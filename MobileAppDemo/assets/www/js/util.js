@@ -211,6 +211,13 @@ var Util = function() {
     function isRunningOnChromeDesktop() {
         return ( !navigator.userAgent.match( /(Android|iPhone|iPod|iPad)/ ) );
     }
+    
+    /**
+     * Is the mobile app running on an iOS device?
+     */
+    function isRunningOniOS() {
+        return ( navigator.userAgent.match( /(iPhone|iPod|iPad)/ ) );
+    }
 
     /**
      * Is the specified date/time stamp a valid ISO formatted date/time stamp?
@@ -381,6 +388,7 @@ var Util = function() {
         'getWorkOrderDocumentNumbersAsString' : getWorkOrderDocumentNumbersAsString,
         'isOnline'                            : isOnline,
         'isRunningOnChromeDesktop'            : isRunningOnChromeDesktop,
+        'isRunningOniOS'                      : isRunningOniOS,
         'isValidISODateTimeStamp'             : isValidISODateTimeStamp,
         'setSecondsAndMillisecondsToZero'     : setSecondsAndMillisecondsToZero,
         'startPSRT'                           : startPSRT,

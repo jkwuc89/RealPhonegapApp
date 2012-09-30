@@ -11,6 +11,13 @@
  * Encapsulate the dialog functionality for the application
  */
 var Dialog = function() {
+    
+    var baseDialogOptions = {
+        fullScreenForce : true,
+        top : ( Util.isRunningOniOS() ? 250 : false ),
+        zindex : '1000'
+    }; 
+    
 	/**
      * Function to show an alert dialog box using the simpledialog plugin. 
      *  Arguments should be localized before being passed to this function.
@@ -35,11 +42,10 @@ var Dialog = function() {
     		body: body
     	});
     	
-    	$(document).simpledialog2({
-            blankContent : dialog,
-            width: dialogWidth,
-            fullScreenForce: true
-        });
+    	var dialogOptions = Util.clone( baseDialogOptions );
+    	dialogOptions.blankContent = dialog;
+    	dialogOptions.width = dialogWidth;
+    	$(document).simpledialog2( dialogOptions );
     	
     	if ( okHandler && _.isFunction( okHandler ) ) {
     	    $('#btnOkay').click( okHandler );
@@ -76,12 +82,11 @@ var Dialog = function() {
             body: body
         });
         
-        $(document).simpledialog2({
-            blankContent : dialog,
-            fullScreenForce: true,
-            zindex: '1000',
-            width: dialogWidth
-        });
+        var dialogOptions = Util.clone( baseDialogOptions );
+        dialogOptions.blankContent = dialog;
+        dialogOptions.width = dialogWidth;
+        
+        $(document).simpledialog2( dialogOptions );
     }
     
     /**

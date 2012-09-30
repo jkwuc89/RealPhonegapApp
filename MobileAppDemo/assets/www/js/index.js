@@ -18,6 +18,7 @@ var Index = function() {
        },
        dbDemo : function() {
            console.log( "Index.jsonDemo: Running database demo" );
+           Dialog.showAlert( "Dialog Test", "Testing dialog position" );
        }
    };
    
