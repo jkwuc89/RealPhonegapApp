@@ -1,5 +1,3 @@
-#!/bin/bash
-
 #
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -19,27 +17,7 @@
 # under the License.
 #
 
-#
-# compile and launch a Cordova/iOS project to the simulator
-#
+Include these headers if you are using a bleeding edge plugin in an older version of Cordova.
 
-set -e
-
-CORDOVA_PATH=$( cd "$( dirname "$0" )" && pwd )
-PROJECT_PATH=$CORDOVA_PATH/..
-
-for file in $PROJECT_PATH/*.xcodeproj; do
-  PROJECT_NAME=$(basename "$file" .xcodeproj)
-done;
-
-cd "$PROJECT_PATH"
-
-APP=build/$PROJECT_NAME.app
-SDK=`xcodebuild -showsdks | grep Sim | tail -1 | awk '{print $6}'`
-
-xcodebuild -project $PROJECT_NAME.xcodeproj -arch i386 -target $PROJECT_NAME -configuration Debug -sdk $SDK clean build VALID_ARCHS="i386" CONFIGURATION_BUILD_DIR="$PROJECT_PATH/build"
-
-
-
-
-
+1.5.0 -- only for 1.5.0 projects
+0.9.6 -- for projects between 0.9.6 and 1.4.1

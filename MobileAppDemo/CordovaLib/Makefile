@@ -1,4 +1,3 @@
-#! /bin/sh 
 #
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -18,6 +17,31 @@
 # under the License.
 #
 
-CORDOVA_PATH=$( cd "$( dirname "$0" )" && pwd )
+SHELL = /bin/sh
+CHMOD = chmod
+CP = cp
+MV = mv
+NOOP = $(SHELL) -c true
+RM_F = rm -f
+RM_IR = rm -iR
+RM_RF = rm -rf
+TEST_F = test -f
+TOUCH = touch
+UMASK_NULL = umask 0
+DEV_NULL = > /dev/null 2>&1
+MKPATH = mkdir -p
+CAT = cat
+MAKE = make
+OPEN = open
+JAVA = java
+ECHO = echo
+ECHO_N = echo -n
+CDV_VER = $(shell head -1 VERSION)
 
-tail -f "$CORDOVA_PATH/console.log"
+all :: javascript/cordova-$(CDV_VER).js
+
+javascript/cordova-$(CDV_VER).js: clean
+	$(CP) javascript/cordova.ios.js $@
+	
+clean:
+	$(RM_F) javascript/cordova-*.js
