@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "total": 3,
+  "standardJobCodes": 
+  [
+    {
+      "webId": 2566,
+      "standardJobCodeManufacturerId": 7,
+      "jobCode": "22",
+      "completeJobCode": "1022",
+      "timeFrequency": null,
+      "timeFrequencyType": 0,
+      "active": true,
+      "counter": null,
+      "counterFrequency": null,
+      "counterType": 0,
+      "description": "REAR BUMPER - UPD",
+      "notes": "REAR BUMPER - UPDATED",
+      "parentId": 2539
+    },
+    {
+      "webId": 2590,
+      "standardJobCodeManufacturerId": 7,
+      "jobCode": "23",
+      "completeJobCode": "1023",
+      "timeFrequency": null,
+      "timeFrequencyType": 0,
+      "active": true,
+      "counter": null,
+      "counterFrequency": null,
+      "counterType": 0,
+      "description": "RETR OHG RAIL - UPD",
+      "notes": "RETR OHG RAIL - UPDATED",
+      "parentId": 2539
+    },
+    {
+      "webId": 9999,
+      "standardJobCodeManufacturerId": 7,
+      "jobCode": "24",
+      "completeJobCode": "1024",
+      "timeFrequency": null,
+      "timeFrequencyType": 0,
+      "active": true,
+      "counter": null,
+      "counterFrequency": null,
+      "counterType": 0,
+      "description": "NEWSJCUPD - UPD",
+      "notes": "NEW STD JOB CODE INSERTED DURING UPDATE",
+      "parentId": 2539
+    }
+  ]
+}

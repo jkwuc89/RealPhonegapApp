@@ -1,0 +1,30 @@
+<li id="<%= workOrder.webId %>" class="home-page-work-order-list-item" data-icon="false"
+    style="border-left: solid 1px black; margin-left: 0px; margin-right: 0px;"><a style="padding: 0px 0px 0px 0px;">
+    <div class="ui-grid-b">
+        <!-- Block A contains the status icon and the parts on order icon -->
+        <div class="ui-block-a" style="width: 5%;margin-left: 0px;margin-top: 5px;">
+                <img id="workOrderStatusIcon" src="<%= JSONData.getWorkOrderStatusIcon( workOrder ) %>" style="border-style: none;margin-left: 15px;"/>
+                <% if ( JSONData.isPartOnOrder( workOrder ) ) { %>
+                    <br/><img id="partsOnOrderIcon" src="images/redgearicon.png" style="border-style: none;margin-left: 15px;"/>
+                <% } %>
+        </div
+        <!-- Block A contains the work order information -->
+        <div class="ui-block-b" style="width: 50%;margin-left: 0px;margin-bottom: 5px;">
+            <div style="margin-left: 25px;">
+                <h3 class="work-order-list-item-heading" style="margin-bottom: 5px;"><%= workOrder.documentNumber %></h3>
+                <p class="work-order-list-item-text" style="margin-top: -7px;"><%= customer.name %></p>
+                <% if ( equipment ) { %>
+                    <p class="work-order-list-item-text" >Serial: <%= equipment.serialNumber %></p>
+                    <p class="work-order-list-item-text" ><%= equipment.product.manufacturer %>, <%= equipment.product.productCode %></p>
+                <% } %>
+                <% if ( standardJobCode != null ) { %>
+                    <p class="work-order-list-item-text"><span id="jobCode" translate="yes"></span>&nbsp;<span><%= standardJobCode.notes %></span></p>
+                <% } %>
+            </div>
+        </div>
+        
+        <!-- Block B contains the date opened -->
+        <div class="ui-block-c" style="width: 40%;text-align: right;">
+            <h3 class="work-order-list-item-heading" style="color: <%= color %>;"><span><%= Localization.formatDateTime(workOrder.dateOpened, 'd') %></span></h3>
+        </div>
+</li>

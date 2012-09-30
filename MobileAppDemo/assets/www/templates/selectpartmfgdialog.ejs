@@ -1,0 +1,41 @@
+<div style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "selectPartMfgTitle" ).replace( "partNumber", partNumber ) %></h3>
+    <p class="parts-dialog-text" style="text-align: center;"><%= Localization.getText( "selectPartMfgPrompt" ) %></p>
+
+    <div data-role="fieldcontain" style="margin-left: 10px; margin-right: 10px;">
+        <select id="mfgList" data-mini="false">
+        <% for ( var mfgIndex = 0; mfgIndex < mfgs.length; mfgIndex++ ) { %>
+            <option value="<%= mfgs[mfgIndex].internalId %>"><%= mfgs[mfgIndex].internalId %>&nbsp;-&nbsp;<%= mfgs[mfgIndex].description %></option>
+        <% } %>
+        </select>
+    </div>
+    
+    <!-- OK saves the manufacturer selection -->
+    <a href="" data-role="button" data-mini="false" data-inline="true" data-theme="b"
+       onclick="saveMfg();"><%= Localization.getText( "ok" ) %></a>
+    
+    <!-- Cancel closes the dialog and cancels the addition of the part to the work order -->
+    <a href="" onclick="cancel();" data-mini="false" data-role="button" data-inline="true" data-theme="c"><%= Localization.getText( "cancel" ) %></a><br/>
+    <br/>
+</div>
+<script>
+    /**
+     * Cancel clears the selected mfg in the view model which cancels adding the part to the list
+     */
+    function cancel() {
+        debug && console.log( "selectpartmfgdialog.cancel: Canceling manufacturer selection" );
+        ManageWorkOrderParts.setQuickAddPartMfg( "" );
+        UIFrame.closeActiveDialog();
+    }
+
+    /**
+     * Save the selected manufacturer
+     */
+    function saveMfg() {
+        var selectedMfg = $("#mfgList").val();
+        debug && console.log( "selectpartmfgdialog.saveMfg: Selected manufacturer = " + selectedMfg );
+        ManageWorkOrderParts.setQuickAddPartMfg( selectedMfg );
+        UIFrame.closeActiveDialog();
+        ManageWorkOrderParts.setNewPartManufacturer();
+    }
+</script>

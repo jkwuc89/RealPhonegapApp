@@ -1,0 +1,24 @@
+<div class="ui-grid-c">
+    <div class="ui-block-a" style="width: 25%;">
+        <p class="manage-work-order-text" style="margin-left: 20px;">
+            <span id="manufacturerHeader" translate="yes" style="font-weight: bold;">%></span>&nbsp;<span><%= equipment.product.manufacturer %></span>
+        </p>
+    </div>
+    <div class="ui-block-b" style="width: 25%;">
+        <p class="manage-work-order-text">
+            <span id="modelHeader" translate="yes" style="font-weight: bold;">%></span>&nbsp;<span><%= equipment.product.productCode %></span>
+        </p>
+    </div>
+    <div class="ui-block-c" style="width: 25%;">
+        <p class="manage-work-order-text">
+            <span id="serialHeader" translate="yes" style="font-weight: bold;">%></span>&nbsp;<span><%= equipment.serialNumber %></span>
+        </p>
+    </div>
+    <div class="ui-block-d">
+        <p class="manage-work-order-text">
+            <span id="equipmentHoursHeader" translate="yes" style="font-weight: bold;">%></span>&nbsp;<span>
+            <%=  Localization.formatNumber( equipment.hourMeter, "n0" ) %></span>
+        </p>
+    </div>
+</div>
+<hr style="margin-left: 20px;margin-right: 20px;"/>

@@ -1,0 +1,44 @@
+<div>
+    <ul data-role='listview' style="margin-top: -5px;">
+        <li id="acceptWorkOrder" class="popup-menu-disabled-item" data-theme="c" data-icon="false">
+            <%= Localization.getText( "acceptWorkOrder" ) %>
+        </li>
+        <li id="reassignWorkOrder" class="popup-menu-item" data-theme="c" data-icon="false">
+            <a href='#' onclick="onReassign( '<%= workOrder.webId %>' );"><%= Localization.getText( "reassignWorkOrder" ) %></a>
+        </li>
+        <li id="openWorkOrder" class="popup-menu-item" data-theme="c" data-icon="false">
+            <a href='#' onclick="onOpen( '<%= workOrder.webId %>' );"><%= Localization.getText( "openWorkOrder" ) %></a>
+        </li>
+        <li id="viewWorkOrder" class="popup-menu-item" data-theme="c" data-icon="false">
+            <a href='#' onclick="onView( '<%= workOrder.webId %>' );"><%= Localization.getText( "viewWorkOrder" ) %></a>
+        </li>
+    </ul>
+    
+    <hr style="margin-top: -1px;" />
+    <div style="text-align: center;margin-top: -10px;">
+        <a href='#' data-role="button" data-inline="true" onclick="onCancel();" class="button-default" style="width: 90%;"><%= Localization.getText( "cancel" ) %></a>
+    </div>
+</div>
+<script>
+    /**
+     * onclick event handlers for the popup menu
+     */
+    function onReassign( workOrderId ) {
+        debug && console.log( "acceptedworkorderpopupmenu.onReassign: Reassigning work order ID: " + workOrderId );
+        UIFrame.closeActiveDialog();
+        WorkOrderList.displayReassignWorkOrderDialog( workOrderId );    
+    }
+    function onOpen( workOrderId ) {
+        debug && console.log( "acceptedworkorderpopupmenu.onView: Opening work order ID: " + workOrderId );
+        UIFrame.closeActiveDialog();
+        WorkOrderList.openWorkOrder( workOrderId );
+    }
+    function onView( workOrderId ) {
+        debug && console.log( "acceptedworkorderpopupmenu.onView: Viewing work order ID: " + workOrderId );
+        UIFrame.closeActiveDialog();
+        WorkOrderList.viewWorkOrder( workOrderId );        
+    }
+    function onCancel() {
+        UIFrame.closeActiveDialog();
+    }
+</script>

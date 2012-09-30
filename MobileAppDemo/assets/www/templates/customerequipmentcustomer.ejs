@@ -1,0 +1,60 @@
+<li  id="customer<%= customer.webId %>" class="customer-list-item list-item-padding customer-equipment-customer-border" data-icon="false" ><a>
+    <div class="ui-grid-b">
+        <div class="ui-block-a">
+            <div>
+                <h3><%= customer.name %></h3>
+                <p class="work-order-list-item-text" style="margin-top: -10px;"><%= customer.internalId %></p>
+                <% if ( communicationDetail ) { %>
+                    <p class="work-order-list-item-text" ><span><%= communicationDetail.information %></span>
+                    <!-- Optionally display the phone extension -->
+                    <% if ( communicationDetail.extension && communicationDetail.extension.length > 0 ) { %>
+                        &nbsp;<span id="phoneExtension" translate="yes"></span>&nbsp;<span><%= communicationDetail.extension %></span>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+        <div class="ui-block-b">
+            <img class="globe-icon-large" src="images/globe.png"/>
+            
+            <div class="list-item-icon-text">
+                <h3 id="addressLabel" translate="yes">Address</h3>
+                <!-- Handle addresses with two street properties -->
+                <p class="work-order-list-item-text" style="margin-top: -10px;"><%= address.street %></p>
+                
+                <!-- Required to ensure consistent HTML spacing -->
+                <% if ( address.street2 && address.street2.length > 0 ) { %>
+                    <p class="work-order-list-item-text"><%= address.street2 %></p>
+                    <p class="work-order-list-item-text" ><%= address.city %> <%= address.state %>&nbsp;<%= address.postalCode %></p>
+                <% } else { %>
+                    <p class="work-order-list-item-text" ><%= address.city %> <%= address.state %>&nbsp;<%= address.postalCode %></p>
+                    <p class="work-order-list-item-text">&nbsp;</p> 
+                <% } %>
+                
+            </div>
+        </div>      
+        <div class="ui-block-c">
+            <div class="ui-block-right" style="margin-right: 20px;">
+                <h3 id="open" translate="yes">Open:</h3>
+                <p id="p<%= customer.webId %>">
+                <%= pmsCount %> PMs<br />
+                <%= woCount %> WOs<br />
+            </div>
+            
+            <div class="ui-block-c-customer">
+              <% if( customer.mainContactId && customer.contacts && customer.contacts.length > 0 ) { %>
+                <h3><%= contact.firstName %>&nbsp;<%= contact.lastName %></h3>
+                <% if ( contact.address.communicationDetails ) { %>
+                    <% for ( i = 0; i < contact.address.communicationDetails.length; i++ ) { %>
+                        <p class="work-order-list-item-text" ><span><%= contact.address.communicationDetails[i].type %>:&nbsp;<%= contact.address.communicationDetails[i].information %></span>
+                        <!-- Optionally display the phone extension -->
+                        <% if ( contact.address.communicationDetails[i].extension.length > 0 ) { %>
+                            &nbsp;<span id="phoneExtension" translate="yes"></span>&nbsp;<span><%= contact.address.communicationDetails[i].extension %></span>
+                        <% } %>
+                        </p>
+                    <% } %>
+                <% } %>
+              <% } %>
+            </div>
+        </div>
+    </div>
+</a></li>

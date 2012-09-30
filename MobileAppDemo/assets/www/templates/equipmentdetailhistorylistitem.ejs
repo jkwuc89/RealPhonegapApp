@@ -1,0 +1,18 @@
+<li id="<%= workOrder.webId %>" class="work-order-history-list-item list-item-padding" data-icon="false" style="margin-left: 0px; margin-right: 0px;"><a>
+    <div class="ui-grid-c">
+        <div class="ui-block-a">
+            <h3><%= workOrder.documentNumber %></h3>
+            <p><%= Localization.getText( "serviceDate" ) %> <%= Localization.formatDateTime( segment.dateClosed, 'd' ) %></p>
+            <p><%= Localization.getText( "serviceTruckNumber" ) %> <%= segment.serviceTruckId %></p>
+        </div>
+        <div class="ui-block-b" style="width: 66%;">
+            <% if ( standardJobCode != null ) { %>
+                <h3><%= standardJobCode.notes %> - <%= Localization.getText("jobCode") %> <%=standardJobCode.jobCode %></h3>
+            <% } else { %>
+                <h3>No Job Code</h3>
+            <% } %>  
+            <p><%= segment.notesTop %></p>
+            <p><%= segment.notesBottom %></p>
+        </div>  
+    </div>
+</a></li>

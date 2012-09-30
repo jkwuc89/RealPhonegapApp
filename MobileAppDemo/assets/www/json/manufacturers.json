@@ -1,0 +1,4777 @@
+{
+  "success": true,
+  "total": 954,
+  "manufacturers": 
+  [
+    {
+      "webId": 414,
+      "internalId": "DMT",
+      "description": "D&M Truck Top"
+    },
+    {
+      "webId": 464,
+      "internalId": "EXP",
+      "description": "NBO Only"
+    },
+    {
+      "webId": 528,
+      "internalId": "GSE",
+      "description": "GSE"
+    },
+    {
+      "webId": 810,
+      "internalId": "PDI",
+      "description": "Pre Delivery In"
+    },
+    {
+      "webId": 831,
+      "internalId": "PM",
+      "description": "Planned Mainten"
+    },
+    {
+      "webId": 862,
+      "internalId": "QUAD",
+      "description": "Quadra"
+    },
+    {
+      "webId": 1043,
+      "internalId": "TUSK",
+      "description": "Tusk"
+    },
+    {
+      "webId": 15810388,
+      "internalId": "~~~~",
+      "description": "(All) Don't use"
+    },
+    {
+      "webId": 202,
+      "internalId": "3D",
+      "description": "3D Storage Sys"
+    },
+    {
+      "webId": 203,
+      "internalId": "A/C",
+      "description": "Allis Chalmers"
+    },
+    {
+      "webId": 204,
+      "internalId": "A1",
+      "description": "A 1 Folding Gat"
+    },
+    {
+      "webId": 205,
+      "internalId": "AARD",
+      "description": "Aardwolf"
+    },
+    {
+      "webId": 15810389,
+      "internalId": "ACCU",
+      "description": "ACCU"
+    },
+    {
+      "webId": 206,
+      "internalId": "ACEI",
+      "description": "Ace Industries"
+    },
+    {
+      "webId": 207,
+      "internalId": "ACK",
+      "description": "Ackerman Steel"
+    },
+    {
+      "webId": 208,
+      "internalId": "ACT",
+      "description": "Advanced Charge"
+    },
+    {
+      "webId": 209,
+      "internalId": "ACTI",
+      "description": "Action Ind"
+    },
+    {
+      "webId": 210,
+      "internalId": "ACTP",
+      "description": "Action Pump Co"
+    },
+    {
+      "webId": 211,
+      "internalId": "ADAP",
+      "description": "Adapa"
+    },
+    {
+      "webId": 212,
+      "internalId": "ADPT",
+      "description": "Adapto"
+    },
+    {
+      "webId": 213,
+      "internalId": "ADVC",
+      "description": "Advance Scubber"
+    },
+    {
+      "webId": 214,
+      "internalId": "ADVL",
+      "description": "Advance Lifts"
+    },
+    {
+      "webId": 215,
+      "internalId": "ADVM",
+      "description": "Advanced Motor"
+    },
+    {
+      "webId": 216,
+      "internalId": "AERO",
+      "description": "Aeroquip"
+    },
+    {
+      "webId": 217,
+      "internalId": "AERV",
+      "description": "AeroVironment"
+    },
+    {
+      "webId": 218,
+      "internalId": "AES",
+      "description": "Applied Energy"
+    },
+    {
+      "webId": 219,
+      "internalId": "AETN",
+      "description": "Aetna Group USA"
+    },
+    {
+      "webId": 220,
+      "internalId": "AGME",
+      "description": "AG Mercury"
+    },
+    {
+      "webId": 221,
+      "internalId": "AGV",
+      "description": "Auto Guided Veh"
+    },
+    {
+      "webId": 222,
+      "internalId": "AIG",
+      "description": "Aigner Index"
+    },
+    {
+      "webId": 223,
+      "internalId": "AIR",
+      "description": "Air Tech Ind"
+    },
+    {
+      "webId": 224,
+      "internalId": "AISL",
+      "description": "Aisle Master"
+    },
+    {
+      "webId": 225,
+      "internalId": "AKER",
+      "description": "Aker Wade"
+    },
+    {
+      "webId": 226,
+      "internalId": "AKRO",
+      "description": "Akro Mils"
+    },
+    {
+      "webId": 227,
+      "internalId": "ALBI",
+      "description": "Albion"
+    },
+    {
+      "webId": 228,
+      "internalId": "ALBR",
+      "description": "Allen Bradley"
+    },
+    {
+      "webId": 229,
+      "internalId": "ALBY",
+      "description": "Albany"
+    },
+    {
+      "webId": 230,
+      "internalId": "ALCA",
+      "description": "Allied Caster"
+    },
+    {
+      "webId": 231,
+      "internalId": "ALEC",
+      "description": "Aleco"
+    },
+    {
+      "webId": 232,
+      "internalId": "ALFT",
+      "description": "Alum-A-Lift"
+    },
+    {
+      "webId": 233,
+      "internalId": "ALGY",
+      "description": "Allegany"
+    },
+    {
+      "webId": 234,
+      "internalId": "ALIN",
+      "description": "American Lincol"
+    },
+    {
+      "webId": 235,
+      "internalId": "ALLA",
+      "description": "All Amer. Metal"
+    },
+    {
+      "webId": 236,
+      "internalId": "ALLI",
+      "description": "Allied Systems"
+    },
+    {
+      "webId": 237,
+      "internalId": "ALLS",
+      "description": "All-State Equip"
+    },
+    {
+      "webId": 238,
+      "internalId": "ALLT",
+      "description": "Alltec"
+    },
+    {
+      "webId": 239,
+      "internalId": "ALP",
+      "description": "Alpine"
+    },
+    {
+      "webId": 240,
+      "internalId": "ALTO",
+      "description": "Nilfisk Alto"
+    },
+    {
+      "webId": 241,
+      "internalId": "ALUM",
+      "description": "Alumaloft"
+    },
+    {
+      "webId": 242,
+      "internalId": "ALUS",
+      "description": "Aluma Sheild"
+    },
+    {
+      "webId": 243,
+      "internalId": "AMCA",
+      "description": "American Caster"
+    },
+    {
+      "webId": 244,
+      "internalId": "AMCH",
+      "description": "American Chrt"
+    },
+    {
+      "webId": 245,
+      "internalId": "AMER",
+      "description": "American Auto"
+    },
+    {
+      "webId": 246,
+      "internalId": "AMIG",
+      "description": "Amigo"
+    },
+    {
+      "webId": 247,
+      "internalId": "AMLI",
+      "description": "American Lifts"
+    },
+    {
+      "webId": 248,
+      "internalId": "AMMZ",
+      "description": "American Mezzan"
+    },
+    {
+      "webId": 249,
+      "internalId": "AMSC",
+      "description": "American Scale"
+    },
+    {
+      "webId": 250,
+      "internalId": "AMSH",
+      "description": "Amerishred"
+    },
+    {
+      "webId": 251,
+      "internalId": "AMTK",
+      "description": "Ametek"
+    },
+    {
+      "webId": 252,
+      "internalId": "AMVU",
+      "description": "American Vulco"
+    },
+    {
+      "webId": 253,
+      "internalId": "AMWH",
+      "description": "Am. Wheelchair"
+    },
+    {
+      "webId": 254,
+      "internalId": "AMWR",
+      "description": "American Wire"
+    },
+    {
+      "webId": 255,
+      "internalId": "ANCR",
+      "description": "Ancra Internati"
+    },
+    {
+      "webId": 256,
+      "internalId": "ANGE",
+      "description": "Angers Equip. C"
+    },
+    {
+      "webId": 257,
+      "internalId": "APA",
+      "description": "APA"
+    },
+    {
+      "webId": 258,
+      "internalId": "APAF",
+      "description": "Apache Forklift"
+    },
+    {
+      "webId": 259,
+      "internalId": "APAM",
+      "description": "Apache Mills"
+    },
+    {
+      "webId": 15810390,
+      "internalId": "APS",
+      "description": "APS Resource"
+    },
+    {
+      "webId": 260,
+      "internalId": "APTN",
+      "description": "Apton Doors"
+    },
+    {
+      "webId": 261,
+      "internalId": "ARBR",
+      "description": "Aaron Bradley"
+    },
+    {
+      "webId": 262,
+      "internalId": "ARCA",
+      "description": "Arca Systems"
+    },
+    {
+      "webId": 15810391,
+      "internalId": "ARIE",
+      "description": "Ariens"
+    },
+    {
+      "webId": 263,
+      "internalId": "ARRO",
+      "description": "Arrow Mat. Hand"
+    },
+    {
+      "webId": 264,
+      "internalId": "ASP",
+      "description": "Advance Storage"
+    },
+    {
+      "webId": 344,
+      "internalId": "CAT",
+      "description": "Caterpillar"
+    },
+    {
+      "webId": 265,
+      "internalId": "ASPW",
+      "description": "American Sports"
+    },
+    {
+      "webId": 266,
+      "internalId": "ATI",
+      "description": "Air Technical"
+    },
+    {
+      "webId": 267,
+      "internalId": "ATL",
+      "description": "Atlet"
+    },
+    {
+      "webId": 15810392,
+      "internalId": "ATLA",
+      "description": "Atlanta Attach"
+    },
+    {
+      "webId": 268,
+      "internalId": "ATLS",
+      "description": "Atlas Lift Truc"
+    },
+    {
+      "webId": 269,
+      "internalId": "ATMH",
+      "description": "Atlas Mtl Hdlg"
+    },
+    {
+      "webId": 270,
+      "internalId": "AURO",
+      "description": "Aurora Shelving"
+    },
+    {
+      "webId": 271,
+      "internalId": "AUTL",
+      "description": "Autolift"
+    },
+    {
+      "webId": 272,
+      "internalId": "AUTM",
+      "description": "Automatic"
+    },
+    {
+      "webId": 273,
+      "internalId": "AUTO",
+      "description": "Auto Craft"
+    },
+    {
+      "webId": 274,
+      "internalId": "AUTQ",
+      "description": "Autoquip Corp"
+    },
+    {
+      "webId": 275,
+      "internalId": "AVEH",
+      "description": "Advanced Vehicl"
+    },
+    {
+      "webId": 276,
+      "internalId": "AWAL",
+      "description": "A-Wall"
+    },
+    {
+      "webId": 277,
+      "internalId": "AZTC",
+      "description": "Aztech Systems"
+    },
+    {
+      "webId": 278,
+      "internalId": "B&L",
+      "description": "B & L Structure"
+    },
+    {
+      "webId": 279,
+      "internalId": "BADA",
+      "description": "Bacou-Dalloz"
+    },
+    {
+      "webId": 280,
+      "internalId": "BADG",
+      "description": "Badger"
+    },
+    {
+      "webId": 281,
+      "internalId": "BAKE",
+      "description": "Baker"
+    },
+    {
+      "webId": 282,
+      "internalId": "BALD",
+      "description": "Baldwin"
+    },
+    {
+      "webId": 283,
+      "internalId": "BALK",
+      "description": "Balkancar"
+    },
+    {
+      "webId": 284,
+      "internalId": "BALY",
+      "description": "Ballymore"
+    },
+    {
+      "webId": 285,
+      "internalId": "BAR",
+      "description": "Barrett"
+    },
+    {
+      "webId": 286,
+      "internalId": "BARE",
+      "description": "Barecat"
+    },
+    {
+      "webId": 287,
+      "internalId": "BARR",
+      "description": "Barrick Manufac"
+    },
+    {
+      "webId": 288,
+      "internalId": "BASE",
+      "description": "Base Mnfg"
+    },
+    {
+      "webId": 289,
+      "internalId": "BASI",
+      "description": "Basiloid"
+    },
+    {
+      "webId": 290,
+      "internalId": "BASS",
+      "description": "Bassi"
+    },
+    {
+      "webId": 291,
+      "internalId": "BAT",
+      "description": "Battery Assy"
+    },
+    {
+      "webId": 292,
+      "internalId": "BATM",
+      "description": "BatteryMate"
+    },
+    {
+      "webId": 293,
+      "internalId": "BAUM",
+      "description": "Baumann"
+    },
+    {
+      "webId": 294,
+      "internalId": "BBI",
+      "description": "Battery Builder"
+    },
+    {
+      "webId": 295,
+      "internalId": "BCL",
+      "description": "BCL Products"
+    },
+    {
+      "webId": 296,
+      "internalId": "BCN",
+      "description": "Beacon"
+    },
+    {
+      "webId": 297,
+      "internalId": "BECH",
+      "description": "Beech Engineeri"
+    },
+    {
+      "webId": 298,
+      "internalId": "BEGL",
+      "description": "Beagle"
+    },
+    {
+      "webId": 299,
+      "internalId": "BEND",
+      "description": "Bendi"
+    },
+    {
+      "webId": 300,
+      "internalId": "BENJ",
+      "description": "Benju Lift"
+    },
+    {
+      "webId": 15810393,
+      "internalId": "BEPK",
+      "description": "Bestpack"
+    },
+    {
+      "webId": 301,
+      "internalId": "BEST",
+      "description": "Best Conveyors"
+    },
+    {
+      "webId": 302,
+      "internalId": "BETC",
+      "description": "Betco"
+    },
+    {
+      "webId": 303,
+      "internalId": "BFS",
+      "description": "Battery Filling"
+    },
+    {
+      "webId": 304,
+      "internalId": "BHP",
+      "description": "Bayhead product"
+    },
+    {
+      "webId": 305,
+      "internalId": "BHS",
+      "description": "BHS"
+    },
+    {
+      "webId": 306,
+      "internalId": "BI",
+      "description": "Bi-States Steel"
+    },
+    {
+      "webId": 307,
+      "internalId": "BIGJ",
+      "description": "Big Joe"
+    },
+    {
+      "webId": 308,
+      "internalId": "BILJ",
+      "description": "Bil-Jax Inc."
+    },
+    {
+      "webId": 309,
+      "internalId": "BILT",
+      "description": "Bilt Industries"
+    },
+    {
+      "webId": 310,
+      "internalId": "BISH",
+      "description": "Bishamon"
+    },
+    {
+      "webId": 311,
+      "internalId": "BLD",
+      "description": "Bull Dog Batt."
+    },
+    {
+      "webId": 312,
+      "internalId": "BLDR",
+      "description": "Bull Dog Rack"
+    },
+    {
+      "webId": 313,
+      "internalId": "BLG",
+      "description": "Blue Giant"
+    },
+    {
+      "webId": 314,
+      "internalId": "BLUF",
+      "description": "Bluff Mfg"
+    },
+    {
+      "webId": 315,
+      "internalId": "BMI",
+      "description": "BMI Inc"
+    },
+    {
+      "webId": 316,
+      "internalId": "BOBC",
+      "description": "Bobcat"
+    },
+    {
+      "webId": 317,
+      "internalId": "BOLZ",
+      "description": "Bolzoni"
+    },
+    {
+      "webId": 318,
+      "internalId": "BORR",
+      "description": "Borroughs Corp"
+    },
+    {
+      "webId": 319,
+      "internalId": "BR",
+      "description": "Built Rite"
+    },
+    {
+      "webId": 15810394,
+      "internalId": "BRIG",
+      "description": "Briggs&Stratton"
+    },
+    {
+      "webId": 320,
+      "internalId": "BRIS",
+      "description": "Bristol Mfg"
+    },
+    {
+      "webId": 321,
+      "internalId": "BROD",
+      "description": "Broderson"
+    },
+    {
+      "webId": 322,
+      "internalId": "BRSH",
+      "description": "Bradshaw Hayes"
+    },
+    {
+      "webId": 323,
+      "internalId": "BRST",
+      "description": "Brister Design"
+    },
+    {
+      "webId": 324,
+      "internalId": "BRU",
+      "description": "Brudi"
+    },
+    {
+      "webId": 325,
+      "internalId": "BT",
+      "description": "BT"
+    },
+    {
+      "webId": 326,
+      "internalId": "BUCK",
+      "description": "Buckhorn"
+    },
+    {
+      "webId": 327,
+      "internalId": "BUSH",
+      "description": "Bushman"
+    },
+    {
+      "webId": 328,
+      "internalId": "C&D",
+      "description": "C&D Technology"
+    },
+    {
+      "webId": 329,
+      "internalId": "CALA",
+      "description": "Carolina Ladder"
+    },
+    {
+      "webId": 330,
+      "internalId": "CALD",
+      "description": "Caldwell"
+    },
+    {
+      "webId": 331,
+      "internalId": "CANA",
+      "description": "Can Am Packagin"
+    },
+    {
+      "webId": 332,
+      "internalId": "CANN",
+      "description": "Cannon Equip"
+    },
+    {
+      "webId": 333,
+      "internalId": "CARB",
+      "description": "Carbit Paint Co"
+    },
+    {
+      "webId": 334,
+      "internalId": "CARD",
+      "description": "Cardinal"
+    },
+    {
+      "webId": 335,
+      "internalId": "CARE",
+      "description": "Carer"
+    },
+    {
+      "webId": 336,
+      "internalId": "CARG",
+      "description": "Cargotainer"
+    },
+    {
+      "webId": 337,
+      "internalId": "CARI",
+      "description": "Carico Systems"
+    },
+    {
+      "webId": 338,
+      "internalId": "CARL",
+      "description": "Carlton Scales"
+    },
+    {
+      "webId": 339,
+      "internalId": "CARN",
+      "description": "Carney Battery"
+    },
+    {
+      "webId": 340,
+      "internalId": "CARQ",
+      "description": "Car Quest"
+    },
+    {
+      "webId": 341,
+      "internalId": "CARR",
+      "description": "Carron Net Co."
+    },
+    {
+      "webId": 342,
+      "internalId": "CAS",
+      "description": "Cascade"
+    },
+    {
+      "webId": 343,
+      "internalId": "CASE",
+      "description": "Case"
+    },
+    {
+      "webId": 345,
+      "internalId": "CAVA",
+      "description": "Calavar"
+    },
+    {
+      "webId": 346,
+      "internalId": "CCAB",
+      "description": "Cover Cab, Inc."
+    },
+    {
+      "webId": 347,
+      "internalId": "CECO",
+      "description": "Cecor"
+    },
+    {
+      "webId": 348,
+      "internalId": "CEN",
+      "description": "Cen Electronics"
+    },
+    {
+      "webId": 349,
+      "internalId": "CFA",
+      "description": "CFA"
+    },
+    {
+      "webId": 350,
+      "internalId": "CHAL",
+      "description": "Chalfant"
+    },
+    {
+      "webId": 15810395,
+      "internalId": "CHAM",
+      "description": "Chamberlain Grp"
+    },
+    {
+      "webId": 351,
+      "internalId": "CHAR",
+      "description": "CharNor"
+    },
+    {
+      "webId": 352,
+      "internalId": "CHEM",
+      "description": "Chemtainer"
+    },
+    {
+      "webId": 353,
+      "internalId": "CHER",
+      "description": "Cherry Ind Equ"
+    },
+    {
+      "webId": 354,
+      "internalId": "CHEV",
+      "description": "Chevrolet"
+    },
+    {
+      "webId": 355,
+      "internalId": "CHID",
+      "description": "Checkers Indust"
+    },
+    {
+      "webId": 356,
+      "internalId": "CHRI",
+      "description": "Chrisman Mfg"
+    },
+    {
+      "webId": 357,
+      "internalId": "CHRT",
+      "description": "Charter Power"
+    },
+    {
+      "webId": 358,
+      "internalId": "CHSD",
+      "description": "Chase Doors"
+    },
+    {
+      "webId": 359,
+      "internalId": "CLEA",
+      "description": "Cleanstar"
+    },
+    {
+      "webId": 360,
+      "internalId": "CLK",
+      "description": "Clark"
+    },
+    {
+      "webId": 361,
+      "internalId": "CLKE",
+      "description": "Clarke"
+    },
+    {
+      "webId": 362,
+      "internalId": "CLOP",
+      "description": "Clopay"
+    },
+    {
+      "webId": 363,
+      "internalId": "CLOR",
+      "description": "Chloride"
+    },
+    {
+      "webId": 364,
+      "internalId": "CLUB",
+      "description": "Club Car"
+    },
+    {
+      "webId": 365,
+      "internalId": "CLY",
+      "description": "Clymer"
+    },
+    {
+      "webId": 15810396,
+      "internalId": "CMAC",
+      "description": "CMasterCrfForkl"
+    },
+    {
+      "webId": 366,
+      "internalId": "CMAT",
+      "description": "Crown Matting"
+    },
+    {
+      "webId": 367,
+      "internalId": "COFF",
+      "description": "Coffing Hoists"
+    },
+    {
+      "webId": 368,
+      "internalId": "COG",
+      "description": "Cogan"
+    },
+    {
+      "webId": 369,
+      "internalId": "COKE",
+      "description": "Coke"
+    },
+    {
+      "webId": 370,
+      "internalId": "COLC",
+      "description": "Columbia Car"
+    },
+    {
+      "webId": 371,
+      "internalId": "COLE",
+      "description": "Coleman"
+    },
+    {
+      "webId": 372,
+      "internalId": "COLM",
+      "description": "Columbia Machin"
+    },
+    {
+      "webId": 373,
+      "internalId": "COLS",
+      "description": "Colson Caster"
+    },
+    {
+      "webId": 374,
+      "internalId": "COLU",
+      "description": "Columbus McKinn"
+    },
+    {
+      "webId": 375,
+      "internalId": "COMB",
+      "description": "Combilfit"
+    },
+    {
+      "webId": 376,
+      "internalId": "COMP",
+      "description": "Complex Steel"
+    },
+    {
+      "webId": 377,
+      "internalId": "CON",
+      "description": "Condor"
+    },
+    {
+      "webId": 378,
+      "internalId": "CONT",
+      "description": "Contico"
+    },
+    {
+      "webId": 379,
+      "internalId": "COOP",
+      "description": "Cooper-Bossman"
+    },
+    {
+      "webId": 380,
+      "internalId": "COPL",
+      "description": "Copperloy"
+    },
+    {
+      "webId": 381,
+      "internalId": "CORN",
+      "description": "Cornell Doors"
+    },
+    {
+      "webId": 382,
+      "internalId": "COTT",
+      "description": "Cotterman"
+    },
+    {
+      "webId": 383,
+      "internalId": "COUS",
+      "description": "Cousins"
+    },
+    {
+      "webId": 384,
+      "internalId": "COXF",
+      "description": "Cox Fence Fitti"
+    },
+    {
+      "webId": 385,
+      "internalId": "COXR",
+      "description": "Coxreels"
+    },
+    {
+      "webId": 386,
+      "internalId": "CPCR",
+      "description": "Campus Crafts"
+    },
+    {
+      "webId": 387,
+      "internalId": "CPXS",
+      "description": "Complex Steel"
+    },
+    {
+      "webId": 388,
+      "internalId": "CRAM",
+      "description": "Cram-a-lot"
+    },
+    {
+      "webId": 389,
+      "internalId": "CRAY",
+      "description": "Crayler"
+    },
+    {
+      "webId": 390,
+      "internalId": "CRBA",
+      "description": "Crown Battery"
+    },
+    {
+      "webId": 391,
+      "internalId": "CRDA",
+      "description": "CR Daniels"
+    },
+    {
+      "webId": 392,
+      "internalId": "CRKT",
+      "description": "Crown Parts Kit"
+    },
+    {
+      "webId": 393,
+      "internalId": "CRSS",
+      "description": "Cross Sale"
+    },
+    {
+      "webId": 394,
+      "internalId": "CRST",
+      "description": "Creative Storag"
+    },
+    {
+      "webId": 395,
+      "internalId": "CRW",
+      "description": "Crown Equipment"
+    },
+    {
+      "webId": 396,
+      "internalId": "CSYS",
+      "description": "Component Syste"
+    },
+    {
+      "webId": 397,
+      "internalId": "CURC",
+      "description": "Curtis Co"
+    },
+    {
+      "webId": 398,
+      "internalId": "CUSH",
+      "description": "Cushman"
+    },
+    {
+      "webId": 399,
+      "internalId": "CVC",
+      "description": "CVC"
+    },
+    {
+      "webId": 400,
+      "internalId": "DACH",
+      "description": "Dacha Forklift"
+    },
+    {
+      "webId": 401,
+      "internalId": "DAE",
+      "description": "Daewoo"
+    },
+    {
+      "webId": 402,
+      "internalId": "DANE",
+      "description": "Dane Ind"
+    },
+    {
+      "webId": 403,
+      "internalId": "DAT",
+      "description": "Datsun"
+    },
+    {
+      "webId": 404,
+      "internalId": "DATN",
+      "description": "Daton"
+    },
+    {
+      "webId": 405,
+      "internalId": "DAVS",
+      "description": "Davis Standard"
+    },
+    {
+      "webId": 406,
+      "internalId": "DAY",
+      "description": "Dayton"
+    },
+    {
+      "webId": 407,
+      "internalId": "DEHN",
+      "description": "Dehnco Equip"
+    },
+    {
+      "webId": 408,
+      "internalId": "DEKA",
+      "description": "East Penn Mfg"
+    },
+    {
+      "webId": 409,
+      "internalId": "DEXC",
+      "description": "Dexco"
+    },
+    {
+      "webId": 410,
+      "internalId": "DIXI",
+      "description": "Dixie Poly-Drum"
+    },
+    {
+      "webId": 411,
+      "internalId": "DJP",
+      "description": "DJ Products"
+    },
+    {
+      "webId": 412,
+      "internalId": "DLM",
+      "description": "DLM Inc"
+    },
+    {
+      "webId": 413,
+      "internalId": "DMAC",
+      "description": "D-Mac"
+    },
+    {
+      "webId": 415,
+      "internalId": "DNK",
+      "description": "DONKEY"
+    },
+    {
+      "webId": 416,
+      "internalId": "DODG",
+      "description": "Dodge"
+    },
+    {
+      "webId": 15810397,
+      "internalId": "DONK",
+      "description": "Donkey"
+    },
+    {
+      "webId": 417,
+      "internalId": "DONS",
+      "description": "Donstar"
+    },
+    {
+      "webId": 418,
+      "internalId": "DOOS",
+      "description": "Doosan"
+    },
+    {
+      "webId": 419,
+      "internalId": "DOUG",
+      "description": "Douglas Batt"
+    },
+    {
+      "webId": 15810398,
+      "internalId": "DPM",
+      "description": "Divers Pro Mktg"
+    },
+    {
+      "webId": 420,
+      "internalId": "DRHM",
+      "description": "Durham"
+    },
+    {
+      "webId": 421,
+      "internalId": "DRMH",
+      "description": "Drum Hauler"
+    },
+    {
+      "webId": 422,
+      "internalId": "DRX",
+      "description": "Drexel"
+    },
+    {
+      "webId": 423,
+      "internalId": "DUAR",
+      "description": "Durable"
+    },
+    {
+      "webId": 424,
+      "internalId": "DUR",
+      "description": "Durand Products"
+    },
+    {
+      "webId": 425,
+      "internalId": "DURA",
+      "description": "Dura-Flex"
+    },
+    {
+      "webId": 426,
+      "internalId": "DURO",
+      "description": "Durolift"
+    },
+    {
+      "webId": 427,
+      "internalId": "DUTR",
+      "description": "Dutro"
+    },
+    {
+      "webId": 428,
+      "internalId": "DYNA",
+      "description": "Dyna Rack"
+    },
+    {
+      "webId": 429,
+      "internalId": "DYNC",
+      "description": "Dynaco"
+    },
+    {
+      "webId": 430,
+      "internalId": "EAG",
+      "description": "Eagle Mfg"
+    },
+    {
+      "webId": 431,
+      "internalId": "EAGP",
+      "description": "Eagle Picher"
+    },
+    {
+      "webId": 432,
+      "internalId": "EAGT",
+      "description": "Eagletronics"
+    },
+    {
+      "webId": 433,
+      "internalId": "EAST",
+      "description": "Eastey"
+    },
+    {
+      "webId": 434,
+      "internalId": "EAVS",
+      "description": "Eaves Mfg"
+    },
+    {
+      "webId": 435,
+      "internalId": "ECMY",
+      "description": "Economy"
+    },
+    {
+      "webId": 436,
+      "internalId": "ECOA",
+      "description": "Ecoa"
+    },
+    {
+      "webId": 437,
+      "internalId": "ECON",
+      "description": "Econo Lift"
+    },
+    {
+      "webId": 15810399,
+      "internalId": "ECOT",
+      "description": "Ecotatilty NA"
+    },
+    {
+      "webId": 438,
+      "internalId": "EDIS",
+      "description": "Edison Minit-ch"
+    },
+    {
+      "webId": 439,
+      "internalId": "EDSA",
+      "description": "Edsal"
+    },
+    {
+      "webId": 440,
+      "internalId": "EEVE",
+      "description": "Eevelle LLC"
+    },
+    {
+      "webId": 441,
+      "internalId": "EGA",
+      "description": "EGA Products"
+    },
+    {
+      "webId": 442,
+      "internalId": "ELBX",
+      "description": "Elbex"
+    },
+    {
+      "webId": 443,
+      "internalId": "ELE",
+      "description": "Easy Lift Equip"
+    },
+    {
+      "webId": 444,
+      "internalId": "ELIF",
+      "description": "Easy Lift"
+    },
+    {
+      "webId": 445,
+      "internalId": "ELLI",
+      "description": "Elliot"
+    },
+    {
+      "webId": 446,
+      "internalId": "ELPA",
+      "description": "Elwell Parker"
+    },
+    {
+      "webId": 447,
+      "internalId": "ELSS",
+      "description": "Elsass Fabricat"
+    },
+    {
+      "webId": 448,
+      "internalId": "ENER",
+      "description": "Enersys"
+    },
+    {
+      "webId": 449,
+      "internalId": "ENGP",
+      "description": "Engineered Prod"
+    },
+    {
+      "webId": 450,
+      "internalId": "ENPC",
+      "description": "Enerpac"
+    },
+    {
+      "webId": 451,
+      "internalId": "ENTR",
+      "description": "Enterprise"
+    },
+    {
+      "webId": 452,
+      "internalId": "EPMH",
+      "description": "EP Manhand"
+    },
+    {
+      "webId": 453,
+      "internalId": "EQTO",
+      "description": "Equipto"
+    },
+    {
+      "webId": 454,
+      "internalId": "ERGO",
+      "description": "ErgoBjorn"
+    },
+    {
+      "webId": 455,
+      "internalId": "ERIC",
+      "description": "Erickson"
+    },
+    {
+      "webId": 456,
+      "internalId": "ERIE",
+      "description": "Erie Manufactur"
+    },
+    {
+      "webId": 457,
+      "internalId": "ERMA",
+      "description": "Ermanco"
+    },
+    {
+      "webId": 458,
+      "internalId": "ESC",
+      "description": "Escalera"
+    },
+    {
+      "webId": 459,
+      "internalId": "ETEK",
+      "description": "E-Tek"
+    },
+    {
+      "webId": 460,
+      "internalId": "EVI",
+      "description": "EVI"
+    },
+    {
+      "webId": 461,
+      "internalId": "EXCE",
+      "description": "Excel Storage P"
+    },
+    {
+      "webId": 462,
+      "internalId": "EXCL",
+      "description": "Excel Mfg"
+    },
+    {
+      "webId": 463,
+      "internalId": "EXID",
+      "description": "Exide Batteries"
+    },
+    {
+      "webId": 465,
+      "internalId": "EZCT",
+      "description": "Ezcut"
+    },
+    {
+      "webId": 466,
+      "internalId": "EZGO",
+      "description": "EZ-GO"
+    },
+    {
+      "webId": 467,
+      "internalId": "FABC",
+      "description": "FabCorp"
+    },
+    {
+      "webId": 468,
+      "internalId": "FAIR",
+      "description": "Fairbanks"
+    },
+    {
+      "webId": 469,
+      "internalId": "FALC",
+      "description": "Falcon Wheels"
+    },
+    {
+      "webId": 470,
+      "internalId": "FANT",
+      "description": "Fantuzzi"
+    },
+    {
+      "webId": 471,
+      "internalId": "FARB",
+      "description": "Fairborn"
+    },
+    {
+      "webId": 472,
+      "internalId": "FAST",
+      "description": "Fastco"
+    },
+    {
+      "webId": 473,
+      "internalId": "FCAT",
+      "description": "Factory Cat"
+    },
+    {
+      "webId": 474,
+      "internalId": "FEEL",
+      "description": "Feeler"
+    },
+    {
+      "webId": 475,
+      "internalId": "FEI",
+      "description": "FEI"
+    },
+    {
+      "webId": 476,
+      "internalId": "FERR",
+      "description": "Ferro Magnetics"
+    },
+    {
+      "webId": 477,
+      "internalId": "FETE",
+      "description": "Feteral Clear"
+    },
+    {
+      "webId": 478,
+      "internalId": "FIMC",
+      "description": "FIMCO Ind."
+    },
+    {
+      "webId": 479,
+      "internalId": "FISC",
+      "description": "Fischer"
+    },
+    {
+      "webId": 480,
+      "internalId": "FKI",
+      "description": "FKI Logistics"
+    },
+    {
+      "webId": 481,
+      "internalId": "FLDG",
+      "description": "Folding Guard"
+    },
+    {
+      "webId": 15810400,
+      "internalId": "FLEC",
+      "description": "Flexible Convey"
+    },
+    {
+      "webId": 482,
+      "internalId": "FLEX",
+      "description": "Flexion"
+    },
+    {
+      "webId": 483,
+      "internalId": "FLOB",
+      "description": "Flow Basics"
+    },
+    {
+      "webId": 15810401,
+      "internalId": "FLOR",
+      "description": "Florlift of NJ"
+    },
+    {
+      "webId": 484,
+      "internalId": "FLOW",
+      "description": "Flow-Rite"
+    },
+    {
+      "webId": 485,
+      "internalId": "FLXB",
+      "description": "FlexBarrier"
+    },
+    {
+      "webId": 486,
+      "internalId": "FLXI",
+      "description": "Flexi"
+    },
+    {
+      "webId": 487,
+      "internalId": "FMC",
+      "description": "FMC Industries"
+    },
+    {
+      "webId": 488,
+      "internalId": "FND",
+      "description": "Faultless Nut D"
+    },
+    {
+      "webId": 489,
+      "internalId": "FORD",
+      "description": "Ford"
+    },
+    {
+      "webId": 490,
+      "internalId": "FOXP",
+      "description": "Fox Packaging"
+    },
+    {
+      "webId": 491,
+      "internalId": "FRAZ",
+      "description": "Frazier Ind"
+    },
+    {
+      "webId": 492,
+      "internalId": "FREN",
+      "description": "French Creek"
+    },
+    {
+      "webId": 493,
+      "internalId": "FRGT",
+      "description": "Freighliner"
+    },
+    {
+      "webId": 494,
+      "internalId": "FSCL",
+      "description": "Fairbanks Scale"
+    },
+    {
+      "webId": 495,
+      "internalId": "FTWA",
+      "description": "Ft Wayne Awning"
+    },
+    {
+      "webId": 496,
+      "internalId": "FULM",
+      "description": "Fulmen Chargers"
+    },
+    {
+      "webId": 497,
+      "internalId": "GALB",
+      "description": "Galbreath"
+    },
+    {
+      "webId": 498,
+      "internalId": "GARL",
+      "description": "Garlin"
+    },
+    {
+      "webId": 499,
+      "internalId": "GATE",
+      "description": "Gateway"
+    },
+    {
+      "webId": 500,
+      "internalId": "GBC",
+      "description": "General Battery"
+    },
+    {
+      "webId": 501,
+      "internalId": "GBI",
+      "description": "GB Industries"
+    },
+    {
+      "webId": 502,
+      "internalId": "GE",
+      "description": "General Elect"
+    },
+    {
+      "webId": 503,
+      "internalId": "GEHL",
+      "description": "Gehl"
+    },
+    {
+      "webId": 504,
+      "internalId": "GEM",
+      "description": "Global Elec Mot"
+    },
+    {
+      "webId": 505,
+      "internalId": "GEN",
+      "description": "Genie Inc."
+    },
+    {
+      "webId": 506,
+      "internalId": "GEND",
+      "description": "GenDrive"
+    },
+    {
+      "webId": 507,
+      "internalId": "GENI",
+      "description": "Genie Ind"
+    },
+    {
+      "webId": 508,
+      "internalId": "GEQU",
+      "description": "Global Equip Co"
+    },
+    {
+      "webId": 509,
+      "internalId": "GER",
+      "description": "Gerard Strappin"
+    },
+    {
+      "webId": 589,
+      "internalId": "INBL",
+      "description": "Int Baler"
+    },
+    {
+      "webId": 510,
+      "internalId": "GET",
+      "description": "Get Smart Scaf"
+    },
+    {
+      "webId": 511,
+      "internalId": "GIAN",
+      "description": "Giant Lift"
+    },
+    {
+      "webId": 512,
+      "internalId": "GIL",
+      "description": "Gillis"
+    },
+    {
+      "webId": 513,
+      "internalId": "GLOB",
+      "description": "Global Industri"
+    },
+    {
+      "webId": 514,
+      "internalId": "GM",
+      "description": "General Motors"
+    },
+    {
+      "webId": 515,
+      "internalId": "GNB",
+      "description": "GNB Industrial"
+    },
+    {
+      "webId": 516,
+      "internalId": "GOMZ",
+      "description": "Gomez Automotiv"
+    },
+    {
+      "webId": 517,
+      "internalId": "GOPS",
+      "description": "Gopher Signs"
+    },
+    {
+      "webId": 518,
+      "internalId": "GORB",
+      "description": "Gorbel"
+    },
+    {
+      "webId": 519,
+      "internalId": "GOUL",
+      "description": "Gould"
+    },
+    {
+      "webId": 520,
+      "internalId": "GPX",
+      "description": "GPX Int."
+    },
+    {
+      "webId": 521,
+      "internalId": "GRAD",
+      "description": "Graddall"
+    },
+    {
+      "webId": 522,
+      "internalId": "GRAV",
+      "description": "Gravely"
+    },
+    {
+      "webId": 523,
+      "internalId": "GREG",
+      "description": "Gregory Lift"
+    },
+    {
+      "webId": 15810402,
+      "internalId": "GRNF",
+      "description": "Green Field Prd"
+    },
+    {
+      "webId": 524,
+      "internalId": "GRNG",
+      "description": "Grainger"
+    },
+    {
+      "webId": 525,
+      "internalId": "GROK",
+      "description": "The Grand Rock"
+    },
+    {
+      "webId": 526,
+      "internalId": "GROV",
+      "description": "Grove Equipment"
+    },
+    {
+      "webId": 527,
+      "internalId": "GRP7",
+      "description": "Group Seven"
+    },
+    {
+      "webId": 15810403,
+      "internalId": "GRVM",
+      "description": "Green Valley Mf"
+    },
+    {
+      "webId": 529,
+      "internalId": "GUAR",
+      "description": "Guardian Equip"
+    },
+    {
+      "webId": 530,
+      "internalId": "HAAS",
+      "description": "Haas Doors"
+    },
+    {
+      "webId": 531,
+      "internalId": "HAKO",
+      "description": "Hako"
+    },
+    {
+      "webId": 532,
+      "internalId": "HALA",
+      "description": "Halla"
+    },
+    {
+      "webId": 533,
+      "internalId": "HALL",
+      "description": "Hallowell"
+    },
+    {
+      "webId": 534,
+      "internalId": "HAM",
+      "description": "Hamech"
+    },
+    {
+      "webId": 535,
+      "internalId": "HAML",
+      "description": "Hamilton Caster"
+    },
+    {
+      "webId": 536,
+      "internalId": "HAN",
+      "description": "Hancock Rack"
+    },
+    {
+      "webId": 537,
+      "internalId": "HANA",
+      "description": "Hanaoka Sharyo"
+    },
+    {
+      "webId": 538,
+      "internalId": "HAND",
+      "description": "Handle-it"
+    },
+    {
+      "webId": 539,
+      "internalId": "HANI",
+      "description": "Hannibal"
+    },
+    {
+      "webId": 540,
+      "internalId": "HANR",
+      "description": "Hancock Racking"
+    },
+    {
+      "webId": 541,
+      "internalId": "HANY",
+      "description": "Handy"
+    },
+    {
+      "webId": 542,
+      "internalId": "HARB",
+      "description": "Harboreigh"
+    },
+    {
+      "webId": 543,
+      "internalId": "HARL",
+      "description": "Harlan Corp"
+    },
+    {
+      "webId": 544,
+      "internalId": "HARM",
+      "description": "Harmony Ent."
+    },
+    {
+      "webId": 545,
+      "internalId": "HARO",
+      "description": "Harlo"
+    },
+    {
+      "webId": 546,
+      "internalId": "HARP",
+      "description": "Harper Mfg"
+    },
+    {
+      "webId": 547,
+      "internalId": "HARR",
+      "description": "Harrington Hois"
+    },
+    {
+      "webId": 548,
+      "internalId": "HASP",
+      "description": "Handling Spec"
+    },
+    {
+      "webId": 549,
+      "internalId": "HAUL",
+      "description": "Haulotte"
+    },
+    {
+      "webId": 550,
+      "internalId": "HAWK",
+      "description": "Hawker"
+    },
+    {
+      "webId": 551,
+      "internalId": "HBC",
+      "description": "Hobart Cabinet"
+    },
+    {
+      "webId": 552,
+      "internalId": "HEFT",
+      "description": "Hefty Herman"
+    },
+    {
+      "webId": 553,
+      "internalId": "HELI",
+      "description": "Heli"
+    },
+    {
+      "webId": 554,
+      "internalId": "HELM",
+      "description": "Helmar"
+    },
+    {
+      "webId": 555,
+      "internalId": "HERK",
+      "description": "Herkules"
+    },
+    {
+      "webId": 556,
+      "internalId": "HERT",
+      "description": "Hertner"
+    },
+    {
+      "webId": 557,
+      "internalId": "HIGR",
+      "description": "HI-Gear"
+    },
+    {
+      "webId": 558,
+      "internalId": "HILM",
+      "description": "Hilman Rollers"
+    },
+    {
+      "webId": 559,
+      "internalId": "HIN",
+      "description": "Hinowa"
+    },
+    {
+      "webId": 560,
+      "internalId": "HIVC",
+      "description": "Hi-Vac"
+    },
+    {
+      "webId": 561,
+      "internalId": "HKS",
+      "description": "HK Systems"
+    },
+    {
+      "webId": 562,
+      "internalId": "HOB",
+      "description": "Ametek"
+    },
+    {
+      "webId": 563,
+      "internalId": "HODG",
+      "description": "Hodge Mfg"
+    },
+    {
+      "webId": 564,
+      "internalId": "HOI",
+      "description": "Hoist Liftruck"
+    },
+    {
+      "webId": 565,
+      "internalId": "HOIS",
+      "description": "Hoist & Crane"
+    },
+    {
+      "webId": 566,
+      "internalId": "HOLL",
+      "description": "Holland Vision"
+    },
+    {
+      "webId": 567,
+      "internalId": "HOND",
+      "description": "Honda"
+    },
+    {
+      "webId": 568,
+      "internalId": "HONM",
+      "description": "Honeyman"
+    },
+    {
+      "webId": 15810404,
+      "internalId": "HPWA",
+      "description": "Husky Power"
+    },
+    {
+      "webId": 569,
+      "internalId": "HSI",
+      "description": "Harris Stopler"
+    },
+    {
+      "webId": 570,
+      "internalId": "HSIN",
+      "description": "Hdlg Sys Int"
+    },
+    {
+      "webId": 571,
+      "internalId": "HUBT",
+      "description": "Hubtex"
+    },
+    {
+      "webId": 572,
+      "internalId": "HUL",
+      "description": "Hulift"
+    },
+    {
+      "webId": 573,
+      "internalId": "HUNT",
+      "description": "Hunter Lifts"
+    },
+    {
+      "webId": 574,
+      "internalId": "HUSK",
+      "description": "Husky Rack"
+    },
+    {
+      "webId": 575,
+      "internalId": "HWIL",
+      "description": "H Wilson Co."
+    },
+    {
+      "webId": 15810405,
+      "internalId": "HYBR",
+      "description": "Hy-Brid Lifts!"
+    },
+    {
+      "webId": 576,
+      "internalId": "HYDA",
+      "description": "Hyundai"
+    },
+    {
+      "webId": 577,
+      "internalId": "HYLF",
+      "description": "Hy-Lifter"
+    },
+    {
+      "webId": 578,
+      "internalId": "HYRD",
+      "description": "Hyrdrodyne"
+    },
+    {
+      "webId": 579,
+      "internalId": "HYS",
+      "description": "Hyster"
+    },
+    {
+      "webId": 580,
+      "internalId": "HYT",
+      "description": "Hytrol"
+    },
+    {
+      "webId": 581,
+      "internalId": "IBC",
+      "description": "IBC"
+    },
+    {
+      "webId": 582,
+      "internalId": "IBE",
+      "description": "Ind Batery Eng"
+    },
+    {
+      "webId": 583,
+      "internalId": "IDPX",
+      "description": "IndustriaPlex"
+    },
+    {
+      "webId": 584,
+      "internalId": "IDSH",
+      "description": "Ideal Shield"
+    },
+    {
+      "webId": 585,
+      "internalId": "IEP",
+      "description": "Illinois Eng Pr"
+    },
+    {
+      "webId": 586,
+      "internalId": "IMCO",
+      "description": "Impco"
+    },
+    {
+      "webId": 587,
+      "internalId": "IN-S",
+      "description": "InStock Storage"
+    },
+    {
+      "webId": 588,
+      "internalId": "INBA",
+      "description": "Interstate Batt"
+    },
+    {
+      "webId": 590,
+      "internalId": "INCD",
+      "description": "Incord"
+    },
+    {
+      "webId": 591,
+      "internalId": "INDW",
+      "description": "Indiana Wire"
+    },
+    {
+      "webId": 592,
+      "internalId": "INFI",
+      "description": "Infinity"
+    },
+    {
+      "webId": 593,
+      "internalId": "INGR",
+      "description": "Ingersoll-Rand"
+    },
+    {
+      "webId": 594,
+      "internalId": "INT",
+      "description": "Intrupa"
+    },
+    {
+      "webId": 595,
+      "internalId": "INTE",
+      "description": "Interthor"
+    },
+    {
+      "webId": 596,
+      "internalId": "INTL",
+      "description": "Interlake"
+    },
+    {
+      "webId": 597,
+      "internalId": "INTM",
+      "description": "Intermec"
+    },
+    {
+      "webId": 598,
+      "internalId": "INTO",
+      "description": "Interroll"
+    },
+    {
+      "webId": 599,
+      "internalId": "INTR",
+      "description": "International"
+    },
+    {
+      "webId": 600,
+      "internalId": "IPC",
+      "description": "IPC Eagle"
+    },
+    {
+      "webId": 601,
+      "internalId": "IRON",
+      "description": "Ironclad"
+    },
+    {
+      "webId": 602,
+      "internalId": "ISP",
+      "description": "ISP Balers"
+    },
+    {
+      "webId": 603,
+      "internalId": "ITC",
+      "description": "ITC Mfg"
+    },
+    {
+      "webId": 604,
+      "internalId": "ITW",
+      "description": "ITW Muller"
+    },
+    {
+      "webId": 605,
+      "internalId": "J&L",
+      "description": "J & L Wire"
+    },
+    {
+      "webId": 606,
+      "internalId": "JAM",
+      "description": "Jamco Products"
+    },
+    {
+      "webId": 607,
+      "internalId": "JAMS",
+      "description": "Jamison Doors"
+    },
+    {
+      "webId": 608,
+      "internalId": "JARK",
+      "description": "Jarke Corp"
+    },
+    {
+      "webId": 609,
+      "internalId": "JAS",
+      "description": "JAS Trailer"
+    },
+    {
+      "webId": 610,
+      "internalId": "JCB",
+      "description": "JCB"
+    },
+    {
+      "webId": 611,
+      "internalId": "JDER",
+      "description": "John Deere"
+    },
+    {
+      "webId": 612,
+      "internalId": "JESC",
+      "description": "Jesco"
+    },
+    {
+      "webId": 613,
+      "internalId": "JET",
+      "description": "Jet Pallet truc"
+    },
+    {
+      "webId": 614,
+      "internalId": "JLG",
+      "description": "JLG"
+    },
+    {
+      "webId": 615,
+      "internalId": "JSTR",
+      "description": "Justrite Mnfg"
+    },
+    {
+      "webId": 616,
+      "internalId": "JSTW",
+      "description": "Just Wire"
+    },
+    {
+      "webId": 617,
+      "internalId": "JUNG",
+      "description": "Jungheinrich"
+    },
+    {
+      "webId": 618,
+      "internalId": "JW",
+      "description": "J. W. Speaker"
+    },
+    {
+      "webId": 619,
+      "internalId": "K&M",
+      "description": "K & M Machine"
+    },
+    {
+      "webId": 620,
+      "internalId": "K&T",
+      "description": "K & T Construct"
+    },
+    {
+      "webId": 621,
+      "internalId": "K&W",
+      "description": "K&W"
+    },
+    {
+      "webId": 622,
+      "internalId": "KAL",
+      "description": "Kalmar AC"
+    },
+    {
+      "webId": 623,
+      "internalId": "KANA",
+      "description": "Kanawha Scales"
+    },
+    {
+      "webId": 624,
+      "internalId": "KARC",
+      "description": "Karcher"
+    },
+    {
+      "webId": 625,
+      "internalId": "KARR",
+      "description": "Karrior"
+    },
+    {
+      "webId": 626,
+      "internalId": "KAW",
+      "description": "Kawasaki"
+    },
+    {
+      "webId": 627,
+      "internalId": "KD",
+      "description": "KD MANITOU"
+    },
+    {
+      "webId": 628,
+      "internalId": "KDE",
+      "description": "Kelly Dock Equi"
+    },
+    {
+      "webId": 629,
+      "internalId": "KDL",
+      "description": "KD Lift"
+    },
+    {
+      "webId": 630,
+      "internalId": "KEN",
+      "description": "Keneco"
+    },
+    {
+      "webId": 631,
+      "internalId": "KENM",
+      "description": "Kentucky Manf."
+    },
+    {
+      "webId": 632,
+      "internalId": "KENT",
+      "description": "Kent"
+    },
+    {
+      "webId": 633,
+      "internalId": "KENW",
+      "description": "Kenworth"
+    },
+    {
+      "webId": 634,
+      "internalId": "KESM",
+      "description": "Kesmac"
+    },
+    {
+      "webId": 635,
+      "internalId": "KEY",
+      "description": "Keytroller"
+    },
+    {
+      "webId": 636,
+      "internalId": "KIN",
+      "description": "Kinedyne"
+    },
+    {
+      "webId": 637,
+      "internalId": "KING",
+      "description": "Kingway"
+    },
+    {
+      "webId": 638,
+      "internalId": "KINN",
+      "description": "Kinnear"
+    },
+    {
+      "webId": 639,
+      "internalId": "KNGP",
+      "description": "King Pallet Jak"
+    },
+    {
+      "webId": 15810406,
+      "internalId": "KOCH",
+      "description": "Koch Equipment"
+    },
+    {
+      "webId": 15810407,
+      "internalId": "KODI",
+      "description": "Kodiak"
+    },
+    {
+      "webId": 15810408,
+      "internalId": "KOEH",
+      "description": "Koehring Cranes"
+    },
+    {
+      "webId": 640,
+      "internalId": "KOKE",
+      "description": "Koke"
+    },
+    {
+      "webId": 641,
+      "internalId": "KOM",
+      "description": "Komatsu"
+    },
+    {
+      "webId": 642,
+      "internalId": "KONS",
+      "description": "Konstant Produc"
+    },
+    {
+      "webId": 643,
+      "internalId": "KORY",
+      "description": "Kornylak"
+    },
+    {
+      "webId": 644,
+      "internalId": "KTI",
+      "description": "Kinetic Techno"
+    },
+    {
+      "webId": 645,
+      "internalId": "KUBO",
+      "description": "Kubota"
+    },
+    {
+      "webId": 646,
+      "internalId": "LABR",
+      "description": "Labor"
+    },
+    {
+      "webId": 647,
+      "internalId": "LAF",
+      "description": "Lafis"
+    },
+    {
+      "webId": 648,
+      "internalId": "LAL",
+      "description": "Lift-a-loft"
+    },
+    {
+      "webId": 649,
+      "internalId": "LAMR",
+      "description": "Lamarche"
+    },
+    {
+      "webId": 15810409,
+      "internalId": "LANC",
+      "description": "Lancer"
+    },
+    {
+      "webId": 650,
+      "internalId": "LAND",
+      "description": "Landoll"
+    },
+    {
+      "webId": 651,
+      "internalId": "LANG",
+      "description": "Langley Mfg."
+    },
+    {
+      "webId": 652,
+      "internalId": "LANS",
+      "description": "Lansing"
+    },
+    {
+      "webId": 653,
+      "internalId": "LANT",
+      "description": "Lantech"
+    },
+    {
+      "webId": 654,
+      "internalId": "LDKG",
+      "description": "Load King"
+    },
+    {
+      "webId": 655,
+      "internalId": "LEE",
+      "description": "Lee Enginering"
+    },
+    {
+      "webId": 656,
+      "internalId": "LEGD",
+      "description": "Legend"
+    },
+    {
+      "webId": 657,
+      "internalId": "LEIS",
+      "description": "Leisure Craft I"
+    },
+    {
+      "webId": 658,
+      "internalId": "LEK",
+      "description": "Lektro"
+    },
+    {
+      "webId": 659,
+      "internalId": "LEST",
+      "description": "Lester"
+    },
+    {
+      "webId": 660,
+      "internalId": "LEWB",
+      "description": "Lewis Bins"
+    },
+    {
+      "webId": 661,
+      "internalId": "LEWC",
+      "description": "Lewco Mat. Hand"
+    },
+    {
+      "webId": 662,
+      "internalId": "LEWI",
+      "description": "Lewis Shepard"
+    },
+    {
+      "webId": 663,
+      "internalId": "LFTK",
+      "description": "Lift King"
+    },
+    {
+      "webId": 664,
+      "internalId": "LFTR",
+      "description": "Lift-Rite"
+    },
+    {
+      "webId": 665,
+      "internalId": "LGIA",
+      "description": "Little Giant"
+    },
+    {
+      "webId": 666,
+      "internalId": "LIBT",
+      "description": "Liberty"
+    },
+    {
+      "webId": 667,
+      "internalId": "LIFK",
+      "description": "Use LIFT"
+    },
+    {
+      "webId": 668,
+      "internalId": "LIFO",
+      "description": "Liftomatic"
+    },
+    {
+      "webId": 669,
+      "internalId": "LIFP",
+      "description": "Lift Products"
+    },
+    {
+      "webId": 670,
+      "internalId": "LIFT",
+      "description": "Lift Technologi"
+    },
+    {
+      "webId": 671,
+      "internalId": "LIFX",
+      "description": "Liftex"
+    },
+    {
+      "webId": 672,
+      "internalId": "LINC",
+      "description": "Lincoln Elec"
+    },
+    {
+      "webId": 673,
+      "internalId": "LIND",
+      "description": "Linde-Baker"
+    },
+    {
+      "webId": 674,
+      "internalId": "LIQU",
+      "description": "Liquid Inc."
+    },
+    {
+      "webId": 675,
+      "internalId": "LISA",
+      "description": "Lista Mfg"
+    },
+    {
+      "webId": 676,
+      "internalId": "LIST",
+      "description": "List Industries"
+    },
+    {
+      "webId": 677,
+      "internalId": "LIT",
+      "description": "Leader Ind Tire"
+    },
+    {
+      "webId": 678,
+      "internalId": "LNDA",
+      "description": "Landa"
+    },
+    {
+      "webId": 679,
+      "internalId": "LODI",
+      "description": "Lodi Metal Tech"
+    },
+    {
+      "webId": 680,
+      "internalId": "LOGI",
+      "description": "Logitrans"
+    },
+    {
+      "webId": 681,
+      "internalId": "LOLF",
+      "description": "Load Lifter"
+    },
+    {
+      "webId": 682,
+      "internalId": "LON",
+      "description": "Long Reach"
+    },
+    {
+      "webId": 683,
+      "internalId": "LORO",
+      "description": "Loron Inc."
+    },
+    {
+      "webId": 684,
+      "internalId": "LOUI",
+      "description": "Louisville Ladd"
+    },
+    {
+      "webId": 685,
+      "internalId": "LOWR",
+      "description": "Lowery"
+    },
+    {
+      "webId": 686,
+      "internalId": "LOZ",
+      "description": "Lozier"
+    },
+    {
+      "webId": 687,
+      "internalId": "LSHE",
+      "description": "Lewis-Shepard"
+    },
+    {
+      "webId": 688,
+      "internalId": "LTS",
+      "description": "LTS Scale"
+    },
+    {
+      "webId": 689,
+      "internalId": "LUDL",
+      "description": "Ludlow Composit"
+    },
+    {
+      "webId": 690,
+      "internalId": "LULL",
+      "description": "Lull"
+    },
+    {
+      "webId": 691,
+      "internalId": "LUMP",
+      "description": "Lumper Ind."
+    },
+    {
+      "webId": 692,
+      "internalId": "LYNN",
+      "description": "Lynn Ladder"
+    },
+    {
+      "webId": 693,
+      "internalId": "LYON",
+      "description": "Lyons Metal"
+    },
+    {
+      "webId": 694,
+      "internalId": "MAC",
+      "description": "Mac Chargers"
+    },
+    {
+      "webId": 695,
+      "internalId": "MACH",
+      "description": "Master Chemical"
+    },
+    {
+      "webId": 696,
+      "internalId": "MAGL",
+      "description": "Magline"
+    },
+    {
+      "webId": 697,
+      "internalId": "MAL",
+      "description": "Mallard Manf"
+    },
+    {
+      "webId": 698,
+      "internalId": "MALV",
+      "description": "Malavac Inc"
+    },
+    {
+      "webId": 699,
+      "internalId": "MANA",
+      "description": "Manaras"
+    },
+    {
+      "webId": 700,
+      "internalId": "MANC",
+      "description": "Manco Mfg"
+    },
+    {
+      "webId": 701,
+      "internalId": "MANI",
+      "description": "Manitou"
+    },
+    {
+      "webId": 702,
+      "internalId": "MARA",
+      "description": "Marathon"
+    },
+    {
+      "webId": 703,
+      "internalId": "MARD",
+      "description": "Martindale Elec"
+    },
+    {
+      "webId": 704,
+      "internalId": "MARK",
+      "description": "Mark lift"
+    },
+    {
+      "webId": 705,
+      "internalId": "MARS",
+      "description": "Mars Cars"
+    },
+    {
+      "webId": 706,
+      "internalId": "MART",
+      "description": "Martin Cab Co"
+    },
+    {
+      "webId": 707,
+      "internalId": "MASH",
+      "description": "Master Halco &"
+    },
+    {
+      "webId": 708,
+      "internalId": "MAST",
+      "description": "Master Mover"
+    },
+    {
+      "webId": 709,
+      "internalId": "MAXL",
+      "description": "Maxi Lift"
+    },
+    {
+      "webId": 710,
+      "internalId": "MAXN",
+      "description": "Maxon"
+    },
+    {
+      "webId": 711,
+      "internalId": "MAXP",
+      "description": "Max Pak"
+    },
+    {
+      "webId": 712,
+      "internalId": "MAY",
+      "description": "Mayville Aerial"
+    },
+    {
+      "webId": 713,
+      "internalId": "MAYB",
+      "description": "Maybury Mat Han"
+    },
+    {
+      "webId": 714,
+      "internalId": "MC",
+      "description": "Master Craft"
+    },
+    {
+      "webId": 715,
+      "internalId": "MCCU",
+      "description": "McCullough Ind"
+    },
+    {
+      "webId": 716,
+      "internalId": "MCGR",
+      "description": "Mcguire"
+    },
+    {
+      "webId": 717,
+      "internalId": "MEC",
+      "description": "MEC Aerial"
+    },
+    {
+      "webId": 718,
+      "internalId": "MECA",
+      "description": "Mecalux"
+    },
+    {
+      "webId": 719,
+      "internalId": "MECC",
+      "description": "Mecco"
+    },
+    {
+      "webId": 720,
+      "internalId": "MECO",
+      "description": "Modern Equip Co"
+    },
+    {
+      "webId": 721,
+      "internalId": "MEDI",
+      "description": "Media Recovery"
+    },
+    {
+      "webId": 722,
+      "internalId": "MEDL",
+      "description": "Medlin Equip"
+    },
+    {
+      "webId": 723,
+      "internalId": "MELX",
+      "description": "Melex"
+    },
+    {
+      "webId": 724,
+      "internalId": "METL",
+      "description": "Metalware Shelv"
+    },
+    {
+      "webId": 725,
+      "internalId": "METR",
+      "description": "Metro"
+    },
+    {
+      "webId": 15810410,
+      "internalId": "MFGT",
+      "description": "Molded Fiber Gl"
+    },
+    {
+      "webId": 726,
+      "internalId": "MHTY",
+      "description": "Mighty Lift Inc"
+    },
+    {
+      "webId": 727,
+      "internalId": "MIDC",
+      "description": "Mid-Continental"
+    },
+    {
+      "webId": 728,
+      "internalId": "MIDS",
+      "description": "Mid State Mfg"
+    },
+    {
+      "webId": 15810411,
+      "internalId": "MILE",
+      "description": "Miller Edge Inc"
+    },
+    {
+      "webId": 729,
+      "internalId": "MILI",
+      "description": "Millipore"
+    },
+    {
+      "webId": 730,
+      "internalId": "MILL",
+      "description": "Miller"
+    },
+    {
+      "webId": 731,
+      "internalId": "MINU",
+      "description": "Minuteman"
+    },
+    {
+      "webId": 732,
+      "internalId": "MISC",
+      "description": "Miscellaneous"
+    },
+    {
+      "webId": 733,
+      "internalId": "MIT",
+      "description": "Mitsubishi"
+    },
+    {
+      "webId": 734,
+      "internalId": "MITC",
+      "description": "Mitco"
+    },
+    {
+      "webId": 735,
+      "internalId": "MLM",
+      "description": "Modern Lt Metal"
+    },
+    {
+      "webId": 736,
+      "internalId": "MLTT",
+      "description": "Multiton"
+    },
+    {
+      "webId": 737,
+      "internalId": "MLWT",
+      "description": "Millwaukee Truc"
+    },
+    {
+      "webId": 738,
+      "internalId": "MMST",
+      "description": "McMaster Carr"
+    },
+    {
+      "webId": 739,
+      "internalId": "MNRB",
+      "description": "Maine Rubber"
+    },
+    {
+      "webId": 740,
+      "internalId": "MOBL",
+      "description": "Mobil Pallet"
+    },
+    {
+      "webId": 741,
+      "internalId": "MOFF",
+      "description": "Moffett"
+    },
+    {
+      "webId": 742,
+      "internalId": "MONO",
+      "description": "Monoflo Int"
+    },
+    {
+      "webId": 743,
+      "internalId": "MORS",
+      "description": "Morse"
+    },
+    {
+      "webId": 744,
+      "internalId": "MOTR",
+      "description": "Motrec"
+    },
+    {
+      "webId": 745,
+      "internalId": "MRCK",
+      "description": "Mac-Rack"
+    },
+    {
+      "webId": 746,
+      "internalId": "MRCT",
+      "description": "Mart Cart"
+    },
+    {
+      "webId": 747,
+      "internalId": "MRKT",
+      "description": "Marketeer"
+    },
+    {
+      "webId": 748,
+      "internalId": "MSI",
+      "description": "Measurement Sys"
+    },
+    {
+      "webId": 749,
+      "internalId": "MTC",
+      "description": "MTC"
+    },
+    {
+      "webId": 750,
+      "internalId": "MTLD",
+      "description": "Mettler Toledo"
+    },
+    {
+      "webId": 751,
+      "internalId": "MULT",
+      "description": "Multi-Shifter"
+    },
+    {
+      "webId": 752,
+      "internalId": "MUST",
+      "description": "Mustang"
+    },
+    {
+      "webId": 753,
+      "internalId": "MVP",
+      "description": "More Value Part"
+    },
+    {
+      "webId": 754,
+      "internalId": "N/A",
+      "description": "Misc Part"
+    },
+    {
+      "webId": 755,
+      "internalId": "NAMC",
+      "description": "Namco"
+    },
+    {
+      "webId": 756,
+      "internalId": "NAPA",
+      "description": "Napa Automotive"
+    },
+    {
+      "webId": 757,
+      "internalId": "NASH",
+      "description": "Nashville Wire"
+    },
+    {
+      "webId": 758,
+      "internalId": "NATD",
+      "description": "National Door"
+    },
+    {
+      "webId": 759,
+      "internalId": "NATP",
+      "description": "National Partit"
+    },
+    {
+      "webId": 760,
+      "internalId": "NDSG",
+      "description": "Nordskog"
+    },
+    {
+      "webId": 761,
+      "internalId": "NECH",
+      "description": "N.E. Charger"
+    },
+    {
+      "webId": 762,
+      "internalId": "NEST",
+      "description": "Nestaflex"
+    },
+    {
+      "webId": 15810412,
+      "internalId": "NEXG",
+      "description": "Nexgen Balers"
+    },
+    {
+      "webId": 763,
+      "internalId": "NEXL",
+      "description": "Nexel Industrie"
+    },
+    {
+      "webId": 764,
+      "internalId": "NHOL",
+      "description": "New Holland"
+    },
+    {
+      "webId": 765,
+      "internalId": "NICH",
+      "description": "Nichiyu"
+    },
+    {
+      "webId": 766,
+      "internalId": "NICL",
+      "description": "Nichols"
+    },
+    {
+      "webId": 767,
+      "internalId": "NIPP",
+      "description": "Nippon"
+    },
+    {
+      "webId": 768,
+      "internalId": "NIS",
+      "description": "Nissan"
+    },
+    {
+      "webId": 769,
+      "internalId": "NITE",
+      "description": "Nitech"
+    },
+    {
+      "webId": 770,
+      "internalId": "NLST",
+      "description": "Nelson Steel"
+    },
+    {
+      "webId": 771,
+      "internalId": "NOBL",
+      "description": "Noble"
+    },
+    {
+      "webId": 772,
+      "internalId": "NOES",
+      "description": "Northeast Batt"
+    },
+    {
+      "webId": 773,
+      "internalId": "NORD",
+      "description": "Nordock"
+    },
+    {
+      "webId": 774,
+      "internalId": "NORT",
+      "description": "North American"
+    },
+    {
+      "webId": 775,
+      "internalId": "NOTO",
+      "description": "Northen Tool &"
+    },
+    {
+      "webId": 776,
+      "internalId": "NOVA",
+      "description": "Nova Technology"
+    },
+    {
+      "webId": 777,
+      "internalId": "NSS",
+      "description": "NSS Enterprises"
+    },
+    {
+      "webId": 778,
+      "internalId": "NUSO",
+      "description": "NuSource"
+    },
+    {
+      "webId": 779,
+      "internalId": "NUT",
+      "description": "Nutting"
+    },
+    {
+      "webId": 780,
+      "internalId": "NWSN",
+      "description": "Northwestern"
+    },
+    {
+      "webId": 781,
+      "internalId": "NWST",
+      "description": "NorthWest Motor"
+    },
+    {
+      "webId": 782,
+      "internalId": "NYK",
+      "description": "NYK"
+    },
+    {
+      "webId": 783,
+      "internalId": "NYLO",
+      "description": "Nylon Net"
+    },
+    {
+      "webId": 784,
+      "internalId": "OHAU",
+      "description": "OHAUS"
+    },
+    {
+      "webId": 785,
+      "internalId": "OLDH",
+      "description": "Oldham"
+    },
+    {
+      "webId": 786,
+      "internalId": "OMEG",
+      "description": "Omega Industria"
+    },
+    {
+      "webId": 787,
+      "internalId": "OMNI",
+      "description": "Omni Metalcraft"
+    },
+    {
+      "webId": 788,
+      "internalId": "ONFL",
+      "description": "Onfloor Tech"
+    },
+    {
+      "webId": 789,
+      "internalId": "OPTM",
+      "description": "Optimas"
+    },
+    {
+      "webId": 790,
+      "internalId": "ORB",
+      "description": "Orbis"
+    },
+    {
+      "webId": 791,
+      "internalId": "ORIN",
+      "description": "Orion"
+    },
+    {
+      "webId": 792,
+      "internalId": "OTIS",
+      "description": "Otis"
+    },
+    {
+      "webId": 793,
+      "internalId": "OTTA",
+      "description": "Ottawa Yard"
+    },
+    {
+      "webId": 794,
+      "internalId": "OVHD",
+      "description": "Overhead Door"
+    },
+    {
+      "webId": 795,
+      "internalId": "P&H",
+      "description": "P&H Crane"
+    },
+    {
+      "webId": 796,
+      "internalId": "PACC",
+      "description": "Pac Craft"
+    },
+    {
+      "webId": 797,
+      "internalId": "PACF",
+      "description": "Pacific Cloride"
+    },
+    {
+      "webId": 798,
+      "internalId": "PACK",
+      "description": "Packmule"
+    },
+    {
+      "webId": 799,
+      "internalId": "PACL",
+      "description": "Pacline"
+    },
+    {
+      "webId": 800,
+      "internalId": "PALF",
+      "description": "Palfinger"
+    },
+    {
+      "webId": 801,
+      "internalId": "PALL",
+      "description": "Pallet Mule"
+    },
+    {
+      "webId": 15810413,
+      "internalId": "PALO",
+      "description": "Pal O Matic"
+    },
+    {
+      "webId": 802,
+      "internalId": "PALR",
+      "description": "Pallet Runner"
+    },
+    {
+      "webId": 803,
+      "internalId": "PALT",
+      "description": "Paltier"
+    },
+    {
+      "webId": 804,
+      "internalId": "PANL",
+      "description": "Panel Built Inc"
+    },
+    {
+      "webId": 805,
+      "internalId": "PAR",
+      "description": "Par Car"
+    },
+    {
+      "webId": 806,
+      "internalId": "PARG",
+      "description": "Pargo"
+    },
+    {
+      "webId": 807,
+      "internalId": "PARK",
+      "description": "Parker"
+    },
+    {
+      "webId": 808,
+      "internalId": "PAYC",
+      "description": "Pay Casters"
+    },
+    {
+      "webId": 809,
+      "internalId": "PBM",
+      "description": "Pollard Brother"
+    },
+    {
+      "webId": 15810414,
+      "internalId": "PBMI",
+      "description": "PBM Ind Charger"
+    },
+    {
+      "webId": 811,
+      "internalId": "PEER",
+      "description": "Peerless MFG"
+    },
+    {
+      "webId": 812,
+      "internalId": "PENC",
+      "description": "Penco"
+    },
+    {
+      "webId": 813,
+      "internalId": "PENT",
+      "description": "Pentalift"
+    },
+    {
+      "webId": 814,
+      "internalId": "PERE",
+      "description": "Peregrine Inc"
+    },
+    {
+      "webId": 815,
+      "internalId": "PERM",
+      "description": "Perma Tech"
+    },
+    {
+      "webId": 816,
+      "internalId": "PETR",
+      "description": "Peterbilt"
+    },
+    {
+      "webId": 817,
+      "internalId": "PETT",
+      "description": "Pettibone"
+    },
+    {
+      "webId": 818,
+      "internalId": "PFAB",
+      "description": "Porta Fab"
+    },
+    {
+      "webId": 819,
+      "internalId": "PFLO",
+      "description": "Pflow Ind"
+    },
+    {
+      "webId": 820,
+      "internalId": "PHLS",
+      "description": "Phildelphia Sci"
+    },
+    {
+      "webId": 821,
+      "internalId": "PHTC",
+      "description": "Phil TramRail C"
+    },
+    {
+      "webId": 822,
+      "internalId": "PILO",
+      "description": "Pilot Chargers"
+    },
+    {
+      "webId": 823,
+      "internalId": "PINN",
+      "description": "Pinnacle Locker"
+    },
+    {
+      "webId": 824,
+      "internalId": "PION",
+      "description": "Pioneer"
+    },
+    {
+      "webId": 825,
+      "internalId": "PIPP",
+      "description": "Pipp Moblie"
+    },
+    {
+      "webId": 826,
+      "internalId": "PIQA",
+      "description": "Piqua Baler"
+    },
+    {
+      "webId": 827,
+      "internalId": "PKNG",
+      "description": "Porta King"
+    },
+    {
+      "webId": 828,
+      "internalId": "PLTM",
+      "description": "Pallet Master"
+    },
+    {
+      "webId": 829,
+      "internalId": "PLUK",
+      "description": "Pluskota Electr"
+    },
+    {
+      "webId": 830,
+      "internalId": "PLUS",
+      "description": "Plus One"
+    },
+    {
+      "webId": 832,
+      "internalId": "PMCO",
+      "description": "PM Consumables"
+    },
+    {
+      "webId": 833,
+      "internalId": "PMF",
+      "description": "Paris Mfg Facil"
+    },
+    {
+      "webId": 834,
+      "internalId": "PODS",
+      "description": "Podzilla"
+    },
+    {
+      "webId": 835,
+      "internalId": "POLA",
+      "description": "Polar Inc"
+    },
+    {
+      "webId": 836,
+      "internalId": "POLS",
+      "description": "Polaris"
+    },
+    {
+      "webId": 837,
+      "internalId": "POPU",
+      "description": "Power Pusher"
+    },
+    {
+      "webId": 838,
+      "internalId": "POSI",
+      "description": "PosiCharge"
+    },
+    {
+      "webId": 839,
+      "internalId": "POW",
+      "description": "PowerBoss"
+    },
+    {
+      "webId": 840,
+      "internalId": "POWA",
+      "description": "Poweramp System"
+    },
+    {
+      "webId": 841,
+      "internalId": "POWB",
+      "description": "Power Battery"
+    },
+    {
+      "webId": 842,
+      "internalId": "POWD",
+      "description": "Power Designers"
+    },
+    {
+      "webId": 843,
+      "internalId": "POWF",
+      "description": "Power Factor"
+    },
+    {
+      "webId": 844,
+      "internalId": "POWI",
+      "description": "Powers Industri"
+    },
+    {
+      "webId": 845,
+      "internalId": "POWP",
+      "description": "Power Pro"
+    },
+    {
+      "webId": 846,
+      "internalId": "POWR",
+      "description": "PowerFlow Syste"
+    },
+    {
+      "webId": 847,
+      "internalId": "PRAM",
+      "description": "Pramac"
+    },
+    {
+      "webId": 848,
+      "internalId": "PRED",
+      "description": "Predator"
+    },
+    {
+      "webId": 15810415,
+      "internalId": "PRES",
+      "description": "Prestolite Elec"
+    },
+    {
+      "webId": 849,
+      "internalId": "PRIN",
+      "description": "Princeton"
+    },
+    {
+      "webId": 850,
+      "internalId": "PRMV",
+      "description": "Prime Mover"
+    },
+    {
+      "webId": 851,
+      "internalId": "PRNT",
+      "description": "Parent Metal Pr"
+    },
+    {
+      "webId": 852,
+      "internalId": "PRO",
+      "description": "Pro Line"
+    },
+    {
+      "webId": 15810416,
+      "internalId": "PROC",
+      "description": "Pro Charging"
+    },
+    {
+      "webId": 853,
+      "internalId": "PRST",
+      "description": "Presto Lift"
+    },
+    {
+      "webId": 854,
+      "internalId": "PSP",
+      "description": "Power Storage"
+    },
+    {
+      "webId": 855,
+      "internalId": "PSTX",
+      "description": "Pacific Steamex"
+    },
+    {
+      "webId": 856,
+      "internalId": "PTR",
+      "description": "PTR Baler & Com"
+    },
+    {
+      "webId": 857,
+      "internalId": "PWFL",
+      "description": "PowrFlite"
+    },
+    {
+      "webId": 858,
+      "internalId": "PWPL",
+      "description": "Power Plug"
+    },
+    {
+      "webId": 859,
+      "internalId": "QCI",
+      "description": "QC Industries"
+    },
+    {
+      "webId": 860,
+      "internalId": "QIKC",
+      "description": "Quick Cable"
+    },
+    {
+      "webId": 861,
+      "internalId": "QSS",
+      "description": "Quantum Storage"
+    },
+    {
+      "webId": 863,
+      "internalId": "QUAN",
+      "description": "Quantronix"
+    },
+    {
+      "webId": 864,
+      "internalId": "QUIC",
+      "description": "Quick Charge"
+    },
+    {
+      "webId": 865,
+      "internalId": "R.B.",
+      "description": "RB Mfg"
+    },
+    {
+      "webId": 866,
+      "internalId": "RACB",
+      "description": "Rack Builders"
+    },
+    {
+      "webId": 867,
+      "internalId": "RACK",
+      "description": "Racking - Misc"
+    },
+    {
+      "webId": 868,
+      "internalId": "RAM",
+      "description": "Ramar Mat Handl"
+    },
+    {
+      "webId": 869,
+      "internalId": "RAPI",
+      "description": "Rapid Rack"
+    },
+    {
+      "webId": 870,
+      "internalId": "RAVA",
+      "description": "Ravas"
+    },
+    {
+      "webId": 871,
+      "internalId": "RAY",
+      "description": "Raymond"
+    },
+    {
+      "webId": 872,
+      "internalId": "RAYN",
+      "description": "Raynor"
+    },
+    {
+      "webId": 873,
+      "internalId": "RDRN",
+      "description": "Road Runner"
+    },
+    {
+      "webId": 874,
+      "internalId": "READ",
+      "description": "Reading Precast"
+    },
+    {
+      "webId": 875,
+      "internalId": "RECO",
+      "description": "Reaco Batteries"
+    },
+    {
+      "webId": 876,
+      "internalId": "REEL",
+      "description": "Reelcraft"
+    },
+    {
+      "webId": 877,
+      "internalId": "REHG",
+      "description": "Rehrig Pacific"
+    },
+    {
+      "webId": 15810417,
+      "internalId": "RELD",
+      "description": "Reldom Corp"
+    },
+    {
+      "webId": 878,
+      "internalId": "RELO",
+      "description": "Reel O Matic"
+    },
+    {
+      "webId": 879,
+      "internalId": "RENT",
+      "description": "Rental"
+    },
+    {
+      "webId": 880,
+      "internalId": "REP",
+      "description": "Republic"
+    },
+    {
+      "webId": 881,
+      "internalId": "REPS",
+      "description": "Republic Storag"
+    },
+    {
+      "webId": 882,
+      "internalId": "RESF",
+      "description": "Resurfice Corp"
+    },
+    {
+      "webId": 883,
+      "internalId": "REV",
+      "description": "Revolution"
+    },
+    {
+      "webId": 884,
+      "internalId": "RHIT",
+      "description": "Rite-Hite"
+    },
+    {
+      "webId": 885,
+      "internalId": "RICO",
+      "description": "Rico Mfg."
+    },
+    {
+      "webId": 886,
+      "internalId": "RIDG",
+      "description": "Ridg-U-Rack"
+    },
+    {
+      "webId": 887,
+      "internalId": "RIGL",
+      "description": "Rigger Lift"
+    },
+    {
+      "webId": 888,
+      "internalId": "RILN",
+      "description": "Rightline"
+    },
+    {
+      "webId": 889,
+      "internalId": "RJS",
+      "description": "RJS Corporation"
+    },
+    {
+      "webId": 890,
+      "internalId": "RMAX",
+      "description": "Riv Max"
+    },
+    {
+      "webId": 891,
+      "internalId": "ROA",
+      "description": "Roach"
+    },
+    {
+      "webId": 892,
+      "internalId": "ROBO",
+      "description": "Robopac"
+    },
+    {
+      "webId": 893,
+      "internalId": "ROL",
+      "description": "Rol Lift"
+    },
+    {
+      "webId": 894,
+      "internalId": "ROLF",
+      "description": "Roller Forks"
+    },
+    {
+      "webId": 895,
+      "internalId": "ROLL",
+      "description": "Roll-A-Way"
+    },
+    {
+      "webId": 896,
+      "internalId": "ROLS",
+      "description": "Roll Stair LLC"
+    },
+    {
+      "webId": 897,
+      "internalId": "ROLW",
+      "description": "Rol-Away"
+    },
+    {
+      "webId": 898,
+      "internalId": "ROM",
+      "description": "ROM"
+    },
+    {
+      "webId": 899,
+      "internalId": "ROSS",
+      "description": "Rossell Metal"
+    },
+    {
+      "webId": 900,
+      "internalId": "ROUS",
+      "description": "Rousseau Metal"
+    },
+    {
+      "webId": 901,
+      "internalId": "ROY",
+      "description": "Royal"
+    },
+    {
+      "webId": 15810418,
+      "internalId": "RPS",
+      "description": "R.P.S. Corp"
+    },
+    {
+      "webId": 902,
+      "internalId": "RRC",
+      "description": "Re-Rent Charge"
+    },
+    {
+      "webId": 903,
+      "internalId": "RUBB",
+      "description": "Rubbermaid"
+    },
+    {
+      "webId": 904,
+      "internalId": "RUGR",
+      "description": "Ruger"
+    },
+    {
+      "webId": 905,
+      "internalId": "RUNI",
+      "description": "Runi"
+    },
+    {
+      "webId": 906,
+      "internalId": "RVI",
+      "description": "RVI Mfg"
+    },
+    {
+      "webId": 907,
+      "internalId": "RWMC",
+      "description": "RWM Caster"
+    },
+    {
+      "webId": 908,
+      "internalId": "RYTC",
+      "description": "Rytec"
+    },
+    {
+      "webId": 909,
+      "internalId": "S&S",
+      "description": "S & S Tug"
+    },
+    {
+      "webId": 910,
+      "internalId": "SACK",
+      "description": "Sackett"
+    },
+    {
+      "webId": 911,
+      "internalId": "SAFC",
+      "description": "Safco"
+    },
+    {
+      "webId": 912,
+      "internalId": "SAFW",
+      "description": "Safeway"
+    },
+    {
+      "webId": 913,
+      "internalId": "SAK",
+      "description": "Sakash John Co"
+    },
+    {
+      "webId": 914,
+      "internalId": "SALE",
+      "description": "Sales"
+    },
+    {
+      "webId": 915,
+      "internalId": "SALT",
+      "description": "Salter"
+    },
+    {
+      "webId": 916,
+      "internalId": "SAM",
+      "description": "Samsung"
+    },
+    {
+      "webId": 917,
+      "internalId": "SAMU",
+      "description": "Samuel"
+    },
+    {
+      "webId": 918,
+      "internalId": "SANI",
+      "description": "Sani Tech"
+    },
+    {
+      "webId": 919,
+      "internalId": "SASE",
+      "description": "Sase Co."
+    },
+    {
+      "webId": 920,
+      "internalId": "SAVA",
+      "description": "Savage Bros."
+    },
+    {
+      "webId": 921,
+      "internalId": "SAVT",
+      "description": "Save TY Yellow"
+    },
+    {
+      "webId": 15810419,
+      "internalId": "SBS",
+      "description": "SBS Battery"
+    },
+    {
+      "webId": 922,
+      "internalId": "SCB",
+      "description": "Steele Canvas B"
+    },
+    {
+      "webId": 923,
+      "internalId": "SCHA",
+      "description": "Schaeff"
+    },
+    {
+      "webId": 924,
+      "internalId": "SCHF",
+      "description": "Schaefer"
+    },
+    {
+      "webId": 925,
+      "internalId": "SCHI",
+      "description": "Schiek Sports"
+    },
+    {
+      "webId": 926,
+      "internalId": "SCHM",
+      "description": "Schumacher"
+    },
+    {
+      "webId": 927,
+      "internalId": "SCHR",
+      "description": "Schreck"
+    },
+    {
+      "webId": 928,
+      "internalId": "SCHU",
+      "description": "Schauer"
+    },
+    {
+      "webId": 929,
+      "internalId": "SCTE",
+      "description": "Scott Equipment"
+    },
+    {
+      "webId": 930,
+      "internalId": "SCTR",
+      "description": "Scotland Rack"
+    },
+    {
+      "webId": 931,
+      "internalId": "SDC",
+      "description": "Sandusky Cab"
+    },
+    {
+      "webId": 932,
+      "internalId": "SEC",
+      "description": "Securall"
+    },
+    {
+      "webId": 933,
+      "internalId": "SELC",
+      "description": "Selco"
+    },
+    {
+      "webId": 934,
+      "internalId": "SELL",
+      "description": "Sellick"
+    },
+    {
+      "webId": 935,
+      "internalId": "SENT",
+      "description": "Sentry Protecti"
+    },
+    {
+      "webId": 936,
+      "internalId": "SERV",
+      "description": "Serco"
+    },
+    {
+      "webId": 937,
+      "internalId": "SETN",
+      "description": "Seton Identific"
+    },
+    {
+      "webId": 938,
+      "internalId": "SHDS",
+      "description": "Shields Company"
+    },
+    {
+      "webId": 939,
+      "internalId": "SHLF",
+      "description": "Shuttle Lift"
+    },
+    {
+      "webId": 940,
+      "internalId": "SHSW",
+      "description": "Shock Switch"
+    },
+    {
+      "webId": 941,
+      "internalId": "SHWA",
+      "description": "ShockWatch"
+    },
+    {
+      "webId": 15810420,
+      "internalId": "SIAT",
+      "description": "SIAT"
+    },
+    {
+      "webId": 942,
+      "internalId": "SICH",
+      "description": "Sichelschmidt"
+    },
+    {
+      "webId": 943,
+      "internalId": "SIER",
+      "description": "Sierra Shelving"
+    },
+    {
+      "webId": 944,
+      "internalId": "SILH",
+      "description": "Silent Hoist"
+    },
+    {
+      "webId": 945,
+      "internalId": "SIMN",
+      "description": "Simon"
+    },
+    {
+      "webId": 946,
+      "internalId": "SIMP",
+      "description": "Simplex"
+    },
+    {
+      "webId": 947,
+      "internalId": "SINC",
+      "description": "Sinco"
+    },
+    {
+      "webId": 948,
+      "internalId": "SING",
+      "description": "Singer Safety"
+    },
+    {
+      "webId": 949,
+      "internalId": "SKMP",
+      "description": "Skamp"
+    },
+    {
+      "webId": 950,
+      "internalId": "SKOL",
+      "description": "Skolnik Industr"
+    },
+    {
+      "webId": 951,
+      "internalId": "SKY",
+      "description": "Skyjack"
+    },
+    {
+      "webId": 952,
+      "internalId": "SKYT",
+      "description": "SkyTrak"
+    },
+    {
+      "webId": 15810421,
+      "internalId": "SLBA",
+      "description": "Southland Batte"
+    },
+    {
+      "webId": 953,
+      "internalId": "SLD",
+      "description": "Soliddeal"
+    },
+    {
+      "webId": 954,
+      "internalId": "SLIF",
+      "description": "Super Lift"
+    },
+    {
+      "webId": 955,
+      "internalId": "SMET",
+      "description": "Smetco"
+    },
+    {
+      "webId": 956,
+      "internalId": "SMH",
+      "description": "Sys Mat Handl"
+    },
+    {
+      "webId": 957,
+      "internalId": "SMIT",
+      "description": "Smith"
+    },
+    {
+      "webId": 958,
+      "internalId": "SMO",
+      "description": "SMO Packaging"
+    },
+    {
+      "webId": 959,
+      "internalId": "SNOR",
+      "description": "Snorkel Interna"
+    },
+    {
+      "webId": 960,
+      "internalId": "SOBT",
+      "description": "Southern Batter"
+    },
+    {
+      "webId": 961,
+      "internalId": "SOCO",
+      "description": "SOCO"
+    },
+    {
+      "webId": 962,
+      "internalId": "SOUW",
+      "description": "Southworth"
+    },
+    {
+      "webId": 963,
+      "internalId": "SP",
+      "description": "SP Industries"
+    },
+    {
+      "webId": 964,
+      "internalId": "SPAN",
+      "description": "Span Trak"
+    },
+    {
+      "webId": 965,
+      "internalId": "SPCG",
+      "description": "Spaceguard Prod"
+    },
+    {
+      "webId": 966,
+      "internalId": "SPCR",
+      "description": "SpaceRak"
+    },
+    {
+      "webId": 967,
+      "internalId": "SPER",
+      "description": "Sperian"
+    },
+    {
+      "webId": 968,
+      "internalId": "SPLF",
+      "description": "Speed Lift"
+    },
+    {
+      "webId": 969,
+      "internalId": "SPRK",
+      "description": "Speedrack"
+    },
+    {
+      "webId": 970,
+      "internalId": "SPT",
+      "description": "Spilltech"
+    },
+    {
+      "webId": 971,
+      "internalId": "SRC",
+      "description": "Serco"
+    },
+    {
+      "webId": 15810422,
+      "internalId": "SROK",
+      "description": "Sroka"
+    },
+    {
+      "webId": 972,
+      "internalId": "SSP",
+      "description": "Service Spring"
+    },
+    {
+      "webId": 973,
+      "internalId": "STAN",
+      "description": "Stanbury Electr"
+    },
+    {
+      "webId": 974,
+      "internalId": "STAR",
+      "description": "Starlift Parts"
+    },
+    {
+      "webId": 975,
+      "internalId": "STAT",
+      "description": "Staticon"
+    },
+    {
+      "webId": 976,
+      "internalId": "STBL",
+      "description": "StableMate"
+    },
+    {
+      "webId": 977,
+      "internalId": "STEE",
+      "description": "Steelcase"
+    },
+    {
+      "webId": 978,
+      "internalId": "STES",
+      "description": "Steel Solutions"
+    },
+    {
+      "webId": 979,
+      "internalId": "STEV",
+      "description": "Stevens"
+    },
+    {
+      "webId": 980,
+      "internalId": "STIN",
+      "description": "Steinbach"
+    },
+    {
+      "webId": 981,
+      "internalId": "STKG",
+      "description": "Steel King"
+    },
+    {
+      "webId": 982,
+      "internalId": "STOR",
+      "description": "Storage Increas"
+    },
+    {
+      "webId": 983,
+      "internalId": "STRA",
+      "description": "Strato Lift"
+    },
+    {
+      "webId": 984,
+      "internalId": "STRE",
+      "description": "Star Electric"
+    },
+    {
+      "webId": 985,
+      "internalId": "STRG",
+      "description": "Storage Battery"
+    },
+    {
+      "webId": 15810423,
+      "internalId": "STRI",
+      "description": "Stringo"
+    },
+    {
+      "webId": 986,
+      "internalId": "STRL",
+      "description": "Store-Loc"
+    },
+    {
+      "webId": 987,
+      "internalId": "STRP",
+      "description": "StraPack"
+    },
+    {
+      "webId": 988,
+      "internalId": "STVC",
+      "description": "Stanley Vidmar"
+    },
+    {
+      "webId": 989,
+      "internalId": "SUN",
+      "description": "Sun"
+    },
+    {
+      "webId": 990,
+      "internalId": "SUP",
+      "description": "Superior Mfg"
+    },
+    {
+      "webId": 991,
+      "internalId": "SUPE",
+      "description": "Superior Eng."
+    },
+    {
+      "webId": 15810424,
+      "internalId": "SUPL",
+      "description": "Superlift"
+    },
+    {
+      "webId": 992,
+      "internalId": "SUPR",
+      "description": "Supply Resource"
+    },
+    {
+      "webId": 993,
+      "internalId": "SUZU",
+      "description": "Suzuki"
+    },
+    {
+      "webId": 994,
+      "internalId": "SWIN",
+      "description": "Swinger"
+    },
+    {
+      "webId": 995,
+      "internalId": "SWPX",
+      "description": "Sweepx"
+    },
+    {
+      "webId": 996,
+      "internalId": "TAIL",
+      "description": "Taillift"
+    },
+    {
+      "webId": 997,
+      "internalId": "TAKE",
+      "description": "Takeuchi"
+    },
+    {
+      "webId": 998,
+      "internalId": "TAMC",
+      "description": "Tamco Foods"
+    },
+    {
+      "webId": 999,
+      "internalId": "TASK",
+      "description": "Taski"
+    },
+    {
+      "webId": 1000,
+      "internalId": "TAY",
+      "description": "Taylor Dunn"
+    },
+    {
+      "webId": 1001,
+      "internalId": "TAYC",
+      "description": "Taylor Crane"
+    },
+    {
+      "webId": 1002,
+      "internalId": "TAYL",
+      "description": "Taylor"
+    },
+    {
+      "webId": 1003,
+      "internalId": "TBRT",
+      "description": "Thombert, Inc"
+    },
+    {
+      "webId": 1004,
+      "internalId": "TCM",
+      "description": "TCM"
+    },
+    {
+      "webId": 1005,
+      "internalId": "TECH",
+      "description": "Techno Truck"
+    },
+    {
+      "webId": 1006,
+      "internalId": "TELD",
+      "description": "Teledyne"
+    },
+    {
+      "webId": 1007,
+      "internalId": "TELE",
+      "description": "Telescope"
+    },
+    {
+      "webId": 1008,
+      "internalId": "TENS",
+      "description": "Tennsco Corp"
+    },
+    {
+      "webId": 1009,
+      "internalId": "TENT",
+      "description": "Tennant"
+    },
+    {
+      "webId": 1010,
+      "internalId": "TFE",
+      "description": "TFE POWER TRANS"
+    },
+    {
+      "webId": 1011,
+      "internalId": "THER",
+      "description": "Thermo Scientif"
+    },
+    {
+      "webId": 1012,
+      "internalId": "THEU",
+      "description": "Theuber"
+    },
+    {
+      "webId": 1013,
+      "internalId": "THK",
+      "description": "Thork"
+    },
+    {
+      "webId": 1014,
+      "internalId": "THOM",
+      "description": "Thomas"
+    },
+    {
+      "webId": 1015,
+      "internalId": "TIRS",
+      "description": "Tiresocks"
+    },
+    {
+      "webId": 1016,
+      "internalId": "TKO",
+      "description": "TKO Doors"
+    },
+    {
+      "webId": 1017,
+      "internalId": "TMI",
+      "description": "TMI Inc."
+    },
+    {
+      "webId": 1018,
+      "internalId": "TOMC",
+      "description": "Tomcat"
+    },
+    {
+      "webId": 1019,
+      "internalId": "TOPP",
+      "description": "Toppy America"
+    },
+    {
+      "webId": 1020,
+      "internalId": "TORB",
+      "description": "Torbeck"
+    },
+    {
+      "webId": 1021,
+      "internalId": "TORN",
+      "description": "Tornado"
+    },
+    {
+      "webId": 1022,
+      "internalId": "TOTA",
+      "description": "Total Automatio"
+    },
+    {
+      "webId": 1023,
+      "internalId": "TOTL",
+      "description": "Totall Attachme"
+    },
+    {
+      "webId": 1024,
+      "internalId": "TOTR",
+      "description": "Toter"
+    },
+    {
+      "webId": 1025,
+      "internalId": "TOW",
+      "description": "Towmotor"
+    },
+    {
+      "webId": 1026,
+      "internalId": "TOY",
+      "description": "Toyota"
+    },
+    {
+      "webId": 1027,
+      "internalId": "TPI",
+      "description": "TPI Corp"
+    },
+    {
+      "webId": 1028,
+      "internalId": "TRAI",
+      "description": "Trailer Jockey"
+    },
+    {
+      "webId": 1029,
+      "internalId": "TRAM",
+      "description": "Tramrail"
+    },
+    {
+      "webId": 1030,
+      "internalId": "TREL",
+      "description": "TrellborgMonarc"
+    },
+    {
+      "webId": 1031,
+      "internalId": "TREX",
+      "description": "Terex"
+    },
+    {
+      "webId": 1032,
+      "internalId": "TRG",
+      "description": "The Rack Group"
+    },
+    {
+      "webId": 1033,
+      "internalId": "TRIA",
+      "description": "Tri Arc"
+    },
+    {
+      "webId": 1034,
+      "internalId": "TRIB",
+      "description": "Tri-Boro"
+    },
+    {
+      "webId": 1035,
+      "internalId": "TRIC",
+      "description": "Tri-City Indust"
+    },
+    {
+      "webId": 1036,
+      "internalId": "TRIL",
+      "description": "Tri-Lite"
+    },
+    {
+      "webId": 1037,
+      "internalId": "TRMB",
+      "description": "Trackmobile"
+    },
+    {
+      "webId": 1038,
+      "internalId": "TRO",
+      "description": "Trojan Battery"
+    },
+    {
+      "webId": 1039,
+      "internalId": "TRRK",
+      "description": "Tropic Rack"
+    },
+    {
+      "webId": 1040,
+      "internalId": "TRUE",
+      "description": "Trueline Wire G"
+    },
+    {
+      "webId": 1041,
+      "internalId": "TSA",
+      "description": "Tech Serv Assis"
+    },
+    {
+      "webId": 1042,
+      "internalId": "TUG",
+      "description": "Tug Technologie"
+    },
+    {
+      "webId": 1044,
+      "internalId": "TUV",
+      "description": "TUV"
+    },
+    {
+      "webId": 1045,
+      "internalId": "TXL",
+      "description": "TXL"
+    },
+    {
+      "webId": 1046,
+      "internalId": "TYGD",
+      "description": "Tygard"
+    },
+    {
+      "webId": 1047,
+      "internalId": "ULIN",
+      "description": "Uline"
+    },
+    {
+      "webId": 1048,
+      "internalId": "ULSR",
+      "description": "US Laser"
+    },
+    {
+      "webId": 1049,
+      "internalId": "ULTL",
+      "description": "Ultra Lift"
+    },
+    {
+      "webId": 1050,
+      "internalId": "ULTR",
+      "description": "Ultra-Fab Prod."
+    },
+    {
+      "webId": 1051,
+      "internalId": "UNAR",
+      "description": "Unarco"
+    },
+    {
+      "webId": 1052,
+      "internalId": "UNEX",
+      "description": "Unex"
+    },
+    {
+      "webId": 1053,
+      "internalId": "UNIS",
+      "description": "UNISAN Products"
+    },
+    {
+      "webId": 1054,
+      "internalId": "UNRC",
+      "description": "United Receptac"
+    },
+    {
+      "webId": 1055,
+      "internalId": "UPRT",
+      "description": "Upright"
+    },
+    {
+      "webId": 1056,
+      "internalId": "USP",
+      "description": "United Steel Pr"
+    },
+    {
+      "webId": 15810425,
+      "internalId": "VACT",
+      "description": "Vac-Tron"
+    },
+    {
+      "webId": 1057,
+      "internalId": "VALY",
+      "description": "Valley Craft"
+    },
+    {
+      "webId": 1058,
+      "internalId": "VART",
+      "description": "Varta"
+    },
+    {
+      "webId": 1059,
+      "internalId": "VERS",
+      "description": "Versacart"
+    },
+    {
+      "webId": 1060,
+      "internalId": "VERT",
+      "description": "Vertispace"
+    },
+    {
+      "webId": 1061,
+      "internalId": "VEST",
+      "description": "Vestil"
+    },
+    {
+      "webId": 1062,
+      "internalId": "VETC",
+      "description": "Vertech"
+    },
+    {
+      "webId": 1063,
+      "internalId": "VISI",
+      "description": "Visionmark"
+    },
+    {
+      "webId": 1064,
+      "internalId": "VLFT",
+      "description": "Viking Lift"
+    },
+    {
+      "webId": 1065,
+      "internalId": "VMAR",
+      "description": "V. Mariotti"
+    },
+    {
+      "webId": 1066,
+      "internalId": "VOLT",
+      "description": "Voltex"
+    },
+    {
+      "webId": 1067,
+      "internalId": "VRSL",
+      "description": "Versa Lift"
+    },
+    {
+      "webId": 1068,
+      "internalId": "WACO",
+      "description": "Waco"
+    },
+    {
+      "webId": 1069,
+      "internalId": "WALD",
+      "description": "Waldon Manufact"
+    },
+    {
+      "webId": 1070,
+      "internalId": "WARE",
+      "description": "Warehouse Equip"
+    },
+    {
+      "webId": 1071,
+      "internalId": "WARS",
+      "description": "WarehouseRack"
+    },
+    {
+      "webId": 1072,
+      "internalId": "WAS",
+      "description": "W. A. Schmidt"
+    },
+    {
+      "webId": 1073,
+      "internalId": "WASC",
+      "description": "WA Schmidt"
+    },
+    {
+      "webId": 1074,
+      "internalId": "WAYD",
+      "description": "Wayne Dalton"
+    },
+    {
+      "webId": 1075,
+      "internalId": "WCK",
+      "description": "WC Ketterman In"
+    },
+    {
+      "webId": 1076,
+      "internalId": "WEIG",
+      "description": "Weigh Tronix"
+    },
+    {
+      "webId": 1077,
+      "internalId": "WELC",
+      "description": "Weldoca"
+    },
+    {
+      "webId": 1078,
+      "internalId": "WELD",
+      "description": "Weld Fab"
+    },
+    {
+      "webId": 15810426,
+      "internalId": "WELS",
+      "description": "Weldsale"
+    },
+    {
+      "webId": 1079,
+      "internalId": "WEMC",
+      "description": "Weber Elec Man"
+    },
+    {
+      "webId": 1080,
+      "internalId": "WENC",
+      "description": "Wenco"
+    },
+    {
+      "webId": 1081,
+      "internalId": "WERN",
+      "description": "Werner Ladder"
+    },
+    {
+      "webId": 1082,
+      "internalId": "WESC",
+      "description": "Wesco"
+    },
+    {
+      "webId": 1083,
+      "internalId": "WESF",
+      "description": "Westfalia Techn"
+    },
+    {
+      "webId": 1084,
+      "internalId": "WESP",
+      "description": "Western Pacific"
+    },
+    {
+      "webId": 1085,
+      "internalId": "WFLX",
+      "description": "Wear-Flex"
+    },
+    {
+      "webId": 15810427,
+      "internalId": "WHEA",
+      "description": "Wheaton & Sons"
+    },
+    {
+      "webId": 1086,
+      "internalId": "WHIT",
+      "description": "White"
+    },
+    {
+      "webId": 1087,
+      "internalId": "WHOG",
+      "description": "Wholesale Gate"
+    },
+    {
+      "webId": 1088,
+      "internalId": "WHSR",
+      "description": "Warehouse Rack"
+    },
+    {
+      "webId": 1089,
+      "internalId": "WHTG",
+      "description": "Whiting"
+    },
+    {
+      "webId": 1090,
+      "internalId": "WIGG",
+      "description": "Wiggins Lift"
+    },
+    {
+      "webId": 1091,
+      "internalId": "WILD",
+      "description": "Wildcat"
+    },
+    {
+      "webId": 1092,
+      "internalId": "WILL",
+      "description": "Willmar"
+    },
+    {
+      "webId": 1093,
+      "internalId": "WIN",
+      "description": "Windsor Ind"
+    },
+    {
+      "webId": 1094,
+      "internalId": "WINN",
+      "description": "Winn Pallet Mst"
+    },
+    {
+      "webId": 1095,
+      "internalId": "WIRC",
+      "description": "Wirecrafters"
+    },
+    {
+      "webId": 1096,
+      "internalId": "WIS",
+      "description": "Wise Co"
+    },
+    {
+      "webId": 1097,
+      "internalId": "WIX",
+      "description": "Wix"
+    },
+    {
+      "webId": 1098,
+      "internalId": "WLDK",
+      "description": "Wil-Deck"
+    },
+    {
+      "webId": 1099,
+      "internalId": "WMCW",
+      "description": "Wilbanks McWort"
+    },
+    {
+      "webId": 1100,
+      "internalId": "WMH",
+      "description": "WMH Tool Grou"
+    },
+    {
+      "webId": 1101,
+      "internalId": "WORK",
+      "description": "Worksman"
+    },
+    {
+      "webId": 1102,
+      "internalId": "WORL",
+      "description": "World-Lift"
+    },
+    {
+      "webId": 1103,
+      "internalId": "WRFL",
+      "description": "Warefield Elect"
+    },
+    {
+      "webId": 1104,
+      "internalId": "WST",
+      "description": "Williams Steel"
+    },
+    {
+      "webId": 1105,
+      "internalId": "WULF",
+      "description": "Wulftec"
+    },
+    {
+      "webId": 1106,
+      "internalId": "WWH",
+      "description": "Wireway Husky"
+    },
+    {
+      "webId": 1107,
+      "internalId": "WYK",
+      "description": "WYK Sorbents"
+    },
+    {
+      "webId": 1108,
+      "internalId": "XTRA",
+      "description": "XtraPower"
+    },
+    {
+      "webId": 1109,
+      "internalId": "YAL",
+      "description": "Yale"
+    },
+    {
+      "webId": 1110,
+      "internalId": "YAM",
+      "description": "Yam"
+    },
+    {
+      "webId": 1111,
+      "internalId": "YAMA",
+      "description": "Yamaha Golf Car"
+    },
+    {
+      "webId": 1112,
+      "internalId": "YUAS",
+      "description": "Yuasa"
+    },
+    {
+      "webId": 1113,
+      "internalId": "ZAMB",
+      "description": "Zamboni"
+    },
+    {
+      "webId": 15810428,
+      "internalId": "ZEFE",
+      "description": "Zefer"
+    },
+    {
+      "webId": 1114,
+      "internalId": "ZEP",
+      "description": "ZEP Mfg"
+    }
+  ]
+}

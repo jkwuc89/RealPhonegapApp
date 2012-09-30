@@ -1,0 +1,116 @@
+<div style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "selectRepairCodeTitle" ) %></h3>
+    <p class="parts-dialog-text"><%= Localization.getText( "selectRepairCodePrompt" ) %></p>
+
+    <%
+        // Split out the current repair code so that we can set the
+        // selects below to match the current repair code
+        var currentSegment1JobCode = "";
+        var currentSegment2JobCode = "";
+        var currentSegment3JobCode = ""; 
+        if ( currentRepairCodeId ) {
+            currentSegment1JobCode = currentRepairCodeId.substr( 0, 2 );
+            currentSegment2JobCode = currentRepairCodeId.substr( 2, 2 );
+            currentSegment3JobCode = currentRepairCodeId.substr( 4 ); 
+        }
+    %>
+
+    <div data-role="fieldcontain" style="margin-left: 10px; margin-right: 10px;">
+        <select id="segment1Select" data-mini="false" onchange="ManageWorkOrderRepairDetails.onSegment1Change();">
+        <% 
+           var index = 0;
+           var selectedSegment1Index = 0;
+           var segment1List = ManageWorkOrderRepairDetails.getStandardJobCodeSegment1List();
+           var segment1JobCode = null;
+           for ( index = 0; index < segment1List.length; index++ ) {
+              segment1JobCode = segment1List[index].completeJobCode.substr( 0, 2 );
+              if ( segment1JobCode == currentSegment1JobCode ) {
+                  selectedSegment1Index = index;
+        %>
+                 <option selected="selected" value="<%= segment1List[index].completeJobCode %>"><%= segment1JobCode %> - <%= segment1List[index].description %></option>
+        <%    } else { %>
+                 <option value="<%= segment1List[index].completeJobCode %>"><%= segment1JobCode %> - <%= segment1List[index].description %></option>
+        <%    } %> 
+        <% } %>
+        </select>
+    </div>
+    <div data-role="fieldcontain" style="margin-left: 10px; margin-right: 10px;">
+        <select id="segment2Select" data-mini="false" onchange="ManageWorkOrderRepairDetails.onSegment2Change();">
+        <%
+           var selectedSegment2Index = 0;
+           var segment2List = ManageWorkOrderRepairDetails.getStandardJobCodeSegment2List( segment1List[selectedSegment1Index].completeJobCode );
+           var segment2JobCode = null;
+           for ( index = 0; index < segment2List.length; index++ ) {
+              segment2JobCode = segment2List[index].completeJobCode.substr( 2, 2 );
+              if ( segment2JobCode == currentSegment2JobCode ) {
+                  selectedSegment2Index = index;
+        %>
+                 <option selected="selected" value="<%= segment2List[index].completeJobCode %>"><%= segment2JobCode %> - <%= segment2List[index].description %></option>
+        <%    } else { %>
+                 <option value="<%= segment2List[index].completeJobCode %>"><%= segment2JobCode %> - <%= segment2List[index].description %></option>
+        <%    } %> 
+        <% } %>
+        </select>
+    </div>
+    <div data-role="fieldcontain" style="margin-left: 10px; margin-right: 10px;">
+        <select id="segment3Select" data-mini="false" onchange="ManageWorkOrderRepairDetails.onSegment3Change();">
+        <%
+           var segment3List = ManageWorkOrderRepairDetails.getStandardJobCodeSegment3List( segment2List[selectedSegment2Index].completeJobCode );
+           var segment3JobCode = null;
+           for ( index = 0; index < segment3List.length; index++ ) {
+               segment3JobCode = segment3List[index].completeJobCode.substr( 4 );
+              if ( segment3JobCode == currentSegment3JobCode ) {
+        %>
+                 <option selected="selected" value="<%= segment3List[index].completeJobCode %>"><%= segment3JobCode %> - <%= segment3List[index].description %></option>
+        <%    } else { %>
+                 <option value="<%= segment3List[index].completeJobCode %>"><%= segment3JobCode %> - <%= segment3List[index].description %></option>
+        <%    } %> 
+        <% } %>
+        </select>
+    </div>
+    
+    <p class="parts-dialog-text" style="text-align: center; font-size: 12pt; font-weight: bold;"><span id="selectedRepairCode">
+        <% if ( currentRepairCodeId ) { %>
+            <%= currentRepairCodeId %> - <%= currentRepairCodeNotes %>
+        <% } else { %>
+            <%= segment3List[0].completeJobCode %> - <%= segment3List[0].notes %>
+        <% } %>
+        </span>
+    </p>
+    
+    <hr />
+    <!-- Button content area -->
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">
+        <div class="ui-block-a">
+            <!-- Cancel closes the dialog and cancels the addition of the part to the work order -->
+            <a href="" onclick="cancel();" data-mini="false" data-role="button" data-inline="true" data-theme="c" style="width: 95%;">
+                <%= Localization.getText( "cancel" ) %>
+            </a>
+        </div>
+        <div class="ui-block-b">
+            <!-- OK saves the manufacturer selection -->
+            <a href="" data-role="button" data-mini="false" data-inline="true" data-theme="b" onclick="save();" style="width: 95%;">
+                <%= Localization.getText( "okay" ) %>
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+    /**
+     * Cancel clears the selected mfg in the view model which cancels adding the part to the list
+     */
+    function cancel() {
+        debug && console.log( "selectrepaircodedialog.cancel: Canceling repair code selection" );
+        UIFrame.closeActiveDialog();
+    }
+
+    /**
+     * Save the selected repair code
+     */
+    function save() {
+        var selectedJobCode = $("#segment3Select").val();
+        debug && console.log( "selectrepaircodedialog.save: Repair code segment 1 = " + selectedJobCode );
+        UIFrame.closeActiveDialog();
+        ManageWorkOrderRepairDetails.setRepairCode( selectedJobCode );
+    }
+</script>

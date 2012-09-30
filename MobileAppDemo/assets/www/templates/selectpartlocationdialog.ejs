@@ -1,0 +1,45 @@
+<div style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "selectPartLocationTitle" ) %></h3>
+    <p class="parts-dialog-text"><%= prompt %></p>
+
+    <input id="action" type="hidden" value="<%= action %>"/>
+    <div data-role="fieldcontain" style="margin-left: 10px; margin-right: 10px;">
+        <select id="locationList" data-mini="false">
+        <% for ( var index = 0; index < stockAreas.length; index++ ) { %>
+            <option value="<%= index %>"><%= stockAreas[index].name %></option>
+        <% } %>
+        </select>
+    </div>
+    <br/>
+    
+    <!-- OK saves the location selection -->
+    <a href="" data-role="button" data-mini="false" data-inline="true" data-theme="b"
+       onclick="saveLocation();"><%= Localization.getText( "ok" ) %></a>
+    
+    <!-- Cancel closes the dialog and cancels the addition of the part to the work order -->
+    <a href="" onclick="cancel();" data-mini="false" data-role="button" data-inline="true" data-theme="c"><%= Localization.getText( "cancel" ) %></a><br/>
+    <br/>
+</div>
+<script>
+    /**
+     * Cancel cancels adding the part to the list
+     */
+    function cancel() {
+        var action = $("#action").val();
+        debug && console.log( "selectpartlocationdialog.cancel: Canceling part location selection for action: " + action );
+        UIFrame.closeActiveDialog();
+        ManageWorkOrderParts.selectPartLocationDialogCallback( null, action, true );
+    }
+
+    /**
+     * Save the selected location
+     */
+    function saveLocation() {
+        var action = $("#action").val();
+        var selectedStockAreaIndex = $("#locationList").val();
+        debug && console.log( "selectpartlocationdialog.saveLocation: Action = " +
+                              action + ", selected location index = " + selectedStockAreaIndex );
+        UIFrame.closeActiveDialog();
+        ManageWorkOrderParts.selectPartLocationDialogCallback( selectedStockAreaIndex, action, false );
+    }
+</script>

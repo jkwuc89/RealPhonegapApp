@@ -1,0 +1,16 @@
+<div id="header" data-role="header" data-position="fixed">
+    <div class="ui-bar-a">
+        <a class="headerIcon" id="homeIcon" href=""><img class="icon-button" src="images/home-gold-up.png"></a>
+        <div data-role="fieldcontain" id="tasksMenuDiv">
+            <select id="tasksMenuSelect" translate="yes" data-native-menu="<%= UIFrame.USE_NATIVE_SELECT %>" data-mini="true" data-theme="c">
+            </select>
+        </div>
+        <h1 id="<%= pageId %>" translate="yes" class="ui-title">Translated Page Title Goes Here</h1>
+        <p id="onlineIndicator" style="color: white; font-weight: bold; font-size: 16px; position:absolute; top: 0px; right: 140px;"></p> 
+        <a class="headerIcon" id="messagesIcon" href=""><img class="icon-button" src="images/messagesicon-white-up.png"></a>
+        <a class="headerIcon" id="toolboxIcon" href=""><img class="icon-button" src="images/toolboxicon-white-up.png"></a>
+    </div>
+    <% if ( additionalHeaderTemplate != "" ) { %>
+        <%= new EJS({url: additionalHeaderTemplate }).render() %>
+    <% } %>
+</div>

@@ -1,0 +1,24 @@
+<div style="text-align:center;">
+    <div style="text-align: center;margin-top: 15px;">
+        
+        <div class="ui-grid-a" style="text-align: left;">
+            <div class="ui-block-a" style="margin-top: -10px;">
+                <p style="font-weight: bold;margin-left: 15px;"><%= Localization.getText( 'warrantyStartHeader' ) %></p>
+                <p style="font-weight: bold;margin-left: 15px;margin-top: -10px;"><%= Localization.getText( 'warrantyStartHeader' ) %></p>
+                <p style="font-weight: bold;margin-left: 15px;margin-top: -10px;"><%= Localization.getText( 'warrantyExpirationHeader' ) %></p>
+            </div>
+            
+            <div class="ui-block-b" style="margin-top: -10px;">
+                <p ><%= Localization.formatDateTime( warranty.warrantyStart, 'd' ) %></p>
+                <p style="margin-top: -10px;"><%= Localization.formatDateTime( warranty.expirationDate, 'd' ) %></p>
+                <p style="margin-top: -10px;"><%= warranty.description %></p>
+            </div>
+        </div>
+    </div>
+    
+    <hr />
+    
+    <a id="btnOkay" href="" data-role="button" data-inline="true" data-theme="b" onclick="UIFrame.closeActiveDialog();" style="width: 90%;margin-bottom: 10px;">
+        <%= Localization.getText( "okay" ) %>
+    </a>
+</div>

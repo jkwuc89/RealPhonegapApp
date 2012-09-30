@@ -1,0 +1,20 @@
+<li id="<%= pmDue.webId %>" class="open-planned-maintenance" data-icon="false" style="margin-left: 0px; margin-right: 0px;"><a>
+    <div class="ui-grid-b">
+        <div class="ui-block-a" style="margin-left: 25px;">
+            <h3><%= Localization.getText( "pmSchedule" ) %> <%= Localization.formatDateTime( pmDue.dateSchedule, 'd' ) %></h3>
+            <% if( equipment.lastServicedDate ) { %>
+                <p><%= Localization.getText( "lastServiceDateLabel") %> <%= Localization.formatDateTime( equipment.lastServiceDate, 'd' ) %></p>
+            <% } %>
+        </div>
+        <div class="ui-block-b" style="margin-left: -25px;">
+            <h3><%= Localization.getText( "pmType" ) %> </h3>
+        </div>
+        <div class="ui-block-c">
+            <% if ( standardJobCode ) { %>
+                <h3><%= standardJobCode.notes %> - <%= Localization.getText("jobCode") %> <%= standardJobCode.jobCode %></h3>
+            <% } else { %>
+                <h3><%= Localization.getText( "noAvailableJobCode") %></h3>
+             <% } %>
+        </div>
+    </div>
+</a></li>

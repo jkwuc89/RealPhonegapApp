@@ -1,0 +1,54 @@
+<li  id="equipment<%= %>" class="customer-list-item list-item-padding equipment-detail-equipment-border" data-icon="false" style="margin-left: 0px; margin-right: 0px;"><a>
+    <div class="ui-grid-c">
+        <div class="ui-block-a">
+            <div>
+                <h3><%= equipment.serialNumber %></h3>
+               <p class="work-order-list-item-text" style="margin-top: -10px;"><%= manufacturer.description %></p>
+               <p class="work-order-list-item-text"><%= equipment.product.productCode %></p>
+               <p class="work-order-list-item-text"><%= equipment.modelYear %></p>
+            </div>
+        </div>
+        <div class="ui-block-b">
+            <div>
+                <h3 id="customerIdHeader"><%= Localization.getText("customerIdHeader") %> 
+                    <% if( customerEquipmentId ) { %>
+                        <%= customerEquipmentId %>
+                    <% } %>
+                </h3>
+                <p class="work-order-list-item-text" style="margin-top: -10px;"><%= Localization.getText("pmContractHeader") %> 
+                    <%= new Date( equipment.nextPMDate ) >= new Date() ? Localization.getText( "yes" ) : Localization.getText( "no") %></p>
+                <p class="work-order-list-item-text"><%= Localization.getText("manufacturerHeader") + manufacturer.description %></p>
+                <% if ( equipment.nextPMDate ) { %>
+                    <p id="lastServiceDateLabel" class="work-order-list-item-text">
+                        <%= Localization.getText("lastServiceDateLabel") + Localization.formatDateTime( equipment.nextPMDate, 'd') %></p>
+                <% } else { %>
+                    <p id="lastServiceDateLabel" class="work-order-list-item-text">&nbsp;</p>
+                <% } %>
+            </div>
+        </div>      
+        <div class="ui-block-c">
+            <div>
+                <h3 id="warrantyHeader"><%= Localization.getText("warrantyHeader") + warrantyDisplay  %></h3>
+                <p id="hourMeterLabel" class="work-order-list-item-text" style="margin-top: -10px;"><%= Localization.getText("hourMeterHeader") + equipment.hourMeter%></p>
+                <p id="odometerLabel" class="work-order-list-item-text"><%= Localization.getText("odometerHeader") +  equipment.odometer %></p>
+            </div>
+        </div>
+        <div class="ui-block-d">
+            <img class="globe-icon-large" src="images/globe.png" />
+            
+            <div class="list-item-icon-text">
+                <h3 id="location" translate="yes"><%= customer.name %></h3>
+                <p class="work-order-list-item-text" style="margin-top: -10px;" ><%= address.street %></p>
+                
+                <!-- Required to ensure consistent HTML spacing -->
+                <% if ( address.street2 && address.street2.length > 0 ) { %>
+                    <p class="work-order-list-item-text"><%= address.street2 %></p>
+                    <p class="work-order-list-item-text"><%= address.city %>,&nbsp;<%= address.state %>&nbsp;<%= address.postalCode %></p>
+                <% } else { %>
+                    <p class="work-order-list-item-text"><%= address.city %>,&nbsp;<%= address.state %>&nbsp;<%= address.postalCode %></p>
+                    <p class="work-order-list-item-text">&nbsp;</p>
+                <% } %>
+             </div>
+        </div>
+    </div>
+</a></li>

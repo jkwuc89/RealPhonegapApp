@@ -1,0 +1,13 @@
+<div style="text-align: center;">
+    <h3 class="manage-work-order-review-signature-text" id="signature" translate="yes" style="display: inline-block;"></h3>
+    <a href="" class="manage-work-order-review-signature-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <% if( signature != null ) { %>
+        <img id="signatureImage" style="width: 300px; border-bottom: solid 1px black;" src="<%=signatureImage%>" />
+    <% } %>
+    <p style="display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <h3 class="manage-work-order-review-signature-text" style="display: inline-block;">
+    <% if( signature != null ) { %>
+        <span id="date" translate="yes"></span>:&nbsp;<span style="font-weight: normal;"><% formattedSignatureDate %></span>
+    <% } %>
+    </h3>
+</div>

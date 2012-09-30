@@ -1,0 +1,27 @@
+<div style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "startTimeTitle" ) %></h
+    <p class="clocking-dialog-text"><%= Localization.getText( "startTimePrompt" ) %></p>
+    
+    <% var startTimeIn24HourFormat = Localization.formatDateTime( startTime, 'HH:mm:ss' ); %>
+    
+    <!-- Display the time picker --> 
+    <input name="startTime" id="startTime" type="date" data-role="datebox" style="font-size: 16px;" value="<%= Localization.formatDateTime( startTime, 't' ) %>"
+           data-options='{ "mode": "timebox", "timeFormatOverride": 12, "defaultPickerValue": "<%= startTimeIn24HourFormat %>" }' /><br/><br/>
+     
+    <hr />
+    <!-- Button content area -->
+    <div id="divButtons" class="ui-grid-a" style="margin-top: -10px;">
+        <div class="ui-block-a">
+            <a href="" data-role="button" data-inline="true" data-theme="c" style="width: 95%;">
+            <%= Localization.getText( "cancel" ) %></a>
+        </div>
+        
+        <!-- Cancel closes the start time dialog and does not change the clocking status -->
+        <div class="ui-block-b">
+            <a href="" data-role="button" data-inline="true" data-theme="b" style="width: 95%;" 
+               onclick="UIFrame.closeActiveDialog(); JSONData.saveClockingStatus( '<%= newClockingStatus %>', $('#startTime').val() );">
+                <%= Localization.getText( "save" ) %>
+            </a>
+        </div>
+    </div>
+</div>

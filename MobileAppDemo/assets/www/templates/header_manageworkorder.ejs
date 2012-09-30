@@ -1,0 +1,22 @@
+<div id="manageWorkOrderHeader" class="ui-bar-d">
+    <div class="ui-grid-a" style="height: 42px;">
+        <div class="ui-block-a manage-work-order-header-status">
+            <h2 class="manage-work-order-header-status-text"><span id="status" translate="yes"></span>:&nbsp;</h2>
+            <img id="manageWorkOrderHeaderStatusIcon" src=""/>
+            <h2 class="manage-work-order-header-status-text">&nbsp;<span id="workOrderStatus"></span></h2>
+            <img id="manageWorkOrderHeaderPartsOnOrderIcon" src="images/redgearicon.png"/>
+        </div>
+        <div class="ui-block-b" style="width: 68%;">
+            <div class="manage-work-order-header-buttons">
+                <a href="" id="manageWorkOrderCustomer" class="manage-work-order-header-button button-default" translate="yes"
+                   data-role="button" data-mini="true" data-inline="true" data-theme="d"></a>
+                <a href="" id="manageWorkOrderEquipment" class="manage-work-order-header-button button-default" translate="yes"
+                   data-role="button" data-mini="true" data-inline="true" data-theme="d"></a>
+                <div data-role="fieldcontain" id="manageWorkOrderSelectDiv" style="display: none;">
+                    <select id="manageWorkOrderSelectMenu" data-native-menu="<%= UIFrame.USE_NATIVE_SELECT %>" data-mini="true" data-inline="true" data-theme="d">
+                    </select>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>

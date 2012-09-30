@@ -1,0 +1,48 @@
+<div style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "reassignWorkOrder" ) %></h3>
+    
+    <input id="workOrderId" type="hidden" value="<%= workOrder.webId %>"/>
+    <div data-role="fieldcontain" style="margin: 10px 20px 10px 20px; text-align: left;">
+        <p class="clocking-dialog-text"><span style="font-weight: bold;"><%= Localization.getText( "workOrder" ) %>:</span>&nbsp;<span><%= workOrder.documentNumber %></span></p>
+        <p class="clocking-dialog-text"><span style="font-weight: bold;"><%= Localization.getText( "customer" ) %>:</span>&nbsp;<span><%= customer.name %></span></p>
+        <% if ( equipment ) { %>
+            <p class="clocking-dialog-text"><span style="font-weight: bold;"><%= Localization.getText( "equipment" ) %>:</span>&nbsp;<span><%= equipment.serialNumber %></span></p>
+        <% } %>
+        <% if ( workOrder.workOrderSegments[0].segmentName && workOrder.workOrderSegments[0].segmentName != "null" ) { %>
+            <p class="clocking-dialog-text"><span style="font-weight: bold;"><%= Localization.getText( "description" ) %>:</span>&nbsp;<span><%= workOrder.workOrderSegments[0].segmentName %></span></p>
+        <% } %>
+        <p class="clocking-dialog-text"><span style="font-weight: bold;"><%= Localization.getText( "reason" ) %>:</span></p>
+        <textarea class="reassign-work-order-reason" name="reason" id="reason" style="rows: 3;font-size: 11pt; padding: 0em; resize: none; width: 100%;margin-top: -20px;"></textarea>
+    </div>   
+
+    <hr />
+    <!-- Button content area -->
+    <div id="divButtons" class="ui-grid-a" style="margin-top: -10px;">
+        <div class="ui-block-a">
+            <!-- Cancel closes the start time dialog and does not change the clocking status -->
+            <a href="" rel='cancel' style="width: 95%" data-mini="false" data-role="button" data-inline="true" data-theme="c"><%= Localization.getText( "cancel" ) %></a><br/>
+        </div>
+        <div class="ui-block-b">
+            <!-- Save calls back to UIFrame to save the new clocking status with start time -->
+            <a href="" data-role="button" data-mini="false" data-inline="true" data-theme="b" style="width: 95%" 
+               onclick="save();"><%= Localization.getText( "save" ) %></a>
+        </div>
+    </div>
+    <script>
+        /**
+         * Update the work order to indicate that it is rejected / reassigned. 
+         */
+        function save() {
+            var reason = $("#reason").val();
+            // Reason text must be entered
+            if ( !reason || reason.length == 0 ) {
+                alert( Localization.getText( "reassignReasonMissing" ) );                
+            } else {
+                var workOrder = JSONData.getObjectById( "workOrders", $("#workOrderId").val() );
+                UIFrame.closeActiveDialog();
+                debug && console.log( "reassignworkorderdialog.save: Reassigning work order ID " + workOrder.webId + ". Reason = '" + reason + "'");
+                WorkOrderList.reassignWorkOrder( workOrder, reason );
+            }
+        }
+    </script>
+</div>

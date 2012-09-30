@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Crown Service Force Automation</title>
+<link rel="stylesheet" href="js/libs/jquery/crownsfa.jquery.mobile-1.1.1.min.css" />   
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.datebox.min.css" />
+<link rel="stylesheet" href="js/libs/badge/badge.css" />  
+<link rel="stylesheet" href="css/leadingedjemobile.css" /> 
+<link rel="stylesheet" href="js/libs/jquery/jquerymobile-redbuttontheme.min.css" />
+</head>
+<body>
+    <div id="vanInventoryAddPage" data-role="page">
+        <div data-role="content" align="center">
+            <div class="ui-grid-a">
+                <div id="guidedSearchBlock" class="ui-block-a guided-search-block-width block-div-pos guided-search-block-div" style="margin-top: -5px;">
+                    <ul id="guidedSearchList" data-role="listview" data-filter="false" style="margin-top: -8px;">
+                    </ul>
+                </div>  
+                <div id="inventoryListBlock" class="ui-block-b list-block-width block-div-pos list-block-div" style="margin-top: -4x;">
+                    <div style="padding: 5px;background-color: #eee;border-left: solid 1px black;margin-left: -1px;margin-top: -1px;border-top: solid 1px black;">
+                        <input type="search" name="search" id="inventorySearch" value="" />
+                    </div>
+                    <ul id="vanInventoryList" data-role="listview" data-filter="false" data-filter-placeholder="Search Inventory" data-bind="foreach: inventory">
+                        <li class="van-inventory-list-item" style="margin-left: -1px;border-left: solid 1px black;">
+                            <div class="inventory-list-item" style="width: 20%">
+                              <h3 data-bind="text: productCode"></h3>
+                              <p data-bind="text: description"></p>
+                            </div>
+                            <div class="inventory-list-item" style="width: 20%">
+                              <h3 data-bind="text: manufacturer"></h3>
+                            </div>
+                            <div class="inventory-list-item" style="width: 15%">
+                              <h3 data-bind="text: binName"></h3>
+                            </div>
+                            <div data-bind="attr: { id: 'qty' + webId }" class="inventory-list-item" style="width: 10%">
+                              <h3 data-bind="text: quantity"></h3>
+                            </div>
+                            <div class="inventory-list-item" style="width: 20%">
+                                <a href="" class="manage-work-order-parts-qty-button" id="decrementPartQty" data-role="button" data-icon="minus"
+                                    data-bind="click: $parent.decrementDesiredQuantity" data-iconpos="notext" data-inline="true" style="position: relative; top: -2px;"></a>
+                                <input class="numeric-input" type="number" name="desiredQuantity" id="desiredQuantity" min="1" data-mini="true" data-inline="true"
+                                    data-bind="value: desiredQuantity, valueUpdate: 'afterkeydown'" style="position: relative; left: -7px;top: 0px;"></input>
+                                <a href="" class="manage-work-order-parts-qty-button" id="incrementPartQty" data-role="button" data-icon="plus"
+                                    data-bind="click: $parent.incrementDesiredQuantity" data-iconpos="notext" data-inline="true" data-mini="true" style="top: -2px; left: -23px;"></a>
+                                <a href="" data-bind="attr: { id: webId }, click: $parent.addMe" class="van-inventory-add-buttons"
+                                    style="position: absolute; right: 10px;bottom: 5px;" data-role="button" data-inline="true" data-theme="c"></a>
+                            </div>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>var debug = true;</script>
+        <script src="js/libs/jquery/jquery-1.8.1.min.js"></script>
+        <script src="js/libs/phonegap/cordova-2.0.0.ios.min.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/libs/jquery/jquery.dotimeout.min.js"></script>
+        <script src="js/libs/jquery/jquery.mobile-1.1.1.min.js"></script>
+        <script src="js/libs/jquery/jquery.mobile.simpledialog2.min.js"></script>
+        <script src="js/libs/jquery/jquery.mobile.datebox.min.js"></script>
+        <script src="js/libs/jquery/jquery.i18n.min.js"></script>
+        <script src="js/libs/badge/badge.js"></script>
+        <script src="js/libs/ejs/ejs_production.js"></script>
+        <script src="js/libs/knockout/knockout-2.1.0.js"></script>
+        <script src="js/libs/knockout/knockout.mapping.js"></script>
+        <script src="js/libs/underscore/underscore-min.js"></script>
+        <script src="js/libs/globalize/globalize.min.js"></script>
+        <script src="js/libs/globalize/globalize.culture.en-US.js"></script>
+        <script src="js/firefox.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/database.js"></script>
+        <script src="js/jsondata.js"></script>
+        <script src="js/translations.js"></script>
+        <script src="js/localization.js"></script>
+        <script src="js/dialog.js"></script>
+        <script src="js/uiframe.js"></script>
+        <script src="js/vaninventoryadd.js"></script>
+    </div>
+</body>
+</html>

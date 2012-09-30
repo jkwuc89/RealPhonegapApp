@@ -1,0 +1,44 @@
+<div style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "nonProductiveClockingTitle" ) %></h3>
+    <p class="clocking-dialog-text"><%= Localization.getText( "nonProductiveClockingPrompt" ) %></p>
+
+    <!-- Display non productive clocking types -->
+    <div id="nonProductiveClockingTypeSelectDiv" data-role="fieldcontain" style="width: 100%;">
+        <select name="nonProductiveClockingType" id="nonProductiveClockingType" data-native-menu="<%= UIFrame.USE_NATIVE_SELECT %>"
+                data-theme="c" data-inline="false" data-mini="false" style="width: 90%;">
+            <% for ( var i = 0; i < nonProductiveStatuses.length; i++ ) { %>
+                <option id="<%= nonProductiveStatuses[i] %>"
+                        value="<%= nonProductiveStatuses[i] %>"><%= Localization.getText( nonProductiveStatuses[i] ) %></option>
+            <% } %>
+        </select>
+    </div>
+
+    <hr /> 
+    <!-- Button content area -->
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">     
+        <div class="ui-block-a">
+            <!-- Cancel closes the start time dialog and does not change the clocking status -->
+            <a href="" rel='close' data-mini="false" data-role="button" data-inline="true" data-theme="c" style="width: 95%;">
+                <%= Localization.getText( "cancel") %></a>
+        </div>
+        <div class="ui-block-b">
+            <!-- Save calls back to UIFrame to save the new clocking status with the chosen start time -->
+            <a href="" data-role="button" data-mini="false" data-inline="true" data-theme="b" style="width: 95%;"
+               onclick="save();"><%= Localization.getText( "save") %></a>
+        </div>
+    </div>
+    <script>
+    
+        /**
+         * Save the chosen clocking status
+         */
+        function save() {
+            var clockingStatus = $('#nonProductiveClockingType').val();
+            debug && console.log( "nonproductiveclockingdialog.save: Changing clocking status to " +
+                                  clockingStatus + " using current time" );
+            UIFrame.closeActiveDialog();
+            JSONData.saveClockingStatus( clockingStatus, Util.getISOCurrentTime() );
+        }
+    </script>
+</div>
+    

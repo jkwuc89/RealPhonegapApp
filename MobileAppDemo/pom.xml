@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Maven pom for building the Crown SFA mobile application.
+
+Prerequsite:
+1.  Install JDK 1.6
+2.  Install Maven 3.0.3
+3.  Copy settings.xml from the project's buildtools directory to your .m2 directory
+4.  Install the Android SDK
+5.  Set environment variable ANDROID_HOME to the path of your installed Android SDK
+    and add $ANDROID_HOME/tools as well as $ANDROID_HOME/platform-tools to your $PATH.
+    (or on Windows %ANDROID_HOME%\tools and %ANDROID_HOME%\platform-tools).
+
+To build the APK, run mvn clean install
+
+To deploy the APK to a connected tablet, run mvn android:deploy
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.leadingedje</groupId>
+    <artifactId>MobileAppDemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>apk</packaging>
+    <name>${project.groupId}.${project.artifactId}</name>
+
+    <properties>
+        <android.sdk.path>/Users/jkwuc89/projects/android-sdk-macosx</android.sdk.path>
+        <android.sdk.version>13</android.sdk.version>
+        <build.target.directory>bin</build.target.directory>
+        <compiler.version>1.6</compiler.version>
+        <phonegap.version>2.0.0</phonegap.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <source.directory>src</source.directory>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>4.0.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cordova</groupId>
+            <artifactId>cordova</artifactId>
+            <version>${phonegap.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <directory>${build.target.directory}</directory>
+        <sourceDirectory>${source.directory}</sourceDirectory>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>3.3.0</version>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${compiler.version}</source>
+                    <target>${compiler.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <configuration>
+                    <sdk>
+                        <platform>${android.sdk.version}</platform>
+                    </sdk>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

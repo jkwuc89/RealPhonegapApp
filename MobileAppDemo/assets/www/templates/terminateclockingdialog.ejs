@@ -1,0 +1,46 @@
+<div style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "terminateClockingTitle" ) %></h3>
+    <p class="clocking-dialog-text"><%= Localization.getText( "terminateClockingPrompt" ) %></p>
+    
+    <hr /> 
+    <!-- Button content area -->
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">     
+        <div class="ui-block-a">  
+            <!-- No closes this dialog and does not change anything -->
+            <a href="" onclick="UIFrame.closeActiveDialog();" data-mini="false" data-role="button" data-inline="true" data-theme="c" style="width: 95%;">
+            <%= Localization.getText( "no" ) %></a>
+        </div>
+        <div class="ui-block-b">  
+            <!-- Yes calls back to JSONData.saveClockingStatus to set the clocking status to "Logged In" -->
+            <a href="" data-role="button" data-mini="false" data-inline="true" data-theme="b" style="width: 95%;" onclick="save();">
+            <%= Localization.getText( "yes" ) %></a>
+        </div>
+    </div>
+</div>
+<script>
+    /**
+     * Save the chosen clocking status
+     */
+    function save() {
+        UIFrame.closeActiveDialog();
+        debug && console.log( "terminateclockingdialog.save: Changing clocking status to technicianStatusNonProductive using current time" );
+        JSONData.saveClockingStatus( 'technicianStatusLoggedIn', Util.getISOCurrentTime() );
+        JSONData.setCurrentWorkOrderOnHold();
+        var currentPageId = UIFrame.getCurrentPageId(); 
+        if ( currentPageId.indexOf( "manageWorkOrder") == 0 ) {
+            // If a manage work order page is active, take user to the work orders list page
+            debug && console.log( "terminateclockingdialog.save: Navigating to work order list page" );
+            UIFrame.navigateToPage( "workorderlist.html" );            
+        } else if ( currentPageId == "workOrderListPage") {
+            // If on the work orders list page, repopulate the lists
+            debug && console.log( "terminateclockingdialog.save: Repopulating work order list views" );
+            WorkOrderList.populateListViews( WorkOrderList.getWorkOrders(), false );
+            JSONData.postWorkOrders( JSONData.getWorkOrdersRequiringPostToMiddleTier(), null );
+        } else if ( currentPageId == "homePage" ) {
+            debug && console.log( "terminateclockingdialog.save: Reloading home page" );
+            JSONData.postWorkOrders( JSONData.getWorkOrdersRequiringPostToMiddleTier(), function() {
+                UIFrame.reloadCurrentPage();    
+            });
+        }
+    }
+</script>
