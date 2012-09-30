@@ -17,8 +17,6 @@ var Localization = function() {
      */
     var DEFAULT_LANGUAGE       = "en-US";
     var LS_LANGUAGE            = "language";
-    // Separate language files not supported by tablet 
-    // var LANGUAGE_FILE_LOCATION = "js/translations/";
 
     /**
      * Change the language
@@ -31,8 +29,7 @@ var Localization = function() {
         Globalize.culture( newLang );
         if ( reloadPage ) {
             // Reload the login page
-            // window.location.reload();
-            document.location.href = "index.html";
+            UIFrame.reloadCurrentPage();
         }
     }
     
@@ -84,6 +81,7 @@ var Localization = function() {
         // Set the translation dictionary using the translations from the loaded language file
         $.i18n.setDictionary( this.currentTranslationDictionary );
         
+        // Language load complete...call the specified callback fn
         loadCallback();
     }
     
@@ -109,7 +107,7 @@ var Localization = function() {
      * is used to select all elements that must be translated
      */
     function translate() {
-        var elementsToTranslate = $("[translate='yes']");
+        var elementsToTranslate = $("[data-translate='yes']");
         var currentElement;
         for ( var i = 0; i < elementsToTranslate.length; i++ ) {
             currentElement = elementsToTranslate[i];

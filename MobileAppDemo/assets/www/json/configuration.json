@@ -5,22 +5,10 @@
     [
         {
             "webId": 1,
-            "version": "1.0.97",
-            "localWorkOrderIndex": 0,
-            "middleTierBaseUrl": "http://206.51.156.155:8080/mobileservice/",
-            "middleTierVersion": "0.1",
-            "logonUrl": "j_spring_security_check",
-            "logonTimeout": 30,
-            "enterpriseId": "520032",
+            "version": "1.0",
             "loadLocalJSONFilesOnly": false,
-            "jsonFeedUpdateUrlParameter": "?dateUpdated=",
             "dailyUpdateFrequency": 1440,
             "periodicUpdateFrequency": 5,
-            "psrtUrl": "file:///mnt/sdcard/EzParts/Crown/App/Html/EzParts.html",
-            "technicianClockingUpdateUrl": "technicianClocking/process",
-            "technicianClockingUpdateTimeout": 45,
-            "workOrderUpdateUrl": "workOrder/process",
-            "workOrderUpdateTimeout": 45,
             "jsonDatabaseFeeds":
             [
                 {

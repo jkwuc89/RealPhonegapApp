@@ -1,5 +1,5 @@
 <div style="text-align: center">
-    <h1 id="workOrder" translate="yes" style="-webkit-margin-before: .25em; -webkit-margin-after: .25em;"></h1>
+    <h1 id="workOrder" data-translate="yes" style="-webkit-margin-before: .25em; -webkit-margin-after: .25em;"></h1>
 </div>
 <!-- Branch, customer and work order info -->
 <div class="ui-grid-b">
@@ -17,24 +17,24 @@
         <p class="manage-work-order-text"><%= address.street %></p>
         <p class="manage-work-order-text"><%= address.street2 %></p>
         <p class="manage-work-order-text"><span><%= address.city %></span>,&nbsp;<span><%= address.state %></span>&nbsp;<span><%= address.postalCode %></span></p>
-        <p class="manage-work-order-text"><span id="nameHeader" translate="yes" style="font-weight: bold;"></span>&nbsp;<span><%= contact.firstName %></span>&nbsp;<span><%= contact.lastName %></span></p>
+        <p class="manage-work-order-text"><span id="nameHeader" data-translate="yes" style="font-weight: bold;"></span>&nbsp;<span><%= contact.firstName %></span>&nbsp;<span><%= contact.lastName %></span></p>
         <p class="manage-work-order-text">
             <span style="font-weight: bold;"><%= commDetails.type %></span>&nbsp;<span><%= commDetails.information %></span>
             <% if( commDetails.extension != null ) { %>
-                <span id="phoneExtension" translate="yes"></span>&nbsp;<span><%= commDetails.extension %></span>
+                <span id="phoneExtension" data-translate="yes"></span>&nbsp;<span><%= commDetails.extension %></span>
             <% } %>
         </p>
     </div>
     <div class="ui-block-c" style="width: 33%;">
-        <h3 class="manage-work-order-heading"><span id="workOrderHeader" translate="yes"></span>&nbsp;<span><%= workOrder.documentNumber %></span></h3>
+        <h3 class="manage-work-order-heading"><span id="workOrderHeader" data-translate="yes"></span>&nbsp;<span><%= workOrder.documentNumber %></span></h3>
         <p class="manage-work-order-text">
-            <span id="dateClosedHeader" translate="yes" style="font-weight: bold;"></span>&nbsp;<span><%= Localization.formatDateTime( workOrder.workOrderSegments[0].dateClosed, 'd' ) %></span>
+            <span id="dateClosedHeader" data-translate="yes" style="font-weight: bold;"></span>&nbsp;<span><%= Localization.formatDateTime( workOrder.workOrderSegments[0].dateClosed, 'd' ) %></span>
         </p>
         <p class="manage-work-order-text">
-            <span id="customerHeader" translate="yes" style="font-weight: bold;"></span>&nbsp;<span><%= customer.internalId %></span>
+            <span id="customerHeader" data-translate="yes" style="font-weight: bold;"></span>&nbsp;<span><%= customer.internalId %></span>
         </p>
         <p class="manage-work-order-text">
-            <span id="purchaseOrderHeader" translate="yes" style="font-weight: bold;"></span>&nbsp;<span>JSON TBD</span>
+            <span id="purchaseOrderHeader" data-translate="yes" style="font-weight: bold;"></span>&nbsp;<span>JSON TBD</span>
         </p>
     </div>
 </div>

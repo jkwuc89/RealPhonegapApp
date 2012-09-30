@@ -1,14 +1,14 @@
 <!-- Total labor hours -->
 <div style="text-align: right;margin-right: 20px;">
     <br/>
-    <p class="manage-work-order-text"><span id="totalLaborHours" translate="yes" style="font-weight: bold;"></span>:&nbsp;<span><%= hours %></span></p>
+    <p class="manage-work-order-text"><span id="totalLaborHours" data-translate="yes" style="font-weight: bold;"></span>:&nbsp;<span><%= hours %></span></p>
 </div> 
 
 <br/>
 
 <!-- Reported problem -->
 <div style="margin-left: 20px;">
-    <h3 class="manage-work-order-heading" id="reportedProblem" translate="yes"></h3>
+    <h3 class="manage-work-order-heading" id="reportedProblem" data-translate="yes"></h3>
     <p class="manage-work-order-text"><%= workOrder.note %></p>
 </div>
 
@@ -17,7 +17,7 @@
 
 <!-- Repair action code -->
 <div style="margin-left: 20px;">
-    <h3 class="manage-work-order-heading" id="repairActionCodeLabel" translate="yes"></h3>
+    <h3 class="manage-work-order-heading" id="repairActionCodeLabel" data-translate="yes"></h3>
     <p class="manage-work-order-text"><%= repairCode %></p>
 </div>
 
@@ -25,7 +25,7 @@
 
 <!-- Additional repair notes -->
 <div style="margin-left: 20px;">
-    <h3 class="manage-work-order-heading" id="additionalRepairNotesLabel" translate="yes"></h3>
+    <h3 class="manage-work-order-heading" id="additionalRepairNotesLabel" data-translate="yes"></h3>
     <p class="manage-work-order-text">
         <span><%= segment.notesTop %></span><br/>
         <span><%= segment.notesBottom %></span>
@@ -35,7 +35,7 @@
 <br />
 
 <div style="margin-left: 20px;">
-    <h3 class="manage-work-order-heading" id="workOrderRecipientHeader" translate="yes"></h3>
+    <h3 class="manage-work-order-heading" id="workOrderRecipientHeader" data-translate="yes"></h3>
     <% if( emailRecipient != null ) { %>
         <p class="manage-work-order-text"><span><%= emailRecipient.information %></span></p>
     <% } else { %>

@@ -14,34 +14,6 @@ var JSONData = function() {
      * Handle window onload event
      */
     $(window).load( function( event ) {
-        // After a page loads, remove the flags indicating that post saved work orders is running
-        // and post saved clockings is running
-        debug && console.log( "JSONData.window.load: Removing post saved running flags" );
-        window.localStorage.removeItem( "postSavedWorkOrdersRunning", true );
-        window.localStorage.removeItem( "postSavedTechnicianClockingsRunning", true );
-        
-        // After page navigation is complete, check the date/time stamp for 
-        // the last periodic update.  If it's been longer than periodicUpdateFrequency
-        // since the last update, run the update now.
-        if ( Util.isOnline() ) {
-            debug && console.log( "JSONData.window.load: Checking last time periodic JSON feed update executed" );
-            var periodicJSONUpdateNeeded = false;
-            if ( getConfig().dateTimePeriodicUpdate ) {
-                var now = new Date().getTime();
-                var lastPeriodicUpdate = new Date( getConfig().dateTimePeriodicUpdate ).getTime();
-                if ( ( now - lastPeriodicUpdate ) > getConfig().periodicUpdateFrequency * 60 * 1000 ) {
-                    periodicJSONUpdateNeeded = true;
-                }
-            } else {
-                periodicJSONUpdateNeeded = true;
-            }
-            if ( periodicJSONUpdateNeeded ) {
-                debug && console.log( "JSONData.window.load: Running periodic JSON feed update" );
-                JSONData.getPeriodicJSONFeedUpdates();
-            } else {
-                debug && console.log( "JSONData.window.load: Periodic JSON feed update not needed" );
-            }
-        }
     });
     
     /**

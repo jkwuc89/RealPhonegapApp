@@ -17,15 +17,15 @@
                 <!-- Icon bar -->
                 <div class="ui-block-a manage-work-order-icon-bar">
                     <a href="" onclick="UIFrame.navigateToPage('manageworkorderoverview.html');"><img class="manage-work-order-icon-button" id="manageWorkOrderOverviewIcon" src="images/manageworkorder-overview-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderOverview" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderOverview" data-translate="yes"></p>
                     <a href="" onclick="UIFrame.navigateToPage('manageworkorderdiagnostics.html');"><img class="manage-work-order-icon-button" id="manageWorkOrderDiagnosticsIcon" src="images/manageworkorder-diagnostics-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderDiagnostics" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderDiagnostics" data-translate="yes"></p>
                     <img class="manage-work-order-icon" id="manageWorkOrderRepairWorkIcon" src="images/manageworkorder-repair-active.png" />
-                    <p class="manage-work-order-icon-active-text" id="manageWorkOrderRepairWork" translate="yes"></p>
+                    <p class="manage-work-order-icon-active-text" id="manageWorkOrderRepairWork" data-translate="yes"></p>
                     <a href="" onclick="ManageWorkOrder.navigateToReviewPage( ManageWorkOrder.TECH_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderTechnicianReviewIcon" src="images/manageworkorder-techreview-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderTechnicianReview" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderTechnicianReview" data-translate="yes"></p>
                     <a href="" onclick="ManageWorkOrder.navigateToReviewPage( ManageWorkOrder.CUSTOMER_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderCustomerReviewIcon" src="images/manageworkorder-customerreview-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderCustomerReview" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderCustomerReview" data-translate="yes"></p>
                 </div>
                 <!-- Overview content -->
                 <div class="ui-block-b manage-work-order-content" style="margin-top: 0px;">
@@ -35,28 +35,28 @@
                             <li class="ui-block-a" style="padding-top: 3px;">
                                 <a href="" onclick="UIFrame.navigateToPage('manageworkorderparts.html');" class="manage-work-order-parts-navbar-button" data-role="button" data-icon="gear" data-corners="false" data-shadow="false"
                                    data-iconshadow="true" data-iconpos="top" data-inline="true"
-                                   translate="yes" id="manageWorkOrderParts"></a>
+                                   data-translate="yes" id="manageWorkOrderParts"></a>
                             </li>
                             <li class="ui-block-b" style="padding-top: 3px;">
                                 <a href="" class="ui-btn-active manage-work-order-parts-navbar-button" data-role="button" data-icon="grid" data-corners="false" data-shadow="false"
                                    data-iconshadow="true" data-iconpos="top" data-inline="true"
-                                   translate="yes" id="manageWorkOrderRepairDetails"></a>
+                                   data-translate="yes" id="manageWorkOrderRepairDetails"></a>
                             </li>
                         </ul>
                     </div>
                     <!-- Labor header start -->
                     <div id="manageWorkOrderLaborHeader" class="ui-bar-c" style="height: 44px;">
-                        <a href="" id="repairCodes" class="manage-work-order-header-button" translate="yes"
+                        <a href="" id="repairCodes" class="manage-work-order-header-button" data-translate="yes"
                            data-bind="click: selectRepairCode, visible: writable"
                            data-role="button" data-mini="true" data-inline="true" data-theme="d" data-icon="crownsfa-wrench"></a>&nbsp;
-                        <h2 class="manage-work-order-labor-header-text">&nbsp;<span id="equipmentHoursLabel" translate="yes"></span>:</h2>
+                        <h2 class="manage-work-order-labor-header-text">&nbsp;<span id="equipmentHoursLabel" data-translate="yes"></span>:</h2>
                         <input class="numeric-input" type="number" id="equipmentHours" data-mini="true" data-inline="true"
                                onchange="ManageWorkOrderRepairDetails.valueChanged()"
                                data-bind="value: hourMeter, valueUpdate: 'afterkeydown', visible: writable"
                                style="display: inline-block; position: relative; left: -1px; top: -1px; width: 100px;"/>
                         <p class="manage-work-order-readonly-value"
                            data-bind="text: hourMeter, visible: writable() == false"></p>
-                        <h2 class="manage-work-order-labor-header-text">&nbsp;<span id="billingFolderLabel" translate="yes"></span>:</h2>
+                        <h2 class="manage-work-order-labor-header-text">&nbsp;<span id="billingFolderLabel" data-translate="yes"></span>:</h2>
                         <div data-role="fieldcontain" class="manage-work-order-billing-folder-div" data-bind="visible: writable">
                             <select id="billingFolderList" data-native-menu="true" data-mini="true" data-inline="true" data-theme="d" data-placeholder="false"
                                     onchange="ManageWorkOrderRepairDetails.valueChanged()"
@@ -68,14 +68,14 @@
                         <section data-bind="visible: poNumberRequired" style="display: inline-block;">
                             <div style="position: relative; left: -50px; display: inline-block;"
                                  data-bind="visible: writable">
-                                <h2 class="manage-work-order-labor-header-text">&nbsp;<span id="purchaseOrder" translate="yes"></span>:</h2>
+                                <h2 class="manage-work-order-labor-header-text">&nbsp;<span id="purchaseOrder" data-translate="yes"></span>:</h2>
                                 <input id="poNumber" data-mini="true" data-inline="true"
                                        data-bind="value: poNumber, valueUpdate: 'afterkeydown'"
                                        style="display: inline-block; width: 150px;"/>
                             </div>
                             <div style="position: relative; display: inline-block;"
                                  data-bind="visible: writable() == false">
-                                <h2 class="manage-work-order-labor-header-text">&nbsp;<span id="purchaseOrder" translate="yes"></span>:</h2>
+                                <h2 class="manage-work-order-labor-header-text">&nbsp;<span id="purchaseOrder" data-translate="yes"></span>:</h2>
                                 <p class="manage-work-order-readonly-value"
                                    data-bind="text: poNumber, visible: writable() == false"></p>
                             </div>
@@ -84,25 +84,25 @@
                             <a href="" id="manageWorkOrderSave" class="manage-work-order-header-button"
                                style="width: 125px;"
                                data-bind="click: saveWorkOrder, visible: writable"
-                               translate="yes" data-role="button" data-mini="true" data-inline="true" data-theme="b"></a>
+                               data-translate="yes" data-role="button" data-mini="true" data-inline="true" data-theme="b"></a>
                         </div>
                     </div>
                     <!-- Labor header end -->
                     <!-- Repair codes banner and section start -->
                     <div id="manageWorkOrderRepairCodesBanner" class="ui-bar-d"
                          style="height: 32px; border-top: solid 1px black; border-bottom: solid 1px black">
-                        <h2 class="manage-work-order-banner-text">&nbsp;<span id="repairInformation" translate="yes"></span></h2>
+                        <h2 class="manage-work-order-banner-text">&nbsp;<span id="repairInformation" data-translate="yes"></span></h2>
                     </div>
                     <div id="repairCodeDetailsContent" style="margin-left: 10px;margin-right: 10px;">
                         <span id="standardJobCodeInformation" data-bind="visible: repairCodeId">
-                            <h4 translate="yes" id="repairCodeDetailsLabel" style="-webkit-margin-before: 0.5em; -webkit-margin-after: 0.5em"></h4>
+                            <h4 data-translate="yes" id="repairCodeDetailsLabel" style="-webkit-margin-before: 0.5em; -webkit-margin-after: 0.5em"></h4>
                             <p style="-webkit-margin-before: 0.5em; -webkit-margin-after: 0.5em">
                                 <span id="repairCodeDetailsCode" data-bind="text: repairCodeId"></span>&nbsp;-
                                 <span id="repairCodeDetailsDescription" data-bind="text: repairCodeDescription"></span>
                                 <span data-bind="visible: repairCodeNotes">-&nbsp;<span data-bind="text: repairCodeNotes"></span></span>
                             </p>
                         </span>
-                        <p style="-webkit-margin-before: 0.5em; -webkit-margin-after: 0.5em"><span translate="yes" id="additionalRepairNotesLabel"></span>:</p>
+                        <p style="-webkit-margin-before: 0.5em; -webkit-margin-after: 0.5em"><span data-translate="yes" id="additionalRepairNotesLabel"></span>:</p>
                         <textarea id="additionalRepairNotes" rows="10" cols="" style="height: 95px;"
                                   style="-webkit-margin-after: 1em"
                                   onchange="ManageWorkOrderRepairDetails.valueChanged()"
@@ -117,15 +117,15 @@
                         The width's below allow the borders to line up on the tablet
                     -->
                     <div id="manageWorkOrderLaborHoursBanner" class="ui-bar-d" style="height: 32px; border-top: solid 1px black; border-bottom: solid 1px black">
-                        <h2 class="manage-work-order-banner-text">&nbsp;<span id="laborHours" translate="yes"></span></h2>
+                        <h2 class="manage-work-order-banner-text">&nbsp;<span id="laborHours" data-translate="yes"></span></h2>
                     </div>
                     <div id="manageWorkOrderLaborListHeader" class="ui-bar-c" style="height: 30px;">
                         <p class="manage-work-order-labor-list-header">
-                            <span class="manage-work-order-labor-list-header-text" translate="yes" id="date" style="width: 175px;"></span>
-                            <span class="manage-work-order-labor-list-header-text" translate="yes" id="start" style="width: 150px;"></span>
-                            <span class="manage-work-order-labor-list-header-text" translate="yes" id="stop" style="width: 150px;"></span>
-                            <span class="manage-work-order-labor-list-header-text" translate="yes" id="Hours" style="width: 150px;"></span>
-                            <span class="manage-work-order-labor-list-header-text" translate="yes" id="type" style="border-right: none;"></span>
+                            <span class="manage-work-order-labor-list-header-text" data-translate="yes" id="date" style="width: 175px;"></span>
+                            <span class="manage-work-order-labor-list-header-text" data-translate="yes" id="start" style="width: 150px;"></span>
+                            <span class="manage-work-order-labor-list-header-text" data-translate="yes" id="stop" style="width: 150px;"></span>
+                            <span class="manage-work-order-labor-list-header-text" data-translate="yes" id="Hours" style="width: 150px;"></span>
+                            <span class="manage-work-order-labor-list-header-text" data-translate="yes" id="type" style="border-right: none;"></span>
                         </p> 
                     </div>
                     <ul id="manageWorkOrderLaborList" data-role="listview" data-bind="foreach: laborHours">
@@ -155,7 +155,7 @@
     
         <script>var debug = true;</script>
         <script src="js/libs/jquery/jquery-1.8.1.min.js"></script>
-        <script src="js/libs/phonegap/cordova-2.0.0.ios.min.js"></script>
+        <script src="js/libs/phonegap/cordova-2.1.0.ios.min.js"></script>
         <script src="js/init.js"></script>
         <script src="js/libs/jquery/jquery.dotimeout.min.js"></script>
         <script src="js/libs/jquery/jquery.mobile-1.1.1.min.js"></script>

@@ -8,7 +8,7 @@
                     <p class="work-order-list-item-text" ><span><%= communicationDetail.information %></span>
                     <!-- Optionally display the phone extension -->
                     <% if ( communicationDetail.extension && communicationDetail.extension.length > 0 ) { %>
-                        &nbsp;<span id="phoneExtension" translate="yes"></span>&nbsp;<span><%= communicationDetail.extension %></span>
+                        &nbsp;<span id="phoneExtension" data-translate="yes"></span>&nbsp;<span><%= communicationDetail.extension %></span>
                     <% } %>
                 <% } %>
             </div>
@@ -17,7 +17,7 @@
             <img class="globe-icon-large" src="images/globe.png"/>
             
             <div class="list-item-icon-text">
-                <h3 id="addressLabel" translate="yes">Address</h3>
+                <h3 id="addressLabel" data-translate="yes">Address</h3>
                 <!-- Handle addresses with two street properties -->
                 <p class="work-order-list-item-text" style="margin-top: -10px;"><%= address.street %></p>
                 
@@ -34,7 +34,7 @@
         </div>      
         <div class="ui-block-c">
             <div class="ui-block-right" style="margin-right: 20px;">
-                <h3 id="open" translate="yes">Open:</h3>
+                <h3 id="open" data-translate="yes">Open:</h3>
                 <p id="p<%= customer.webId %>">
                 <%= pmsCount %> PMs<br />
                 <%= woCount %> WOs<br />
@@ -48,7 +48,7 @@
                         <p class="work-order-list-item-text" ><span><%= contact.address.communicationDetails[i].type %>:&nbsp;<%= contact.address.communicationDetails[i].information %></span>
                         <!-- Optionally display the phone extension -->
                         <% if ( contact.address.communicationDetails[i].extension.length > 0 ) { %>
-                            &nbsp;<span id="phoneExtension" translate="yes"></span>&nbsp;<span><%= contact.address.communicationDetails[i].extension %></span>
+                            &nbsp;<span id="phoneExtension" data-translate="yes"></span>&nbsp;<span><%= contact.address.communicationDetails[i].extension %></span>
                         <% } %>
                         </p>
                     <% } %>

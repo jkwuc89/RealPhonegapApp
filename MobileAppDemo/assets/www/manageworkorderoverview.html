@@ -17,21 +17,21 @@
                 <!-- Icon bar -->
                 <div class="ui-block-a manage-work-order-icon-bar">
                     <img id="manageWorkOrderOverviewIcon" src="images/manageworkorder-overview-active.png" /></a>
-                    <p class="manage-work-order-icon-active-text" id="manageWorkOrderOverview" translate="yes"></p>
+                    <p class="manage-work-order-icon-active-text" id="manageWorkOrderOverview" data-translate="yes"></p>
                     <a href="" class="iconButton" onclick="UIFrame.navigateToPage('manageworkorderdiagnostics.html');"><img class="manage-work-order-icon-button" id="manageWorkOrderDiagnosticsIcon" src="images/manageworkorder-diagnostics-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderDiagnostics" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderDiagnostics" data-translate="yes"></p>
                     <a href="" class="iconButton" onclick="UIFrame.navigateToPage('manageworkorderparts.html');"><img class="manage-work-order-icon-button" id="manageWorkOrderRepairWorkIcon" src="images/manageworkorder-repair-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderRepairWork" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderRepairWork" data-translate="yes"></p>
                     <a href="" class="iconButton" onclick="ManageWorkOrder.navigateToReviewPage( ManageWorkOrder.TECH_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderTechnicianReviewIcon" src="images/manageworkorder-techreview-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderTechnicianReview" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderTechnicianReview" data-translate="yes"></p>
                     <a href="" class="iconButton" onclick="ManageWorkOrder.navigateToReviewPage( ManageWorkOrder.CUSTOMER_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderCustomerReviewIcon" src="images/manageworkorder-customerreview-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderCustomerReview" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderCustomerReview" data-translate="yes"></p>
                 </div>
                 <!-- Overview content -->
                 <div class="ui-block-b manage-work-order-content" style="margin-top: 3px;">
                     <!-- Customer information -->
                     <div class="ui-bar-d" style="height: 32px; border-top: solid 1px black; border-bottom: solid 1px black">
-                        <h2 class="manage-work-order-banner-text">&nbsp;<span id="customerInformation" translate="yes"></span></h2>
+                        <h2 class="manage-work-order-banner-text">&nbsp;<span id="customerInformation" data-translate="yes"></span></h2>
                     </div>
                     <br/>
                     <div class="ui-grid-b">
@@ -48,62 +48,62 @@
 	                            <section data-bind="foreach: contact.address.communicationDetails">
 	                                <p class="manage-work-order-text">
 	                                    <span data-bind="text: type"></span>:&nbsp;<span data-bind="text: information"></span>
-	                                    <span data-bind="if: extension">&nbsp;<span id="phoneExtension" translate="yes"></span>&nbsp;<span data-bind="text: extension"></span></span>
+	                                    <span data-bind="if: extension">&nbsp;<span id="phoneExtension" data-translate="yes"></span>&nbsp;<span data-bind="text: extension"></span></span>
 	                                </p>
 	                            </section>
                             </div>
                         </div>
                         <div class="ui-block-c" style="width: auto;">
-                            <h3 class="manage-work-order-heading" id="open" translate="yes"></h3>
-                            <p class="manage-work-order-text"><span id="openWorkOrdersLabel" translate="yes"></span>:&nbsp;<span id="openWorkOrdersCount"></span></p>
-                            <p class="manage-work-order-text"><span id="openPMsDueLabel" translate="yes"></span>:&nbsp;<span id="openPMsDueCount"></span></p>
+                            <h3 class="manage-work-order-heading" id="open" data-translate="yes"></h3>
+                            <p class="manage-work-order-text"><span id="openWorkOrdersLabel" data-translate="yes"></span>:&nbsp;<span id="openWorkOrdersCount"></span></p>
+                            <p class="manage-work-order-text"><span id="openPMsDueLabel" data-translate="yes"></span>:&nbsp;<span id="openPMsDueCount"></span></p>
                         </div>
                     </div>
                     <!-- Customer instructions -->
                     <div class="manage-work-order-overview-text-block">
-                        <p class="manage-work-order-heading" id="customerInstructionsHeading" translate="yes"></p>
+                        <p class="manage-work-order-heading" id="customerInstructionsHeading" data-translate="yes"></p>
                         <p class="manage-work-order-text" id="customerInstructions"></p>
                     </div>
                     <br/>
                     <!-- Equipment information -->
                     <section id="equipmentInformationSection" data-bind="visible: !equipment.missing || !equipment.missing()">
                         <div class="ui-bar-d" style="height: 32px; border-top: solid 1px black; border-bottom: solid 1px black">
-                            <h2 class="manage-work-order-banner-text">&nbsp;<span id="equipmentInformation" translate="yes"></span></h2>
+                            <h2 class="manage-work-order-banner-text">&nbsp;<span id="equipmentInformation" data-translate="yes"></span></h2>
                         </div>
                         <br/>
                         <div class="ui-grid-b">
                             <!-- Work order icons -->
                             <div class="ui-block-a" style="width: 40%; padding-left: 10px">
                                 <!-- Equipment information -->
-                                <h3 class="manage-work-order-heading"><span id="equipmentSerialNumberLabel" translate="yes"></span>:&nbsp;<span data-bind="text: equipment.serialNumber"></span></h3>
-                                <p class="manage-work-order-text"><span id="manufacturerLabel" translate="yes"></span>:&nbsp;<span data-bind="text: equipment.product.manufacturer"></span></p>
-                                <p class="manage-work-order-text"><span id="modelLabel" translate="yes"></span>:&nbsp;<span data-bind="text: equipment.product.productCode"></span></p>
+                                <h3 class="manage-work-order-heading"><span id="equipmentSerialNumberLabel" data-translate="yes"></span>:&nbsp;<span data-bind="text: equipment.serialNumber"></span></h3>
+                                <p class="manage-work-order-text"><span id="manufacturerLabel" data-translate="yes"></span>:&nbsp;<span data-bind="text: equipment.product.manufacturer"></span></p>
+                                <p class="manage-work-order-text"><span id="modelLabel" data-translate="yes"></span>:&nbsp;<span data-bind="text: equipment.product.productCode"></span></p>
                                 <p class="manage-work-order-text" data-bind="text: equipment.modelYear"></p>
                             </div>
                             <!-- Customer information -->
                             <div class="ui-block-b" style="width: 40%;">
-                                <h3 class="manage-work-order-heading"><span id="customer" translate="yes"></span>:&nbsp;<span data-bind="text: customer.internalId"></span></h3>
-                                <p class="manage-work-order-text"><span id="pmContractLabel" translate="yes"></span>:&nbsp;<span id="pmContractYorN"></span></p>
-                                <p class="manage-work-order-text"><span id="nextPMDateLabel" translate="yes"></span>:&nbsp;<span id="nextPMDate"></span></p>
-                                <p class="manage-work-order-text"><span id="lastServiceDateLabel" translate="yes"></span>:&nbsp;<span id="lastServiceDate"></span></p>
+                                <h3 class="manage-work-order-heading"><span id="customer" data-translate="yes"></span>:&nbsp;<span data-bind="text: customer.internalId"></span></h3>
+                                <p class="manage-work-order-text"><span id="pmContractLabel" data-translate="yes"></span>:&nbsp;<span id="pmContractYorN"></span></p>
+                                <p class="manage-work-order-text"><span id="nextPMDateLabel" data-translate="yes"></span>:&nbsp;<span id="nextPMDate"></span></p>
+                                <p class="manage-work-order-text"><span id="lastServiceDateLabel" data-translate="yes"></span>:&nbsp;<span id="lastServiceDate"></span></p>
                             </div>
                             <!-- Additional work order information -->
                             <div class="ui-block-c" style="width: auto;">
-                                <h3 class="manage-work-order-heading" id="standardJobCodeInfo"><span id="jobCodeLabel" translate="yes"></span>:&nbsp;<span id="jobCode"></span></h3>
-                                <p class="manage-work-order-text"><span id="warrantyLabel" translate="yes"></span>:&nbsp;<span id="warranty"></span></p>
-                                <p class="manage-work-order-text"><span id="hourMeterLabel" translate="yes"></span>:&nbsp;<span id="hourMeter"></span></p>
+                                <h3 class="manage-work-order-heading" id="standardJobCodeInfo"><span id="jobCodeLabel" data-translate="yes"></span>:&nbsp;<span id="jobCode"></span></h3>
+                                <p class="manage-work-order-text"><span id="warrantyLabel" data-translate="yes"></span>:&nbsp;<span id="warranty"></span></p>
+                                <p class="manage-work-order-text"><span id="hourMeterLabel" data-translate="yes"></span>:&nbsp;<span id="hourMeter"></span></p>
                             </div>
                         </div>
                         <br/>
                     </section>
                     <!-- Work order date and description -->
                     <div class="ui-bar-d" style="height: 32px; border-top: solid 1px black; border-bottom: solid 1px black">
-                        <h2 class="manage-work-order-banner-text">&nbsp;<span id="serviceRequest" translate="yes"></span></h2>
+                        <h2 class="manage-work-order-banner-text">&nbsp;<span id="serviceRequest" data-translate="yes"></span></h2>
                     </div>
                     <br/>
                     <div class="manage-work-order-overview-text-block">
                         <p class="manage-work-order-heading">
-                            <span id="openedOn" translate="yes"></span>&nbsp;<span id="workOrderDate"></span></p>
+                            <span id="openedOn" data-translate="yes"></span>&nbsp;<span id="workOrderDate"></span></p>
                             <span id="workOrderNote" data-bind="text: workOrder.workOrderSegments()[0].notesTop"></span>
                         <p class="manage-work-order-text" id="workOrderDescription">
                             <span data-bind="visible: workOrder.note && workOrder.note() != 'null', text: workOrder.note()"></span><br/>
@@ -115,7 +115,7 @@
     
         <script>var debug = true;</script>
         <script src="js/libs/jquery/jquery-1.8.1.min.js"></script>
-        <script src="js/libs/phonegap/cordova-2.0.0.ios.min.js"></script>
+        <script src="js/libs/phonegap/cordova-2.1.0.ios.min.js"></script>
         <script src="js/init.js"></script>
         <script src="js/libs/jquery/jquery.dotimeout.min.js"></script>
         <script src="js/libs/jquery/jquery.mobile-1.1.1.min.js"></script>

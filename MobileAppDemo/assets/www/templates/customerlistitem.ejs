@@ -14,7 +14,7 @@
                     <p class="work-order-list-item-text" ><span><%= communicationDetail.information %></span>
                     <!-- Optionally display the phone extension -->
                     <% if ( communicationDetail.extension && communicationDetail.extension.length > 0 ) { %>
-                        &nbsp;<span id="phoneExtension" translate="yes"></span>&nbsp;<span><%= communicationDetail.extension %></span>
+                        &nbsp;<span id="phoneExtension" data-translate="yes"></span>&nbsp;<span><%= communicationDetail.extension %></span>
                     <% } %>
                 <% } %>
             </div>
@@ -52,7 +52,7 @@
                             </span>
                         <!-- Optionally display the phone extension -->
                         <% if ( mainContact.address.communicationDetails[i].extension && mainContact.address.communicationDetails[i].extension.length > 0 ) { %>
-                            &nbsp;<span id="phoneExtension" translate="yes"></span>&nbsp;<span><%= mainContact.address.communicationDetails[i].extension %></span>
+                            &nbsp;<span id="phoneExtension" data-translate="yes"></span>&nbsp;<span><%= mainContact.address.communicationDetails[i].extension %></span>
                         <% } %>
                         </p>
                     <% } %>

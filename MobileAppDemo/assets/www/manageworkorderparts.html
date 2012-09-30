@@ -18,15 +18,15 @@
                 <!-- Icon bar -->
                 <div class="ui-block-a manage-work-order-icon-bar">
                     <a href="" onclick="UIFrame.navigateToPage('manageworkorderoverview.html');"><img class="manage-work-order-icon-button" id="manageWorkOrderOverviewIcon" src="images/manageworkorder-overview-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderOverview" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderOverview" data-translate="yes"></p>
                     <a href="" onclick="UIFrame.navigateToPage('manageworkorderdiagnostics.html');"><img class="manage-work-order-icon-button" id="manageWorkOrderDiagnosticsIcon" src="images/manageworkorder-diagnostics-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderDiagnostics" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderDiagnostics" data-translate="yes"></p>
                     <img class="manage-work-order-icon" id="manageWorkOrderRepairWorkIcon" src="images/manageworkorder-repair-active.png" />
-                    <p class="manage-work-order-icon-active-text" id="manageWorkOrderRepairWork" translate="yes"></p>
+                    <p class="manage-work-order-icon-active-text" id="manageWorkOrderRepairWork" data-translate="yes"></p>
                     <a href="" onclick="ManageWorkOrder.navigateToReviewPage( ManageWorkOrder.TECH_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderTechnicianReviewIcon" src="images/manageworkorder-techreview-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderTechnicianReview" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderTechnicianReview" data-translate="yes"></p>
                     <a href="" onclick="ManageWorkOrder.navigateToReviewPage( ManageWorkOrder.CUSTOMER_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderCustomerReviewIcon" src="images/manageworkorder-customerreview-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderCustomerReview" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderCustomerReview" data-translate="yes"></p>
                 </div>
                 <!-- Overview content -->
                 <div class="ui-block-b manage-work-order-content" style="margin-top: 0px;">
@@ -36,12 +36,12 @@
                             <li class="ui-block-a" style="padding-top: 3px;">
                                 <a href="" class="ui-btn-active manage-work-order-parts-navbar-button" data-role="button" data-icon="gear" data-corners="false" data-shadow="false"
                                    data-iconshadow="true" data-iconpos="top" data-inline="true"
-                                   translate="yes" id="manageWorkOrderParts"></a>
+                                   data-translate="yes" id="manageWorkOrderParts"></a>
                             </li>
                             <li class="ui-block-b" style="padding-top: 3px;">
                                 <a href="" onclick="UIFrame.navigateToPage('manageworkorderrepairdetails.html');" class="manage-work-order-parts-navbar-button" data-role="button" data-icon="grid" data-corners="false" data-shadow="false"
                                    data-iconshadow="true" data-iconpos="top" data-inline="true"
-                                   translate="yes" id="manageWorkOrderRepairDetails"></a>
+                                   data-translate="yes" id="manageWorkOrderRepairDetails"></a>
                             </li>
                         </ul>
                     </div>
@@ -52,18 +52,18 @@
                                 <select id="addPartsMenu"
                                         data-native-menu="<%= UIFrame.USE_NATIVE_SELECT %>" data-mini="true"
                                         data-inline="true" data-theme="e" data-icon="plus" data-iconpos="notext">
-                                    <option id="partsMenu" translate="yes" value=""></option>
-                                    <option id="inventory" translate="yes" value="addFromInventory"></option>
-                                    <option id="catalogButton" translate="yes" value="addFromPSRT"></option>
-                                    <option id="outsidePurchase" translate="yes" value="addFromOutsidePurchase"></option>
+                                    <option id="partsMenu" data-translate="yes" value=""></option>
+                                    <option id="inventory" data-translate="yes" value="addFromInventory"></option>
+                                    <option id="catalogButton" data-translate="yes" value="addFromPSRT"></option>
+                                    <option id="outsidePurchase" data-translate="yes" value="addFromOutsidePurchase"></option>
                                 </select>
                             </div>
                             <div class="ui-block-b manage-work-order-parts-quick-add">
-                                <h2 class="manage-work-order-parts-header-text">&nbsp;&nbsp;<span id="partNumberLabel" translate="yes"></span>:</h2>
+                                <h2 class="manage-work-order-parts-header-text">&nbsp;&nbsp;<span id="partNumberLabel" data-translate="yes"></span>:</h2>
                                 <input type="text" name="quickAddPartNumber" id="quickAddPartNumber" value="" data-mini="true" data-inline="true"
                                        data-bind="value: partNumber, valueUpdate: 'afterkeydown'"/>
                                 <!-- Quantity controls inside part header -->
-                                <h2 class="manage-work-order-parts-header-text">&nbsp;<span id="quantityLabel" translate="yes"></span>:</h2>
+                                <h2 class="manage-work-order-parts-header-text">&nbsp;<span id="quantityLabel" data-translate="yes"></span>:</h2>
                                 <a href="" class="manage-work-order-parts-qty-button" id="decrementPartQty" data-role="button" data-icon="minus"
                                    data-bind="click: decrementQtyInHeader"
                                    data-iconpos="notext" data-inline="true" style="position: relative; top: -2px;"></a>
@@ -73,14 +73,14 @@
                                 <a href="" class="manage-work-order-parts-qty-button" id="incrementPartQty" data-role="button" data-icon="plus"
                                    data-bind="click: incrementQtyInHeader"
                                    data-iconpos="notext" data-inline="true" style="top: -2px; left: -21px;"></a>
-                                <a href="" id="quickAddPart" class="manage-work-order-header-button button-default" translate="yes"
+                                <a href="" id="quickAddPart" class="manage-work-order-header-button button-default" data-translate="yes"
                                    data-bind="click: addPartFromHeader"
                                    data-role="button" data-mini="true" data-inline="true" data-theme="d"
                                    style="position: relative; top: -3px; left: -10px;"></a>
                                 <div style="display: inline-block; padding-top: 2px; position: absolute; right: 10px;">
                                     <a href="" id="manageWorkOrderSave" class="manage-work-order-header-button button-default"
                                        data-bind="click: saveChanges, visible: writable"
-                                       translate="yes" data-role="button" data-mini="true" data-inline="true" data-theme="b"></a>
+                                       data-translate="yes" data-role="button" data-mini="true" data-inline="true" data-theme="b"></a>
                                 </div>
                             </div>
                         </div>
@@ -93,19 +93,19 @@
                     <div id="manageWorkOrderPartsListHeader" class="ui-bar-b">
                         <div class="ui-grid-d" style="height: 30px;">
                             <div class="ui-block-a manage-work-order-parts-list-header-block" style="width: 105px;">
-                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="manufacturerLabel"></p>
+                                <p class="manage-work-order-parts-list-header-text" data-translate="yes" id="manufacturerLabel"></p>
                             </div>
                             <div class="ui-block-b manage-work-order-parts-list-header-block" style="width: 195px;">
-                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="partNumberLabel"></p>
+                                <p class="manage-work-order-parts-list-header-text" data-translate="yes" id="partNumberLabel"></p>
                             </div>
                             <div class="ui-block-c manage-work-order-parts-list-header-block" style="width: 365px;">
-                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="description"></p>
+                                <p class="manage-work-order-parts-list-header-text" data-translate="yes" id="description"></p>
                             </div>
                             <div class="ui-block-d manage-work-order-parts-list-header-block" style="width: 215px;">
-                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="location"></p>
+                                <p class="manage-work-order-parts-list-header-text" data-translate="yes" id="location"></p>
                             </div>
                             <div class="ui-block-e manage-work-order-parts-list-header-block" style="border-right: none;">
-                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="quantityLabel"></p>
+                                <p class="manage-work-order-parts-list-header-text" data-translate="yes" id="quantityLabel"></p>
                             </div>
                         </div>
                     </div>
@@ -170,7 +170,7 @@
     
         <script>var debug = true;</script>
         <script src="js/libs/jquery/jquery-1.8.1.min.js"></script>
-        <script src="js/libs/phonegap/cordova-2.0.0.ios.min.js"></script>
+        <script src="js/libs/phonegap/cordova-2.1.0.ios.min.js"></script>
         <script src="js/init.js"></script>
         <script src="js/libs/jquery/jquery.dotimeout.min.js"></script>
         <script src="js/libs/jquery/jquery.mobile-1.1.1.min.js"></script>

@@ -18,24 +18,24 @@
                 <!-- Icon bar -->
                 <div class="ui-block-a manage-work-order-icon-bar">
                     <a href="" onclick="UIFrame.navigateToPage('manageworkorderoverview.html');"><img class="manage-work-order-icon-button" id="manageWorkOrderOverviewIcon" src="images/manageworkorder-overview-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderOverview" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderOverview" data-translate="yes"></p>
                     <a href="" onclick="UIFrame.navigateToPage('manageworkorderdiagnostics.html');"><img class="manage-work-order-icon-button" id="manageWorkOrderDiagnosticsIcon" src="images/manageworkorder-diagnostics-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderDiagnostics" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderDiagnostics" data-translate="yes"></p>
                     <a href="" onclick="UIFrame.navigateToPage('manageworkorderparts.html');"><img class="manage-work-order-icon-button" id="manageWorkOrderRepairWorkIcon" src="images/manageworkorder-repair-inactive.png" /></a>
-                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderRepairWork" translate="yes"></p>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderRepairWork" data-translate="yes"></p>
                     <section style="display: inline-block;"
                              data-bind="visible: pageId() == 'manageWorkOrderTechnicianReviewPage'">
                         <img class="manage-work-order-icon" id="manageWorkOrderTechnicianReviewIcon" src="images/manageworkorder-techreview-active.png" />
-                        <p class="manage-work-order-icon-active-text" id="manageWorkOrderTechnicianReview" translate="yes"></p>
+                        <p class="manage-work-order-icon-active-text" id="manageWorkOrderTechnicianReview" data-translate="yes"></p>
                         <a href="" onclick="ManageWorkOrder.navigateToReviewPage( ManageWorkOrder.CUSTOMER_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderCustomerReviewIcon" src="images/manageworkorder-customerreview-inactive.png" /></a>
-                        <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderCustomerReview" translate="yes"></p>
+                        <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderCustomerReview" data-translate="yes"></p>
                     </section>
                     <section style="display: inline-block;"
                              data-bind="visible: pageId() == 'manageWorkOrderCustomerReviewPage'">
                         <a href="" onclick="ManageWorkOrder.navigateToReviewPage( ManageWorkOrder.TECH_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderTechnicianReviewIcon" src="images/manageworkorder-techreview-inactive.png" /></a>
-                        <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderTechnicianReview" translate="yes"></p>
+                        <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderTechnicianReview" data-translate="yes"></p>
                         <img class="manage-work-order-icon" id="manageWorkOrderCustomerReviewIcon" src="images/manageworkorder-customerreview-active.png" />
-                        <p class="manage-work-order-icon-active-text" id="manageWorkOrderCustomerReview" translate="yes"></p>
+                        <p class="manage-work-order-icon-active-text" id="manageWorkOrderCustomerReview" data-translate="yes"></p>
                     </section>
                 </div>
 
@@ -48,7 +48,7 @@
                         </div>
                         <div class="ui-block-b" style="text-align: right;">
                             <h2 class="manage-work-order-heading" style="font-size: 16pt;">
-                                <span id="workOrderNo" translate="yes"></span>:&nbsp;<span data-bind="text: manageWO.workOrder.documentNumber"></span>
+                                <span id="workOrderNo" data-translate="yes"></span>:&nbsp;<span data-bind="text: manageWO.workOrder.documentNumber"></span>
                             </h2>
                         </div>
                     </div>
@@ -70,13 +70,13 @@
                         <div class="ui-block-c" style="width: 20%;">
                             <div class="ui-grid-a">
                                 <div class="ui-block-a" style="width: 50%; text-align: left;">
-                                    <p class="manage-work-order-text"><span id="dateStarted" translate="yes" style="font-weight: bold;"></span>:</p>
-                                    <p class="manage-work-order-text"><span id="dateComplete" translate="yes" style="font-weight: bold;"></span>:</p>
+                                    <p class="manage-work-order-text"><span id="dateStarted" data-translate="yes" style="font-weight: bold;"></span>:</p>
+                                    <p class="manage-work-order-text"><span id="dateComplete" data-translate="yes" style="font-weight: bold;"></span>:</p>
                                     <p class="manage-work-order-text" 
                                        data-bind="visible: (manageWO.customer.poNumberRequired == true || manageWO.workOrder.documentReference)">
-                                        <span id="purchaseOrder" translate="yes" style="font-weight: bold;"></span>:
+                                        <span id="purchaseOrder" data-translate="yes" style="font-weight: bold;"></span>:
                                     </p>
-                                    <p class="manage-work-order-text"><span id="technician" translate="yes" style="font-weight: bold;"></span>:</p>
+                                    <p class="manage-work-order-text"><span id="technician" data-translate="yes" style="font-weight: bold;"></span>:</p>
                                 </div>
                                 <div class="ui-block-b" style="width: 50%; text-align: right;">
                                     <p class="manage-work-order-text" data-bind="text: formattedWorkOrderStartDate"></p>
@@ -93,25 +93,25 @@
                     <!-- Reported problem -->
                     <div>
                         <br/>
-                        <h3 class="manage-work-order-heading" id="reportedProblem" translate="yes" style="padding: 2px; background-color: black; color: white;"></h3>
+                        <h3 class="manage-work-order-heading" id="reportedProblem" data-translate="yes" style="padding: 2px; background-color: black; color: white;"></h3>
                         <p class="manage-work-order-text" data-bind="text: manageWO.workOrder.workOrderSegments()[0].notesTop"></p>
                     </div>
                     <!-- Diagnostic code details - Not supported in Phase 1 -->
                         <div>
                             <br/>
-                            <h3 class="manage-work-order-heading" id="diagnosticCodeDetails" translate="yes" style="padding: 2px; background-color: black; color: white;"></h3>
+                            <h3 class="manage-work-order-heading" id="diagnosticCodeDetails" data-translate="yes" style="padding: 2px; background-color: black; color: white;"></h3>
                             <p class="manage-work-order-text" data-bind=""></p>
                         </div>
                     <!-- Repair action code -->
                     <div>
                         <br/>
-                        <h3 class="manage-work-order-heading" id="repairActionCodeLabel" translate="yes" style="padding: 2px; background-color: black; color: white;"></h3>
+                        <h3 class="manage-work-order-heading" id="repairActionCodeLabel" data-translate="yes" style="padding: 2px; background-color: black; color: white;"></h3>
                         <p class="manage-work-order-text" data-bind="text: repairCode"></p>
                     </div>
                     <!-- Additional repair notes -->
                     <div>
                         <br/>
-                        <h3 class="manage-work-order-heading" id="additionalRepair" translate="yes" style="padding: 2px; background-color: black; color: white;"></h3>
+                        <h3 class="manage-work-order-heading" id="additionalRepair" data-translate="yes" style="padding: 2px; background-color: black; color: white;"></h3>
                         <p class="manage-work-order-text" data-bind="text: manageWO.workOrder.workOrderSegments()[0].notesBottom"></p>
                     </div>
                     <br/>
@@ -121,22 +121,22 @@
                     <div class="ui-grid-c">
                         <div class="ui-block-a" style="width: 25%; text-align: left;">
                             <p class="manage-work-order-text">
-                                <span id="manufacturerLabel" translate="yes" style="font-weight: bold;"></span>:&nbsp;<span data-bind="text: manageWO.equipment.product.manufacturer"></span>
+                                <span id="manufacturerLabel" data-translate="yes" style="font-weight: bold;"></span>:&nbsp;<span data-bind="text: manageWO.equipment.product.manufacturer"></span>
                             </p>
                         </div>
                         <div class="ui-block-b" style="width: 25%; text-align: center;">
                             <p class="manage-work-order-text">
-                                <span id="modelLabel" translate="yes" style="font-weight: bold;"></span>:&nbsp;<span data-bind="text: manageWO.equipment.product.productCode"></span>
+                                <span id="modelLabel" data-translate="yes" style="font-weight: bold;"></span>:&nbsp;<span data-bind="text: manageWO.equipment.product.productCode"></span>
                             </p>
                         </div>
                         <div class="ui-block-c" style="width: 25%; text-align: center;">
                             <p class="manage-work-order-text">
-                                <span id="serial" translate="yes" style="font-weight: bold;"></span>:&nbsp;<span data-bind="text: manageWO.equipment.serialNumber"></span>
+                                <span id="serial" data-translate="yes" style="font-weight: bold;"></span>:&nbsp;<span data-bind="text: manageWO.equipment.serialNumber"></span>
                             </p>
                         </div>
                         <div class="ui-block-d" style=" text-align: right;">
                             <p class="manage-work-order-text">
-                                <span id="equipmentHoursLabel" translate="yes" style="font-weight: bold;"></span>:&nbsp;<span data-bind="text: formattedEquipmentHourMeter"></span>
+                                <span id="equipmentHoursLabel" data-translate="yes" style="font-weight: bold;"></span>:&nbsp;<span data-bind="text: formattedEquipmentHourMeter"></span>
                             </p>
                         </div>
                     </div>
@@ -145,19 +145,19 @@
                     <div id="manageWorkOrderPartsListHeader" class="ui-bar-d" style="border: solid 1px black;">
                         <div class="ui-grid-d" style="height: 30px;">
                             <div class="ui-block-a manage-work-order-parts-list-header-block" style="width: 105px;">
-                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="manufacturerLabel"></p>
+                                <p class="manage-work-order-parts-list-header-text" data-translate="yes" id="manufacturerLabel"></p>
                             </div>
                             <div class="ui-block-b manage-work-order-parts-list-header-block" style="width: 195px;">
-                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="partNumberLabel"></p>
+                                <p class="manage-work-order-parts-list-header-text" data-translate="yes" id="partNumberLabel"></p>
                             </div>
                             <div class="ui-block-c manage-work-order-parts-list-header-block" style="width: 365px;">
-                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="description"></p>
+                                <p class="manage-work-order-parts-list-header-text" data-translate="yes" id="description"></p>
                             </div>
                             <div class="ui-block-d manage-work-order-parts-list-header-block" style="width: 215px;">
-                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="location"></p>
+                                <p class="manage-work-order-parts-list-header-text" data-translate="yes" id="location"></p>
                             </div>
                             <div class="ui-block-e manage-work-order-parts-list-header-block" style="border-right: none;">
-                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="quantityLabel"></p>
+                                <p class="manage-work-order-parts-list-header-text" data-translate="yes" id="quantityLabel"></p>
                             </div>
                         </div>
                     </div>
@@ -188,14 +188,14 @@
                     <!-- Total labor hours -->
                     <div style="text-align: right;">
                         <br/>
-                        <p class="manage-work-order-text"><span id="totalLaborHours" translate="yes" style="font-weight: bold;"></span>:&nbsp;<span data-bind="text: totalLaborHours"></span></p>
+                        <p class="manage-work-order-text"><span id="totalLaborHours" data-translate="yes" style="font-weight: bold;"></span>:&nbsp;<span data-bind="text: totalLaborHours"></span></p>
                     </div> 
                     
                     <!-- Work order will be sent to - Customer review page only -->
                     <div style="text-align: center;"
                          data-bind="visible: pageId() == ManageWorkOrder.CUSTOMER_REVIEW_PAGE">
                         <h3 class="manage-work-order-heading"
-                            style="display: inline-block;"><span id="workOrderWillBeSentTo" translate="yes"></span>:&nbsp;</h3>
+                            style="display: inline-block;"><span id="workOrderWillBeSentTo" data-translate="yes"></span>:&nbsp;</h3>
                         <input type="email" id="emailAddress"
                                style="display: inline-block; width: 300px;"
                                data-inline="true" data-mini="false"
@@ -209,18 +209,18 @@
                     <!-- Signature with date -->
                     <div style="text-align: center;"
                          data-bind="visible: writable() || ( !writable() && workOrderSigned() )">
-                        <h3 class="manage-work-order-review-signature-text" id="signature" translate="yes"
+                        <h3 class="manage-work-order-review-signature-text" id="signature" data-translate="yes"
                             style="display: inline-block;"></h3>
                         <a href="" class="manage-work-order-review-signature-text" id="captureSignatureLink"
                            data-bind="click: signWorkOrder, visible: writable() && !workOrderSigned()"
-                        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="tapHereToSign" translate="yes"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        <p class="manage-work-order-review-signature-text" id="capturingSignature" translate="yes" style="display: none;"></p>
+                        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="tapHereToSign" data-translate="yes"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        <p class="manage-work-order-review-signature-text" id="capturingSignature" data-translate="yes" style="display: none;"></p>
                         <img id="signatureImage" style="width: 300px; border-bottom: solid 1px black;"
                            data-bind="attr: { src: signatureImage }, visible: workOrderSigned()" />
                         <p style="display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;</p>
                         <h3 class="manage-work-order-review-signature-text"
                             style="display: inline-block;">
-                            <span id="date" translate="yes"></span>:&nbsp;<span style="font-weight: normal;" data-bind="text: formattedSignatureDate"></span>
+                            <span id="date" data-translate="yes"></span>:&nbsp;<span style="font-weight: normal;" data-bind="text: formattedSignatureDate"></span>
                         </h3>
                     </div>
                     
@@ -233,12 +233,12 @@
                                     <input type="hidden" name="output" class="output">
                                 </div>
                                 <div style="text-align: center;">
-                                    <a href="" id="clearButton" class="clearButton" translate="yes" style="width: 150px;"
+                                    <a href="" id="clearButton" class="clearButton" data-translate="yes" style="width: 150px;"
                                        data-role="button" data-mini="false" data-inline="true" data-theme="c"></a>
-                                    <a href="" id="cancel" class="cancel" translate="yes" style="width: 150px;"
+                                    <a href="" id="cancel" class="cancel" data-translate="yes" style="width: 150px;"
                                        data-role="button" data-mini="false" data-inline="true" data-theme="c"
                                        data-bind="click: cancelSignature"></a>
-                                    <a href="" id="done" class="reviewSignatureButton" translate="yes"
+                                    <a href="" id="done" class="reviewSignatureButton" data-translate="yes"
                                        data-role="button" data-mini="false" data-inline="true" data-theme="a"
                                        data-bind="click: saveSignature"></a>
                                 </div>
@@ -249,14 +249,14 @@
                     <!-- Work order needs review -->
                     <div style="text-align: center;"
                          data-bind="visible: pageId() == ManageWorkOrder.TECH_REVIEW_PAGE">
-                        <a href="" id="workOrderNeedsReview" translate="yes"
+                        <a href="" id="workOrderNeedsReview" data-translate="yes"
                            data-role="button" data-inline="true" data-mini="false"
                            data-bind="click: reviewWorkOrder, visible: writable() && !workOrderReviewed()">
                         </a>
                         <br/>
                         <h3 class="manage-work-order-heading"
                             data-bind="visible: workOrderReviewed()">
-                            <span id="workOrderReviewed" translate="yes"></span>&nbsp;<span data-bind="text: formattedReviewDate"></span>
+                            <span id="workOrderReviewed" data-translate="yes"></span>&nbsp;<span data-bind="text: formattedReviewDate"></span>
                         </h3>
                     </div>
                 </div>
@@ -265,7 +265,7 @@
     
         <script>var debug = true;</script>
         <script src="js/libs/jquery/jquery-1.8.1.min.js"></script>
-        <script src="js/libs/phonegap/cordova-2.0.0.ios.min.js"></script>
+        <script src="js/libs/phonegap/cordova-2.1.0.ios.min.js"></script>
         <script src="js/init.js"></script>
         <script src="js/libs/jquery/jquery.dotimeout.min.js"></script>
         <script src="js/libs/jquery/jquery.mobile-1.1.1.min.js"></script>
