@@ -6,6 +6,7 @@
         {
             "webId": 1,
             "version": "1.0",
+            "serverBaseUrl": "http://wedinger.com/mobileappdemo",
             "loadLocalJSONFilesOnly": false,
             "dailyUpdateFrequency": 1440,
             "periodicUpdateFrequency": 5,
@@ -13,99 +14,34 @@
             [
                 {
                     "name": "inventory",
-                    "url": "inventory/list",
+                    "url": "inventory.json",
                     "updateSupported": true,
                     "readOnly": false
-                },
-                {
-                    "name": "standardJobCodes",
-                    "url": "standardJobCode/list",
-                    "updateSupported": false,
-                    "readOnly": true
-                },
-                {
-                    "name": "stockAreas",
-                    "url": "stockArea/list",
-                    "updateSupported": false,
-                    "readOnly": true
                 }
             ],
             "jsonLocalStoreFeeds":
             [
                 {
-                    "name": "branches",
-                    "url": "branch/list",
-                    "updateSupported": false,
-                    "readOnly": true
-                },
-                {
                     "name": "customers",
-                    "url": "customer/list",
+                    "url": "customers.json",
                     "updateSupported": true,
                     "readOnly": false
                 },
                 {
                     "name": "equipment",
-                    "url": "equipment/list",
+                    "url": "equipment.json",
                     "updateSupported": true,
                     "readOnly": false
-                },
-                {
-                    "name": "folders",
-                    "url": "folder/list",
-                    "updateSupported": false,
-                    "readOnly": true
-                },
-                {
-                    "name": "laborCodes",
-                    "url": "laborCode/list",
-                    "updateSupported": false,
-                    "readOnly": true
-                },{
-                    "name": "laborTimeTypes",
-                    "url": "laborTimeType/list",
-                    "updateSupported": false,
-                    "readOnly": true
                 },
                 {
                     "name": "manufacturers",
-                    "url": "manufacturer/list",
-                    "updateSupported": false,
-                    "readOnly": true
-                },
-                {   
-                    "name": "notes",
-                    "url": "note/list",
-                    "updateSupported": true,
-                    "readOnly": true
-                },
-                {
-                    "name": "pmSchedules",
-                    "url": "pmSchedule/list",
-                    "updateSupported": true,
-                    "readOnly": false
-                },
-                {
-                    "name": "stockAreas",
-                    "url": "stockArea/list",
-                    "updateSupported": false,
-                    "readOnly": true
-                },
-                {
-                    "name": "technicianClocking",
-                    "url": "technicianClocking/list",
-                    "updateSupported": true,
-                    "readOnly": false
-                },
-                {
-                    "name": "webUsers",
-                    "url": "webUser/list",
+                    "url": "manufacturers.json",
                     "updateSupported": false,
                     "readOnly": true
                 },
                 {
                     "name": "workOrders",
-                    "url": "workOrder/list",
+                    "url": "workOrders.json",
                     "updateSupported": true,
                     "readOnly": false
                 }

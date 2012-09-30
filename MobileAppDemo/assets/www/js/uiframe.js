@@ -27,7 +27,6 @@ var UIFrame = function() {
      */
     var LS_CURRENT_TECHNICIAN_STATUS      = "currentTechnicianStatus";
     var LS_CURRENT_WORK_ORDER_STATUS      = "currentWorkOrderStatus";
-    var LS_PAGE_HISTORY                   = "pageHistory";
 
     /**
      * Initial page load list filtering constants
@@ -158,14 +157,14 @@ var UIFrame = function() {
         	onTasksMenu : false,
         	additionalHeader : true
         },
-        'loginPage' : {
+        'indexPage' : {
             url : 'index.html',
             navigateFunction : JSONData.logoff,
             onTasksMenu : true,
             additionalHeader : false
         }
     };
-    var pagesWithoutCommonHeaderAndFooter = [ "closeOutDayPage", "customerEquipmentPage", "equipmentDetailPage", "loginPage", "pmsDueListFrame", 
+    var pagesWithoutCommonHeaderAndFooter = [ "closeOutDayPage", "customerEquipmentPage", "equipmentDetailPage", "indexPage", "pmsDueListFrame", 
                                               "vanInventoryPage", "vanInventoryAddPage", "workOrderHistoryReviewPage", "workOrderListFrame" ];
 
     // Preload commonly used EJS templates
@@ -217,53 +216,6 @@ var UIFrame = function() {
     }
     
     /**
-     * Add the current page to the page history.  The login page is not added to the history.
-     */
-    function addCurrentPageToHistory() {
-        var currentPage = getCurrentPage();
-        if ( currentPage.id != "loginPage" ) {
-            debug && console.log( "UIFrame.addCurrentPageToHistory: Adding current page '" + 
-                                  currentPage.id + "' to page history in local storage" );
-            var pageHistory = window.localStorage.getItem( LS_PAGE_HISTORY );
-            if ( pageHistory == null ) {
-                debug && console.log( "UIFrame.addCurrentPageToHistory: page history being created because it does not exist" );
-                pageHistory = {};
-                pageHistory.pages = new Array();
-            } else {
-                pageHistory = JSON.parse( pageHistory );
-            }
-            pageHistory.pages.push( currentPage );
-            window.localStorage.setItem( LS_PAGE_HISTORY, JSON.stringify( pageHistory ) );
-        }
-    }
-    
-    /**
-     * Get previous page from page history
-     * @returns Previous page URL or null if it does not exist
-     */
-    function getPreviousPageFromHistory() {
-        var previousPage = null;
-        var pageHistory = window.localStorage.getItem( LS_PAGE_HISTORY );
-        if ( pageHistory ) {
-            pageHistory = JSON.parse( pageHistory );
-            if ( pageHistory.pages.length > 0 ) {
-                previousPage = pageHistory.pages.pop();
-                window.localStorage.setItem( LS_PAGE_HISTORY, JSON.stringify( pageHistory ) );
-                debug && console.log( "UIFrame.getPreviousPageFromHistory: Previous page = '" + previousPage.id + "'" );
-            }
-        }
-        return previousPage;
-    }
-    
-    /**
-     * Clear the page history
-     */
-    function clearPageHistory() {
-        debug && console.log( "UIFrame.clearPageHistory: Removing page history from local storage" );
-        window.localStorage.removeItem( LS_PAGE_HISTORY );
-    }
-    
-    /**
      * Navigate to the page specified by url
      * @param url
      * @param skipAddToHistory
@@ -303,11 +255,6 @@ var UIFrame = function() {
                 }
             }
 
-            // If current URL is the login page, close the "attempting logon" progress dialog
-            if ( currentPage.id == "loginPage" ) {
-                closeActiveDialog();
-            }
-            
             // Write additional page ID to local storage to load correct review page
             if ( reviewPageId != undefined && reviewPageId != null ) {
                 window.localStorage.setItem( ManageWorkOrder.LS_REVIEW_PAGE_ID, reviewPageId );
@@ -317,36 +264,6 @@ var UIFrame = function() {
         } else {
             debug && console.log( "UIFrame.navigateToPage: Navigation skipped because page is already loaded" );
         }
-    }
-    
-    /**
-     * Navigate to the previous page in the page history
-     */
-    function navigateToPreviousPage() {
-        var previousPage = getPreviousPageFromHistory();
-        if ( previousPage ) {
-            // Review pages share the same URL. Write out local storage item
-            // to load the correct review page.
-            debug && console.log( "UIFrame.navigateToPreviousPage: Navigating to " + previousPage.id );
-            if ( previousPage.id == "manageWorkOrderCustomerReviewPage" ||
-                 previousPage.id == "manageWorkOrderTechnicianReviewPage" ) {
-                window.localStorage.setItem( ManageWorkOrder.LS_REVIEW_PAGE_ID, previousPage.id );
-                navigateToPage( previousPage.url, true, previousPage.id );
-            } else {
-                navigateToPage( previousPage.url, true );
-            }
-        } else {
-            debug && console.log( "UIFrame.navigateToPreviousPage: No previous page in history" );
-        }
-    }
-    
-    /**
-     * Navigate to the page specified by url
-     * @param url
-     */
-    function navigateParentToPage( url ) {
-        debug && console.log( "UIFrame.navigateParentToPage: About to navigate to " + url );
-        parent.document.location.href = url;
     }
     
     /**
@@ -591,18 +508,6 @@ var UIFrame = function() {
         } else {
             navigateToPage( Pages[pageId].url );
         }
-    }
-    
-    /**
-     * Update the message count badge on the messages icon.
-     * If the message count is 0, the badge is removed.
-     */
-    function updateMessageCountBadge( count ) {
-        debug && console.log( "UIFrame.updateMessageCountBadge: Changing message count to " + count );
-        $('#messagesIcon').mobileBadge( {
-            count: count,
-            position: 'topright'
-        });
     }
     
     /**
@@ -1317,12 +1222,6 @@ var UIFrame = function() {
                 
                 // Build the common UI parts
                 buildPageHeaderAndFooter( pageId );
-                updateMessageCountBadge( JSONData.getNewMessageCount() );
-                
-                // Work order list page will take care of updating the toolbox count
-                if ( pageId != "workOrderListPage" ) {
-                    updateToolboxCountBadge();
-                }
                 
                 // Call the page specific init function if defined
                 if ( pageInitFunction ) {
@@ -1411,9 +1310,7 @@ var UIFrame = function() {
         }
     
         // Set a uniform background color for all pages except the login page
-        if ( pageId != "loginPage" ) {
-            $("div:jqmData(role='page')").css( "background", "#F9F9F9" );
-        }
+        $("div:jqmData(role='page')").css( "background", "#E0E0E0" );
         
         debug && console.log( "UIFrame.postPageSpecificInit: Finished" );
     }
@@ -1434,7 +1331,6 @@ var UIFrame = function() {
         'bindKeypressToInputElements'               : bindKeypressToInputElements,               
         'buildPageHeaderAndFooter'                  : buildPageHeaderAndFooter,
         'changeListFilter'                          : changeListFilter,
-        'clearPageHistory'                          : clearPageHistory,
         'closeActiveDialog'                         : closeActiveDialog,
         'displayEndNonProductiveClockingDialog'     : displayEndNonProductiveClockingDialog,
         'displayNonProductiveClockingDialog'        : displayNonProductiveClockingDialog,
@@ -1450,7 +1346,6 @@ var UIFrame = function() {
         'initListFilterGuidedSearchSelection'       : initListFilterGuidedSearchSelection,
         'isDialogDisplayed'                         : isDialogDisplayed,
         'navigateToPage'                            : navigateToPage,
-        'navigateToPreviousPage'                    : navigateToPreviousPage,
         'postPageSpecificInit'                      : postPageSpecificInit,
         'refreshGuidedSearch'                       : refreshGuidedSearch,
         'refreshGuidedSearchWithSelectedItem'       : refreshGuidedSearchWithSelectedItem,
@@ -1460,7 +1355,6 @@ var UIFrame = function() {
         'updateCurrentWorkOrderStatus'              : updateCurrentWorkOrderStatus,
         'updateGuidedSearchItemCount'               : updateGuidedSearchItemCount,
         'updateListDividerItemCount'                : updateListDividerItemCount,
-        'updateMessageCountBadge'                   : updateMessageCountBadge,
         'updateToolboxCountBadge'                   : updateToolboxCountBadge,
         'validatePageId'                            : validatePageId
     };

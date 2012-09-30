@@ -35,31 +35,18 @@ function onDeviceReady() {
         debug && console.log( "init.onDeviceReady: MobileDb.openDB" );
         MobileDb.openDB();
     }
-    // Handle the back button ourselves
-    document.addEventListener( "backbutton", backKeyDown, true );
-    
     // Handle the offline and online events for all pages except the login page
-    if ( $("div:jqmData(role='page')")[0].id != "loginPage" ) {
-        document.addEventListener( "offline", function( event ) {
-            debug && console.log( "init.offline: Mobile app is now offline" );
-            $("#onlineIndicator").text( Localization.getText( "offline" ) );
-            window.localStorage.setItem( "onlineStatus", "offline" );
-        }, false );
-        document.addEventListener( "online", function( event ) {
-            debug && console.log( "init.online: Mobile app is now online" );
-            $("#onlineIndicator").text( Localization.getText( "online" ) );
-            window.localStorage.setItem( "onlineStatus", "online" );
-            if ( JSONData && _.isFunction( JSONData.postSavedWorkOrders ) ) {
-                JSONData.postSavedWorkOrders();
-            }
-        }, false );
-    }
-}
-
-/**
- * Handle the back button ourselves
- */ 
-function backKeyDown( event ) {
-    debug && console.log( "init.backKeyDown: Back button tapped" );
-    UIFrame.navigateToPreviousPage();
+    document.addEventListener( "offline", function( event ) {
+        debug && console.log( "init.offline: Mobile app is now offline" );
+        $("#onlineIndicator").text( Localization.getText( "offline" ) );
+        window.localStorage.setItem( "onlineStatus", "offline" );
+    }, false );
+    document.addEventListener( "online", function( event ) {
+        debug && console.log( "init.online: Mobile app is now online" );
+        $("#onlineIndicator").text( Localization.getText( "online" ) );
+        window.localStorage.setItem( "onlineStatus", "online" );
+        if ( JSONData && _.isFunction( JSONData.postSavedWorkOrders ) ) {
+            JSONData.postSavedWorkOrders();
+        }
+    }, false );
 }

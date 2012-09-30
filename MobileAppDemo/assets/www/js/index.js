@@ -11,14 +11,21 @@ var Index = function() {
     
    // Knockout view model for the login page
    var indexViewModel = {
-       version : ko.observable( "" )
+       version : ko.observable( "" ),
+       jsonDemo : function() {
+           debug && console.log( "Index.jsonDemo: Running JSON demo" );
+           JSONData.reset();
+       },
+       dbDemo : function() {
+           console.log( "Index.jsonDemo: Running database demo" );
+       }
    };
    
    /**
     * Initialization
     */
    var init = _.once( function( pageId ) {
-       debug && console.log( "Index.init: Logon page initialization" );
+       debug && console.log( "Index.init: Index page initialization" );
        
        // Load the app's configuration data
        debug && console.log( "Index.init: Loading configuration" );
@@ -45,9 +52,6 @@ var Index = function() {
        // Apply the knockout bindings
        ko.applyBindings( indexViewModel );
 
-       // Clear the page history
-       UIFrame.clearPageHistory();
-       
        // This MUST be the last line inside each page specific init function
        UIFrame.postPageSpecificInit( pageId );
    });

@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="css/leadingedjemobile.css" />
 </head>
 <body>
-    <div id="loginPage" data-role="page" data-theme="b">
+    <div id="indexPage" data-role="page" data-theme="b">
         <div data-role="header" data-position="fixed" style="height: 50px;"> 
             <h1 id="indexPageTitle" data-translate="yes" style="margin-top: 15px;">Mobile App Demo</h1> 
         </div> 
@@ -26,6 +26,14 @@
                 <div class="ui-block-b login-center-block">
                     <div style="margin-top: 20%;">
                         <img src="images/leadingedjelogo.png" style="margin-bottom: 25px;"/>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 50%;">
+                            <a id="jsonDemo" data-translate="yes" data-role="button" data-bind="click: jsonDemo"></a>
+                        </div>
+                        <div class="ui-block-b" style="width: 50%;">
+                            <a id="dbDemo" data-translate="yes" data-role="button" data-bind="click: dbDemo"></a>
+                        </div>
                     </div>
                     <div data-role="fieldcontain">
                         <select name="selectLanguage" id="selectLanguage" data-native-menu="false" data-theme="c" data-inline="true">
@@ -58,7 +66,6 @@
         <script src="js/libs/globalize/globalize.min.js"></script>
         <script src="js/libs/globalize/globalize.culture.en-US.js"></script>
         <script src="js/libs/globalize/globalize.culture.de.js"></script>
-        <script src="js/firefox.js"></script>
         <script src="js/util.js"></script>
         <script src="js/jsondata.js"></script>
         <script src="js/database.js"></script>
