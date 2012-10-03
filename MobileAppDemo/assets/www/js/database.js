@@ -14,8 +14,6 @@ var MobileDb = function() {
     var db = null;
     var INVENTORY_TABLE         = "inventory";
     var PRODUCTS_TABLE          = "products";
-    var STANDARDJOBCODES_TABLE  = "standardJobCodes";
-    var STOCKAREAS_TABLE        = "stockAreas";
     
     // SQL queries
     var SQL_CREATE_TABLE        = "CREATE TABLE IF NOT EXISTS ";
@@ -27,13 +25,6 @@ var MobileDb = function() {
     var SQL_WHERE_WEBID = " WHERE webId = ";
     var SQL_OR_WEBID    = " OR webId = ";
     
-    var SQL_CREATE_PRODUCTS = 
-        SQL_CREATE_TABLE + PRODUCTS_TABLE + ' (webId PRIMARY KEY, manufacturer, productCode, description, productType, commodityCode, returnable)';
-    var SQL_SELECT_PRODUCTS_BY_TYPE_AND_CODE = 
-        'SELECT * FROM ' + PRODUCTS_TABLE + ' WHERE productType = ? AND productCode = ?';
-    var SQL_SELECT_PRODUCTS_BY_TYPE_CODE_AND_MFG = 
-        'SELECT * FROM ' + PRODUCTS_TABLE + ' WHERE productType = ? AND productCode = ? AND manufacturer = ?';
-    
     var SQL_CREATE_INVENTORY =
         SQL_CREATE_TABLE + INVENTORY_TABLE + ' (webId PRIMARY KEY, productId, manufacturer, productCode, stockAreaId, binName, mainBin, quantity, minimum, maximum)';
     var SQL_INSERT_INTO_INVENTORY = 
@@ -42,25 +33,6 @@ var MobileDb = function() {
         'SELECT * FROM ' + INVENTORY_TABLE;
     var SQL_UPDATE_INVENTORY_QUANTITY = 
         'UPDATE ' + INVENTORY_TABLE + ' SET quantity=quantityValue where webId=webIdValue';
-    var SQL_SELECT_INVENTORY_PRODUCTS_STOCKAREAS = 
-        'select i.*, p.description, s.webId as stockAreaId, s.name as stockAreaName, s.type as stockAreaType ' + 
-        'from ' + PRODUCTS_TABLE + ' as p, ' + INVENTORY_TABLE + ' as i, ' + STOCKAREAS_TABLE + ' as s ' +
-        'where p.webId = i.productId and i.stockAreaId = s.webId';
-    var SQL_SELECT_INVENTORY_PRODUCTS_STOCKAREAS_AVAILABLE = // FIXME waiting on DIS feedback
-    	'select i.*, p.description, s.webId as stockAreaId, s.name as stockAreaName, s.type as stockAreaType ' + 
-        'from ' + PRODUCTS_TABLE + ' as p, ' + INVENTORY_TABLE + ' as i, ' + STOCKAREAS_TABLE + ' as s ' +
-        'where p.webId = i.productId and p.productType = 1 and i.stockAreaId = s.webId and s.departmentId = 15801457 and i.webId in (' +
-        'select webId from ' + INVENTORY_TABLE + ' where quantity > 0 or minimum > 0 or maximum > 0)';
-    
-    var SQL_CREATE_STANDARDJOBCODES = 
-        SQL_CREATE_TABLE + STANDARDJOBCODES_TABLE + ' (webId PRIMARY KEY, completeJobCode, description, jobCode, notes)';
-    var SQL_INSERT_INTO_STANDARDJOBCODES = 
-        SQL_INSERT_INTO + STANDARDJOBCODES_TABLE + ' VALUES( ';
-    
-    var SQL_CREATE_STOCKAREAS = 
-        SQL_CREATE_TABLE + STOCKAREAS_TABLE + ' (webId PRIMARY KEY, type, branchId, departmentId, name )'; 
-    var SQL_INSERT_INTO_STOCKAREAS = 
-        SQL_INSERT_INTO + STOCKAREAS_TABLE + ' VALUES( ';
     
     /**
      * Open the mobile app's local database
@@ -69,7 +41,7 @@ var MobileDb = function() {
         debug && console.log( "MobileDb.openDB: Opening DB" );
         if ( db == null ) {
             try {
-                db = window.openDatabase( "CrownSFA", "1.0", "CrownSFA", 1024000000 );
+                db = window.openDatabase( "LeadingEDJE", "1.0", "LeadingEDJE", 1024000000 );
                 debug && console.log( "MobileDb.openDB: Database opened" );
             } catch ( e ) {
                 console.error( "MobileDb.openDB: e is: " + e );
@@ -97,7 +69,6 @@ var MobileDb = function() {
                   "Call openDB() before calling executeSql().";
         }
         
-        // debug && console.log( "MobileDb.executeSql: Executing SQL: " + sql );
         if ( parameters === undefined || parameters == null ) {
             parameters = [];
         }
@@ -173,30 +144,6 @@ var MobileDb = function() {
                             inventory.minimum + ', ' +
                             inventory.maximum + ')';
                 break;
-                
-            case "standardJobCodes" :
-                var standardJobCode = jsonData;
-                // Only consider standard job codes whose description and notes are not null
-                if ( !( standardJobCode.description == null && 
-                        standardJobCode.notes == null ) ) {
-                    insertSql = SQL_INSERT_INTO_STANDARDJOBCODES +
-                                standardJobCode.webId + ', ' + 
-                                '"' + standardJobCode.completeJobCode + '", ' +
-                                '"' + standardJobCode.description + '", ' +
-                                '"' + standardJobCode.jobCode + '", ' +
-                                '"' + standardJobCode.notes + '")';
-                }
-                break;
-                
-            case "stockAreas" :
-                var stockArea = jsonData;
-                insertSql = SQL_INSERT_INTO_STOCKAREAS + 
-                            stockArea.webId + ', ' +
-                            stockArea.type + ', ' +
-                            stockArea.branchId + ', ' +
-                            stockArea.departmentId + ', ' +
-                            '"' + stockArea.name + '")';
-                break;
         }
         return insertSql;
     }
@@ -224,14 +171,6 @@ var MobileDb = function() {
         switch ( dataType ) {
             case "inventory" :
                 createTableSql = SQL_CREATE_INVENTORY;
-                break;
-                
-            case "standardJobCodes" :
-                createTableSql = SQL_CREATE_STANDARDJOBCODES;
-                break;
-                
-            case "stockAreas" :
-                createTableSql = SQL_CREATE_STOCKAREAS;
                 break;
                 
             default:
@@ -357,65 +296,6 @@ var MobileDb = function() {
     }
     
     /**
-     * Create a test version of the products table
-     * @param numRows - number of rows to put into the table
-     */
-    function createProductsTable( numRows ) {
-        openDB();
-        if ( db ) {
-            debug && console.log( "MobileDb.createProductsTable: Dropping table: " + PRODUCTS_TABLE );
-            dropTable( null, PRODUCTS_TABLE );
-            
-            debug && console.log( "MobileDb.createProductsTable: Creating table: " + PRODUCTS_TABLE );
-            executeSql( SQL_CREATE_PRODUCTS, null, null, function() {
-                debug && console.log( "MobileDb.createProductsTable: Populating table: " + PRODUCTS_TABLE );
-                populateProductsTable( numRows );
-            }, function() {
-                throw "MobileDb.createProductsTable: Failed to create " + PRODUCTS_TABLE;
-            } );
-        } else {
-            throw "MobileDb.createProductsTable: openDB failed to open the database";
-        }
-    }
-    
-    /**
-     * Popluate the products table with test data
-     * @param numRows - Number of rows being inserted
-     */
-    function populateProductsTable( numRows ) {
-        var createProductsTableComplete = _.after( numRows, function() {
-            debug && console.log( "MobileDb.createProductsTableComplete: Products table created and populated" );
-        });
-        var executeSqlCallback = function( arg ) {
-            createProductsTableComplete();
-        };
-        
-        debug && console.log( "MobileDb.populateProductsTable: Inserting " + numRows + " rows" );
-        var sql = "";
-        var webId = "";
-        var productCode = "";
-        var description = "";
-        for ( var i = 0; i < numRows - 2; i++ ) {
-            // Populate the sql parms array with the product's 
-            // webId, productCode and description
-            webId       = i + 1;
-            productCode = webId;
-            description = "This is the product description for productCode" + webId;
-            sql = 'INSERT INTO PRODUCTS VALUES( ' + webId + ', "CRW", ' + 
-                                                              '"' + productCode + '", "' + description + '", 1, "", "false" )';
-            executeSql( sql, null, null, executeSqlCallback, null );
-        }
-        
-        // Add rows for PTR and TTR
-        sql = SQL_INSERT_INTO + PRODUCTS_TABLE + ' VALUES( ' + numRows + 1 + ', "' + JSONData.WORK_ORDER_LINE_MFG_LABOR + '", ' + 
-                                            '"' + JSONData.WORK_ORDER_LINE_PTR + '", "' + JSONData.WORK_ORDER_LINE_PTR + '", 3, "", "false" )';
-        executeSql( sql, null, null, executeSqlCallback, null );
-        sql = SQL_INSERT_INTO + PRODUCTS_TABLE + ' VALUES( ' + numRows + 2 + ', "' + JSONData.WORK_ORDER_LINE_MFG_LABOR + '", ' + 
-                                            '"' + JSONData.WORK_ORDER_LINE_TTR + '", "' + JSONData.WORK_ORDER_LINE_TTR + '", 3, "", "false" )';
-        executeSql( sql, null, null, executeSqlCallback, null );
-    }
-    
-    /**
      * Is the number of parameters in the parms array valid for 
      * the SQL statement?
      * @param sqlStatement - SQL statement to check
@@ -466,6 +346,9 @@ var MobileDb = function() {
         
         var startTime = new Date().getTime();
 
+        // NOTE: Results returned from query are read only.  To make them writable
+        //       we close the results and return the clone
+        //
         // This internal function allows us to batch the cloning of the result set into
         // an object array.  By using setTimeout, we give the browser an opportunitity 
         // to be responsive while this is happening
@@ -560,16 +443,6 @@ var MobileDb = function() {
     }
     
     /**
-     * Drop all tables
-     * @param tx
-     */
-    function dropAllTables() {
-        db.transaction( function( tx ) {
-            dropTable( tx, PRODUCTS_TABLE );
-        });
-    }
-    
-    /**
      * Simple database error callback
      */
     function defaultErrorCallbackFn( err1, err2 ) {
@@ -605,20 +478,12 @@ var MobileDb = function() {
     // Public accessible methods are exposed here
     return {
         'SQL_SELECT_INVENTORY'                              : SQL_SELECT_INVENTORY,
-        'SQL_SELECT_INVENTORY_PRODUCTS_STOCKAREAS'          : SQL_SELECT_INVENTORY_PRODUCTS_STOCKAREAS,
-        'SQL_SELECT_INVENTORY_PRODUCTS_STOCKAREAS_AVAILABLE': SQL_SELECT_INVENTORY_PRODUCTS_STOCKAREAS_AVAILABLE,
         'SQL_SELECT_ALL_FROM_TABLE'                         : SQL_SELECT_ALL_FROM_TABLE,
         'SQL_SELECT_ONE_FROM_TABLE'                         : SQL_SELECT_ONE_FROM_TABLE,
-        'SQL_SELECT_PRODUCTS_BY_TYPE_AND_CODE'              : SQL_SELECT_PRODUCTS_BY_TYPE_AND_CODE,
-        'SQL_SELECT_PRODUCTS_BY_TYPE_CODE_AND_MFG'          : SQL_SELECT_PRODUCTS_BY_TYPE_CODE_AND_MFG,
-        'SQL_UPDATE_INVENTORY_QUANTITY'                     : SQL_UPDATE_INVENTORY_QUANTITY,
         'createAndPopulateTable'                            : createAndPopulateTable,
-        'createProductsTable'                               : createProductsTable,
-        'dropAllTables'                                     : dropAllTables,
         'executeSql'                                        : executeSql,
         'executeSqlBatch'                                   : executeSqlBatch,
         'openDB'                                            : openDB,
-        'populateProductsTable'                             : populateProductsTable,
         'selectData'                                        : selectData,
         'updateData'                                        : updateData,
         'updateTable'                                       : updateTable

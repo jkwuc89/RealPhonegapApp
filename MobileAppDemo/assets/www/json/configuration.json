@@ -7,7 +7,6 @@
             "webId": 1,
             "version": "1.0",
             "serverBaseUrl": "http://wedinger.com/mobileappdemo",
-            "loadLocalJSONFilesOnly": false,
             "dailyUpdateFrequency": 1440,
             "periodicUpdateFrequency": 5,
             "jsonDatabaseFeeds":

@@ -63,11 +63,6 @@ var Index = function() {
 }();
 
 /**
- * Disable the ability to turn off the footer by tapping on the screen
- */ 
-$("[data-role=footer]").fixedtoolbar({ tapToggle: false });
-
-/**
  * Change handler for the language dropdown
  */
 $("#selectLanguage").change( function( event ) {

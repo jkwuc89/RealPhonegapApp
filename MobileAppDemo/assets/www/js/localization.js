@@ -28,7 +28,7 @@ var Localization = function() {
         window.localStorage.setItem( LS_LANGUAGE, newLang );
         Globalize.culture( newLang );
         if ( reloadPage ) {
-            // Reload the login page
+            // Reload the page after switching language
             UIFrame.reloadCurrentPage();
         }
     }
@@ -55,25 +55,6 @@ var Localization = function() {
         var currentLanguage = getLanguage();
         debug && console.log( "Localization.loadLanguage: Loading language " + currentLanguage );
         Globalize.culture( currentLanguage );
-
-        // The code below for switching language files works on Google Chrome desktop
-        // and on Google Chrome Beta on the Android tablet.  However, it fails on
-        // Android default browser with unknown chromium error: -6.
-        // So, we are forced to keep all translations in a single preloaded file
-        /*
-        var languageFile = LANGUAGE_FILE_LOCATION + currentLanguage + ".js";
-        debug && console.log( "Localization.loadLanguage: Loading language file " + languageFile );
-        $.ajax({
-            url : languageFile,
-            dataType : "script",
-            success : loadCallback,
-            error : function( jqXHR, textStatus, errorThrown ) {
-                console.error( JSON.stringify( jqXHR ) );
-                console.error( JSON.stringify( errorThrown ) );
-                throw "Localization.loadLanguage: Loading language file failed.  Status = " + textStatus;
-            }
-        });
-        */
 
         // Using single translations file
         this.currentTranslationDictionary = translations[currentLanguage];
