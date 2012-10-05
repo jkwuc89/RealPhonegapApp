@@ -115,15 +115,23 @@ nav a:hover {
     MOBILE: Main
    ============== */
 
-.main {
+#main {
 	padding: 30px 0;
 }
 
-.main article h1 {
-	font-size: 2em;
+#main article h1 {
+	font-size: 1.6em;
+	text-align: center;
+	color: #82B21A;
+}
+#main article h2 {
+	font-size: 1.2em;
+}
+#main ul.anchors {
+	display: none;
 }
 
-.main aside {
+#main aside {
 	color: white;
 	padding: 0 5% 10px;
 }
@@ -133,7 +141,7 @@ nav a:hover {
 	padding: 20px 0;
 }
 .footer-container,
-.main aside {
+#main aside {
 	border-top: 20px solid #82B21A;
 	background: #CACACA;
 }
@@ -214,6 +222,9 @@ footer #social a {
 	font-weight: bold;
 	text-decoration: none;
 }
+footer #social a:hover {
+	text-decoration: underline;
+}
 
 footer #copyright {
 	margin: 2px;
@@ -265,7 +276,7 @@ footer #copyright {
 	   ==================== */
 
 	.header-container,
-	.main aside {
+	#main aside {
 		-webkit-box-shadow: 0 5px 10px #aaa;
 		-moz-box-shadow: 0 5px 10px #aaa;
 		box-shadow: 0 5px 10px #aaa;
@@ -288,12 +299,12 @@ footer #copyright {
 		WIDE: Main
 	   ============ */
 
-	.main article {
+	#main article {
 		float: left;
 		width: 57%;
 	}
 
-	.main aside {
+	#main aside {
 		float: right;
 		width: 28%;
 	}
