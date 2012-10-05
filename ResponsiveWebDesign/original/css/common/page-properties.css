@@ -1,0 +1,30 @@
+/*<![CDATA[*/
+
+/* Page Properties
+------------------------------------------------ */
+/* Force vertical scrollbars by add 1px to the bottom margin - http://www.hicksdesign.co.uk/journal/forcing-scrollbars-now-even-better
+html { height: 100%; margin-bottom: 1px; } */
+
+html {
+	/* Keep FireFox from jumping when pages need vertical scrollbar. - http://www.websemantics.co.uk/tutorials/useful_css_snippets/ */
+	overflow: -moz-scrollbars-vertical;
+	overflow-x: auto;
+	overflow-y: scroll;
+	/* Hides inactive IE browser scrollbar. (http://archivist.incutio.com/viewlist/css-discuss/600)
+	overflow: auto; */
+}
+
+html,
+body {
+	width: 100%;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+	position: relative;
+}
+
+/*]]>*/
