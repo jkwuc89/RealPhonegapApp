@@ -1,10 +1,11 @@
 var translations = {
     "en-US" : {
+        "appFooter"                     : "Tap on a demo button above",
+        "appTitle"                      : "Leading EDJE Mobile App Demo",
         "dbDemo"                        : "Database Demo",
         "englishUS"                     : "English",
         "german"                        : "German",
-        "indexFooter"                   : "Tap on a demo button above",
-        "indexPageTitle"                : "Leading EDJE Mobile App Demo",
+        "indexPage"                     : "Home",
         "jsonDemo"                      : "JSON Demo",
         "ok"                            : "OK",
         "resetComplete"                 : "JSON data load is complete.",
@@ -14,11 +15,13 @@ var translations = {
         "versionLabel"                  : "Version"
     },
     "de" : {
-        "dbDemo"                        : "Database Demo",
+        "appFooter"                     : "Tippen Sie auf einem Demo-Button oben",
+        "appTitle"                      : "Leading EDJE Mobile-Anwendung demo",
+        "dbDemo"                        : "Database-Demo",
         "englishUS"                     : "Englisch",
         "german"                        : "Deutsch",
         "indexFooter"                   : "Tippen Sie auf einem Demo-Button oben",
-        "indexPageTitle"                : "Leading EDJE Mobile App Demo",
+        "indexPage"                     : "Zuhause",
         "jsonDemo"                      : "JSON Demo",
         "selectLanguageLabel"           : "Sprache auswählen",
         "versionLabel"                  : "Version"

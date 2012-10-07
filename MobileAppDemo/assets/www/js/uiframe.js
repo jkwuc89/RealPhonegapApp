@@ -16,23 +16,17 @@ var UIFrame = function() {
     /**
      * UI constants
      */
-    var IMAGE_PATH                        = "images/";
-    var USE_NATIVE_SELECT                 = "true";
+    var IMAGE_PATH              = "images/";
+    var USE_NATIVE_SELECT       = "true";
     
     /**
-     * Associative array containing the HTML generation information for each page
-     * inside the mobile app.  The key is the HTML ID for the page and must match
-     * the id inside the page's <div data-role="page"> element.
+     * Pages contained in this app
      */
     var Pages = { 
         'indexPage' : {
             url : 'index.html',
-            navigateFunction : JSONData.logoff,
-            onTasksMenu : true,
-            additionalHeader : false
         }
     };
-    var pagesWithoutCommonHeaderAndFooter = [ "indexPage" ];
 
     /**
      * Navigate to the page specified by url
@@ -90,26 +84,22 @@ var UIFrame = function() {
      * Build the page header.
      */
     function buildPageHeaderAndFooter( pageId ) {
-        if ( pagesWithoutCommonHeaderAndFooter.indexOf( pageId ) != -1 ) {
-            debug && console.log( "UIFrame.buildPageHeaderAndFooter: Page ID " + pageId + " does not use the common header / footer" );
-        } else {
-            // Common header and footer are built here
-            debug && console.log( "UIFrame.buildPageHeaderAndFooter: Building header for page ID: " + pageId );
-    
-            // Insert the header and footer HTML and trigger the pagecreate event to 
-            // update the DOM (from http://forum.jquery.com/topic/page-level-refresh)
-            var currentPage = $( "#" + pageId );
-            debug && console.log( "UIFrame.buildPageHeaderAndFooter: Rendering header HTML for : " + pageId );
-            var renderedHtml = new EJS( {url: "templates/header"} ).render( {
-                pageId : pageId,
-            });
-            debug && console.log( "UIFrame.buildPageHeaderAndFooter: Prepending header HTML to : " + pageId );
-            $(renderedHtml).prependTo( currentPage );
-            debug && console.log( "UIFrame.buildPageHeaderAndFooter: Rendering and appending footer HTML to : " + pageId );
-            renderedHtml = new EJS( {url: 'templates/footer'} ).render();
-            $(renderedHtml).appendTo( currentPage );
-            $(currentPage).trigger( 'pagecreate' );
-        }
+        // Common header and footer are built here
+        debug && console.log( "UIFrame.buildPageHeaderAndFooter: Building header for page ID: " + pageId );
+
+        // Insert the header and footer HTML and trigger the pagecreate event to 
+        // update the DOM (from http://forum.jquery.com/topic/page-level-refresh)
+        var currentPage = $( "#" + pageId );
+        debug && console.log( "UIFrame.buildPageHeaderAndFooter: Rendering header HTML for : " + pageId );
+        var renderedHtml = new EJS( {url: "templates/header"} ).render( {
+            pageId : pageId,
+        });
+        debug && console.log( "UIFrame.buildPageHeaderAndFooter: Prepending header HTML to : " + pageId );
+        $(renderedHtml).prependTo( currentPage );
+        debug && console.log( "UIFrame.buildPageHeaderAndFooter: Rendering and appending footer HTML to : " + pageId );
+        renderedHtml = new EJS( {url: 'templates/footer'} ).render();
+        $(renderedHtml).appendTo( currentPage );
+        $(currentPage).trigger( 'pagecreate' );
     }
 
     /**
