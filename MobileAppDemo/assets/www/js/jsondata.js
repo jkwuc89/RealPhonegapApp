@@ -47,9 +47,6 @@ var JSONData = function() {
         MobileDb.openDB();
         
         if ( pageId != "indexPage" ) {
-            var periodicUpdateFrequency = JSONData.getConfig().periodicUpdateFrequency;
-            debug && console.log( "JSONData.init: Periodic JSON feed update will run every " + 
-                                  periodicUpdateFrequency + " minutes" );
             // FIXME: Add a function to run every 5 minutes
             // $.doTimeout( 'JSONFeedUpdates', periodicUpdateFrequency * 60 * 1000, getPeriodicJSONFeedUpdates );
         } else {
@@ -120,7 +117,7 @@ var JSONData = function() {
     function getConfig() {
         if ( !config ) {
             try {
-                config = JSON.parse( window.localStorage.getItem( "configuration.1" ) );
+                config = JSON.parse( window.localStorage.getItem( "configuration" ) );
             } catch ( exc ) {
                 console.warn( "JSONData.getConfig: App configuration JSON not available in local storage yet" );
                 config = null;
@@ -172,8 +169,8 @@ var JSONData = function() {
         
         // Create the key for saving the json.  It includes the datatype.
         var key = null;
-        if ( data.hasOwnProperty( "webId" ) ) {
-            key = dataType + "." + data.webId;
+        if ( !_.isUndefined( data.id ) ) {
+            key = dataType + "." + data.id;
         } else {
             key = dataType;
         }
@@ -225,7 +222,7 @@ var JSONData = function() {
         var count = jsonFeedData['count'];
         var currentItem = null;
         if ( count > 0 ) {
-            var dataType = Object.keys(jsonFeedData)[2];
+            var dataType = Object.keys(jsonFeedData)[1];
             debug && console.log( "JSONData.saveJSONFeedDataIntoLocalStore: Saving " + count +
                                   " " + dataType  + " objects into local JSON store" );
             

@@ -1,14 +1,10 @@
 {
-    "success": true,
     "total": 1,
     "configuration": 
     [
         {
-            "webId": 1,
             "version": "1.0",
             "serverBaseUrl": "http://wedinger.com/mobileappdemo",
-            "dailyUpdateFrequency": 1440,
-            "periodicUpdateFrequency": 5,
             "jsonDatabaseFeeds":
             [
                 {
@@ -22,21 +18,6 @@
                 {
                     "name": "customers",
                     "url": "customers.json",
-                    "readOnly": false
-                },
-                {
-                    "name": "equipment",
-                    "url": "equipment.json",
-                    "readOnly": false
-                },
-                {
-                    "name": "manufacturers",
-                    "url": "manufacturers.json",
-                    "readOnly": true
-                },
-                {
-                    "name": "workOrders",
-                    "url": "workOrders.json",
                     "readOnly": false
                 }
             ]

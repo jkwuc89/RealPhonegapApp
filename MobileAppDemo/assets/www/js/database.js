@@ -19,6 +19,7 @@ var MobileDb = function() {
     var SQL_SELECT_ALL_FROM_TABLE = "SELECT * FROM tableName";
     var SQL_SELECT_ONE_FROM_TABLE = "SELECT * FROM tableName WHERE webId = ? LIMIT 1";
     
+    var SQL_DELETE_JSON_FROM_PARTS = "DELETE FROM " + PARTS_TABLE + " WHERE name LIKE 'JSON %'"
     var SQL_INSERT_INTO_PARTS = 
         SQL_INSERT_INTO + PARTS_TABLE + ' VALUES( ';
     var SQL_SELECT_PARTS = 
@@ -164,6 +165,7 @@ var MobileDb = function() {
         // Create SQL batch for populating the table
         debug && console.log( "MobileDb.populateTable: Creating SQL batch for " + dataType );
         var sqlBatch = [];
+        sqlBatch.push( SQL_DELETE_JSON_FROM_PARTS );
         _.each( jsonData[dataType], function( jsonInList ) {
             var insertSql = getInsertSql( dataType, jsonInList );
             if ( insertSql ) {
