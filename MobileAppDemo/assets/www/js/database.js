@@ -12,27 +12,17 @@
 var MobileDb = function() {
     
     var db = null;
-    var INVENTORY_TABLE         = "inventory";
-    var PRODUCTS_TABLE          = "products";
+    var PARTS_TABLE             = "parts";
     
     // SQL queries
-    var SQL_CREATE_TABLE        = "CREATE TABLE IF NOT EXISTS ";
-    var SQL_DELETE_ALL_ROWS     = "DELETE FROM ";
-    var SQL_DELETE_ROW_BY_WEBID = "DELETE FROM tableName WHERE webId = ";
     var SQL_INSERT_INTO         = "INSERT INTO ";
     var SQL_SELECT_ALL_FROM_TABLE = "SELECT * FROM tableName";
     var SQL_SELECT_ONE_FROM_TABLE = "SELECT * FROM tableName WHERE webId = ? LIMIT 1";
-    var SQL_WHERE_WEBID = " WHERE webId = ";
-    var SQL_OR_WEBID    = " OR webId = ";
     
-    var SQL_CREATE_INVENTORY =
-        SQL_CREATE_TABLE + INVENTORY_TABLE + ' (webId PRIMARY KEY, productId, manufacturer, productCode, stockAreaId, binName, mainBin, quantity, minimum, maximum)';
-    var SQL_INSERT_INTO_INVENTORY = 
-        SQL_INSERT_INTO + INVENTORY_TABLE + ' VALUES( ';
-    var SQL_SELECT_INVENTORY = 
-        'SELECT * FROM ' + INVENTORY_TABLE;
-    var SQL_UPDATE_INVENTORY_QUANTITY = 
-        'UPDATE ' + INVENTORY_TABLE + ' SET quantity=quantityValue where webId=webIdValue';
+    var SQL_INSERT_INTO_PARTS = 
+        SQL_INSERT_INTO + PARTS_TABLE + ' VALUES( ';
+    var SQL_SELECT_PARTS = 
+        'SELECT * FROM ' + PARTS_TABLE;
     
     /**
      * Open the mobile app's local database
@@ -80,12 +70,10 @@ var MobileDb = function() {
         }
         // Attempt to use existing transaction if available
         if ( tx === undefined || tx == null ) {
-            // debug && console.log( "MobileDb.executeSql: Using new transaction for query" );
             db.transaction( function( txParm ) {
                 txParm.executeSql( sql, parameters, successCallbackFn, errorCallbackFn );
             });
         } else {
-            // debug && console.log( "MobileDb.executeSql: Using existing transaction for query" );
             tx.executeSql( sql, parameters, successCallbackFn, errorCallbackFn );
         }
     }
@@ -130,68 +118,52 @@ var MobileDb = function() {
     function getInsertSql( dataType, jsonData ) {
         var insertSql = null;
         switch ( dataType ) {
-            case "inventory" :
-                var inventory = jsonData;
-                insertSql = SQL_INSERT_INTO_INVENTORY + 
-                            inventory.webId + ', ' +
-                            inventory.product.webId + ', ' +
-                            '"' + inventory.product.manufacturer + '", ' +
-                            '"' + inventory.product.productCode.replace( /\\/g, "" ).replace( /"/g, "&quot;" ) + '", ' +
-                            inventory.stockAreaId + ', ' +
-                            '"' + inventory.binName + '", ' +
-                            (inventory.mainBin ? 1 : 0) + ', ' +
-                            inventory.quantity + ', ' +
-                            inventory.minimum + ', ' +
-                            inventory.maximum + ')';
+            case "parts" :
+                var part = jsonData;
+                insertSql = SQL_INSERT_INTO_PARTS + 
+                            part.partnum + ', ' +
+                            '"' + part.name + '", ' +
+                            '"' + part.description + '", ' +
+                            part.quantity + ', ' +
+                            part.price + ')';
                 break;
         }
         return insertSql;
     }
     
     /**
-     * Create and populate a table using the specified json data.
+     * Populate a table using the specified json data.
      * @param jsonData - JSON data used to populate the table
      * @param successCallback - Success callback function
      * @param errorCallback - Error callback function
      */
-    function createAndPopulateTable( jsonData, successCallback, errorCallback ) {
-        debug && console.log( "MobileDb.createAndPopulateTable: Validating parameters" );
+    function populateTable( jsonData, successCallback, errorCallback ) {
+        debug && console.log( "MobileDb.populateTable: Validating parameters" );
         if ( !jsonData ) {
-            console.error( "MobileDb.createAndPopulateTable: Required parameter jsonData is null or undefined" );
-            throw "MobileDb.createAndPopulateTable: Required parameter jsonData is null or undefined";
+            console.error( "MobileDb.populateTable: Required parameter jsonData is null or undefined" );
+            throw "MobileDb.populateTable: Required parameter jsonData is null or undefined";
         }
         if ( !db ) {
-            throw "MobileDb.createAndPopulateTable: Database instance is not open.  Call openDB() before calling this method.";
+            throw "MobileDb.populateTable: Database instance is not open.  Call openDB() before calling this method.";
         }
         
         // Datatype specific init
-        var dataType = _.keys( jsonData )[2];
-        debug && console.log( "MobileDb.createAndPopulateTable: JSON datatype = " + dataType );
-        var createTableSql = null;
-        switch ( dataType ) {
-            case "inventory" :
-                createTableSql = SQL_CREATE_INVENTORY;
-                break;
-                
-            default:
-                throw "MobileDb.createAndPopulateTable: Table creation/population not supported for JSON datatype " + dataType;
-        }
+        var dataType = _.keys( jsonData )[1];
+        debug && console.log( "MobileDb.populateTable: JSON datatype = " + dataType );
         
         // Use default callbacks if callback params are undefined
         if ( !successCallback ) {
             successCallback = function() {
-                debug && console.log( "MobileDb.createAndPopulateTable: " + dataType + " table creation and population successful" );
+                debug && console.log( "MobileDb.populateTable: " + dataType + " table creation and population successful" );
             };
         }
         if ( !errorCallback ) {
             errorCallback = defaultErrorCallbackFn;
         }
         
-        // Create SQL batch for creating and populating the table
-        debug && console.log( "MobileDb.createAndPopulateTable: Creating SQL batch for " + dataType );
+        // Create SQL batch for populating the table
+        debug && console.log( "MobileDb.populateTable: Creating SQL batch for " + dataType );
         var sqlBatch = [];
-        sqlBatch.push( createTableSql );
-        sqlBatch.push( SQL_DELETE_ALL_ROWS + dataType );
         _.each( jsonData[dataType], function( jsonInList ) {
             var insertSql = getInsertSql( dataType, jsonInList );
             if ( insertSql ) {
@@ -199,100 +171,8 @@ var MobileDb = function() {
             }
         });
         
-        debug && console.log( "MobileDb.createAndPopulateTable: Executing SQL batch for " + dataType );
+        debug && console.log( "MobileDb.populateTable: Executing SQL batch for " + dataType );
         executeSqlBatch( sqlBatch, successCallback, errorCallback );
-    }
-    
-    /**
-     * Update a DB table with the specified JSON data
-     * @param jsonData - JSON data used to update the table
-     * @param successCallback - 
-     */
-    function updateTable( jsonData, successCallback, errorCallback ) {
-        if ( !jsonData ) {
-            throw "MobileDb.updateTable: Required parameter jsonData is null or undefined";
-        }
-        if ( !db ) {
-            throw "MobileDb.updateTable: Database instance is not open.  Call openDB() before calling this method.";
-        }
-        
-        var count    = jsonData['total'];
-        var dataType = _.keys( jsonData )[2];
-        debug && console.log( "MobileDb.updateTable: JSON datatype = " + dataType + ", update count = " + count );
-        
-        // Use default callbacks if callback params are undefined
-        if ( !successCallback ) {
-            successCallback = function() {
-                debug && console.log( "MobileDb.updateTable: " + dataType + " table update successful" );
-            };
-        }
-        if ( !errorCallback ) {
-            errorCallback = defaultErrorCallbackFn;
-        }
-        
-        if ( count > 0 ) {
-            debug && console.log( "MobileDb.updateTable: Building SELECT query to get existing objects" ); 
-            // Build the SELECT query to get all existing JSON objects
-            // whose webId's match those inside jsonData
-            var selectSql = SQL_SELECT_ALL_FROM_TABLE.replace( "tableName", dataType );
-            for ( var i = 0; i < count; i++ ) {
-                var currentWebId = jsonData[dataType][i].webId;
-                if ( i == 0 ) {
-                    selectSql += SQL_WHERE_WEBID + currentWebId;
-                } else {
-                    selectSql += SQL_OR_WEBID + currentWebId;
-                }
-            };
-            
-            var sqlUpdateBatch = [];
-            selectData( selectSql, null, function( objectsToUpdate ) {
-                debug && console.log( "MobileDb.updateTable: SELECT returned " + objectsToUpdate.length +
-                                      " existing objects. Building SQL batch to update objects." ); 
-                _.each( objectsToUpdate, function( objectInList ) {
-                    // Add delete each object returned from the SELECT
-                    sqlUpdateBatch.push( SQL_DELETE_ROW_BY_WEBID.replace( "tableName", dataType ) + objectInList.webId );
-                    // Add insert for each object returned from SELECT and
-                    // mark object inside jsonData as updated
-                    var jsonUpdateObject = _.find( jsonData[dataType], function( jsonInList ) {
-                        return jsonInList.webId == objectInList.webId;
-                    });
-                    sqlUpdateBatch.push( getInsertSql( dataType, jsonUpdateObject ) );
-                    jsonUpdateObject.updated = true;
-                });
-                
-                // Add insert statements for those objects not found during SELECT
-                _.each( jsonData[dataType], function( jsonInList ) {
-                    if ( !jsonInList.updated ) {
-                        sqlUpdateBatch.push( getInsertSql( dataType, jsonInList ) );
-                    }
-                });
-                
-                // Execute the SQL batch
-                debug && console.log( "MobileDb.updateTable: Executing batch to update objects" );
-                executeSqlBatch( sqlUpdateBatch,
-                    // Success callback
-                    function() {
-                        debug && console.log( "MobileDb.updateTable: SQL update batch successful" ); 
-                        // Update complete, call the success callback
-                        successCallback();
-                    },
-                    // Error callback
-                    function( err1, err2 ) {
-                        console.error( "MobileDb.updateTable: SQL update batch failed" );
-                        defaultErrorCallbackFn( err1, err2 );
-                        // Update complete, call the success callback
-                        successCallback();
-                    }
-                );
-            }, function( err1, err2 ) {
-                console.error( "MobileDb.updateTable: SQL SELECT to get existing objects failed" );
-                defaultErrorCallbackFn( err1, err2 );
-                successCallback();
-            });
-        } else {
-            // Call success callback immediately if there is nothing to update
-            successCallback();
-        }
     }
     
     /**
@@ -347,7 +227,7 @@ var MobileDb = function() {
         var startTime = new Date().getTime();
 
         // NOTE: Results returned from query are read only.  To make them writable
-        //       we close the results and return the clone
+        //       we clone the results and return the clone
         //
         // This internal function allows us to batch the cloning of the result set into
         // an object array.  By using setTimeout, we give the browser an opportunitity 
@@ -477,15 +357,13 @@ var MobileDb = function() {
 
     // Public accessible methods are exposed here
     return {
-        'SQL_SELECT_INVENTORY'                              : SQL_SELECT_INVENTORY,
         'SQL_SELECT_ALL_FROM_TABLE'                         : SQL_SELECT_ALL_FROM_TABLE,
         'SQL_SELECT_ONE_FROM_TABLE'                         : SQL_SELECT_ONE_FROM_TABLE,
-        'createAndPopulateTable'                            : createAndPopulateTable,
+        'populateTable'                                     : populateTable,
         'executeSql'                                        : executeSql,
         'executeSqlBatch'                                   : executeSqlBatch,
         'openDB'                                            : openDB,
         'selectData'                                        : selectData,
-        'updateData'                                        : updateData,
-        'updateTable'                                       : updateTable
+        'updateData'                                        : updateData
     };
 }();

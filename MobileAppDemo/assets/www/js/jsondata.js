@@ -222,7 +222,7 @@ var JSONData = function() {
         if ( !jsonFeedData ) {
             throw "JSONData.saveJSONFeedDataIntoLocalStore: Required parameters jsonFeedData is undefined";
         }
-        var count = jsonFeedData['total'];
+        var count = jsonFeedData['count'];
         var currentItem = null;
         if ( count > 0 ) {
             var dataType = Object.keys(jsonFeedData)[2];
@@ -299,8 +299,7 @@ var JSONData = function() {
             debug && console.log( "JSONData.loadJSONDataType: Update of JSON feed " + jsonFeed.name +
                                   " skipped because it does not support updates" );
             var emptyUpdateData = {
-                success : true,
-                total : 0
+                count : 0
             };
             emptyUpdateData[jsonFeed.name] = [];
             successCallback( emptyUpdateData );
@@ -339,10 +338,10 @@ var JSONData = function() {
             loadJSONDataType( currentJSONFeed, 
                 // Success call back stores the JSON data into the database 
                 function( data, textStatus, jqXHR ) {
-                    var dataType = _.keys(data)[2];
+                    var dataType = _.keys(data)[1];
                     debug && console.log( "JSONData.loadJSONDataIntoDatabase: Storing " + dataType + " into DB" );
                     // During a full sync, tables are created and populated
-                    MobileDb.createAndPopulateTable( data, function() {
+                    MobileDb.populateTable( data, function() {
                         debug && console.log( "JSONData.loadJSONDataIntoDatabase: " + dataType + " table created and populated" );
                         loadJSONDataIntoDatabaseComplete();
                     });

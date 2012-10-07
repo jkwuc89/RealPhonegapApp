@@ -12,9 +12,8 @@
             "jsonDatabaseFeeds":
             [
                 {
-                    "name": "inventory",
-                    "url": "inventory.json",
-                    "updateSupported": true,
+                    "name": "parts",
+                    "url": "parts.json",
                     "readOnly": false
                 }
             ],
@@ -23,25 +22,21 @@
                 {
                     "name": "customers",
                     "url": "customers.json",
-                    "updateSupported": true,
                     "readOnly": false
                 },
                 {
                     "name": "equipment",
                     "url": "equipment.json",
-                    "updateSupported": true,
                     "readOnly": false
                 },
                 {
                     "name": "manufacturers",
                     "url": "manufacturers.json",
-                    "updateSupported": false,
                     "readOnly": true
                 },
                 {
                     "name": "workOrders",
                     "url": "workOrders.json",
-                    "updateSupported": true,
                     "readOnly": false
                 }
             ]
