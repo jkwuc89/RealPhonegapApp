@@ -15,14 +15,20 @@
         <div data-role="content" align="center">
             <!-- Using a 3 column content grid to horizontally center the login form -->
             <div class="ui-grid-b">
-                <div class="ui-block-a login-spacer-block">
+                <div class="ui-block-a" style="width: 30%;">
                     <div style="position:absolute;left: 15px; bottom: 40px;">
                         <h3><span id="versionLabel" data-translate="yes"></span>:&nbsp;<span data-bind="text: version"></span></h3>
                     </div>
                 </div>
-                <div class="ui-block-b login-center-block">
-                    <div style="margin-top: 20%;">
+                <div class="ui-block-b" style="width: 40%;">
+                    <div style="margin-top: 10%;">
                         <img src="images/leadingedjelogo.png" style="margin-bottom: 25px;"/>
+                        <h3 style="-webkit-margin-before: 0em; -webkit-margin-after: .2em;">
+                            <span data-bind="text: today"></span>
+                        </h3>
+                        <h3 style="-webkit-margin-before: 0em; -webkit-margin-after: .4em;">
+                            <span data-bind="text: todayHoursLabel"></span>:&nbsp;<span data-bind="text: todayInHours"></span>
+                        </h3>
                     </div>
                     <div class="ui-grid-a">
                         <div class="ui-block-a" style="width: 50%;">
@@ -40,7 +46,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="ui-block-c login-spacer-block"></div>
+                <div class="ui-block-c" style="width: 30%;"></div>
             </div>
         </div>
         <script>var debug = true;</script>

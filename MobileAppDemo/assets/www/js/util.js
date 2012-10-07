@@ -10,37 +10,6 @@
 var Util = function() {
     
     /**
-     * Loop over a list that requires asynchronous processing
-     * iterator function must call resume() to iterate to the next item 
-     * in the list.
-     * @param list - Item list
-     * @param iterator - Function called for each item in the list
-     */
-    function asyncEach( list, iterator ) {
-        debug && console.log( "Util.asyncEach: Iterating over " + list.length + " items" );
-        
-        var n = list.length,
-            i = -1;
-
-        var iterate = function() {
-            debug && console.log( "Util.asyncEach: Iterating to next item in the list" );
-            i += 1;
-            if ( i === n )
-                return;
-            iterator( list[i], resume );
-        };
-
-        var resume = function() {
-            debug && console.log( "Util.asyncEach: Resuming asynchronous loop" );
-            setTimeout( iterate, 1 );
-        };
-        resume();
-    };
-    
-    // PSRT integration directories
-    var PSRT_REQUEST_DIR = ".WOrequests";
-
-    /**
      * Quickly clone an object
      */
     function clone( obj ) {
@@ -136,26 +105,6 @@ var Util = function() {
     }
     
     /**
-     * Return a string containing a string separated list of work
-     * order document numbers
-     * @param workOrders - work order array
-     * @returns String containing work order document numbers
-     */
-    function getWorkOrderDocumentNumbersAsString( workOrders ) {
-        if ( !workOrders || !_.isArray( workOrders ) || workOrders.length === 0 ) {
-            throw "Util.getWorkOrderDocumentNumbersAsString: Required parameter workOrders is missing or is invalid";
-        }
-        
-        var workOrderNumbers = "";
-        _.each( workOrders, function( workOrderInList ) {
-            workOrderNumbers += ( workOrderInList.documentNumber + " " );
-        });
-        workOrderNumbers = $.trim( workOrderNumbers );
-        
-        return workOrderNumbers;
-    }
-
-    /**
      * Get the current time in the ISO format that conforms to the DIS JSON model
      */
     function getISOCurrentTime() {
@@ -249,92 +198,6 @@ var Util = function() {
         dateTime.setMilliseconds( 0 );
         return dateTime.toISOString();
     }
-
-    /** 
-     * Start the PSRT application. This must handle the TaskBar, Customer Equipment, and Manage WO contexts
-     * 	@param equipmentSerialNumber - optional
-     *  @param psrtModel - optional 
-     * 	@param customerName - optional 
-     *  @param workOrderDocumentNumber - optional
-     */
-    function startPSRT( serialNumber, psrtModel, customerName, workOrderDocumentNumber ) {
-    	debug && console.log( "Util.startPSRT: Attempting PSRT launch" );
-        
-        // If the workOrder parameter was sent, create a request
-        if( workOrderDocumentNumber ) {
-            // Create WO request file for PSRT.  This allows PSRT to initialize it's search filter.
-            var woRequestObj = {};
-            if ( psrtModel ) {
-                woRequestObj.model = psrtModel;
-            } else {
-                woRequestObj.model = "";
-            }
-            
-            if( customerName ) {
-            	woRequestObj.customer = customerName;
-            } else {
-            	woRequestObj.customer = "";
-            }
-            	            
-            woRequestObj.serialNumber = serialNumber;
-            
-            var woRequestFilename = "";
-        	if( workOrderDocumentNumber ) {
-        		woRequestFilename = PSRT_REQUEST_DIR + "/" + workOrderDocumentNumber + ".json";
-        	}
-            	
-            var woRequestData = JSON.stringify( woRequestObj );
-            debug && console.log( "Util.startPSRT: Writing " + woRequestData + " to " + woRequestFilename );
-            
-            // Create the WO request directory
-            LocalFS.createDirectory( PSRT_REQUEST_DIR, function() {
-                // Write the WO request file
-                LocalFS.writeFile( woRequestFilename, woRequestData,
-                    // Write success results in attempt to start PSRT
-                    function() {
-                        debug && console.log( "Util.startPSRT: WO request file created. Starting PSRT" );
-                        if ( window.Firefox ) {
-                            debug && console.log( "Util.startPSRT: Firefox Phonegap plugin available" );
-                            window.Firefox( { url : JSONData.getConfig().psrtUrl },
-                                function() {
-                                    // Write flag to local storage to indicate that PSRT was started
-                                    window.localStorage.setItem( "psrtStarted", Util.getISOCurrentTime() ); 
-                                    debug && console.log( "Util.startPSRT: Firefox started" );
-                                },
-                                function() {
-                                    console.error( "Util.startPSRT: Attempt to start Firefox failed" );
-                                }
-                            );
-                        } else {
-                            console.error( "Util.startPSRT: Firefox plugin is not available" ); 
-                        }
-                    },
-                    // Failure to write the PSRT WO request file results in an alert
-                    function( error ) {
-                        alert( Localization.getText( "psrtWORequestFileWriteError") );
-                    }
-                );
-            });
-        // Normal launch with no equipment criteria
-        } else {
-        	debug && console.log( "Util.startPSRT: Starting PSRT with no equipment criteria." );
-            if ( window.Firefox ) {
-                debug && console.log( "Util.startPSRT: Firefox Phonegap plugin available" );
-                window.Firefox( { url : JSONData.getConfig().psrtUrl },
-                    function() {
-                        // Write flag to local storage to indicate that PSRT was started
-                        window.localStorage.setItem( "psrtStarted", Util.getISOCurrentTime() ); 
-                        debug && console.log( "Util.startPSRT: Firefox started" );
-                    },
-                    function() {
-                        console.error( "Util.startPSRT: Attempt to start Firefox failed" );
-                    }
-                );
-            } else {
-                console.error( "Util.startPSRT: Firefox plugin is not available" ); 
-            }
-        }
-    }
     
     /**
      * Take a picture using the tablet's camera.
@@ -378,20 +241,17 @@ var Util = function() {
     }
 
     return {
-        'asyncEach'                           : asyncEach,
         'clone'                               : clone,
         'convert12HourTimeToISODateTimeStamp' : convert12HourTimeToISODateTimeStamp,
         'convertDateToISODateTimeStamp'       : convertDateToISODateTimeStamp,
         'getISOCurrentTime'                   : getISOCurrentTime,
         'getObjectFromArray'                  : getObjectFromArray,
         'getUniqueId'                         : getUniqueId,
-        'getWorkOrderDocumentNumbersAsString' : getWorkOrderDocumentNumbersAsString,
         'isOnline'                            : isOnline,
         'isRunningOnChromeDesktop'            : isRunningOnChromeDesktop,
         'isRunningOniOS'                      : isRunningOniOS,
         'isValidISODateTimeStamp'             : isValidISODateTimeStamp,
         'setSecondsAndMillisecondsToZero'     : setSecondsAndMillisecondsToZero,
-        'startPSRT'                           : startPSRT,
         'takePicture'                         : takePicture
     };
 

@@ -50,6 +50,14 @@ var Index = function() {
            indexViewModel.version( "" );
        }
        
+       // Display today's date formatted using the selected locale
+       indexViewModel.today = ko.observable( Localization.formatDateTime( Util.getISOCurrentTime(), "f" ) );
+       indexViewModel.todayHoursLabel =
+           ko.observable( Localization.getText( "todayHoursLabel" ) +
+                          Localization.formatDateTime( "1970-01-01T00:00:00Z", "d" ) );
+       indexViewModel.todayInHours =
+           ko.observable( Localization.formatNumber( ( new Date().getTime() / 1000 / 60 / 60 ), "n2" ) );
+       
        // Apply the knockout bindings
        ko.applyBindings( indexViewModel );
 
