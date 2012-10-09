@@ -15,7 +15,7 @@ var translations = {
         "german"                        : "German",
         "home"                          : "HOME",
         "indexPage"                     : "Home",
-        "jsonDemo"                      : "JSON Demo",
+        "jsonDemo"                      : "Load JSON Data",
         "knockoutDemo"                  : "Knockout Demo",
         "loadingPage"                   : "Navigating to ",
         "nameLabel"                     : "Name",
