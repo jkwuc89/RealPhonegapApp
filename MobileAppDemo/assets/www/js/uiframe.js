@@ -24,7 +24,10 @@ var UIFrame = function() {
      */
     var Pages = { 
         'indexPage' : {
-            url : 'index.html',
+            url : 'index.html'
+        },
+        'knockoutDemo' : {
+            url : 'knockoutdemo.html'
         }
     };
 
@@ -44,7 +47,7 @@ var UIFrame = function() {
         }
 
         if ( !skipNavigation ) {
-            $.mobile.showPageLoadingMsg( "a", Localization.getText( "loadingPage" ) + " " + pageTitle, true );
+            $.mobile.showPageLoadingMsg( "a", Localization.getText( "loadingPage" ) + " " + url, true );
             document.location.href = url;
         } else {
             debug && console.log( "UIFrame.navigateToPage: Navigation skipped because page is already loaded" );
@@ -245,9 +248,6 @@ var UIFrame = function() {
         $("[data-role=header]").fixedtoolbar({ tapToggle: false });
         $("[data-role=footer]").fixedtoolbar({ tapToggle: false });
 
-        // Set a uniform background color for all pages except the login page
-        $("div:jqmData(role='page')").css( "background", "#E0E0E0" );
-        
         debug && console.log( "UIFrame.postPageSpecificInit: Finished" );
     }
     

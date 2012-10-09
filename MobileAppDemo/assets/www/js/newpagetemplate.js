@@ -7,9 +7,22 @@
 "use strict";
 
 /**
- * 
+ * Using the Revealing Module JavaScript pattern to encapsulate
+ * the UI frame functionality into an object
  */
 var NewPage = function() {
+
+    /**
+     * Initialization
+     */
+    var init = _.once( function( pageId ) {
+        debug && console.log( "NewPage.init: New page initialization" );
+    });    
+
+    return {
+        'init'           : init
+    };
+
 }();
 
 /**

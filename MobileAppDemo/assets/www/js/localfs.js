@@ -18,7 +18,7 @@ var LocalFS = function() {
      * Subdirectory under devices local file system directory
      * where JSON files are stored
      */
-    var JSON_DIR = "com.crown";
+    var JSON_DIR = "com.leadingedje";
     
     /**
      * Open the local file system

@@ -159,9 +159,10 @@ var Dialog = function() {
     
     // Public accessible methods are exposed here
     return {
-    	'showAlert'        : showAlert,
-    	'showConfirm'      : showConfirm,
-    	'showConfirmYesNo' : showConfirmYesNo,
-    	'showPleaseWait'   : showPleaseWait
+        'baseDialogOptions' : baseDialogOptions,
+    	'showAlert'         : showAlert,
+    	'showConfirm'       : showConfirm,
+    	'showConfirmYesNo'  : showConfirmYesNo,
+    	'showPleaseWait'    : showPleaseWait
     };
 }();

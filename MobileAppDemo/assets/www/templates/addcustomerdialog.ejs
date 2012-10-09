@@ -1,0 +1,25 @@
+<div id="addCustomerDialog" style="text-align: center;">
+    <!-- Dialog header with buttons -->
+    <div class="ui-bar-a">
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="text-align: left;">
+                <a href="" id="cancelButton"
+                   data-role="button" data-inline="true" data-mini="false" data-theme="a"
+                   onclick="UIFrame.closeActiveDialog();"><%= Localization.getText( "cancel" ) %></a>
+            </div>
+            <div class="ui-block-b" style="text-align: center;">
+                <h3 style="display: inline-block;"><%= dialogTitle %></h3>
+            </div>
+            <div class="ui-block-c" style="text-align: right;">
+                <a href="" id="saveButton"
+                   style="position: absolute; top: 2px; right: 3px;"
+                   data-role="button" data-inline="true" data-mini="false" data-theme="b"
+                   onclick="save();"><%= Localization.getText( "done" ) %></a>
+           </div>
+       </div>
+    </div>
+    <div data-role="fieldcontain" style="margin: 10px 20px 10px 20px; text-align: left;">
+    </div>
+    <script>
+    </script>
+</div>

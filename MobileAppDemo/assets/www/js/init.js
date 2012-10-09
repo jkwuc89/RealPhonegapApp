@@ -10,9 +10,7 @@
 $(document).on("mobileinit", function() {
     debug && console.log( "init.mobileinit: Setting jQuery Mobile defaults" );
     $.mobile.ajaxEnabled = false;
-    $.mobile.buttonMarkup.hoverDelay = 0;
-    $.mobile.defaultPageTransition = "none";
-    $.mobile.page.prototype.options.domCache = true;
+    $.mobile.defaultPageTransition = "fade";
     $.mobile.loadingMessageTextVisible = true;
 });
 

@@ -16,8 +16,7 @@ var MobileDb = function() {
     
     // SQL queries
     var SQL_INSERT_INTO         = "INSERT INTO ";
-    var SQL_SELECT_ALL_FROM_TABLE = "SELECT * FROM tableName";
-    var SQL_SELECT_ONE_FROM_TABLE = "SELECT * FROM tableName WHERE webId = ? LIMIT 1";
+    var SQL_SELECT_ALL_FROM_TABLE = "SELECT * FROM tableName LIMIT 100";
     
     var SQL_DELETE_JSON_FROM_PARTS = "DELETE FROM " + PARTS_TABLE + " WHERE name LIKE 'JSON %'"
     var SQL_INSERT_INTO_PARTS = 
@@ -360,7 +359,6 @@ var MobileDb = function() {
     // Public accessible methods are exposed here
     return {
         'SQL_SELECT_ALL_FROM_TABLE'                         : SQL_SELECT_ALL_FROM_TABLE,
-        'SQL_SELECT_ONE_FROM_TABLE'                         : SQL_SELECT_ONE_FROM_TABLE,
         'populateTable'                                     : populateTable,
         'executeSql'                                        : executeSql,
         'executeSqlBatch'                                   : executeSqlBatch,

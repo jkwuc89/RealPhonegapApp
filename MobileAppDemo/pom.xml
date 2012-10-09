@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-Maven pom for building the Crown SFA mobile application.
+Maven pom for building the mobile application.
 
 Prerequsite:
 1.  Install JDK 1.6
 2.  Install Maven 3.0.3
-3.  Copy settings.xml from the project's buildtools directory to your .m2 directory
-4.  Install the Android SDK
-5.  Set environment variable ANDROID_HOME to the path of your installed Android SDK
+3.  Install the Android SDK
+4.  Set environment variable ANDROID_HOME to the path of your installed Android SDK
     and add $ANDROID_HOME/tools as well as $ANDROID_HOME/platform-tools to your $PATH.
     (or on Windows %ANDROID_HOME%\tools and %ANDROID_HOME%\platform-tools).
 

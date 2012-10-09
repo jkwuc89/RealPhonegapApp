@@ -24,15 +24,6 @@ var JSONData = function() {
     var config = null;
     
     /**
-     * Valid JSON feed update types
-     */
-    var JSON_FEED_UPDATE_TYPE = {
-        FULL : 0,
-        DAILY : 1,
-        PERIODIC : 2
-    };
-
-    /**
      * Initialize the JSONData object.  This method should be called
      * by each page's pageinit event handler.  _.once is used to ensure
      * that init is only called once.
@@ -305,12 +296,10 @@ var JSONData = function() {
     
     /**
      * Load JSON feeds into the database
-     * @param updateType - JSON data update type, member of JSON_DATA_UPDATE_TYPE,
-     *                     defaults to FULL
      */
     var loadJSONDataIntoDatabaseComplete = null;
     var loadJSONDataErrorOccurred = false;
-    function loadJSONDataIntoDatabase( updateType ) {
+    function loadJSONDataIntoDatabase() {
 
         if ( !config ) {
             config = getConfig();
@@ -324,7 +313,7 @@ var JSONData = function() {
         // calls loadJSONDataIntoLocalStore to load the JSON feeds that are stored in local storage
         loadJSONDataIntoDatabaseComplete = _.after( getConfig().jsonDatabaseFeeds.length, function() {
             debug && console.log( "JSONData.loadJSONDataIntoDatabaseComplete: Executed once after all JSON is loaded into the DB" );
-            loadJSONDataIntoLocalStore( updateType );
+            loadJSONDataIntoLocalStore();
         });
         
         // Load all of the database feeds
@@ -358,12 +347,10 @@ var JSONData = function() {
 
     /**
      * Local JSON feeds into local storage
-     * @param updateType - JSON data update type, member of JSON_DATA_UPDATE_TYPE,
-     *                     defaults to FULL
      */
     var loadJSONDataIntoLocalStoreStartTime = null;
     var loadJSONDataIntoLocalStoreComplete = null;
-    function loadJSONDataIntoLocalStore( updateType ) {
+    function loadJSONDataIntoLocalStore() {
         // Set up an _.after function that executes once when all JSON data is loaded into
         // the local store
         loadJSONDataIntoLocalStoreComplete = _.after( getConfig().jsonLocalStoreFeeds.length, function() {
@@ -472,34 +459,6 @@ var JSONData = function() {
     }
     
     /**
-     * Get an object from the database via its ID
-     * @param dataType - JSON data type which matches the DB table name
-     * @param id - ID of the object, a null ID calls the resultCallback with null as the result
-     * @param resultCallback - This function is called with the object or null if the object does not exist
-     */
-    function getObjectFromDatabaseById( dataType, id, resultCallback ) {
-        if ( !dataType || !resultCallback || !_.isFunction( resultCallback ) ) {
-            throw "JSONData.getObjectFromDatabaseById: One or more required parameters (dataType, resultCallback) are undefined or invalid";
-        }
-        if ( id != null ) {
-            var sqlParms = [];
-            sqlParms.push( id );
-            MobileDb.selectData( MobileDb.SQL_SELECT_ONE_FROM_TABLE.replace( "tableName", dataType ), sqlParms, function( result ) {
-                if ( result.length == 0 ) {
-                    debug && console.log( "JSONData.getObjectFromDatabaseById: " + dataType + " object with ID " + id + " not found" );
-                    resultCallback( null );
-                } else {
-                    debug && console.log( "JSONData.getObjectFromDatabaseById: Calling resultCallback with " + JSON.stringify( result ) );
-                    resultCallback( result[0] );
-                }
-            }, null ); 
-        } else {
-            debug && console.log( "JSONData.getObjectFromDatabaseById: id is null, calling resultCallback with null result" );
-            resultCallback( null );
-        }
-    }
-    
-    /**
      * Get an object from the specified JSON object array
      * @param jsonObjArray - JSON object array
      * @param webId - webId used to locate the desired object
@@ -552,9 +511,8 @@ var JSONData = function() {
      * Get objects from the database by datatype
      * @param dataType - JSON data type
      * @param resultCallback - Called with array of objects from database
-     * @param whereClause, optional
      */
-    function getObjectsFromDatabase( dataType, resultCallback, whereClause ) {
+    function getObjectsFromDatabase( dataType, resultCallback ) {
         if ( !dataType || !resultCallback || !_.isFunction( resultCallback ) ) {
             throw "JSONData.getObjectsFromDatabase: One or more required parameters (dataType, resultCallback) are undefined or invalid";
         }
@@ -570,7 +528,7 @@ var JSONData = function() {
                                Localization.getText( "resettingMobileApp" ), "350px" );
         removeAllLocalStorageItems();
         debug && console.log( "JSONData.reloadJSONData: JSON data being loaded into an empty local store" );
-        loadJSONDataIntoDatabase( JSON_FEED_UPDATE_TYPE.FULL );
+        loadJSONDataIntoDatabase();
     }
     
     return {
@@ -580,7 +538,6 @@ var JSONData = function() {
         'getJSONFeedConfig'                         : getJSONFeedConfig,
         'getObjectById'                             : getObjectById,
         'getObjectFromArrayById'                    : getObjectFromArrayById,
-        'getObjectFromDatabaseById'                 : getObjectFromDatabaseById,
         'getObjectsByDataType'                      : getObjectsByDataType,
         'getObjectsFromDatabase'                    : getObjectsFromDatabase,
         'init'                                      : init,
