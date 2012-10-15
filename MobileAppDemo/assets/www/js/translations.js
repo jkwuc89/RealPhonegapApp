@@ -7,7 +7,9 @@ var translations = {
         "appTitle"                      : "Leading EDJE Mobile App Demo",
         "cancel"                        : "Cancel",
         "cityLabel"                     : "City",
+        "clearButton"                   : "Clear",
         "customers"                     : "Customers",
+        "date"                          : "Date",
         "dbDemo"                        : "Database Demo",
         "descriptionLabel"              : "Description",
         "done"                          : "Done",
@@ -24,6 +26,7 @@ var translations = {
         "ok"                            : "OK",
         "partNumberLabel"               : "Part Number",
         "parts"                         : "Parts",
+        "pleaseSignBelow"               : "Please sign in the box below",                   
         "priceLabel"                    : "Price",
         "quantityLabel"                 : "Quantity",
         "stateLabel"                    : "State",
@@ -31,6 +34,7 @@ var translations = {
         "resettingMobileApp"            : "Loading all JSON data from the server into the mobile app. Please wait.",
         "resetTitle"                    : "Load JSON Data",
         "selectLanguageLabel"           : "Select Language",
+        "signatureCaptureDemo"          : "Signature Capture Demo",
         "todayHoursLabel"               : "Hours since ",
         "versionLabel"                  : "Version",
         "zipLabel"                      : "ZIP"
@@ -52,6 +56,7 @@ var translations = {
         "online"                        : "ONLINE",
         "parts"                         : "Parts",
         "selectLanguageLabel"           : "Sprache auswählen",
+        "signatureCaptureDemo"          : "Erfassen von Unterschriften Demo",
         "todayHoursLabel"               : "Stunden seit ",
         "versionLabel"                  : "Version"
     }

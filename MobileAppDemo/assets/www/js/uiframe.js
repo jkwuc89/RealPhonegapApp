@@ -28,6 +28,9 @@ var UIFrame = function() {
         },
         'knockoutDemo' : {
             url : 'knockoutdemo.html'
+        },
+        'signatureCaptureDemo' : {
+            url : 'signaturecapturedemo.html'
         }
     };
 

@@ -23,6 +23,10 @@ var Index = function() {
        knockoutDemo : function() {
            console.log( "Index.knockoutDemo: Running Knockout demo" );
            UIFrame.navigateToPage( "knockoutdemo.html" );
+       },
+       signatureCaptureDemo : function() {
+           console.log( "Index.signatureCaptureDemo: Running Signature Capture demo" );
+           UIFrame.navigateToPage( "signaturecapturedemo.html" );
        }
    };
    

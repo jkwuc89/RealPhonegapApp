@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Leading EDJE Mobile App Demo</title>
+<link rel="stylesheet" href="js/libs/jquery/leadingedje.jquery.mobile-1.1.1.min.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.datebox.min.css" />
+<link rel="stylesheet" href="js/libs/badge/badge.css" />  
+<link rel="stylesheet" href="css/leadingedjemobile.css" />
+</head>
+<body>
+    <div id="signatureCaptureDemo" data-role="page" style="background-color: #FFFFFF;">
+        
+        <!-- Signature with date -->
+        <div style="text-align: center; background-color: #FFFFFF;">
+            <p class="signature-demo-text" id="pleaseSignBelow" data-translate="yes"></p>
+            <img id="signatureImage" style="width: 300px; border-bottom: solid 1px black; display: none;"
+               data-bind="attr: { src: signatureImage }" />
+            <p style="display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <h3 class="signature-demo-text"
+                style="display: inline-block;">
+                <span id="date" data-translate="yes"></span>:&nbsp;<span style="font-weight: normal;" data-bind="text: formattedSignatureDate"></span>
+            </h3>
+            <br/>
+        </div>
+        
+        <!-- Signature capture block...initially hidden -->
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="width: 5%;"></div>
+            <div id="signatureArea" class="ui-block-b signature-div" style="width: 90%; padding-top: 10px; text-align: center;">
+                <div style="padding-left: 10px; padding-right: 10px;">
+                    <form class="sigPad" action="javascript:myFunction(); return false;">
+                        <div id="divSignature" class="sig sigWrapper">
+                            <canvas id="signatureCanvas" class="pad" width="1100px" height="250px"></canvas>
+                            <input type="hidden" name="output" class="output">
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="" id="clearButton" class="clearButton" data-translate="yes" style="width: 150px;"
+                               data-role="button" data-mini="false" data-inline="true" data-theme="c"
+                               data-bind="click: clearSignature"></a>
+                            <a href="" id="done" class="save-signature-button" data-translate="yes"
+                               data-role="button" data-mini="false" data-inline="true" data-theme="a"
+                               data-bind="click: saveSignature"></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="ui-block-c" style="width: 5%;"></div>
+        </div>
+        
+        <script>var debug = true;</script>
+        <script src="js/libs/jquery/jquery-1.8.1.min.js"></script>
+        <script src="js/libs/phonegap/cordova-2.1.0.ios.min.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/libs/jquery/jquery.dotimeout.min.js"></script>
+        <script src="js/libs/jquery/jquery.mobile-1.1.1.min.js"></script>
+        <script src="js/libs/jquery/jquery.mobile.simpledialog2.min.js"></script>
+        <script src="js/libs/jquery/jquery.mobile.datebox.min.js"></script>
+        <script src="js/libs/jquery/jquery.i18n.min.js"></script>
+        <script src="js/libs/signature/jquery.signaturepad.min.js"></script>
+        <script src="js/libs/signature/flashcanvas.js"></script>
+        <script src="js/libs/signature/json2.min.js"></script>
+        <script src="js/libs/badge/badge.js"></script>
+        <script src="js/libs/ejs/ejs_production.js"></script>
+        <script src="js/libs/knockout/knockout-2.1.0.js"></script>
+        <script src="js/libs/knockout/knockout.mapping.js"></script>
+        <script src="js/libs/underscore/underscore-min.js"></script>
+        <script src="js/libs/globalize/globalize.min.js"></script>
+        <script src="js/libs/globalize/globalize.culture.en-US.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/database.js"></script>
+        <script src="js/jsondata.js"></script>
+        <script src="js/translations.js"></script>
+        <script src="js/localization.js"></script>
+        <script src="js/dialog.js"></script>
+        <script src="js/uiframe.js"></script>
+        <script src="js/signaturecapturedemo.js"></script>
+    </div>
+</body>
+</html>
