@@ -34,7 +34,7 @@ var translations = {
         "resettingMobileApp"            : "Loading all JSON data from the server into the mobile app. Please wait.",
         "resetTitle"                    : "Load JSON Data",
         "selectLanguageLabel"           : "Select Language",
-        "signatureCaptureDemo"          : "Signature Capture Demo",
+        "signatureCaptureDemo"          : "Signature Demo",
         "todayHoursLabel"               : "Hours since ",
         "versionLabel"                  : "Version",
         "zipLabel"                      : "ZIP"
@@ -56,7 +56,7 @@ var translations = {
         "online"                        : "ONLINE",
         "parts"                         : "Parts",
         "selectLanguageLabel"           : "Sprache auswählen",
-        "signatureCaptureDemo"          : "Erfassen von Unterschriften Demo",
+        "signatureCaptureDemo"          : "Unterzeichnung demo",
         "todayHoursLabel"               : "Stunden seit ",
         "versionLabel"                  : "Version"
     }
