@@ -38,7 +38,6 @@ var JSONData = function() {
         MobileDb.openDB();
         
         if ( pageId != "indexPage" ) {
-            // FIXME: Add a function to run every 5 minutes
             // $.doTimeout( 'JSONFeedUpdates', periodicUpdateFrequency * 60 * 1000, getPeriodicJSONFeedUpdates );
         } else {
             debug && console.log( "JSONData.init: Periodic JSON feed update disabled for pageId: " + pageId );
