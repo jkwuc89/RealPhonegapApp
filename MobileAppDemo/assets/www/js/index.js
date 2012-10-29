@@ -13,7 +13,7 @@ var Index = function() {
    var indexViewModel = {
        version : ko.observable( "" ),
        dbDemo : function() {
-           console.log( "Index.jsonDemo: Running database demo" );
+           debug && console.log( "Index.jsonDemo: Running database demo" );
            Dialog.showAlert( "Dialog Test", "Testing dialog position" );
        },
        jsonDemo : function() {
@@ -21,7 +21,7 @@ var Index = function() {
            JSONData.reset();
        },
        knockoutDemo : function() {
-           console.log( "Index.knockoutDemo: Running Knockout demo" );
+           debug && console.log( "Index.knockoutDemo: Running Knockout demo" );
            UIFrame.navigateToPage( "knockoutdemo.html" );
        },
        signatureCaptureDemo : function() {
