@@ -181,6 +181,19 @@ header#top {
 	height: 391px;
 	border: solid 1px green;
 }
+.founders span {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	color: inherit;
+	font-style: italic;
+	text-decoration: none;
+}
+.founders span:first-letter {
+	font-weight: bold;
+	color: #82B21A;
+}
+
 footer #mission-statement {
 	line-height: 1.6em;
 	font-size: 1.2em;
@@ -193,6 +206,7 @@ footer #mission-statement {
 .funner {
 	font-family: "GoodDogRegular", "Georgia", serif;
 	font-size: 1.4em;
+	vertical-align: top;
 }
 footer #awards {
 	width: 280px;
@@ -236,16 +250,12 @@ footer #copyright {
    ========================================================================== */
 
 @media only screen and (min-width: 480px) {
-
-	/* ====================
-		INTERMEDIATE: Menu
-	   ==================== */
-
 	nav a {
 		float: left;
-		width: 27%;
+		width: 24.625%;
+		margin: 0 0.25%;
+		border-bottom: solid 1px #B1BEAD;
 		padding: 0;
-		margin: 0 1.7% 0 1.7%; border-bottom: solid 1px #B1BEAD; margin-bottom: 0;
 	}
 
 	nav li:first-child a {
@@ -255,10 +265,6 @@ footer #copyright {
 	nav li:last-child a {
 		margin-right: 0;
 	}
-
-	/* ========================
-		INTERMEDIATE: IE Fixes
-	   ======================== */
 
 	nav ul li {
 		display: inline;
@@ -271,10 +277,6 @@ footer #copyright {
 
 @media only screen and (min-width: 768px) {
 
-	/* ====================
-		WIDE: CSS3 Effects
-	   ==================== */
-
 	.header-container,
 	#main aside {
 		-webkit-box-shadow: 0 5px 10px #aaa;
@@ -282,22 +284,14 @@ footer #copyright {
 		box-shadow: 0 5px 10px #aaa;
 	}
 
-	/* ============
-		WIDE: Menu
-	   ============ */
-
 	.title {
 		float: left;
 	}
 
 	nav {
 		float: right;
-		width: 38%;
+		width: 50%;
 	}
-
-	/* ============
-		WIDE: Main
-	   ============ */
 
 	#main article {
 		float: left;
@@ -311,10 +305,6 @@ footer #copyright {
 }
 
 @media only screen and (min-width: 1140px) {
-
-	/* ===============
-		Maximal Width
-	   =============== */
 
 	.wrapper {
 		width: 1026px; /* 1140px - 10% for margins */
