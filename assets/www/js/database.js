@@ -18,11 +18,9 @@ var MobileDb = function() {
     var SQL_INSERT_INTO         = "INSERT INTO ";
     var SQL_SELECT_ALL_FROM_TABLE = "SELECT * FROM tableName LIMIT 100";
     
-    var SQL_DELETE_JSON_FROM_PARTS = "DELETE FROM " + PARTS_TABLE + " WHERE name LIKE 'JSON %'"
+    var SQL_DELETE_JSON_FROM_PARTS = "DELETE FROM " + PARTS_TABLE + " WHERE name LIKE 'JSON %'";
     var SQL_INSERT_INTO_PARTS = 
         SQL_INSERT_INTO + PARTS_TABLE + ' VALUES( ';
-    var SQL_SELECT_PARTS = 
-        'SELECT * FROM ' + PARTS_TABLE;
     
     /**
      * Open the mobile app's local database
