@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Leading EDJE Mobile App Demo</title>
+<link rel="stylesheet" href="js/libs/jquery/leadingedje.jquery.mobile-1.1.1.min.css" />    
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.datebox.min.css" />
+<link rel="stylesheet" href="js/libs/badge/badge.css" />  
+<link rel="stylesheet" href="css/leadingedjemobile.css" />
+</head>
+<body>
+    <div id="indexPage" data-role="page" data-theme="b"
+         style="background: #E0E0E0;">
+        <div data-role="content" align="center">
+            <!-- Using a 3 column content grid to horizontally center the login form -->
+            <div class="ui-grid-b">
+                <div class="ui-block-a" style="width: 25%;">
+                    <div style="position:absolute;left: 15px; bottom: 40px;">
+                        <h3><span id="versionLabel" data-translate="yes"></span>:&nbsp;<span data-bind="text: version"></span></h3>
+                    </div>
+                </div>
+                <div class="ui-block-b" style="width: 50%;">
+                    <div style="margin-top: 10%;">
+                        <img src="images/leadingedjelogo.png" style="margin-bottom: 25px;"/>
+                        <h3 style="-webkit-margin-before: 0em; -webkit-margin-after: .2em;">
+                            <span data-bind="text: today"></span>
+                        </h3>
+                        <h3 style="-webkit-margin-before: 0em; -webkit-margin-after: .2em;">
+                            <span data-bind="text: todayHoursLabel"></span>:&nbsp;<span data-bind="text: todayInHours"></span>
+                        </h3>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 50%;">
+                            <a id="jsonDemo" data-translate="yes" data-role="button" data-bind="click: jsonDemo"></a>
+                            <a id="signatureCaptureDemo" data-translate="yes" data-role="button" data-bind="click: signatureCaptureDemo"></a>
+                        </div>
+                        <div class="ui-block-b" style="width: 50%;">
+                            <a id="knockoutDemo" data-translate="yes" data-role="button" data-bind="click: knockoutDemo"></a>
+                        </div>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <select name="selectLanguage" id="selectLanguage" data-native-menu="false" data-theme="c" data-inline="true">
+                            <option id="selectLanguageLabel" data-translate="yes"></option>
+                            <option id="englishUS" data-translate="yes" value="en-US"></option>
+                            <option id="german" data-translate="yes" value="de"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ui-block-c" style="width: 25%;"></div>
+            </div>
+        </div>
+        <script>var debug = true;</script>
+        <script src="js/libs/jquery/jquery-1.8.1.min.js"></script>
+        <script src="js/libs/phonegap/cordova-2.1.0.ios.min.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/libs/jquery/jquery.dotimeout.min.js"></script>
+        <script src="js/libs/jquery/jquery.mobile-1.1.1.min.js"></script>
+        <script src="js/libs/jquery/jquery.mobile.simpledialog2.min.js"></script>
+        <script src="js/libs/jquery/jquery.mobile.datebox.min.js"></script>
+        <script src="js/libs/jquery/jquery.i18n.min.js"></script>
+        <script src="js/libs/badge/badge.js"></script>
+        <script src="js/libs/ejs/ejs_production.js"></script>
+        <script src="js/libs/knockout/knockout-2.1.0.js"></script>
+        <script src="js/libs/knockout/knockout.mapping.js"></script>
+        <script src="js/libs/underscore/underscore-min.js"></script>
+        <script src="js/libs/globalize/globalize.min.js"></script>
+        <script src="js/libs/globalize/globalize.culture.en-US.js"></script>
+        <script src="js/libs/globalize/globalize.culture.de.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/jsondata.js"></script>
+        <script src="js/database.js"></script>
+        <script src="js/translations.js"></script>
+        <script src="js/localization.js"></script>
+        <script src="js/dialog.js"></script>
+        <script src="js/uiframe.js"></script>
+        <script src="js/index.js"></script>
+    </div>
+</body>
+</html>
