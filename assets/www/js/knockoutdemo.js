@@ -27,7 +27,41 @@ var KnockoutDemo = function() {
         parts : ko.observableArray([]),
         addCustomer : addCustomer
     };
-    
+
+    /**
+     * After the PhoneGap deviceready event fires, run postLoadFn()
+     */
+    document.addEventListener( "deviceready", onDeviceReady, false );
+    function onDeviceReady() {
+        debug && console.log( "KnockoutDemo.onDeviceReady: Running postLoadFn" );
+        postLoadFn();
+    }
+
+    /**
+     * After the overview page loads on Chrome Desktop, run postLoadFn()
+     */
+    $(window).load( function() {
+        if ( Util.isRunningOnChromeDesktop() ) {
+            debug && console.log( "KnockoutDemo.window.load: Running postLoadFn" );
+            postLoadFn();
+        } else {
+            debug && console.log( "ManageWorkOrderOverview.window.load: App running on tablet. postLoadFn skipped." );
+        }
+    });
+
+    /**
+     * This function is executed after the page loads on Chrome Desktop
+     * or when the onDeviceReady event fires on the tablet.
+     */
+    function postLoadFn() {
+        debug && console.log( "KnockoutDemo.postLoadFn: Started at " + new Date() );
+
+        // Populate the parts list using the DB
+        JSONData.getObjectsFromDatabase( "parts", function( parts ) {
+            demoViewModel.parts( parts );
+        });
+    }
+
     /**
      * Initialization
      */
@@ -36,12 +70,7 @@ var KnockoutDemo = function() {
         
         // Apply the knockout bindings
         ko.applyBindings( demoViewModel );
-        
-        // Populate the parts list using the DB
-        JSONData.getObjectsFromDatabase( "parts", function( parts ) {
-            demoViewModel.parts( parts );
-        });
-    });    
+    });
     
     /**
      * Reset the add customer label styles
