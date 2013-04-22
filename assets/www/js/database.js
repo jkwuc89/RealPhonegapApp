@@ -305,6 +305,7 @@ var MobileDb = function() {
     /**
      * Delete all rows from a table
      * @param tx
+     * @param tableName
      */
     function deleteAllRows( tx, tableName  ) {
         debug && console.log( "MobileDb.deleteAllRows: Deleting all rows from table: " + tableName );
@@ -313,6 +314,7 @@ var MobileDb = function() {
     
     /**
      * Drop the specified table.
+     * @param tx
      * @param tableName
      */
     function dropTable( tx, tableName ) {
