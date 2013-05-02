@@ -1,0 +1,124 @@
+{
+  "success": true,
+  "total": 6,
+    "requestDate": "2013-04-11T10:16:12Z",
+  "standardJobCodeManufacturers":
+  [
+    {
+      "webId": 5,
+      "internalId": "RAC",
+      "description": "Repair Codes",
+      "jobCodeStructure":
+      [
+        {
+          "length": "2",
+          "name": "Category"
+        },
+        {
+          "length": "2",
+          "name": "Detail"
+        },
+        {
+          "length": "2",
+          "name": "Action"
+        }
+      ]
+    },
+    {
+      "webId": 1,
+      "internalId": "02",
+      "description": "Planned Maint",
+      "jobCodeStructure":
+      [
+        {
+          "length": "3",
+          "name": "Truck Type"
+        },
+        {
+          "length": "1",
+          "name": "Frequency"
+        }
+      ]
+    },
+    {
+      "webId": 2,
+      "internalId": "03",
+      "description": "Serv Repair Job",
+      "jobCodeStructure":
+      [
+        {
+          "length": "4",
+          "name": "Manufacture"
+        },
+        {
+          "length": "6",
+          "name": "Model"
+        },
+        {
+          "length": "4",
+          "name": "Manufacture"
+        },
+        {
+          "length": "2",
+          "name": "Model"
+        }
+      ]
+    },
+    {
+      "webId": 3,
+      "internalId": "BATCHR",
+      "description": "Battery Charger",
+      "jobCodeStructure":
+      [
+        {
+          "length": "2",
+          "name": "Category"
+        },
+        {
+          "length": "2",
+          "name": "Item"
+        },
+        {
+          "length": "2",
+          "name": "Category"
+        }
+      ]
+    },
+    {
+      "webId": 4,
+      "internalId": "DD",
+      "description": "Dock&Door Codes",
+      "jobCodeStructure":
+      [
+        {
+          "length": "2",
+          "name": "Component"
+        },
+        {
+          "length": "2",
+          "name": "Level"
+        },
+        {
+          "length": "2",
+          "name": "Component"
+        }
+      ]
+    },
+    {
+      "webId": 6,
+      "internalId": "REPACT",
+      "description": "Repair/Action",
+      "jobCodeStructure":
+      [
+        {
+          "length": "4",
+          "name": "Components"
+        },
+        {
+          "length": "3",
+          "name": "Actions"
+        }
+      ]
+    }
+  ]
+}

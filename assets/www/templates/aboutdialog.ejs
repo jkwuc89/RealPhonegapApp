@@ -1,0 +1,46 @@
+<div id="aboutDialog" style="text-align: center; padding-bottom: 10px;">
+    <!-- Title text area -->
+    <h3 class="dialog-header"><%= Localization.getText( "realPhonegapApp" ) %></h3>
+
+    <!-- Unsaved changes warning -->
+    <p id="unsavedChangesWarning" class="dialog-text" style="color: red; display: none;">
+        <%= Localization.getText( "debugPageUnsavedChangesWarning" ) %>
+    </p>
+
+    <!-- Body text area -->
+    <div class="ui-grid-b" style="padding-top: 5px;">
+        <div class="ui-block-a" style="width: 49%; text-align: right;">
+            <h3 class="about-dialog-text"><%= Localization.getText( "versionLabel" ) %></h3>
+            <h3 class="about-dialog-text"><%= Localization.getText( "serverLabel" ) %></h3>
+            <h3 class="about-dialog-text"><%= Localization.getText( "lastFullReset" ) %></h3>
+            <h3 class="about-dialog-text"><%= Localization.getText( "lastUpdatedLabel" ) %></h3>
+            <% if ( !( typeof device === 'undefined' ) ) { %>
+                <h3 class="about-dialog-text"><%= Localization.getText( "deviceName" ) %></h3>
+                <h3 class="about-dialog-text"><%= Localization.getText( "androidVersion" ) %></h3>
+            <% } %>
+        </div>
+        <div class="ui-block-b" style="width: 2%;">&nbsp;</div>
+        <div class="ui-block-c" style="width: 49%; text-align: left;">
+            <h3 class="about-dialog-text"><%= Config.getConfig().version %></h3>
+            <h3 class="about-dialog-text"><%= Config.getConfig().middleTierLabel %></h3>
+            <h3 class="about-dialog-text"><%= Config.getConfig().dateTimeFullSync %></h3>
+            <h3 class="about-dialog-text"><%= Config.getConfig().dateTimePeriodicUpdate %></h3>
+            <% if ( !( typeof device === 'undefined' ) ) { %>
+                <h3 class="about-dialog-text"><%= device.name %></h3>
+                <h3 class="about-dialog-text"><%= device.version %></h3>
+            <% } %>
+        </div>
+    </div>
+    <br/>
+    <a id="btnDebug" href="" class="button-default" data-role="button" data-inline="true" data-theme="c" style="width: 50%">
+        <%= Localization.getText( "debugPageButton" ) %>
+    </a>
+
+    <hr />
+    <!-- Button content area -->
+    <div id="divButtons" style="margin-top: -10px;margin-bottom: -10px;">
+        <a id="btnOkay" href="" class="button-default" data-role="button" data-inline="true" data-theme="b" style="width: 75%">
+            <%= Localization.getText( "okay" ) %>
+        </a>
+    </div>
+</div>

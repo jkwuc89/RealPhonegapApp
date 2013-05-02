@@ -1,0 +1,333 @@
+{
+  "success": true,
+  "total": 65,
+    "requestDate": "2013-04-11T10:16:12Z",
+  "roles": 
+  [
+    {
+      "webId": 33,
+      "internalId": "1340",
+      "name": "Vice President"
+    },
+    {
+      "webId": 34,
+      "internalId": "1350",
+      "name": "Internal Audit"
+    },
+    {
+      "webId": 35,
+      "internalId": "1355",
+      "name": "CSS/Acct Mgr"
+    },
+    {
+      "webId": 36,
+      "internalId": "1360",
+      "name": "CSS/Account Rep"
+    },
+    {
+      "webId": 37,
+      "internalId": "1365",
+      "name": "Account Rep/Exp"
+    },
+    {
+      "webId": 38,
+      "internalId": "9999",
+      "name": "z - Table 3"
+    },
+    {
+      "webId": 39,
+      "internalId": "NONE",
+      "name": "None"
+    },
+    {
+      "webId": 40,
+      "internalId": "1110",
+      "name": "Account Mgr."
+    },
+    {
+      "webId": 41,
+      "internalId": "1115",
+      "name": "Account Rep."
+    },
+    {
+      "webId": 42,
+      "internalId": "1120",
+      "name": "Accounting Mgr."
+    },
+    {
+      "webId": 43,
+      "internalId": "1125",
+      "name": "Admin. Assistan"
+    },
+    {
+      "webId": 44,
+      "internalId": "1130",
+      "name": "Administrator"
+    },
+    {
+      "webId": 45,
+      "internalId": "1135",
+      "name": "Allied Rep."
+    },
+    {
+      "webId": 46,
+      "internalId": "1140",
+      "name": "A/R"
+    },
+    {
+      "webId": 47,
+      "internalId": "1145",
+      "name": "A/R Admin."
+    },
+    {
+      "webId": 48,
+      "internalId": "1150",
+      "name": "A/R-A/P Contact"
+    },
+    {
+      "webId": 49,
+      "internalId": "1151",
+      "name": "AttnInv Service"
+    },
+    {
+      "webId": 50,
+      "internalId": "1152",
+      "name": "Attn Inv USWHSP"
+    },
+    {
+      "webId": 51,
+      "internalId": "1153",
+      "name": "AttnInv Rental"
+    },
+    {
+      "webId": 52,
+      "internalId": "1154",
+      "name": "Attn Inv Parts"
+    },
+    {
+      "webId": 53,
+      "internalId": "1155",
+      "name": "Branch Mgr."
+    },
+    {
+      "webId": 54,
+      "internalId": "1170",
+      "name": "Chief Exec Offc"
+    },
+    {
+      "webId": 55,
+      "internalId": "1175",
+      "name": "Chief Finan Ofc"
+    },
+    {
+      "webId": 56,
+      "internalId": "1180",
+      "name": "Chief Op Offc"
+    },
+    {
+      "webId": 57,
+      "internalId": "1185",
+      "name": "Controller"
+    },
+    {
+      "webId": 58,
+      "internalId": "1190",
+      "name": "Credit Mgr."
+    },
+    {
+      "webId": 59,
+      "internalId": "1191",
+      "name": "Customer Care"
+    },
+    {
+      "webId": 60,
+      "internalId": "1192",
+      "name": "CSS"
+    },
+    {
+      "webId": 61,
+      "internalId": "1194",
+      "name": "Dock"
+    },
+    {
+      "webId": 62,
+      "internalId": "1195",
+      "name": "Equipment Mgr."
+    },
+    {
+      "webId": 63,
+      "internalId": "1200",
+      "name": "Executive"
+    },
+    {
+      "webId": 64,
+      "internalId": "1203",
+      "name": "Field Srv. Mgr."
+    },
+    {
+      "webId": 65,
+      "internalId": "1205",
+      "name": "Field Serv Tech"
+    },
+    {
+      "webId": 66,
+      "internalId": "1210",
+      "name": "Inv Control Mgr"
+    },
+    {
+      "webId": 67,
+      "internalId": "1215",
+      "name": "Management"
+    },
+    {
+      "webId": 68,
+      "internalId": "1220",
+      "name": "Parts"
+    },
+    {
+      "webId": 69,
+      "internalId": "1225",
+      "name": "Parts Counter"
+    },
+    {
+      "webId": 70,
+      "internalId": "1230",
+      "name": "Parts Mgr."
+    },
+    {
+      "webId": 71,
+      "internalId": "1231",
+      "name": "PSR"
+    },
+    {
+      "webId": 72,
+      "internalId": "1235",
+      "name": "President"
+    },
+    {
+      "webId": 73,
+      "internalId": "1240",
+      "name": "President-Owner"
+    },
+    {
+      "webId": 74,
+      "internalId": "1243",
+      "name": "Prod Supp Mgr"
+    },
+    {
+      "webId": 75,
+      "internalId": "1250",
+      "name": "Purch Agent"
+    },
+    {
+      "webId": 76,
+      "internalId": "1255",
+      "name": "Regional Admin"
+    },
+    {
+      "webId": 77,
+      "internalId": "1258",
+      "name": "Rental Coord."
+    },
+    {
+      "webId": 78,
+      "internalId": "1260",
+      "name": "Rental Mgr."
+    },
+    {
+      "webId": 79,
+      "internalId": "1265",
+      "name": "Rental Rep"
+    },
+    {
+      "webId": 80,
+      "internalId": "1270",
+      "name": "Sales Contact"
+    },
+    {
+      "webId": 81,
+      "internalId": "1272",
+      "name": "Sales Coord."
+    },
+    {
+      "webId": 82,
+      "internalId": "1275",
+      "name": "Sales Mgr."
+    },
+    {
+      "webId": 83,
+      "internalId": "1276",
+      "name": "Sales Mgr. NA"
+    },
+    {
+      "webId": 84,
+      "internalId": "1285",
+      "name": "Sales Support"
+    },
+    {
+      "webId": 85,
+      "internalId": "1290",
+      "name": "Secretary"
+    },
+    {
+      "webId": 86,
+      "internalId": "1295",
+      "name": "Serv - Call In"
+    },
+    {
+      "webId": 87,
+      "internalId": "1300",
+      "name": "Serv - Sign Off"
+    },
+    {
+      "webId": 88,
+      "internalId": "1305",
+      "name": "Serv Dispatcher"
+    },
+    {
+      "webId": 89,
+      "internalId": "1310",
+      "name": "Service Mgr."
+    },
+    {
+      "webId": 90,
+      "internalId": "1320",
+      "name": "Shop Foreman"
+    },
+    {
+      "webId": 91,
+      "internalId": "1325",
+      "name": "Shop Tech."
+    },
+    {
+      "webId": 92,
+      "internalId": "1330",
+      "name": "Supervisor"
+    },
+    {
+      "webId": 93,
+      "internalId": "1332",
+      "name": "Trainer"
+    },
+    {
+      "webId": 94,
+      "internalId": "1335",
+      "name": "Treasurer"
+    },
+    {
+      "webId": 95,
+      "internalId": "1336",
+      "name": "Truck Driver"
+    },
+    {
+      "webId": 96,
+      "internalId": "1100",
+      "name": "Work Order Primary"
+    },
+    {
+      "webId": 97,
+      "internalId": "1101",
+      "name": "Work Order Secondary"
+    }
+  ]
+}

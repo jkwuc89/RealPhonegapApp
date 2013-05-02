@@ -1,0 +1,62 @@
+<div id="emailAddressUpdateDialog" style="text-align: center;">
+    <!-- Dialog header with buttons -->
+    <div class="ui-bar-a">
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="text-align: left;"></div>
+            <div class="ui-block-b" style="text-align: center;">
+                <h3 style="display: inline-block;"><%= Localization.getText( "emailAddressUpdate" ) %></h3>
+            </div>
+            <div class="ui-block-c" style="text-align: right;"></div>
+       </div>
+    </div>
+    <br/>
+    <div class="ui-grid-b">
+        <div class="ui-block-a" style="text-align: right; width: 100px;">
+            <h3 class="email-address-update-dialog-label-text"><span><%= Localization.getText( "toLabel" ) %></span>:&nbsp;</h3>
+        </div>
+        <div class="ui-block-b" style="text-align: left; width: 550px;">
+            <input type="email" id="emailToAddress"
+                   style="display: inline-block;"
+                   data-inline="true" data-mini="false"
+                   data-bind="value: emailToAddress"/>
+        </div>
+        <div class="ui-block-c" style="text-align: left; width: 50px; margin-top: 7px;">
+            <% if( ManageWorkOrderReview.emailContacts().length > 0 ) { %>
+                <a href="" data-role="button" data-icon="arrow-r" data-mini="true" data-inline="true" data-theme="c"
+                    data-iconpos="notext" onclick="ManageWorkOrderReview.showContactsForEmail(ManageWorkOrderReview.EMAIL_TO_ATTEMPT)"></a>
+            <% } %>
+        </div>
+    </div>
+    <div class="ui-grid-b">
+        <div class="ui-block-a" style="text-align: right; width: 100px;">
+            <h3 class="email-address-update-dialog-label-text"><span><%= Localization.getText( "ccLabel" ) %></span>:&nbsp;</h3>
+        </div>
+        <div class="ui-block-b" style="text-align: left; width: 550px;margin-bottom: 5px;">
+            <input type="email" id="emailCCAddress"
+                   style="display: inline-block;"
+                   data-inline="true" data-mini="false"
+                   data-bind="value: emailCCAddress"/>
+        </div>
+        <div class="ui-block-c" style="text-align: left; width: 50px;margin-top: 7px;">
+            <% if( ManageWorkOrderReview.emailContacts().length > 0 ) { %>
+                <a href="" data-role="button" data-icon="arrow-r" data-mini="true" data-inline="true" data-theme="c"
+                    data-iconpos="notext" onclick="ManageWorkOrderReview.showContactsForEmail(ManageWorkOrderReview.EMAIL_CC_ATTEMPT)"></a>
+            <% } %>
+        </div>
+    </div>
+    
+    <hr />
+    <!-- Button content area -->
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">
+        <div class="ui-block-a">
+            <a id="cancelButton" href="" class="button-default" style="width: 95%;" data-role="button" data-inline="true" data-theme="a"
+                data-bind="click: cancelEmailAddressUpdate"><%= Localization.getText( "cancel" ) %></a>   
+        </div>
+        <div class="ui-block-b" class="default-button" style="margin-left: -2px;">
+             <a id="saveButton" href="" style="width: 95%;" data-role="button" data-inline="true" data-theme="b"
+                   data-bind="click: saveEmailAddressUpdate"><%= Localization.getText( "done" ) %></a>
+        </div>
+    </div>
+</div>
+
+

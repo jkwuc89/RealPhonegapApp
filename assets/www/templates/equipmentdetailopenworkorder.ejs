@@ -1,0 +1,18 @@
+<li id="<%= workOrder.webId %>" class="open-work-order" data-icon="false" style="margin-left: 0px; margin-right: 0px;"><a>
+    <div class="ui-grid-b">
+        <div class="ui-block-a" style="margin-left: 25px;">
+            <h3><%= workOrder.documentNumber %></h3>
+            <p><%= workOrder.note %></p>
+        </div>
+        <div class="ui-block-b" style="margin-left: -25px;">
+            <h3><%= Localization.getText( "openedOn" ) %> <%= Localization.formatDateTime( workOrder.workOrderSegments[0].dateOpened, 'd' ) %></h3>
+        </div>
+        <div class="ui-block-c">
+            <% if ( standardJobCode ) { %>
+                <h3><%= standardJobCode.notes %> - <%= Localization.getText("jobCode") %> <%= standardJobCode.jobCode %></h3>
+            <% } else { %>
+                <h3><%= Localization.getText( "noAvailableJobCode") %></h3>
+             <% } %>
+        </div>
+    </div>
+</a></li>

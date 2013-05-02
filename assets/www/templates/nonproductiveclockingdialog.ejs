@@ -1,0 +1,116 @@
+<div id="nonProductiveClockingDialog" style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "nonProductiveClockingTitle" ) %></h3>
+    <p class="clocking-dialog-text"><%= Localization.getText( "nonProductiveClockingPrompt" ) %></p>
+    <% var startTimeIn24HourFormat = Localization.formatDateTime( startTime, 'HH:mm:ss' ); %>
+
+    <!-- Display non productive clocking types -->
+    <div id="nonProductiveClockingTypeSelectDiv" data-role="fieldcontain" style="width: 100%;">
+        <select name="nonProductiveClockingType" id="nonProductiveClockingType" data-native-menu="<%= UIFrame.USE_NATIVE_SELECT %>"
+                data-theme="c" data-inline="false" data-mini="false" style="width: 100%;" onchange="nonProductiveClockingChange();">
+            <% for ( var i = 0; i < nonProductiveStatuses.length; i++ ) { %>
+                <option id="<%= nonProductiveStatuses[i] %>"
+                    value="<%= nonProductiveStatuses[i] %>"
+                    ><%= Localization.getText( nonProductiveStatuses[i] )%></option>
+            <% } %>
+        </select>
+
+        <br />
+    </div>
+    
+    <!-- Display the time picker -->
+    <div id="selectStartTime" style="padding-left: 10px; padding-right: 10px;">
+        <input id="startTime" name="startTime" value="<%= Localization.formatDateTime( startTime, 't' ) %>"
+               style="display:none;"/>
+    </div>
+
+    <!-- Display the Approved By field
+    <div id="approvedBy" style="padding-left: 10px; padding-right: 10px;">
+        <p class="clocking-dialog-text"><%= Localization.getText( "approvedBy" ) %></p>
+        <input id="approvedByInput" class="clocking-approved-by" name="approvedByInput" id="approvedByInput" style="margin-top: -20px;"/>
+    </div> -->
+
+    <hr /> 
+    <!-- Button content area -->
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">     
+        <div class="ui-block-a">
+            <!-- Cancel closes the start time dialog and does not change the clocking status -->
+            <a href="" onclick="cancel();" data-mini="false" data-role="button" data-inline="true" data-theme="a" style="width: 95%;">
+                <%= Localization.getText( "cancel") %></a>
+        </div>
+        <div class="ui-block-b">
+            <!-- Save calls back to UIFrame to save the new clocking status with the chosen start time -->
+            <a href="" data-role="button" data-mini="false" data-inline="true" data-theme="b" style="width: 95%;"
+               onclick="save();"><%= Localization.getText( "save") %></a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var nonProductiveSelection = $('#nonProductiveClockingType').find('option:selected').attr('value');
+
+    /**
+     * Manage the visibility of the Approved By: field according to the clocking type selection
+     */
+    function nonProductiveClockingChange() {
+        nonProductiveSelection = $('#nonProductiveClockingType').find('option:selected').attr('value');
+
+        if( nonProductiveSelection == "technicianStatusLunch" ) {
+            $( '#approvedBy' ).hide();
+        } else {
+            $( '#approvedBy' ).show();
+        }
+    }
+
+    /**
+     * Save the chosen clocking status
+     */
+    function save() {
+        /*if( nonProductiveSelection != "technicianStatusLunch" && $('#approvedByInput').val() == "" ) {
+            // Save the start time and selection to localStorage before removing the dialog
+            if( JSONData.isFirstClockingOfTheDay() ) {
+                window.localStorage.setItem( "nonProductiveStartTime", Util.convert12HourTimeToISODateTimeStamp( $('#startTime').val() ));
+            }
+
+            window.localStorage.setItem( "nonProductiveSelection", nonProductiveSelection );
+
+            // Hiding this display creates rendering issues, this dialog must be closed
+            Dialog.closeDialog();
+
+            Dialog.showAlert( Localization.getText( "missingApprovalTitle" ), Localization.getText( "missingApprovalMessage" ),
+                function() {
+                    Dialog.closeDialog();
+                    UIFrame.displayNonProductiveClockingDialog();
+                }, "400px" );
+        } else { */
+            // Ensure that the nonProductiveSelection item does not persist in localStorage
+            // if( window.localStorage.getItem( "nonProductiveSelection" )) {
+            //     window.localStorage.removeItem( "nonProductiveSelection" );
+            //}
+
+            var clockingStatus = $('#nonProductiveClockingType').val();
+            var startTime = Util.convert12HourTimeToISODateTimeStamp( $('#startTime').val() );
+            debug && console.log( "nonproductiveclockingdialog.save: Changing clocking status to " +
+                                  clockingStatus + " using start time = " + startTime );
+            Dialog.closeDialog();
+            JSONData.saveClockingStatus( clockingStatus, startTime );
+        //}
+    }
+
+    /**
+     * Cancel the nonproductiveclocking attempt
+     */
+    function cancel() {
+        // Ensure that the nonProductiveSelection item does not persist in localStorage
+        //if( window.localStorage.getItem( "nonProductiveSelection" )) {
+        //    window.localStorage.removeItem( "nonProductiveSelection" );
+        //}
+
+        // Ensure that the nonProductiveStartTime item does not persist in localStorage
+        //if( window.localStorage.getItem( "nonProductiveStartTime" )) {
+        //    window.localStorage.removeItem( "nonProductiveStartTime" );
+        //}
+
+        Dialog.closeDialog();
+    }
+</script>

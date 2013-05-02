@@ -1,0 +1,55 @@
+<div style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( dialogTitle ) %></h3>
+    <p class="clocking-dialog-text"><%= Localization.getText( dialogPrompt ) %></p>
+    <input id="currentClockingStatus" type="hidden" value="<%= currentClockingStatus %>"/>
+    <input id="newClockingStatus" type="hidden" value="<%= newClockingStatus %>"/>
+    <input id="endTime" type="hidden" value="<%= endTime %>"/>
+    
+    <hr /> 
+    <!-- Button content area -->
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">     
+        <div class="ui-block-a">
+            <!-- No closes this dialog and does not change anything -->
+            <a href="" data-mini="false" data-role="button" data-inline="true" data-theme="a" style="width: 95%;" onclick="cancel();">
+                <%= Localization.getText( "no"  ) %>
+            </a><br/>
+        </div>
+        <div class="ui-block-b" style="padding-right: 5px;">
+            <!-- Yes calls back to JSONData.saveClockingStatus to set the clocking status -->
+            <a href="" data-role="button" data-mini="false" data-inline="true" data-theme="b" style="width: 95%;"
+                onclick="save();"><%= Localization.getText( "yes" ) %>
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+    /** 
+     * Cancel the current end non productive clocking attempt
+     */
+    function cancel() {
+        Dialog.closeDialog( false );
+        if ( window.localStorage.getItem( JSONData.LS_CLOSE_OUT_DATE )) {
+            window.localStorage.removeItem( JSONData.LS_CLOSE_OUT_DATE );
+        }
+        if ( window.localStorage.getItem( JSONData.LS_CLOSE_OUT_DAY_ATTEMPT )) {
+            window.localStorage.removeItem( JSONData.LS_CLOSE_OUT_DAY_ATTEMPT );
+        }
+        if ( window.localStorage.getItem( JSONData.LS_LOGOFF_IN_PROGRESS )) {
+            window.localStorage.removeItem( JSONData.LS_LOGOFF_IN_PROGRESS );
+            Dialog.showAlert( Localization.getText( "Logoff" ),
+                              Localization.getText( "endCurrentClockingForLogOff"), null, "350px" );
+        }
+    }
+    
+    /**
+     * Save the chosen clocking status
+     */
+    function save() {
+        var currentClockingStatus = $("#currentClockingStatus").val();
+        var newClockingStatus = $("#newClockingStatus").val();
+        var endTime = $("#endTime").val();        
+        debug && console.log( "endnonproductiveclockingdialog.save: Using end time = " + endTime );
+        Dialog.closeDialog( false );
+        JSONData.saveClockingStatus( newClockingStatus, endTime );
+    }
+</script>

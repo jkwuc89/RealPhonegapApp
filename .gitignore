@@ -1,0 +1,11 @@
+.DS_Store
+workspace.xml
+xcuserdata
+assets.zip
+/gen
+/www
+/bin
+/target
+/out
+dictionaries/
+

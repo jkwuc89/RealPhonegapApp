@@ -1,0 +1,26 @@
+<li id="<%= pmDue.webId %>" class="home-page-planned-maintenance-list-item" data-icon="false"
+    style="border-left: none; border-right: none; margin-left: 0px; margin-right: 0px; width: 100%;"><a style="padding: 0px 0px 0px 0px;">
+    <div class="ui-grid-a">
+        <!-- Block A contains the customer PM due number -->
+        <div class="ui-block-a" style="width: 12%;" >
+            <b><h1 class="planned-maintenance-customer-count"><%= currentCustomerPmsDueCount %></h1></b>
+        </div>
+        
+        <!-- Block B contains the customer information -->
+        <div class="ui-block-b" style="width: 83%; margin-left: 0px;">
+            <% if( address != "" ) { %>
+                <% if ( customer && customer.name ) { %>
+                    <h3 style="font-size: 16px;margin-left: 0px;margin-right: 0px;margin-top: 5px;"><%= customer.name %></h3>
+                <% } else { %>
+                    <h3 style="font-size: 16px;margin-left: 0px;margin-right: 0px;margin-top: 5px;"><%= Localization.getText( "customerMissing" ) %></h3>
+                <% } %>
+                <p style="margin-top: -10px;font-size: 14px;"><%= address %></p>
+            <% } else { %>
+                <% if ( customer && customer.name ) { %>
+                    <h3 class="work-order-list-item-heading" style="margin-top: 13px;"><%= customer.name %></h3>
+                <% } else { %>
+                    <h3 class="work-order-list-item-heading" style="margin-top: 13px;"><%= Localization.getText( "customerMissing" ) %></h3>
+                <% } %>
+            <% } %>
+        </div>
+</a></li>

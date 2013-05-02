@@ -1,0 +1,190 @@
+{
+    "success": true,
+    "total": 1,
+    "configuration":
+    [
+        {
+            "webId": 1,
+            "version": "1.0",
+            "localWorkOrderIndex": 0,
+            "middleTierUrls": [
+                {
+                    "label": "Development",
+                    "url": "http://development/"
+                },
+                {
+                    "label": "Test",
+                    "url": "http://test/"
+                },
+                {
+                    "label": "Production",
+                    "url": "http://production/"
+                }
+            ],
+            "middleTierBaseUrl": "",
+            "middleTierVersion": "0.1",
+            "logonUrl": "j_spring_security_check",
+            "logonTimeout": 30,
+            "idleTimeout": 360,
+            "enterpriseId": "520032",
+            "loadLocalJSONFilesOnly": false,
+            "jsonFeedUpdateUrlParameter": "?dateUpdated=",
+            "dailyUpdateFrequencyInHours": 24,
+            "externalStorageDirectory": "/mnt/sdcard/",
+            "externalStorageDirectories": {
+                "default": "/mnt/sdcard/",
+                "espresso10spr": "/storage/extSdCard/",
+                "espresso10vzw": "/storage/extSdCard/",
+                "espresso10wifibby": "/storage/extSdCard/"
+            },
+            "periodicUpdateFrequency": 5,
+            "psrtCartDirectory": ".WOcarts",
+            "psrtHtmlFile": "Parts.html",
+            "psrtRequestDirectory": ".WOrequests",
+            "psrtUrl": "",
+            "readOnlyMode": false,
+            "technicianClockingUpdateUrl": "technicianClocking/process",
+            "technicianClockingUpdateTimeout": 45,
+            "timeCardUpdateUrl": "timeCard/process",
+            "timeCardUpdateTimeout": 45,
+            "trainingModePostDelay": 5,
+            "useNativeTasksMenu": true,
+            "useScrollableDivs": false,
+            "usePhonegapLoadURLPlugin": false,
+            "workOrderUpdateUrl": "workOrder/process",
+            "workOrderUpdateTimeout": 45,
+            "jsonDatabaseFeeds":
+            [
+                {
+                    "name": "customers",
+                    "url": "customer/list",
+                    "updateSupported": true,
+                    "readOnly": false
+                },
+                {
+                    "name": "equipment",
+                    "url": "equipment/list",
+                    "updateSupported": true,
+                    "readOnly": false
+                },
+                {
+                    "name": "inventory",
+                    "url": "inventory/listFull",
+                    "updateSupported": true,
+                    "readOnly": false
+                },
+                {
+                    "name": "products",
+                    "url": "product/list",
+                    "updateSupported": true,
+                    "updateFrequencyInDays": 7,
+                    "readOnly": true
+                },
+                {
+                    "name": "standardJobCodes",
+                    "url": "standardJobCode/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                },
+                {
+                    "name": "stockAreas",
+                    "url": "stockArea/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                }
+            ],
+            "jsonLocalStoreFeeds":
+            [
+                {
+                    "name": "branches",
+                    "url": "branch/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                },
+                {
+                    "name": "folders",
+                    "url": "folder/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                },
+                {
+                    "name": "laborCodes",
+                    "url": "laborCode/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                },{
+                    "name": "laborTimeTypes",
+                    "url": "laborTimeType/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                },
+                {
+                    "name": "manufacturers",
+                    "url": "manufacturer/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                },
+                {
+                    "name": "notes",
+                    "url": "note/list",
+                    "updateSupported": true,
+                    "readOnly": true
+                },
+                {
+                    "name": "pmSchedules",
+                    "url": "pmSchedule/list",
+                    "updateSupported": false,
+                    "readOnly": false
+                },
+                {
+                    "name": "roles",
+                    "url": "role/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                },
+                {
+                    "name": "serviceTrucks",
+                    "url": "serviceTruck/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                },
+                {
+                    "name": "standardJobCodeManufacturers",
+                    "url": "standardJobCodeManufacturer/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                },
+                {
+                    "name": "stockAreas",
+                    "url": "stockArea/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                },
+                {
+                    "name": "technicianClocking",
+                    "url": "",
+                    "updateSupported": true,
+                    "readOnly": false
+                },
+                {
+                    "name": "timeCard",
+                    "url": "",
+                    "updateSupported": true,
+                    "readOnly": false
+                },
+                {
+                    "name": "webUsers",
+                    "url": "webUser/list",
+                    "updateSupported": false,
+                    "readOnly": true
+                },
+                {
+                    "name": "workOrders",
+                    "url": "workOrder/list",
+                    "updateSupported": true,
+                    "readOnly": false
+                }
+            ]
+        }
+    ]
+}

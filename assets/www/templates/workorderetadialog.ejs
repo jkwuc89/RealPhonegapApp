@@ -1,0 +1,23 @@
+<div id="workOrderETADialog" style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "workOrderETATitle" ) %></h3>
+    <p id="clockingDialogText" class="clocking-dialog-text"><%= Localization.getText( "workOrderETAPrompt" ).replace( "workOrder", workOrderNumber ) %></p>
+    
+    <!-- Display the time picker --> 
+    <div style="padding-left: 10px; padding-right: 10px;">
+        <input id="etaDateTime" name="etaDateTime" value="<%= new Date() %>" style="display:none;"/>
+    </div>
+
+    <hr /> 
+    <!-- Button content area -->
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">     
+        <div class="ui-block-a">
+            <!-- Cancel closes this dialog and does not change the work order ETA -->
+            <a href="" onclick="Dialog.closeDialog();" data-mini="false" data-role="button" data-inline="true" data-theme="a" style="width: 95%;"><%= Localization.getText( "cancel" ) %></a><br/>
+        </div>
+        <div class="ui-block-b">
+            <!-- Save calls back to UIFrame to save the new clocking status with the chosen start time -->
+            <a id="saveETABtn" href="" data-role="button" data-mini="false" data-inline="true" data-theme="b" 
+               style="width: 95%;"><%= Localization.getText( "save" ) %></a>
+        </div>
+    </div>    
+</div>

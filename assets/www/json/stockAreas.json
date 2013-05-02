@@ -1,0 +1,603 @@
+{
+  "success": true,
+  "total": 85,
+    "requestDate": "2013-04-11T10:16:12Z",
+  "stockAreas": 
+  [
+    {
+      "webId": 1788850,
+      "branchId": 32,
+      "departmentId": 68,
+      "name": "Warehouse",
+      "type": 0
+    },
+    {
+      "webId": 1788851,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "Warehouse",
+      "type": 0
+    },
+    {
+      "webId": 1788852,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-008",
+      "type": 2
+    },
+    {
+      "webId": 1788853,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-006",
+      "type": 2
+    },
+    {
+      "webId": 1788854,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-P1",
+      "type": 2
+    },
+    {
+      "webId": 1788855,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-HORML",
+      "type": 2
+    },
+    {
+      "webId": 1788856,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-005",
+      "type": 2
+    },
+    {
+      "webId": 1788857,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-007",
+      "type": 2
+    },
+    {
+      "webId": 1788858,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-011",
+      "type": 2
+    },
+    {
+      "webId": 1788859,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-013",
+      "type": 2
+    },
+    {
+      "webId": 1788900,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-014",
+      "type": 2
+    },
+    {
+      "webId": 1788901,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-022",
+      "type": 2
+    },
+    {
+      "webId": 1788902,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-023",
+      "type": 2
+    },
+    {
+      "webId": 1788903,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-028",
+      "type": 2
+    },
+    {
+      "webId": 1788904,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-030",
+      "type": 2
+    },
+    {
+      "webId": 1788905,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-GFS",
+      "type": 2
+    },
+    {
+      "webId": 1788906,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-GFSFU",
+      "type": 2
+    },
+    {
+      "webId": 1788907,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-020",
+      "type": 2
+    },
+    {
+      "webId": 1788908,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-HAM",
+      "type": 2
+    },
+    {
+      "webId": 1788909,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-SHOP2",
+      "type": 2
+    },
+    {
+      "webId": 1789030,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-SHOP4",
+      "type": 2
+    },
+    {
+      "webId": 1789031,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-SHOP1",
+      "type": 2
+    },
+    {
+      "webId": 1789032,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-021",
+      "type": 2
+    },
+    {
+      "webId": 1789033,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-026",
+      "type": 2
+    },
+    {
+      "webId": 1789034,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-016",
+      "type": 2
+    },
+    {
+      "webId": 1789035,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-009",
+      "type": 2
+    },
+    {
+      "webId": 1789036,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-010",
+      "type": 2
+    },
+    {
+      "webId": 1789037,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-012",
+      "type": 2
+    },
+    {
+      "webId": 1789038,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "O/S-PARTS",
+      "type": 2
+    },
+    {
+      "webId": 1789039,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-004",
+      "type": 2
+    },
+    {
+      "webId": 1789340,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-SHOP3",
+      "type": 2
+    },
+    {
+      "webId": 1789341,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-003",
+      "type": 2
+    },
+    {
+      "webId": 1789342,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-024",
+      "type": 2
+    },
+    {
+      "webId": 1789343,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-015",
+      "type": 2
+    },
+    {
+      "webId": 1789344,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-027",
+      "type": 2
+    },
+    {
+      "webId": 1789345,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "",
+      "type": 1
+    },
+    {
+      "webId": 1789346,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-001",
+      "type": 2
+    },
+    {
+      "webId": 1789347,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-SHOP5",
+      "type": 2
+    },
+    {
+      "webId": 1789348,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-SVALU",
+      "type": 2
+    },
+    {
+      "webId": 1789349,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-002",
+      "type": 2
+    },
+    {
+      "webId": 1789720,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-019",
+      "type": 2
+    },
+    {
+      "webId": 1789721,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-025",
+      "type": 2
+    },
+    {
+      "webId": 1789722,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-MEI",
+      "type": 2
+    },
+    {
+      "webId": 1789723,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-SHOP6",
+      "type": 2
+    },
+    {
+      "webId": 1789724,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-SHOP7",
+      "type": 2
+    },
+    {
+      "webId": 1789725,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-DOT",
+      "type": 2
+    },
+    {
+      "webId": 1789726,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-DANNON",
+      "type": 2
+    },
+    {
+      "webId": 1789727,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-017",
+      "type": 2
+    },
+    {
+      "webId": 1789728,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-018",
+      "type": 2
+    },
+    {
+      "webId": 1789729,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-AHMCC",
+      "type": 2
+    },
+    {
+      "webId": 1790440,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-BOB",
+      "type": 2
+    },
+    {
+      "webId": 1790441,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-CPLND",
+      "type": 2
+    },
+    {
+      "webId": 1790442,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-NASH",
+      "type": 2
+    },
+    {
+      "webId": 1790443,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-RNDYS",
+      "type": 2
+    },
+    {
+      "webId": 1790444,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-GFSPT",
+      "type": 2
+    },
+    {
+      "webId": 1790445,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "V-031",
+      "type": 2
+    },
+    {
+      "webId": 1790446,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-HONDA",
+      "type": 2
+    },
+    {
+      "webId": 1790447,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-NKP",
+      "type": 2
+    },
+    {
+      "webId": 1790448,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-FNDLY",
+      "type": 2
+    },
+    {
+      "webId": 1790449,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-F&P",
+      "type": 2
+    },
+    {
+      "webId": 1815130,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-CONSN",
+      "type": 2
+    },
+    {
+      "webId": 1815131,
+      "branchId": 32,
+      "departmentId": 72,
+      "name": "V-002",
+      "type": 2
+    },
+    {
+      "webId": 1815132,
+      "branchId": 32,
+      "departmentId": 72,
+      "name": "X-MEI",
+      "type": 2
+    },
+    {
+      "webId": 1815133,
+      "branchId": 32,
+      "departmentId": 72,
+      "name": "V-010",
+      "type": 2
+    },
+    {
+      "webId": 1815134,
+      "branchId": 32,
+      "departmentId": 70,
+      "name": "X-WAPAK",
+      "type": 2
+    },
+    {
+      "webId": 1815135,
+      "branchId": 32,
+      "departmentId": 72,
+      "name": "Warehouse",
+      "type": 0
+    },
+    {
+      "webId": 1815136,
+      "branchId": 32,
+      "departmentId": 68,
+      "name": "X-SHOP5",
+      "type": 2
+    },
+    {
+      "webId": 1815137,
+      "branchId": 32,
+      "departmentId": 72,
+      "name": "V-003",
+      "type": 2
+    },
+    {
+      "webId": 1815138,
+      "branchId": 32,
+      "departmentId": 68,
+      "name": "",
+      "type": 1
+    },
+    {
+      "webId": 1815139,
+      "branchId": 32,
+      "departmentId": 68,
+      "name": "O/S-PARTS",
+      "type": 2
+    },
+    {
+      "webId": 2639510,
+      "branchId": 474,
+      "departmentId": 526,
+      "name": "Warehouse",
+      "type": 0
+    },
+    {
+      "webId": 2639511,
+      "branchId": 255,
+      "departmentId": 314,
+      "name": "Warehouse",
+      "type": 0
+    },
+    {
+      "webId": 2639512,
+      "branchId": 255,
+      "departmentId": 314,
+      "name": "V-011",
+      "type": 2
+    },
+    {
+      "webId": 2639513,
+      "branchId": 255,
+      "departmentId": 314,
+      "name": "V-010",
+      "type": 2
+    },
+    {
+      "webId": 2639514,
+      "branchId": 474,
+      "departmentId": 526,
+      "name": "V-433",
+      "type": 2
+    },
+    {
+      "webId": 2639515,
+      "branchId": 474,
+      "departmentId": 526,
+      "name": "V-509",
+      "type": 2
+    },
+    {
+      "webId": 2639516,
+      "branchId": 474,
+      "departmentId": 526,
+      "name": "X-WAL6059",
+      "type": 2
+    },
+    {
+      "webId": 2639517,
+      "branchId": 255,
+      "departmentId": 314,
+      "name": "V-008",
+      "type": 2
+    },
+    {
+      "webId": 2639518,
+      "branchId": 36,
+      "departmentId": 102,
+      "name": "Warehouse",
+      "type": 0
+    },
+    {
+      "webId": 2639519,
+      "branchId": 474,
+      "departmentId": 526,
+      "name": "V-339",
+      "type": 2
+    },
+    {
+      "webId": 2639540,
+      "branchId": 255,
+      "departmentId": 314,
+      "name": "V-001",
+      "type": 2
+    },
+    {
+      "webId": 2639541,
+      "branchId": 39,
+      "departmentId": 126,
+      "name": "Warehouse",
+      "type": 0
+    },
+    {
+      "webId": 2639542,
+      "branchId": 39,
+      "departmentId": 126,
+      "name": "V-014",
+      "type": 2
+    },
+    {
+      "webId": 2639543,
+      "branchId": 474,
+      "departmentId": 526,
+      "name": "V-491",
+      "type": 2
+    },
+    {
+      "webId": 2639544,
+      "branchId": 255,
+      "departmentId": 314,
+      "name": "V-009",
+      "type": 2
+    }
+  ]
+}

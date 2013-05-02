@@ -1,0 +1,22 @@
+<div style="text-align: center;">
+    <!-- Title text area -->
+    <h3 class="dialog-header"><%= title %></h3>
+    
+    <!-- Body text area -->
+    <p class="dialog-text" class="dialog-text"><%= body %></p>
+    
+    <hr />
+    <!-- Button content area -->
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">
+        <div class="ui-block-a">
+            <a id="btnCancel" href="" class="default-button" style="width: 95%;" data-role="button" data-inline="true" data-theme="a">
+                <%= Localization.getText( "cancel"  ) %>
+            </a>   
+        </div>
+        <div class="ui-block-b" class="default-button" style="margin-left: -2px;">
+            <a id="btnOkay" href="" style="width: 95%;" data-mini="false" data-role="button" data-inline="true" data-theme="b" onclick="Dialog.closeDialog()">
+                <%= Localization.getText( "okay" ) %>
+            </a>
+        </div>
+    </div>
+</div>

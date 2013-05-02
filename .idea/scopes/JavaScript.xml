@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="JavaScript" pattern="file:assets/www/js/*||file:assets/www/templates/*||file:test/spec/*" />
+</component>

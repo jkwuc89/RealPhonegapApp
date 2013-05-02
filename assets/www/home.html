@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Real Phonegap App</title>
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="js/libs/mobiscroll/mobiscroll-2.1.custom.min.css" />
+<link rel="stylesheet" href="js/libs/badge/badge.css" />
+<link rel="stylesheet" href="css/realphonegapapp.css" />
+</head>
+<body>
+    <div id="homePage" data-role="page">
+        <div data-role="content" class="nopadding">
+            <!--  Container for the landscape icon bar -->
+            <div id="divImgContainerLandscape" class="home-page-iconbar-landscape" style="text-align: center;">
+                <!-- Hiding messages and Visual WIP because they are not implemented
+                <a id="messagesIconLandscape" class="headerIcon" href=""><img class="icon-button" src="images/homepage-messages-icon-up.png" class="icon-button"></a>
+                <p id="imgMessagesText" translate="yes" class="icon-bar-text"></p>
+
+                <img id="imgMapLandscape" src="images/homepage-map-icon-up.png" class="home-page-item-icon-landscape icon-button"/>
+                <p id="imgMapText" translate="yes" class="icon-bar-text"></p>
+                -->
+
+                <img id="imgTimeSheetLandscape" src="images/homepage-close-out-day-icon-up.png" class="icon-button"/>
+                <p id="imgTimeSheetText" translate="yes" class="icon-bar-text"></p>
+            </div>
+
+            <!--  Container for the Work Order and Planned Maintenance -->
+            <div class="ui-grid-a" style="position: absolute; right: 0px; width: 80%;">
+                <div class="ui-block-a">
+                    <div class="home-page-header-landscape ui-bar-d" style="border-left: solid 1px black; border-right: solid 1px black; border-bottom: solid 1px black;">
+                        <h2 id="workOrderListPage" translate="yes" class="home-page-list-header"></h2>
+                    </div>
+                    <div class="block-div-home-page">
+                        <ul id="workOrderList" data-role="listview" data-filter="false">
+                        </ul>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="home-page-header-landscape ui-bar-d" style="border-bottom: solid 1px black;">
+                        <h2 id="plannedMaintenanceHeader" translate="yes" class="home-page-list-header"></h2>
+                    </div>
+                    <div class="block-div-home-page">
+                        <ul id="plannedMaintenanceList" data-role="listview" data-filter="false">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>var debug = true;</script>
+        <script src="js/libs/jquery/jquery-1.8.3.min.js"></script>
+        <script src="js/libs/phonegap/cordova-2.3.0.android.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/libs/jquery/jquery.mobile-1.2.0.min.js"></script>
+        <script src="js/libs/jquery/jquery.mobile.simpledialog2.min.js"></script>
+        <script src="js/libs/mobiscroll/mobiscroll-2.1.custom.min.js"></script>
+        <script src="js/libs/jquery/jquery.i18n.min.js"></script>
+        <script src="js/libs/jquery/jquery.blockUI.js"></script>
+        <script src="js/libs/badge/badge.js"></script>
+        <script src="js/libs/ejs/ejs_production.js"></script>
+        <script src="js/libs/knockout/knockout-2.2.0.js"></script>
+        <script src="js/libs/knockout/knockout.mapping-2.3.3.js"></script>
+        <script src="js/libs/underscore/underscore-1.4.2.min.js"></script>
+        <script src="js/libs/globalize/globalize.min.js"></script>
+        <script src="js/libs/globalize/globalize.culture.en-US.js"></script>
+        <script src="js/firefox.js"></script>
+        <script src="js/loadurl.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/database.js"></script>
+        <script src="js/workorder.js"></script>
+        <script src="js/jsondata.js"></script>
+        <script src="js/clocking.js"></script>
+        <script src="js/translations.js"></script>
+        <script src="js/localization.js"></script>
+        <script src="js/dialog.js"></script>
+        <script src="js/uiframe.js"></script>
+        <script src="js/home.js"></script>
+    </div>
+</body>
+</html>

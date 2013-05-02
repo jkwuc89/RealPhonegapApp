@@ -1,0 +1,60 @@
+<div style="text-align: center;">
+    <div class="ui-bar-a">
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="text-align: left;">
+                <a href="" id="cancelButton"
+                   data-role="button" data-inline="true" data-mini="false" data-theme="a"
+                   onclick="cancel();"><%= Localization.getText( "cancel" ) %></a>
+            </div>
+            <div class="ui-block-b" style="text-align: center;">
+                <h3 style="display: inline-block;"><%= signatureDialogTitle %></h3>
+            </div>
+            <div class="ui-block-c" style="text-align: right;">
+                <a href="" id="saveButton"
+                   data-role="button" data-inline="true" data-mini="false" data-theme="b"
+                   onclick="save();"><%= Localization.getText( "done") %></a>
+           </div>
+       </div>
+    </div>
+    <div id="signatureArea" class="block-div-signature" style="padding-top: 10px;">
+        <div style="padding-left: 20px; padding-right: 20px;">
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="text-align: left;">
+                    <h3><span><%= signatureType %></span>:&nbsp;</h3>
+                </div>
+                <input id="signatureDate" type="hidden" value="<%= signatureDate %>" />
+                <div class="ui-block-b" style="text-align: right;">
+                    <h3><%= Localization.formatDateTime( signatureDate, "D" ) %></h3>
+                </div>
+            </div>
+            <form class="sigPad" action="javascript:myFunction(); return false;">
+                <div id="divSignature" class="sig sigWrapper">
+                    <canvas id="signatureCanvas" class="pad" width="900px" height="250px"></canvas>
+                    <input type="hidden" name="output" class="output">
+                </div>
+                <div style="text-align: center;">
+                    <a href="" id="clearButton" class="clearButton" data-role="button" data-mini="false"
+                       data-inline="true" data-theme="c"><%= Localization.getText( "clearButton" ) %></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+</div>
+<script>
+    /**
+     * Cancel handler
+     */
+    function cancel() {
+        debug && console.log( "signaturedialog.cancel: Canceling signature capture" );
+        Dialog.closeDialog();
+    }
+    /**
+     * Save handler
+     */
+    function save() {
+        debug && console.log( "signaturedialog.save: Saving signature" );
+        var signatureDate = $("#signatureDate").val();
+        ManageWorkOrderReview.saveSignature( signatureDate );
+    }
+</script>

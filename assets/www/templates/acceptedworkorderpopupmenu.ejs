@@ -1,0 +1,60 @@
+<div>
+    <ul data-role='listview' style="margin-top: -5px;">
+        <!--<li id="acceptWorkOrder" class="popup-menu-disabled-item" data-theme="c" data-icon="false">-->
+            <!--<%= Localization.getText( "acceptWorkOrder" ) %>-->
+        <!--</li>-->
+        <!--<li id="reassignWorkOrder" class="popup-menu-item" data-theme="c" data-icon="false">-->
+            <!--<a href='#' onclick="onReassign( '<%= workOrder.webId %>' );"><%= Localization.getText( "reassignWorkOrder" ) %></a>-->
+        <!--</li>-->
+        <li id="openWorkOrder" class="popup-menu-item" data-theme="c" data-icon="false">
+            <a href='#' onclick="onOpen( '<%= workOrder.webId %>' );"><%= Localization.getText( "openWorkOrder" ) %></a>
+        </li>
+        <li id="reopenWorkOrder" class="popup-menu-item" data-theme="c" data-icon="false">
+            <a href='#' onclick="onReopen( '<%= workOrder.webId %>' );"><%= Localization.getText( "reopenWorkOrder" ) %></a>
+        </li>
+        <li id="editWorkOrder" class="popup-menu-item" data-theme="c" data-icon="false">
+            <a href='#' onclick="onEdit( '<%= workOrder.webId %>' );"><%= Localization.getText( "editWorkOrder" ) %></a>
+        </li>
+        <li id="viewWorkOrder" class="popup-menu-item" data-theme="c" data-icon="false">
+            <a href='#' onclick="onView( '<%= workOrder.webId %>' );"><%= Localization.getText( "viewWorkOrder" ) %></a>
+        </li>
+    </ul>
+    
+    <hr style="margin-top: -1px;" />
+    <div style="text-align: center;margin-top: -10px;">
+        <a href='#' data-role="button" data-inline="true" onclick="onCancel();" class="button-default" style="width: 90%;"><%= Localization.getText( "cancel" ) %></a>
+    </div>
+</div>
+<script>
+    /**
+     * onclick event handlers for the popup menu
+     */
+    function onEdit( workOrderId ) {
+        debug && console.log( "acceptedworkorderpopupmenu.onView: Editing work order ID: " + workOrderId );
+        Dialog.closeDialog( false );
+        WorkOrderList.editWorkOrder( workOrderId );
+    }
+    function onReassign( workOrderId ) {
+        debug && console.log( "acceptedworkorderpopupmenu.onReassign: Reassigning work order ID: " + workOrderId );
+        Dialog.closeDialog( false );
+        WorkOrderList.displayReassignWorkOrderDialog( workOrderId );    
+    }
+    function onOpen( workOrderId ) {
+        debug && console.log( "acceptedworkorderpopupmenu.onView: Opening work order ID: " + workOrderId );
+        Dialog.closeDialog( false );
+        WorkOrderList.openWorkOrder( workOrderId, false );
+    }
+    function onReopen( workOrderId ) {
+        debug && console.log( "acceptedworkorderpopupmenu.onView: Reopening work order ID: " + workOrderId );
+        Dialog.closeDialog( false );
+        WorkOrderList.openWorkOrder( workOrderId, true );
+    }
+    function onView( workOrderId ) {
+        debug && console.log( "acceptedworkorderpopupmenu.onView: Viewing work order ID: " + workOrderId );
+        Dialog.closeDialog( false );
+        WorkOrderList.viewWorkOrder( workOrderId );        
+    }
+    function onCancel() {
+        Dialog.closeDialog( false );
+    }
+</script>

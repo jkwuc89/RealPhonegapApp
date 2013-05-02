@@ -1,0 +1,100 @@
+<div id="outsidePurchaseDialog" style="text-align: center;">
+    <!-- Dialog header with buttons -->
+    <div class="ui-bar-a">
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="text-align: left;">
+                <a href="" id="cancelButton"
+                   data-role="button" data-inline="true" data-mini="false" data-theme="a"
+                   onclick="cancel();"><%= Localization.getText( "cancel" ) %></a>
+            </div>
+            <div class="ui-block-b" style="text-align: center;">
+                <h3 style="display: inline-block;"><%= Localization.getText( "outsidePurchase" ) %></h3>
+            </div>
+            <div class="ui-block-c" style="text-align: right;">
+                <div style="display: inline-block;">
+                    <!--<a href="" id="cameraButton"-->
+                       <!--style="position: absolute; top: 10px; right: 95px;"-->
+                       <!--data-bind="click: takeOutsidePurchaseReceiptPicture">-->
+                       <!--<img src="images/camera-white.png"/>-->
+                    <!--</a>-->
+                    <a href="" id="saveButton"
+                       style="position: absolute; top: 2px; right: 3px;"
+                       data-role="button" data-inline="true" data-mini="false" data-theme="b"
+                       onclick="save();"><%= Localization.getText( "addPart" ) %></a>
+                </div>
+           </div>
+       </div>
+    </div>
+    <!-- Part list header -->
+    <div class="ui-grid-c" style="border-bottom: solid 1px black;">
+        <div class="ui-block-a" style="text-align: center; width: 20%;">
+            <h3 class="outside-purchase-list-header-text"><%= Localization.getText( "quantityLabel" ) %></h3>
+        </div>
+        <div class="ui-block-b" style="text-align: left; padding-left: 12px; width: 40%">
+            <h3 class="outside-purchase-list-header-text"><%= Localization.getText( "Description" ) %></h3>
+        </div>
+        <div class="ui-block-c" style="text-align: left; padding-left: 12px; width: 20%">
+            <h3 class="outside-purchase-list-header-text"><%= Localization.getText( "priceEach" ) %></h3>
+        </div>
+        <div class="ui-block-d" style="width: 15%">
+        </div>
+    </div>
+    
+    <!-- Part list -->
+    <ul id="outsidePurchasePartList" data-role="listview" data-bind="foreach: outsidePurchasePartList">
+        <li style="background-color: #D5D5D5; padding: 5px 0px 0px 0px; border: none;"
+            data-bind="attr: { id: $index }">
+            <div class="ui-grid-c">
+                <div class="ui-block-a" style="text-align: center; width: 20%;">
+                    <a href=""
+                       style="display: inline-block;"
+                       data-role="button" data-icon="minus" data-iconpos="notext" data-inline="true" data-theme="c"
+                       data-bind="click: $parent.decrementOutsidePurchasePartQty"></a>
+                    <input id="outsidePartQty" class="numeric-input" type="number" min="1" value="1"
+                           style="display: inline-block; width: 50px;"
+                           onkeypress="return UIFrame.allowNumericInputOnly(event)"
+                           data-mini="true" data-inline="true"
+                           data-bind="value: quantity, valueUpdate: 'afterkeydown'"/>
+                    <a href=""
+                       style="display: inline-block; position: relative; left: -8px;"
+                       data-role="button" data-icon="plus" data-iconpos="notext" data-inline="true" data-theme="c"
+                       data-bind="click: $parent.incrementOutsidePurchasePartQty"></a>
+                </div>
+                <div class="ui-block-b" style="padding-left: 5px; padding-right: 5px; width: 40%;">
+                    <input id="description"
+                           style="display: inline-block;"
+                           data-mini="true" data-inline="true"
+                           data-bind="value: description, valueUpdate: 'afterkeydown'"/>
+                </div>
+                <div class="ui-block-c" style="padding-left: 5px; padding-right: 5px; width: 20%;">
+                    <input id="outsidePartPriceEach" class="cost-input" type="number" value="0.00"
+                           style="display: inline-block;"
+                           onkeypress="return UIFrame.allowCostInputOnly(event)"
+                           data-mini="true" data-inline="true"
+                           data-bind="value: priceEach, valueUpdate: 'afterkeydown'"/>
+                </div>
+                <div class="ui-block-d" style="text-align: center; width: 15%">
+                    <a href="" id="addLine"
+                       data-role="button" data-inline="true" data-mini="true" data-theme="c"
+                       data-bind="click: $parent.addLineToOutsidePurchasePartList"><%= Localization.getText( "addLine" ) %></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script>
+    /**
+     * Cancel handler
+     */
+    function cancel() {
+        debug && console.log( "outsidepurchasedialog.cancel: Canceling outside part purchase" );
+        Dialog.closeDialog();
+    }
+    /**
+     * Save handler
+     */
+    function save() {
+        debug && console.log( "outsidepurchasedialog.save: Saving outside part purchases" );
+        ManageWorkOrderParts.addOutsidePartPurchasesToPartList();
+    }
+</script>

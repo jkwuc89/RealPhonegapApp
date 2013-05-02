@@ -1,0 +1,46 @@
+<div id="workOrderReviewDialog" style="text-align: center;">
+    <!-- Dialog header with buttons -->
+    <div class="ui-bar-a">
+        <div class="ui-grid-a">
+            <div class="ui-block-a" style="text-align: center; width: 50%;margin-left: 25%;">
+                <h3 style="display: inline-block;"><span><%= Localization.getText( "workOrderReview" ) %></span>&nbsp;-&nbsp;<span><%= workOrder.documentNumber %></span></h3>
+            </div>
+            <div class="ui-block-b" style="text-align: right; width: 25%;">
+                <div style="display: inline-block;">
+                    <a href="" id="cameraButton"
+                       style="position: absolute; top: 10px; right: 25px;" data-bind="click: takeWorkOrderReviewPicture">
+                       <img src="images/camera-white.png"/>
+                   </a>
+                </div>
+           </div>
+       </div>
+    </div>
+    <div style="text-align: left; padding: 0px 10px 0px 10px;">
+        <h3 class="work-order-review-dialog-header-text"><%= Localization.getText( "enterWorkOrderReviewText" ) %></h3>
+        <textarea style="width: 865px; height: 150px;margin-top: -5px;"
+                  data-bind="value: reviewMessageText, valueUpdate: 'afterkeydown'"></textarea>
+        <br/>
+    </div>
+    
+    <hr />
+    <!-- Button content area -->
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">
+        <div class="ui-block-a">
+                <a id="btnCancel" href="" class="default-button" style="width: 95%;" data-role="button" data-inline="true" data-theme="a"
+                   onclick="cancel();"><%= Localization.getText( "cancel" ) %></a>
+            </div>
+            <div class="ui-block-b" class="default-button" style="margin-left: -2px;">
+                <a id="sendButton" href="" style="width: 95%;" data-mini="false" data-role="button" data-inline="true" data-theme="b"
+                   data-bind="click: sendWorkOrderReviewMessage"><%= Localization.getText( "send" ) %></a>
+           </div>
+    </div>
+</div>
+<script>
+    /**
+     * Cancel handler
+     */
+    function cancel() {
+        debug && console.log( "workorderreviewdialog.cancel: Canceling work order review" );
+        Dialog.closeDialog();
+    }
+</script>

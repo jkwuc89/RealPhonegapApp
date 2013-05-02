@@ -1,0 +1,52 @@
+<div id="selectEmailContactDialog" style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "customerEmailContacts" ) %></h3>
+
+    <h3 style="display: inline-block;margin-left:10px;margin-right:10px;"><%= Localization.getText( "customerEmailContactsSelection" ) %></h3>
+
+    <!-- Customer name and email list -->
+    <div data-role="fieldcontain" style="margin: 10px 10px 10px 10px;font-size: 20px;">
+        <fieldset data-role="controlgroup">
+            <%= customersList %>
+        </fieldset>
+    </div>
+
+    <br />
+
+    <hr/>
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">
+        <div class="ui-block-a">
+            <!-- Cancel closes the dialog and cancels the addition of the email contacts -->
+            <a href="" onclick="cancel();" data-mini="false" data-role="button" data-inline="true" data-theme="a"
+               style="width: 95%;"><%= Localization.getText( "cancel" ) %></a>
+        </div>
+        <div class="ui-block-b">
+            <!-- OK saves the contact selection -->
+            <a href="" onclick="okay();" data-role="button" data-mini="false" data-inline="true" data-theme="b" style="width: 95%;"
+                ><%= Localization.getText( "ok" ) %></a>
+        </div>
+    </div>
+</div>
+<script>
+    /**
+     * Cancel closes this dialog
+     */
+    function cancel() {
+        debug && console.log( "selectemailcontactdialog.cancel: Canceling contact selection" );
+        Dialog.closeDialog();
+
+        ManageWorkOrderReview.displayEmailAddressUpdateDialog();
+    }
+
+    /**
+     * Okay adds the current select to the order
+     */
+    function okay() {
+        debug && console.log( "selectemailcontactdialog.okay: Saving email contacts" );
+        var contactResults = $("input[type='checkbox']");
+
+        // Close this dialog
+        Dialog.closeDialog();
+
+        ManageWorkOrderReview.saveEmailContacts( <%= toOrCCAttempt %>,  contactResults );
+    }
+</script>

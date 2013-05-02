@@ -1,0 +1,18 @@
+<!-- Scrollable text dialog -->
+<div style="text-align: center; padding-bottom: 10px;">
+    <!-- Title text area -->
+    <h3 class="dialog-header"><%= title %></h3>
+    
+    <!-- Body text area -->
+    <div style="padding-left: 10px; padding-right: 10px">
+        <textarea readonly="readonly" style="height: 400px; font-size: 14pt;"><%= body %></textarea>
+    </div>
+    
+    <hr />
+    <!-- Button content area -->
+    <div id="divButtons" style="margin-top: -10px;margin-bottom: -10px;">
+        <a id="closeButton" href="" class="button-default" data-role="button" data-inline="true" data-theme="b" style="width: 95%">
+            <%= Localization.getText( "close" ) %>
+        </a>
+    </div>
+</div>

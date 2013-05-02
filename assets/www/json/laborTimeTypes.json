@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "total": 1,
+    "requestDate": "2013-04-11T10:16:12Z",
+  "laborTimeTypes":
+  [
+    {
+      "webId": 1,
+      "internalId": "1",
+      "name": "Productive"
+    }
+  ]
+}

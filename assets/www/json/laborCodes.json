@@ -1,0 +1,218 @@
+{
+  "success": true,
+  "total": 30,
+    "requestDate": "2013-04-11T10:16:12Z",
+  "laborCodes":
+  [
+    {
+      "webId": 8,
+      "internalId": "001",
+      "active": true,
+      "productiveTime": false,
+      "name": "Birthday"
+    },
+    {
+      "webId": 9,
+      "internalId": "002",
+      "active": true,
+      "productiveTime": false,
+      "name": "Building Maintenance"
+    },
+    {
+      "webId": 10,
+      "internalId": "003",
+      "active": true,
+      "productiveTime": false,
+      "name": "Funeral"
+    },
+    {
+      "webId": 11,
+      "internalId": "004",
+      "active": true,
+      "productiveTime": false,
+      "name": "Holiday"
+    },
+    {
+      "webId": 12,
+      "internalId": "005",
+      "active": true,
+      "productiveTime": false,
+      "name": "Inbound Freight"
+    },
+    {
+      "webId": 13,
+      "internalId": "008",
+      "active": true,
+      "productiveTime": false,
+      "name": "Outbound Freight"
+    },
+    {
+      "webId": 14,
+      "internalId": "010",
+      "active": true,
+      "productiveTime": false,
+      "name": "Paperwork"
+    },
+    {
+      "webId": 15,
+      "internalId": "011",
+      "active": true,
+      "productiveTime": false,
+      "name": "Personal Leave"
+    },
+    {
+      "webId": 16,
+      "internalId": "014",
+      "active": true,
+      "productiveTime": false,
+      "name": "Shop Maintenance"
+    },
+    {
+      "webId": 17,
+      "internalId": "015",
+      "active": true,
+      "productiveTime": false,
+      "name": "Training"
+    },
+    {
+      "webId": 18,
+      "internalId": "017",
+      "active": true,
+      "productiveTime": false,
+      "name": "Vacation"
+    },
+    {
+      "webId": 19,
+      "internalId": "018",
+      "active": true,
+      "productiveTime": false,
+      "name": "Vehicle Maintenance"
+    },
+    {
+      "webId": 20,
+      "internalId": "020",
+      "active": true,
+      "productiveTime": false,
+      "name": "Service Supervision"
+    },
+    {
+      "webId": 21,
+      "internalId": "021",
+      "active": true,
+      "productiveTime": false,
+      "name": "Parts Staff"
+    },
+    {
+      "webId": 22,
+      "internalId": "024",
+      "active": true,
+      "productiveTime": false,
+      "name": "Service Clerical"
+    },
+    {
+      "webId": 23,
+      "internalId": "046",
+      "active": true,
+      "productiveTime": false,
+      "name": "DP Training"
+    },
+    {
+      "webId": 24,
+      "internalId": "099",
+      "active": true,
+      "productiveTime": false,
+      "name": "No Pay"
+    },
+    {
+      "webId": 25,
+      "internalId": "100",
+      "active": true,
+      "productiveTime": false,
+      "name": "Lunch"
+    },
+    {
+      "webId": 26,
+      "internalId": "101",
+      "active": true,
+      "productiveTime": false,
+      "name": "Disability"
+    },
+    {
+      "webId": 27,
+      "internalId": "105",
+      "active": true,
+      "productiveTime": false,
+      "name": "Holiday"
+    },
+    {
+      "webId": 28,
+      "internalId": "012",
+      "active": true,
+      "productiveTime": false,
+      "name": null
+    },
+    {
+      "webId": 7,
+      "internalId": "TTRNC",
+      "active": true,
+      "productiveTime": true,
+      "name": "Travel Time No Charge"
+    },
+    {
+      "webId": 6,
+      "internalId": "TTR",
+      "active": true,
+      "productiveTime": true,
+      "name": "Travel Time Regular"
+    },
+    {
+      "webId": 5,
+      "internalId": "TTP",
+      "active": true,
+      "productiveTime": true,
+      "name": "Travel Time Premium"
+    },
+    {
+      "webId": 4,
+      "internalId": "TTO",
+      "active": true,
+      "productiveTime": true,
+      "name": "Travel Time Overtime"
+    },
+    {
+      "webId": 3,
+      "internalId": "PTR",
+      "active": true,
+      "productiveTime": true,
+      "name": "Productive Time Regular"
+    },
+    {
+      "webId": 2,
+      "internalId": "PTP",
+      "active": true,
+      "productiveTime": true,
+      "name": "Productive Time Premium"
+    },
+    {
+      "webId": 1,
+      "internalId": "PTO",
+      "active": true,
+      "productiveTime": true,
+      "name": "Productive Time Overtime"
+    },
+    {
+      "webId": 29,
+      "internalId": "POA",
+      "active": true,
+      "productiveTime": true,
+      "name": "Productive Order Approval"
+    },
+    {
+      "webId": 30,
+      "internalId": "TFP",
+      "active": true,
+      "productiveTime": true,
+      "name": "Travel for Parts"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<div id="manageWorkOrderHeader" class="ui-bar-d">
+    <div class="ui-grid-a" style="height: 42px;">
+        <div class="ui-block-a manage-work-order-header-status">
+            <h2 class="manage-work-order-header-status-text"><span id="status" translate="yes"></span>:&nbsp;</h2>
+            <img id="manageWorkOrderHeaderStatusIcon" class="icon-button" src=""/>
+            <h2 class="manage-work-order-header-status-text">&nbsp;<span id="workOrderStatus"></span></h2>
+            <a href="" id="change" class="manage-work-order-header-button" translate="yes"
+               style="top: -6px; float: right; width: 100px;"
+               data-role="button" data-mini="true" data-inline="true" data-theme="d"></a>
+            <img id="manageWorkOrderHeaderPartsOnOrderIcon" style="float: right;" src="images/redgearicon.png"/>
+        </div>
+        <div class="ui-block-b">
+            <div class="manage-work-order-header-buttons" style="padding-left: 10px;">
+                <a href="" id="manageWorkOrderCustomer" class="manage-work-order-header-button button-default" translate="yes"
+                   data-role="button" data-mini="true" data-inline="true" data-theme="d"></a>
+                <a href="" id="manageWorkOrderEquipment" class="manage-work-order-header-button button-default" translate="yes"
+                   data-role="button" data-mini="true" data-inline="true" data-theme="d"></a>
+                <div data-role="fieldcontain" id="manageWorkOrderSelectDiv" style="display: none; padding-top: 3px; right: -125px;">
+                    <select id="manageWorkOrderSelectMenu" data-native-menu="<%= UIFrame.USE_NATIVE_SELECT %>" data-mini="true" data-inline="true" data-theme="d">
+                    </select>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>

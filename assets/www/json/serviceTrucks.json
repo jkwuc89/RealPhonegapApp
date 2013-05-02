@@ -1,0 +1,362 @@
+{
+  "success": true,
+  "total": 59,
+    "requestDate": "2013-04-11T10:16:12Z",
+  "serviceTrucks":
+  [
+    {
+      "webId": 3462,
+      "internalId": "V-002",
+      "name": "V-002",
+      "webUserId": null
+    },
+    {
+      "webId": 3464,
+      "internalId": "V-004",
+      "name": "V-004",
+      "webUserId": null
+    },
+    {
+      "webId": 3465,
+      "internalId": "V-005",
+      "name": "V-005",
+      "webUserId": null
+    },
+    {
+      "webId": 3466,
+      "internalId": "V-006",
+      "name": "V-006",
+      "webUserId": null
+    },
+    {
+      "webId": 3468,
+      "internalId": "V-008",
+      "name": "V-008",
+      "webUserId": null
+    },
+    {
+      "webId": 3469,
+      "internalId": "V-009",
+      "name": "V-009",
+      "webUserId": null
+    },
+    {
+      "webId": 3473,
+      "internalId": "V-013",
+      "name": "V-013",
+      "webUserId": null
+    },
+    {
+      "webId": 3475,
+      "internalId": "V-015",
+      "name": "V-015",
+      "webUserId": null
+    },
+    {
+      "webId": 3477,
+      "internalId": "V-017",
+      "name": "V-017",
+      "webUserId": null
+    },
+    {
+      "webId": 3478,
+      "internalId": "V-018",
+      "name": "V-018",
+      "webUserId": null
+    },
+    {
+      "webId": 3479,
+      "internalId": "V-019",
+      "name": "V-019",
+      "webUserId": null
+    },
+    {
+      "webId": 3480,
+      "internalId": "V-020",
+      "name": "V-020",
+      "webUserId": null
+    },
+    {
+      "webId": 3485,
+      "internalId": "V-025",
+      "name": "V-025",
+      "webUserId": null
+    },
+    {
+      "webId": 3486,
+      "internalId": "V-026",
+      "name": "V-026",
+      "webUserId": null
+    },
+    {
+      "webId": 3487,
+      "internalId": "V-027",
+      "name": "V-027",
+      "webUserId": null
+    },
+    {
+      "webId": 3488,
+      "internalId": "V-028",
+      "name": "V-028",
+      "webUserId": null
+    },
+    {
+      "webId": 3490,
+      "internalId": "V-031",
+      "name": "V-031",
+      "webUserId": null
+    },
+    {
+      "webId": 3491,
+      "internalId": "V-P1",
+      "name": "V-P1",
+      "webUserId": null
+    },
+    {
+      "webId": 3492,
+      "internalId": "X-AHMCC",
+      "name": "X-AHMCC",
+      "webUserId": null
+    },
+    {
+      "webId": 3493,
+      "internalId": "X-BOB",
+      "name": "X-BOB",
+      "webUserId": null
+    },
+    {
+      "webId": 3494,
+      "internalId": "X-CONSN",
+      "name": "X-CONSN",
+      "webUserId": null
+    },
+    {
+      "webId": 3495,
+      "internalId": "X-CPLND",
+      "name": "X-CPLND",
+      "webUserId": null
+    },
+    {
+      "webId": 3496,
+      "internalId": "X-DANNON",
+      "name": "X-DANNON",
+      "webUserId": null
+    },
+    {
+      "webId": 3497,
+      "internalId": "X-DOT",
+      "name": "X-DOT",
+      "webUserId": null
+    },
+    {
+      "webId": 3498,
+      "internalId": "X-FNDLY",
+      "name": "X-FNDLY",
+      "webUserId": null
+    },
+    {
+      "webId": 3499,
+      "internalId": "X-GFS",
+      "name": "X-GFS",
+      "webUserId": null
+    },
+    {
+      "webId": 3500,
+      "internalId": "X-GFSFU",
+      "name": "X-GFSFU",
+      "webUserId": null
+    },
+    {
+      "webId": 3501,
+      "internalId": "X-GFSPT",
+      "name": "X-GFSPT",
+      "webUserId": null
+    },
+    {
+      "webId": 3502,
+      "internalId": "X-HAM",
+      "name": "X-HAM",
+      "webUserId": null
+    },
+    {
+      "webId": 3503,
+      "internalId": "X-HONDA",
+      "name": "X-HONDA",
+      "webUserId": null
+    },
+    {
+      "webId": 3504,
+      "internalId": "X-HORML",
+      "name": "X-HORML",
+      "webUserId": null
+    },
+    {
+      "webId": 3505,
+      "internalId": "X-MEI",
+      "name": "X-MEI",
+      "webUserId": null
+    },
+    {
+      "webId": 3506,
+      "internalId": "X-NASH",
+      "name": "X-NASH",
+      "webUserId": null
+    },
+    {
+      "webId": 3507,
+      "internalId": "X-NKP",
+      "name": "X-NKP",
+      "webUserId": null
+    },
+    {
+      "webId": 3508,
+      "internalId": "X-RNDYS",
+      "name": "X-RNDYS",
+      "webUserId": null
+    },
+    {
+      "webId": 3509,
+      "internalId": "X-SHOP1",
+      "name": "X-SHOP1",
+      "webUserId": null
+    },
+    {
+      "webId": 3510,
+      "internalId": "X-SHOP2",
+      "name": "X-SHOP2",
+      "webUserId": null
+    },
+    {
+      "webId": 3511,
+      "internalId": "X-SHOP3",
+      "name": "X-SHOP3",
+      "webUserId": null
+    },
+    {
+      "webId": 3512,
+      "internalId": "X-SHOP4",
+      "name": "X-SHOP4",
+      "webUserId": null
+    },
+    {
+      "webId": 3513,
+      "internalId": "X-SHOP5",
+      "name": "X-SHOP5",
+      "webUserId": null
+    },
+    {
+      "webId": 3514,
+      "internalId": "X-SHOP6",
+      "name": "X-SHOP6",
+      "webUserId": null
+    },
+    {
+      "webId": 3515,
+      "internalId": "X-SHOP7",
+      "name": "X-SHOP7",
+      "webUserId": null
+    },
+    {
+      "webId": 3516,
+      "internalId": "X-SVALU",
+      "name": "X-SVALU",
+      "webUserId": null
+    },
+    {
+      "webId": 3517,
+      "internalId": "X-WAPAK",
+      "name": "X-WAPAK",
+      "webUserId": null
+    },
+    {
+      "webId": 3482,
+      "internalId": "V-022",
+      "name": "V-022",
+      "webUserId": 15807108
+    },
+    {
+      "webId": 3489,
+      "internalId": "V-030",
+      "name": "V-030",
+      "webUserId": 15804768
+    },
+    {
+      "webId": 17361440,
+      "internalId": "V-042",
+      "name": "V-042",
+      "webUserId": 15830622
+    },
+    {
+      "webId": 3463,
+      "internalId": "V-003",
+      "name": "V-003",
+      "webUserId": 15805217
+    },
+    {
+      "webId": 3461,
+      "internalId": "V-001",
+      "name": "V-001",
+      "webUserId": 15806716
+    },
+    {
+      "webId": 3472,
+      "internalId": "V-012",
+      "name": "V-012",
+      "webUserId": 15806892
+    },
+    {
+      "webId": 3467,
+      "internalId": "V-007",
+      "name": "V-007",
+      "webUserId": 15806712
+    },
+    {
+      "webId": 3471,
+      "internalId": "V-011",
+      "name": "V-011",
+      "webUserId": 15806416
+    },
+    {
+      "webId": 3481,
+      "internalId": "V-021",
+      "name": "V-021",
+      "webUserId": 15805990
+    },
+    {
+      "webId": 3470,
+      "internalId": "V-010",
+      "name": "V-010",
+      "webUserId": 15805360
+    },
+    {
+      "webId": 3484,
+      "internalId": "V-024",
+      "name": "V-024",
+      "webUserId": 15804977
+    },
+    {
+      "webId": 3483,
+      "internalId": "V-023",
+      "name": "V-023",
+      "webUserId": 15804588
+    },
+    {
+      "webId": 3474,
+      "internalId": "V-014",
+      "name": "V-014",
+      "webUserId": 999999999
+    },
+    {
+      "webId": 3460,
+      "internalId": "O/S-PARTS",
+      "name": "O/S-PARTS",
+      "webUserId": 15807371
+    },
+    {
+      "webId": 3476,
+      "internalId": "V-016",
+      "name": "V-016",
+      "webUserId": 15804045
+    }
+  ]
+}

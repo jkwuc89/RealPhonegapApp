@@ -1,0 +1,24 @@
+<div id="selectMiddleTierDlg" style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "selectMiddleTierTitle" ) %></h3>
+    <p class="dialog-text" style="text-align: center;"><%= Localization.getText( "selectMiddleTierPrompt" ) %></p>
+
+    <div data-role="fieldcontain" style="margin-left: 10px; margin-right: 10px;">
+        <select id="middleTierList" data-mini="false">
+            <% for ( var index = 0; index < middleTierList.length; index++ ) { %>
+            <option value="<%= middleTierList[index].label %>"><%= middleTierList[index].label %></option>
+            <% } %>
+        </select>
+        <br/><br/>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="readOnlyMode" id="readOnlyMode" class="custom" data-inline="true" data-theme="c" />
+            <label for="readOnlyMode"><%= Localization.getText( "readOnlyMode" ) %></label>
+        </fieldset>
+    </div>
+    <hr />
+    <!-- Button content area -->
+    <div id="divButtons" style="margin-top: -10px;">
+        <a id="btnOkay" href="" class="button-default" data-role="button" data-inline="true" data-theme="b" style="width: 95%">
+            <%= Localization.getText( "okay" ) %>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+{
+    "success":true,
+    "total":2,
+    "requestDate": "2013-04-11T10:21:12Z",
+    "products":[{
+        "productCode": "000675",
+        "description": "BOTTOM BAR END BLOCK - UPDATED",
+        "manufacturer": "ALBY",
+        "active": true,
+        "webId": 455116,
+        "productAssociations": [],
+        "commodityCode": null,
+        "productType": 1
+    },{
+        "productCode": "99999-99999-99",
+        "description": "NEW PART",
+        "manufacturer": "CRW",
+        "active": true,
+        "webId": 999999,
+        "productAssociations": [],
+        "commodityCode": null,
+        "productType": 1
+    }]
+}

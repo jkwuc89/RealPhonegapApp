@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Real Phonegap App</title>
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="js/libs/mobiscroll/mobiscroll-2.1.custom.min.css" />
+<link rel="stylesheet" href="js/libs/badge/badge.css" />
+<link rel="stylesheet" href="css/realphonegapapp.css" />
+</head>
+<body>
+    <div id="loginPage" data-role="page" data-theme="b">
+        <div data-role="header" data-position="fixed" style="height: 50px;">
+            <h1 id="loginPageTitle" translate="yes" style="margin-top: 15px;">Real Mobile App</h1>
+        </div>
+        <div data-role="content" align="center">
+            <!-- Using a 3 column content grid to horizontally center the login form -->
+            <div class="ui-grid-b">
+                <div class="ui-block-a login-spacer-block">
+                    <div style="position:absolute;left: 15px; bottom: 50px; text-align: left;">
+                        <h3>
+                            <span id="versionLabel" translate="yes"></span><span data-bind="text: version"></span><br/>
+                            <span id="serverLabel" translate="yes"></span><span data-bind="text: server"></span><br/>
+                            <span id="onlineIndicator"></span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="ui-block-b login-center-block">
+                    <div style="margin-top: 20%;">
+                        <img src="images/leadingedjelogo.png" alt="Leading EDJE" style="margin-bottom: 25px;"/>
+                            <input type="text" name="username" id="username" value="" class="default-text-active"
+                                   data-bind="value: username, valueUpdate: 'afterkeydown'" style="width: 300px;"/>
+                            <input type="text" id="passwordFake" readonly="readonly" class="default-text-active" style="width: 300px;">
+                            <input type="password" name="password" id="password" value=""
+                                   data-bind="value: password, valueUpdate: 'afterkeydown'" style="width: 300px;" onfocus="this.value = this.value;">
+                        <a id="login" translate="yes" href="" class="button-default"
+                           data-role="button" data-inline="true" data-theme="b"
+                           data-bind="click: login"></a><br>
+                    </div>
+                </div>
+                <div class="ui-block-c login-spacer-block"></div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4 id="loginStatusBar" translate="yes">Login status bar</h4>
+        </div>
+        <script>var debug = true;</script>
+        <script src="js/libs/jquery/jquery-1.8.3.min.js"></script>
+        <script src="js/libs/phonegap/cordova-2.3.0.android.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/libs/jquery/jquery.mobile-1.2.0.min.js"></script>
+        <script src="js/libs/jquery/jquery.mobile.simpledialog2.min.js"></script>
+        <script src="js/libs/mobiscroll/mobiscroll-2.1.custom.min.js"></script>
+        <script src="js/libs/jquery/jquery.i18n.min.js"></script>
+        <script src="js/libs/jquery/jquery.blockUI.js"></script>
+        <script src="js/libs/badge/badge.js"></script>
+        <script src="js/libs/ejs/ejs_production.js"></script>
+        <script src="js/libs/knockout/knockout-2.2.0.js"></script>
+        <script src="js/libs/knockout/knockout.mapping-2.3.3.js"></script>
+        <script src="js/libs/underscore/underscore-1.4.2.min.js"></script>
+        <script src="js/libs/globalize/globalize.min.js"></script>
+        <script src="js/libs/globalize/globalize.culture.en-US.js"></script>
+        <script src="js/firefox.js"></script>
+        <script src="js/loadurl.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/workorder.js"></script>
+        <script src="js/jsondata.js"></script>
+        <script src="js/clocking.js"></script>
+        <script src="js/database.js"></script>
+        <script src="js/translations.js"></script>
+        <script src="js/localization.js"></script>
+        <script src="js/dialog.js"></script>
+        <script src="js/uiframe.js"></script>
+        <script src="js/login.js"></script>
+    </div>
+</body>
+</html>

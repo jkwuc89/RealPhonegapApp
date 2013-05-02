@@ -1,0 +1,51 @@
+<div id="selectPartLocationDialog" style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( "selectPartLocationTitle" ) %></h3>
+    <p class="dialog-text"><%= prompt %></p>
+
+    <input id="action" type="hidden" value="<%= action %>"/>
+    <div data-role="fieldcontain" style="margin-left: 10px; margin-right: 10px;">
+        <select id="locationList" data-mini="false">
+        <% for ( var index = 0; index < stockAreas.length; index++ ) { %>
+            <option value="<%= index %>"><%= stockAreas[index].name %></option>
+        <% } %>
+        </select>
+    </div>
+    <br/>
+
+    <hr/>
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">
+        <div class="ui-block-a">
+            <!-- Cancel closes the dialog and cancels the addition of the part to the work order -->
+            <a href="" onclick="cancel();" data-mini="false" data-role="button" data-inline="true" data-theme="a"
+               style="width: 95%;"><%= Localization.getText( "cancel" ) %></a>
+        </div>
+        <div class="ui-block-b">
+            <!-- OK saves the location selection -->
+            <a href="" data-role="button" data-mini="false" data-inline="true" data-theme="b" style="width: 95%;"
+               onclick="saveLocation();"><%= Localization.getText( "ok" ) %></a>
+        </div>
+    </div>
+</div>
+<script>
+    /**
+     * Cancel cancels adding the part to the list
+     */
+    function cancel() {
+        var action = $("#action").val();
+        debug && console.log( "selectpartlocationdialog.cancel: Canceling part location selection for action: " + action );
+        Dialog.closeDialog();
+        ManageWorkOrderParts.selectPartLocationDialogCallback( null, action, true );
+    }
+
+    /**
+     * Save the selected location
+     */
+    function saveLocation() {
+        var action = $("#action").val();
+        var selectedStockAreaIndex = $("#locationList").val();
+        debug && console.log( "selectpartlocationdialog.saveLocation: Action = " +
+                              action + ", selected location index = " + selectedStockAreaIndex );
+        Dialog.closeDialog();
+        ManageWorkOrderParts.selectPartLocationDialogCallback( selectedStockAreaIndex, action, false );
+    }
+</script>

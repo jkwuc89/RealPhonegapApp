@@ -1,0 +1,66 @@
+{
+  "success": true,
+  "total": 1,
+    "requestDate": "2013-04-11T10:21:12Z",
+  "customers":
+  [
+    {
+      "webId": 16316081,
+      "internalId": "INT1005",
+      "name": "Customer 30",
+      "active": true,
+      "damageWaiver": true,
+      "language": "en",
+      "branchId": null,
+      "companyId": 11,
+      "poNumberRequired": false,
+      "billToCustomerId": null,
+      "billToAddressId": 16316068,
+      "shipToCustomerId": 16316081,
+      "shipToAddressId": 16316068,
+      "paymentCustomerId": 16316081,
+      "paymentAddressId": 16316068,
+      "mainAddressId": 16316068,
+      "mainContactId": null,
+      "chargeCode": 303,
+      "priceCode": 329,
+      "solvencyCode": 10,
+      "discountCode": null,
+      "paymentProfile": null,
+      "invoiceGroup": 0,
+      "currencyCode": "USD",
+      "contacts": 
+      [
+      ],
+      "addresses": 
+      [
+        {
+          "webId": 16316068,
+          "internalId": "6262",
+          "active": false,
+          "name": "Customer 30",
+          "name2": null,
+          "street": "Local Branch",
+          "street2": "Branches - Do Not Change Discounts",
+          "county": "011",
+          "city": "New Bremen",
+          "state": "OH",
+          "country": "USA",
+          "postalCode": "45869",
+          "location": null,
+          "startDate": null,
+          "endDate": null,
+          "billTo": true,
+          "shipTo": true,
+          "payTo": null,
+          "main": true,
+          "taxCodeId": null,
+          "mailTo": true,
+          "communicationDetails": 
+          [
+          ]
+        }
+      ]
+    }
+  ]
+}

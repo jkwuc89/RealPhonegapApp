@@ -1,0 +1,63 @@
+<li data-role="list-divider">
+	<div class="ui-grid-b">
+		<div class="ui-block-a" style="margin-top: 10px">
+		    <% if ( customer && ( customer.solvencyCode == 9 || customer.solvencyCode == 11 ) ) { %>
+                <img class="credit-icon" src="images/credit.png" />
+            <% } else { %>
+                <div class="credit-icon" style="margin-top: 5px;"></div>
+            <% } %>
+            
+            <div class="list-item-icon-text">
+                <% if ( customer && customer.name ) { %>
+    			<h3 style="margin-bottom: 0px; -webkit-margin-before: 0em;"><%= customer.name %></h3>
+                <% } else { %>
+                <h3 style="margin-bottom: 0px; -webkit-margin-before: 0em;"><%= Localization.getText( "customerMissing" ) %></h3>
+                <% } %>
+                <% if ( customer && customer.internalId ) { %>
+    			<p class="work-order-list-item-text" ><%= customer.internalId %></p>
+                <% } %>
+    			<% if( communicationDetail && communicationDetail.length > 0 ) { %>
+        			<p class="work-order-list-item-text" ><span><%= communicationDetail.information %></span>
+                    <!-- Optionally display the phone extension -->
+                    
+                    <% if ( communicationDetail.extension && communicationDetail.extension.length > 0 ) { %>
+                        &nbsp;<span id="phoneExtension"><%= translations.phoneExtension %></span>&nbsp;<span><%= communicationDetail.extension %></span>
+                    <% } %>
+                <% } %>
+    	    </div>
+		</div>
+		<div class="ui-block-b">
+			<h3 id="addressHeader" style="margin-bottom: 0px; -webkit-margin-before: 0em;"><%= translations.addressHeader %></h3>
+			<!-- Handle addresses with two street properties -->
+            <p class="work-order-list-item-text" ><%= address.street %></p>
+            <% if ( address.street2 && address.street2.length > 0 ) { %>
+                <p class="work-order-list-item-text" ><%= address.street2 %></p>
+            <% } %>
+            <p class="work-order-list-item-text" ><%= address.city %>,&nbsp;<%= address.state %>&nbsp;<%= address.postalCode %></p>
+		</div>		
+		<div class="ui-block-c">
+            <% if ( customer ) { %>
+		    <div id="open<%= customer.webId %>" class="ui-block-right" >
+		        <h3 id="open" style="margin-bottom: 5px; -webkit-margin-before: 0em;"><%= translations.open %></h3>
+                <p id="p<%= customer.webId %>">
+                <%= pmsCount %> PMs<br />
+                <%= woCount %> WOs<br />
+                <!-- <%= sqCount %> SQs</p> -->
+            </div>
+            <% } %>
+            
+            <div class="ui-block-c-customer">
+            <% if( contact ) { %>
+    			<h3><%= contact.firstName %>&nbsp;<%= contact.lastName %></h3>
+                <% for ( i = 0; i < contact.address.communicationDetails.length; i++ ) { %>
+                    <p class="work-order-list-item-text" ><span><%= contact.address.communicationDetails[i].type %>:&nbsp;<%= contact.address.communicationDetails[i].information %></span>
+                    <!-- Optionally display the phone extension -->
+                    <% if ( contact.address.communicationDetails[i].extension.length > 0 ) { %>
+                        &nbsp;<span id="phoneExtension"><%= translations.phoneExtension %></span>&nbsp;<span><%= contact.address.communicationDetails[i].extension %></span>
+                    <% } %>
+                    </p>
+                <% } %>
+            <% } %>
+		</div>
+	</div>
+</li>

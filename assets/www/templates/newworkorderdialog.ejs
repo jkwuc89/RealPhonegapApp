@@ -1,0 +1,76 @@
+<div id="newWorkOrderPopup" style="text-align: center;">
+    <!-- Dialog header with buttons -->
+    <div class="ui-bar-a">
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="width: 25%;">
+            </div>
+            <div class="ui-block-b" style="text-align: center; width: 50%;">
+                <h3 style="display: inline-block;"><span><%= Localization.getText( "newWorkOrder" ) %></h3>
+            </div>
+            <div class="ui-block-c" style="width: 25%;">
+            </div>
+        </div>
+    </div>
+
+    <div style="padding-top: 10px;">
+        <div class="ui-grid-a">
+            <div class="ui-block-a" style="text-align: right;">
+                <h3 style="padding-top: 17px; padding-right: 10px; -webkit-margin-before: 0;"><%= Localization.getText( "workOrderType" ) %></h3>
+            </div>
+            <div class="ui-block-b" style="text-align: left;">
+                <select id="orderType" data-inline="true" data-theme="d">
+                    <!-- Dialog type determines which order type options are available -->
+                    <% if ( dialogType == WorkOrder.NEW_WORK_ORDER_DIALOG_TYPES.EQUIPMENT ) { %>
+                        <option class="sortCriteria" value='0'><%= Localization.getText( "workOrder" ) %></option>
+                        <option class="sortCriteria" value='1'><%= Localization.getText( "plannedMaintenance" ) %></option>
+                        <option class="sortCriteria" value='2'><%= Localization.getText( "fullMaintenancePM" ) %></option>
+                        <option class="sortCriteria" value='3'><%= Localization.getText( "factoryWarranty" ) %></option>
+                    <% } else if ( dialogType == WorkOrder.NEW_WORK_ORDER_DIALOG_TYPES.EMPTY ) { %>
+                        <option class="sortCriteria" value='4'><%= Localization.getText( "emptyWorkOrder" ) %></option>
+                    <% } %>
+                </select>
+            </div>
+        </div>
+        <div class="ui-grid-a" id="segmentTitleDiv">
+            <div class="ui-block-a" style="text-align: right;">
+                <h3 style="padding-top: 17px; padding-right: 10px; -webkit-margin-before: 0;"><%= Localization.getText( "segmentTitleHeader" ) %></h3>
+            </div>
+            <div class="ui-block-b" style="text-align: left;">
+                <select id="segmentTitle" style="" data-inline="true" data-theme="d">
+                    <option class="sortCriteria" value='0'><%= Localization.getText( "optionRunning" ) %> </option>
+                    <option class="sortCriteria" value='1'><%= Localization.getText( "optionDown" ) %></option>
+                </select>
+            </div>
+        </div>
+        <div id="partsOnlyDiv" style="padding-left: 20px; padding-right: 20px;">
+            <input type="checkbox" name="partsOnly" id="partsOnly" class="custom" data-theme="c"/>
+            <label for="partsOnly"><%= Localization.getText( "partsOnlyWorkOrder" ) %></label>
+        </div>
+
+        <div id="segmentTitleDisplay" class="ui-grid-a" style="margin-top: -20px;margin-left: 5px;">
+            <div class="ui-block-a" style="text-align: left;margin-top: 5px;">
+            </div>
+            <div class="ui-block-b" style="text-align: right;margin-top: 10px;padding-right: 20px;">
+            </div>
+        </div>
+
+        <section id="workOrderDescriptionSection">
+            <h3 style="padding-left: 20px; text-align: left; -webkit-margin-after: 0.5em;"><%= Localization.getText( "workOrderDescription" ) %></h3>
+            <textarea id="txtDescription" style="width: 570px; height: 150px; margin-left: 15px; padding-right: -10px;"></textarea>
+        </section>
+
+        <hr />
+        <!-- Button content area -->
+        <div class="ui-grid-a" style="margin-top: -10px;">
+            <div class="ui-block-a">
+                <a href="" id="cancelButton" style="width: 95%;"
+                   data-role="button" data-inline="true" data-mini="false" data-theme="a"><%= Localization.getText( "cancel" ) %></a>
+            </div>
+            <div class="ui-block-b">
+                <a href="" id="btnSave"
+                   style="width: 95%;"
+                   data-role="button" data-inline="true" data-mini="false" data-theme="b"><%= Localization.getText( "save" ) %></a>
+            </div>
+        </div>
+    </div>
+</div>

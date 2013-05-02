@@ -1,0 +1,19 @@
+<div id="workOrderListHeader" class="ui-bar-d">
+    <div class="ui-grid-a">
+        <div class="ui-block-a guided-search-block-width guided-search-block-header" style="margin-left:1px;">
+            <h2 id="guidedSearchHeader" class="guided-search-header" translate="yes">Guided Search</h2>
+        </div>
+        <div class="ui-block-b list-block-width list-block-header">
+            <a href="" id="refresh" translate="yes"
+               data-role="button" data-icon="refresh" data-mini="true" data-inline="true" data-theme="d"></a>
+            <div data-role="fieldcontain" id="listSortSelectDiv">
+                <select id="sortList" data-native-menu="<%= UIFrame.USE_NATIVE_SELECT %>" data-mini="true" data-inline="true" data-theme="d">
+                    <option class="sortCriteria" id="sortByCustomer" translate="yes" value="sortByCustomer"></option>
+                    <option class="sortCriteria" id="sortByOldest" translate="yes" value="sortByOldest"></option>
+                    <option class="sortCriteria" id="sortByNewest" translate="yes" value="sortByNewest"></option>
+                    <option class="sortCriteria" id="sortByNumber" translate="yes" value="sortByNumber"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

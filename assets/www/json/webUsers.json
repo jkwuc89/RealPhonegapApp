@@ -1,0 +1,38 @@
+{
+    "success": true,
+    "total": 1,
+    "requestDate": "2013-04-11T10:16:12Z",
+    "webUsers": [
+        {
+            "webId": 999999999,
+            "internalId": "007460",
+            "address": {
+                "webId": 15804502,
+                "internalId": "51440",
+                "active": false,
+                "name": "Demo",
+                "name2": null,
+                "street": "",
+                "street2": null,
+                "county": null,
+                "city": "Dayton",
+                "state": "OH",
+                "country": "USA",
+                "postalCode": "45377",
+                "location": null,
+                "startDate": null,
+                "endDate": null,
+                "billTo": false,
+                "shipTo": false,
+                "payTo": null,
+                "main": null,
+                "taxCodeId": null,
+                "mailTo": false,
+                "communicationDetails": []
+            },
+            "roleId": 64,
+            "branchId": 32,
+            "departmentId": 67
+        }
+    ]
+}

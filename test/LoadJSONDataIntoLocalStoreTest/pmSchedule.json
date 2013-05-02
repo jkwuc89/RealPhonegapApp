@@ -1,0 +1,86 @@
+{
+    "success": true,
+    "total": 5,
+    "requestDate": "2013-04-11T10:16:12Z",
+    "pmSchedules":
+    [
+        {
+            "webId": 100000,
+            "dateSchedule": "2013-03-18T04:00:00Z",
+            "dateOverride": null,
+            "counter": 0,
+            "hourmeter": 0,
+            "standardJobCodeId": 1,
+            "standardJobCode": {
+                "webId": 1
+            },
+            "customerId": 1,
+            "equipmentId": 1,
+            "attention": "",
+            "note": "PM schedule with missing equipment"
+        },
+        {
+            "webId": 200000,
+            "dateSchedule": "2013-03-18T04:00:00Z",
+            "dateOverride": null,
+            "counter": 0,
+            "hourmeter": 0,
+            "standardJobCodeId": 1,
+            "customerId": 1,
+            "equipmentId": 1,
+            "equipment": {
+                "webId": 1
+            },
+            "attention": "",
+            "note": "PM schedule with missing standard job code"
+        },
+        {
+            "webId": 300000,
+            "dateSchedule": "2013-03-18T04:00:00Z",
+            "dateOverride": null,
+            "counter": 0,
+            "hourmeter": 0,
+            "standardJobCodeId": 1,
+            "standardJobCode": {
+                "webId": 1
+            },
+            "customerId": 999999,
+            "equipmentId": 1,
+            "equipment": {
+                "webId": 1
+            },
+            "attention": "",
+            "note": "PM schedule with missing customer"
+        },
+        {
+            "webId": 400000,
+            "dateSchedule": "2013-03-18T04:00:00Z",
+            "dateOverride": null,
+            "counter": 0,
+            "hourmeter": 0,
+            "standardJobCodeId": 1,
+            "customerId": 999999,
+            "equipmentId": 1,
+            "attention": "",
+            "note": "PM schedule with no supporting information"
+        },
+        {
+            "webId": 500000,
+            "dateSchedule": "2013-03-18T04:00:00Z",
+            "dateOverride": null,
+            "counter": 0,
+            "hourmeter": 0,
+            "standardJobCodeId": 1,
+            "standardJobCode": {
+                "webId": 1
+            },
+            "customerId": 1,
+            "equipmentId": 1,
+            "equipment": {
+                "webId": 1
+            },
+            "attention": "",
+            "note": "PM schedule with all supporting information"
+        }
+    ]
+}

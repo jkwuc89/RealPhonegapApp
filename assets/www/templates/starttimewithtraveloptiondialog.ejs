@@ -1,0 +1,58 @@
+<div id="startTimeWithTravelOptionDialog" style="text-align: center;">
+    <h3 class="dialog-header"><%= Localization.getText( dialogTitle ) %></h3>
+    <p id="clockingDialogText" class="clocking-dialog-text"><%= Localization.getText( dialogPrompt ) %></p>
+    <% var startTimeIn24HourFormat = Localization.formatDateTime( startTime, 'HH:mm:ss' ); %>
+    
+    <!-- Display the time picker --> 
+    <div style="padding-left: 10px; padding-right: 10px;">
+        <input id="startTime" name="startTime" value="<%= Localization.formatDateTime( startTime, 't' ) %>"
+               style="display:none;"/>
+    </div>
+
+    <!-- Travel required checkbox -->
+    <% if ( showTravelCheckbox ) { %>
+        <div data-role="fieldcontain" style="margin: 10px 10px 10px 10px;font-size: 20px;">
+            <fieldset data-role="controlgroup">
+               <input type="checkbox" name="travelRequired" id="travelRequired" class="custom" data-inline="true" data-theme="c" />
+               <label for="travelRequired"><%= Localization.getText( "travelRequiredPrompt" ) %></label>
+            </fieldset>
+        </div>
+    <% } %>
+        
+    <hr /> 
+    <!-- Button content area -->
+    <div id="divButtons"class="ui-grid-a" style="margin-top: -10px;">     
+        <div class="ui-block-a">
+            <!-- Cancel closes the start time dialog and does not change the clocking status -->
+            <a href="" onclick="Dialog.closeDialog( true );" data-mini="false" data-role="button" data-inline="true" data-theme="a" style="width: 95%;"><%= Localization.getText( "cancel") %></a><br/>
+        </div>
+        <div class="ui-block-b">
+            <!-- Save calls back to UIFrame to save the new clocking status with the chosen start time -->
+            <a href="" data-role="button" data-mini="false" data-inline="true" data-theme="b" 
+               onclick="save();" style="width: 95%;"><%= Localization.getText( "save") %></a>
+        </div>
+    </div>    
+    <script>
+        /**
+         * Save the chosen clocking status
+         */
+        function save() {
+            var clockingStatus = "technicianStatusProductive";
+            var startTime = Util.convert12HourTimeToISODateTimeStamp( $('#startTime').val() );
+            var latestTimeEntry = JSONData.getLatestTimeEntry();
+            if ( latestTimeEntry && ( new Date( startTime ).getTime() ) < ( new Date( latestTimeEntry.timeEnd ).getTime() ) ) {
+                var dialogText =
+                    Localization.getText( "startTimeBeforeLatestTimeEntry" ).replace( "timeEnd", Localization.formatDateTime( latestTimeEntry.timeEnd, 't' ) );
+                $("#clockingDialogText").text( dialogText ).css( "color", "#800000" );
+            } else {
+                if ( $("#travelRequired").attr( 'checked' ) ) {
+                    clockingStatus = "technicianStatusTraveling";
+                }
+                debug && console.log( "starttimewithtraveloptiondialog.save: Changing clocking status to " +
+                                      clockingStatus + " using start time = " + startTime );
+                JSONData.saveClockingStatus( clockingStatus, startTime );
+                Dialog.closeDialog();
+            }
+        }
+    </script>
+</div>
