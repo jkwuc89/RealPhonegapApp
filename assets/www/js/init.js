@@ -80,9 +80,14 @@ var Init = function() {
             debug && console.log( "init.postLoadFn: " + deviceInfo );
             osVersionNumber = Number( device.version.substring( 0, 3 ) );
             useNativeTasksMenu = ( _.indexOf( DEVICES_NOT_SUPPORTING_NATIVE_TASKS_MENU, device.name ) == -1 );
-            useScrollableDivs = ( osVersionNumber >= 4.1 &&
-                                ( _.indexOf( DEVICES_NOT_SUPPORTING_SCROLLABLE_DIVS, device.name ) == -1 ) );
-            usePhonegapLoadURLPlugin = true;
+            useScrollableDivs = ( device.platform == "iOS" || ( osVersionNumber >= 4.1 &&
+                                ( _.indexOf( DEVICES_NOT_SUPPORTING_SCROLLABLE_DIVS, device.name ) == -1 ) ) );
+            // iOS does not use the Load URL plugin
+            if ( device.platform == "iOS" ) {
+                usePhonegapLoadURLPlugin = false;
+            } else {
+                usePhonegapLoadURLPlugin = true;
+            }
         }
 
         if ( !_.isUndefined( UIFrame ) ) {
