@@ -391,6 +391,8 @@ var WorkOrder = function() {
         if ( !workOrderArray ) {
             workOrderArray = JSONData.getObjectsByDataType( "workOrders" );
         }
+
+        // UNDERSCORE _.filter DEMO
         var newWorkOrders = _.filter( workOrderArray, function( currentWorkOrder ) {
             return isNewWorkOrder( currentWorkOrder );
         });

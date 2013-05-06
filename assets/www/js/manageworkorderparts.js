@@ -243,8 +243,10 @@ var ManageWorkOrderParts = function() {
             debug && console.log( "ManageWorkOrderParts.populatePartsList: Work order contains " + workOrderParts.length + " parts" );
             var technicianUserId = JSONData.getTechnicianUserId();
             var currentWorkOrderPart = null;
-            for ( var partIndex = 0; partIndex < workOrderParts.length; partIndex++ ) {
-                currentWorkOrderPart = workOrderParts[partIndex];
+
+            // KNOCKOUT DEMO
+            // UNDERSTORE _.each DEMO
+            _.each( workOrderParts, function( currentWorkOrderPart ) {
                 // Make the part's location and the quantity observable before adding
                 // the part to the observable array.
                 var addPartToListFn = function( part ) {
@@ -286,7 +288,7 @@ var ManageWorkOrderParts = function() {
                         addPartUsingInventoryDbTableFn( currentWorkOrderPart );
                     }
                 }
-            }
+            });
         }
     }
 
