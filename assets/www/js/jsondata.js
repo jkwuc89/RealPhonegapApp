@@ -1681,7 +1681,7 @@ var JSONData = function() {
         }
         debug && console.log( "JSONData.loadJSONDataIntoLocalStore: Update type = " + updateType );
 
-        // UNDERSCORE _.after DEMO
+        // UNDERSCORE _.after REALPHONEGAP DEMO
         // Set up an _.after function that executes once when all JSON data is loaded into
         // the local store
         loadJSONDataIntoLocalStoreComplete = _.after( Config.getConfig().jsonLocalStoreFeeds.length, function() {

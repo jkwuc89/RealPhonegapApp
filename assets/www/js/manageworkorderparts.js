@@ -244,8 +244,8 @@ var ManageWorkOrderParts = function() {
             var technicianUserId = JSONData.getTechnicianUserId();
             var currentWorkOrderPart = null;
 
-            // KNOCKOUT DEMO
-            // UNDERSTORE _.each DEMO
+            // KNOCKOUT REALPHONEGAP DEMO
+            // UNDERSTORE _.each REALPHONEGAP DEMO
             _.each( workOrderParts, function( currentWorkOrderPart ) {
                 // Make the part's location and the quantity observable before adding
                 // the part to the observable array.

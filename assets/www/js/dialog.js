@@ -62,7 +62,7 @@ var Dialog = function() {
 
     /**
      * Chose the about dialog box
-     * EJS TEMPLATE / DIALOG DEMO
+     * EJS TEMPLATE / DIALOG REALPHONEGAP DEMO
      */
     function showAbout() {
         debug && console.log( "Dialog.showAbout: Showing about dialog box" );

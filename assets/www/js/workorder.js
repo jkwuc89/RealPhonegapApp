@@ -392,7 +392,7 @@ var WorkOrder = function() {
             workOrderArray = JSONData.getObjectsByDataType( "workOrders" );
         }
 
-        // UNDERSCORE _.filter DEMO
+        // UNDERSCORE _.filter REALPHONEGAP DEMO
         var newWorkOrders = _.filter( workOrderArray, function( currentWorkOrder ) {
             return isNewWorkOrder( currentWorkOrder );
         });
