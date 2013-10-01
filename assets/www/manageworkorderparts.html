@@ -74,7 +74,7 @@
                                    data-iconpos="notext" data-inline="true" style="position: relative; top: -2px;"></a>
                                 <input class="numeric-input" type="number" name="quickAddPartQuantity" id="quickAddPartQuantity" min="1"
                                        data-mini="true" data-inline="true"
-                                       data-bind="value: quantity, valueUpdate: 'afterkeydown'" style="position: relative; left: -7px;"></input>
+                                       data-bind="value: quantity, valueUpdate: 'afterkeydown'" style="position: relative; left: -7px;"/>
                                 <a href="" class="manage-work-order-parts-qty-button" id="incrementPartQty" data-role="button" data-icon="plus"
                                    data-bind="click: incrementQtyInHeader"
                                    data-iconpos="notext" data-inline="true" style="top: -2px; left: -21px;"></a>
@@ -100,10 +100,10 @@
                             <div class="ui-block-a manage-work-order-parts-list-header-block" style="width: 105px;">
                                 <p class="manage-work-order-parts-list-header-text" translate="yes" id="manufacturerLabel"></p>
                             </div>
-                            <div class="ui-block-b manage-work-order-parts-list-header-block" style="width: 195px;">
+                            <div class="ui-block-b manage-work-order-parts-list-header-block" style="width: 110px;">
                                 <p class="manage-work-order-parts-list-header-text" translate="yes" id="partNumberLabel"></p>
                             </div>
-                            <div class="ui-block-c manage-work-order-parts-list-header-block" style="width: 365px;">
+                            <div class="ui-block-c manage-work-order-parts-list-header-block" style="width: 150px;">
                                 <p class="manage-work-order-parts-list-header-text" translate="yes" id="description"></p>
                             </div>
                             <div class="ui-block-d manage-work-order-parts-list-header-block" style="width: 215px;">
@@ -132,10 +132,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="ui-block-b manage-work-order-parts-list-block" style="width: 195px;">
+                                <div class="ui-block-b manage-work-order-parts-list-block" style="width: 110px;">
                                     <p class="manage-work-order-parts-list-item-text" data-bind="text: product.productCode"></p>
                                 </div>
-                                <div class="ui-block-c manage-work-order-parts-list-block" style="width: 365px;">
+                                <div class="ui-block-c manage-work-order-parts-list-block" style="width: 150px;">
                                     <p class="manage-work-order-parts-list-item-text" data-bind="text: description"></p>
                                 </div>
                                 <div class="ui-block-d manage-work-order-parts-list-block" style="width: 215px;">
@@ -158,7 +158,7 @@
                                     <input class="numeric-input" type="number" min="0" style="display: inline-block; width: 50px;"
                                            data-bind="attr: { id: $index }, visible: $parent.writable() == true && writable() == true, value: qtyOrdered, valueUpdate: 'afterkeydown'"
                                            oninput="ManageWorkOrderParts.onPartQtyChanged( this );"
-                                           data-mini="true" data-inline="true"></input>
+                                           data-mini="true" data-inline="true" />
                                     <a href=""
                                        data-bind="attr: { id: $index }, visible: $parent.writable() == true && writable() == true, click: $parent.incrementPartQtyInList"
                                        style="display: inline-block; position: relative; left: -8px;"
