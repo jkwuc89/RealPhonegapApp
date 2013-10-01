@@ -1,12 +1,12 @@
 function switchToAndroid() {
     echo "Switching $1 to Android version of Phonegap"
-    cat $1 | sed 's/cordova-2\.3\.0\.ios\.js/cordova-2\.3\.0\.android\.js/' > temp.html
+    cat $1 | sed 's/cordova-2\.3\.0\.ios\.js/cordova-2\.9\.0\.android\.js/' > temp.html
     mv temp.html $1
 }
 
 function switchToiOS() {
     echo "Switching $1 to iOS version of Phonegap"
-    cat $1 | sed 's/cordova-2\.3\.0\.android\.js/cordova-2\.3\.0\.ios\.js/' > temp.html
+    cat $1 | sed 's/cordova-2\.3\.0\.android\.js/cordova-2\.9\.0\.ios\.js/' > temp.html
     mv temp.html $1
 }
 
