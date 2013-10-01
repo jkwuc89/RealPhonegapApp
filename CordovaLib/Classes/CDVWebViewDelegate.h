@@ -17,21 +17,23 @@
  under the License.
  */
 
-#import "CDVCordovaView.h"
+#import <UIKit/UIKit.h>
 
-@implementation CDVCordovaView
-
-- (void)loadRequest:(NSURLRequest*)request
-{
-    [super loadRequest:request];
+/**
+ * Distinguishes top-level navigations from sub-frame navigations.
+ * shouldStartLoadWithRequest is called for every request, but didStartLoad
+ * and didFinishLoad is called only for top-level navigations.
+ * Relevant bug: CB-2389
+ */
+@interface CDVWebViewDelegate : NSObject <UIWebViewDelegate>{
+    __weak NSObject <UIWebViewDelegate>* _delegate;
+    NSInteger _loadCount;
+    NSInteger _state;
+    NSInteger _curLoadToken;
+    NSInteger _loadStartPollCount;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code.
-}
-*/
+- (id)initWithDelegate:(NSObject <UIWebViewDelegate>*)delegate;
+- (BOOL)request:(NSURLRequest*)newRequest isFragmentIdentifierToRequest:(NSURLRequest*)originalRequest;
 
 @end

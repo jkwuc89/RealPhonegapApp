@@ -17,13 +17,14 @@
  under the License.
  */
 
-//  Bridge implementation file for using Cordova plugins in PhoneGap 0.9.6.
-//
-
-#import "CDVPlugin.h"
-
-@implementation CDVPlugin
+@interface NSArray (CDVJSONSerializing)
+- (NSString*)JSONString;
 @end
 
-@implementation CDVPluginResult
+@interface NSDictionary (CDVJSONSerializing)
+- (NSString*)JSONString;
+@end
+
+@interface NSString (CDVJSONSerializing)
+- (id)JSONObject;
 @end

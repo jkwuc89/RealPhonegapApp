@@ -44,6 +44,9 @@
 		7370FABE17359D9D00D653C1 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7370FABD17359D9D00D653C1 /* AppHelper.m */; };
 		7370FAC017359DEC00D653C1 /* LeadingEDJEIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7370FABF17359DEC00D653C1 /* LeadingEDJEIcon.png */; };
 		7370FAC217359DF300D653C1 /* LeadingEDJERetinaDisplayIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7370FAC117359DF300D653C1 /* LeadingEDJERetinaDisplayIcon.png */; };
+		73B0D9D617FA645E0096B1DD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B0D9D517FA645E0096B1DD /* ImageIO.framework */; };
+		73B0D9D817FA646B0096B1DD /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B0D9D717FA646B0096B1DD /* OpenAL.framework */; };
+		73B0D9DA17FA64870096B1DD /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B0D9D917FA64860096B1DD /* AssetsLibrary.framework */; };
 		73B2987A1736806F00885C58 /* database in Resources */ = {isa = PBXBuildFile; fileRef = 73B298791736806F00885C58 /* database */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
@@ -111,6 +114,9 @@
 		7370FAC117359DF300D653C1 /* LeadingEDJERetinaDisplayIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeadingEDJERetinaDisplayIcon.png; sourceTree = "<group>"; };
 		7370FAC317359DFC00D653C1 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		7370FAC517359E0100D653C1 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		73B0D9D517FA645E0096B1DD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		73B0D9D717FA646B0096B1DD /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		73B0D9D917FA64860096B1DD /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		73B298791736806F00885C58 /* database */ = {isa = PBXFileReference; lastKnownFileType = folder; name = database; path = assets/database; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* RealPhonegapApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "RealPhonegapApp-Info.plist"; path = "../RealPhonegapApp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
@@ -122,6 +128,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B0D9DA17FA64870096B1DD /* AssetsLibrary.framework in Frameworks */,
+				73B0D9D817FA646B0096B1DD /* OpenAL.framework in Frameworks */,
+				73B0D9D617FA645E0096B1DD /* ImageIO.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -232,6 +241,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73B0D9D917FA64860096B1DD /* AssetsLibrary.framework */,
+				73B0D9D717FA646B0096B1DD /* OpenAL.framework */,
+				73B0D9D517FA645E0096B1DD /* ImageIO.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -485,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COPY_PHASE_STRIP = NO;
@@ -505,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COPY_PHASE_STRIP = YES;

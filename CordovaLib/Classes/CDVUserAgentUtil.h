@@ -17,16 +17,11 @@
  under the License.
  */
 
-//  Bridge implementation file for using Cordova > 1.5 plugins in 1.5.0.
-//
+#import <Foundation/Foundation.h>
 
-#import <Cordova/CDV.h>
-
-/*
- Returns YES if it is at least version specified as NSString(X)
- Usage:
- if (IsAtLeastiOSVersion(@"5.1")) {
- // do something for iOS 5.1 or greater
- }
- */
-#define IsAtLeastiOSVersion(X) ([[[UIDevice currentDevice] systemVersion] compare:X options:NSNumericSearch] != NSOrderedAscending)
+@interface CDVUserAgentUtil : NSObject
++ (NSString*)originalUserAgent;
++ (void)acquireLock:(void (^)(NSInteger lockToken))block;
++ (void)releaseLock:(NSInteger*)lockToken;
++ (void)setUserAgent:(NSString*)value lockToken:(NSInteger)lockToken;
+@end
