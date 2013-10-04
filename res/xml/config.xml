@@ -1,113 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
- Licensed to the Apache Software Foundation (ASF) under one
- or more contributor license agreements.  See the NOTICE file
- distributed with this work for additional information
- regarding copyright ownership.  The ASF licenses this file
- to you under the Apache License, Version 2.0 (the
- "License"); you may not use this file except in compliance
- with the License.  You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing,
- software distributed under the License is distributed on an
- "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- KIND, either express or implied.  See the License for the
- specific language governing permissions and limitations
- under the License.
--->
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        id        = "com.leadingedje.RealPhonegapApp"
-        version   = "2.0.0">
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.leadingedje.RealPhonegapApp" version="2.0.0" xmlns="http://www.w3.org/ns/widgets">
     <name>RealPhonegapApp</name>
-
     <description>
         Real World Mobile App Development with Phonegap
     </description>
-
-    <author href="http://leadingedje.com" email="keith.wedinger@leadingedje.com">
+    <author email="keith.wedinger@leadingedje.com" href="http://leadingedje.com">
         Keith Wedinger - Solutions Architect
     </author>
-
-    <access origin="http://127.0.0.1*"/>
-    <access origin="*leadingedje.com" browserOnly="true" />
-
-    <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
+    <access origin="http://127.0.0.1*" />
+    <access browserOnly="true" origin="*leadingedje.com" />
     <content src="login.html" />
-
     <preference name="loglevel" value="DEBUG" />
-    <!--
-        Setting the load URL timeout value to a very large number to fix
-        the crash caused by a timeout that occurs when the switch between manage work order
-        pages is canceled due to unsaved changes
-    -->
     <preference name="loadUrlTimeoutValue" value="600000" />
-    <!--
-      <preference name="splashscreen" value="resourceName" />
-      <preference name="backgroundColor" value="0xFFF" />
-      <preference name="InAppBrowserStorageEnabled" value="true" />
-      <preference name="disallowOverscroll" value="true" />
-    -->
-
     <feature name="App">
-        <param name="android-package" value="org.apache.cordova.App"/>
-    </feature>
-    <feature name="Geolocation">
-        <param name="android-package" value="org.apache.cordova.GeoBroker"/>
+        <param name="android-package" value="org.apache.cordova.App" />
     </feature>
     <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.Device"/>
-    </feature>
-    <feature name="Accelerometer">
-        <param name="android-package" value="org.apache.cordova.AccelListener"/>
-    </feature>
-    <feature name="Compass">
-        <param name="android-package" value="org.apache.cordova.CompassListener"/>
-    </feature>
-    <feature name="Media">
-        <param name="android-package" value="org.apache.cordova.AudioHandler"/>
-    </feature>
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.CameraLauncher"/>
-    </feature>
-    <feature name="Contacts">
-        <param name="android-package" value="org.apache.cordova.ContactManager"/>
-    </feature>
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.FileUtils"/>
+        <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
     <feature name="NetworkStatus">
-        <param name="android-package" value="org.apache.cordova.NetworkManager"/>
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
-    <feature name="Notification">
-        <param name="android-package" value="org.apache.cordova.Notification"/>
-    </feature>
-    <feature name="Storage">
-        <param name="android-package" value="org.apache.cordova.Storage"/>
-    </feature>
-    <feature name="FileTransfer">
-        <param name="android-package" value="org.apache.cordova.FileTransfer"/>
-    </feature>
-    <feature name="Capture">
-        <param name="android-package" value="org.apache.cordova.Capture"/>
-    </feature>
-    <feature name="Battery">
-        <param name="android-package" value="org.apache.cordova.BatteryListener"/>
-    </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.SplashScreen"/>
-    </feature>
-    <feature name="Echo">
-        <param name="android-package" value="org.apache.cordova.Echo"/>
-    </feature>
-    <feature name="Globalization">
-        <param name="android-package" value="org.apache.cordova.Globalization"/>
-    </feature>
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
-    </feature>
-    <!-- Deprecated plugins element. Remove in 3.0 -->
-    <plugins>
-    </plugins>
 </widget>
