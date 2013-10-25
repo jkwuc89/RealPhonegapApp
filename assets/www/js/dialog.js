@@ -62,7 +62,6 @@ var Dialog = function() {
 
     /**
      * Chose the about dialog box
-     * EJS TEMPLATE / DIALOG REALPHONEGAP DEMO
      */
     function showAbout() {
         debug && console.log( "Dialog.showAbout: Showing about dialog box" );
@@ -99,7 +98,9 @@ var Dialog = function() {
 
     /**
      * Function to show an alert dialog box using the simpledialog plugin.
-     *  Arguments should be localized before being passed to this function.
+     * Arguments should be localized before being passed to this function.
+     * EJS TEMPLATE / DIALOG REALPHONEGAP DEMO
+     *
      * @param title the dialog title
      * @param body the dialog body
      * @param okHandler - function called when OK is tapped, optional
@@ -117,6 +118,7 @@ var Dialog = function() {
         body = body.replace( /\n/gm, '<br />' );
 
         // Build the dialog variable for the simpleDialog2 plug in
+        // EJS / DIALOG REALPHONEGAP DEMO
         var dialog = new EJS({ url: "templates/alertdialog" }).render({
             title: title,
             body: body

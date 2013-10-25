@@ -8,6 +8,7 @@
         Keith Wedinger - Solutions Architect
     </author>
     <access origin="*" />
+    <!-- PROJECT SETUP REALPHONEGAP DEMO -->
     <content src="login.html" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="AutoHideSplashScreen" value="true" />

@@ -9,6 +9,7 @@
     </author>
     <access origin="http://127.0.0.1*" />
     <access browserOnly="true" origin="*leadingedje.com" />
+    <!-- PROJECT STRUCTURE REALPHONEGAP DEMO -->
     <content src="login.html" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="loadUrlTimeoutValue" value="600000" />
