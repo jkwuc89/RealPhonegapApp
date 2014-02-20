@@ -106,6 +106,7 @@ var Localization = function() {
     /**
      * Translate all elements on a page.  The translate attribute
      * is used to select all elements that must be translated
+     * GLOBALIZATION REALPHONEGAP DEMO
      */
     function translate() {
         var elementsToTranslate = $("[translate='yes']");

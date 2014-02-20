@@ -6,13 +6,6 @@
         <option name="UPDATE_PROPERTY_FILES" value="true" />
       </configuration>
     </facet>
-    <facet type="JRUBY" name="JRuby">
-      <configuration>
-        <JRUBY_FACET_CONFIG_ID NAME="JRUBY_SDK_NAME" VALUE="" />
-        <LOAD_PATH number="0" />
-        <I18N_FOLDERS number="0" />
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -22,7 +15,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="cordova-2.3.0" level="project" />
+    <orderEntry type="library" name="cordova-3.0.0" level="project" />
   </component>
 </module>
 

@@ -1,3 +1,4 @@
+// GLOBALIZATION REALPHONEGAP DEMO
 var translations = {
     "en-US" : {
         "acceptWorkOrder"                      : "Accept Work Order",

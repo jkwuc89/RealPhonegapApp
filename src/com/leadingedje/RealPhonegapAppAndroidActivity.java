@@ -5,7 +5,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.WebSettings.RenderPriority;
-import org.apache.cordova.DroidGap;
+import android.webkit.WebView;
+import org.apache.cordova.*;
 
 import java.io.File;
 
@@ -20,6 +21,12 @@ public class RealPhonegapAppAndroidActivity extends DroidGap {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         Log.d( TAG, "RealPhonegapAppAndroidActivity.onCreate: Activity is being created" );
+
+        // Enable web debugging inside all Webview's opened by this app
+        // This supported in Android Kitkat or later
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled( true );
+        }
 
         Context appContext = getApplicationContext();
 
@@ -53,7 +60,8 @@ public class RealPhonegapAppAndroidActivity extends DroidGap {
         Log.d(TAG, "RealPhonegapAppAndroidActivity.onCreate: Device info: " + versionInfo.toString());
         
         Log.d( TAG, "RealPhonegapAppAndroidActivity.onCreate: Opening PhoneGap URL: " + PHONEGAP_URL );
-        super.loadUrl( PHONEGAP_URL );
+        // super.loadUrl( PHONEGAP_URL );
+        super.loadUrl(Config.getStartUrl());
     }
 
     /**

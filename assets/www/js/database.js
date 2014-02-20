@@ -105,6 +105,7 @@ var MobileDb = function() {
      * @param tx
      * @param successCallbackFn
      * @param errorCallbackFn
+     * WEB SQL DATABASE REALPHONEGAP DEMO
      */
     function executeSql( sql, parameters, tx, successCallbackFn, errorCallbackFn ) {
         if ( !db ) {
