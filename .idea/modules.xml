@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RealPhonegapApp.iml" filepath="$PROJECT_DIR$/RealPhonegapApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platforms/android/CordovaLib/CordovaLib.iml" filepath="$PROJECT_DIR$/platforms/android/CordovaLib/CordovaLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platforms/android/RealPhonegapApp.iml" filepath="$PROJECT_DIR$/platforms/android/RealPhonegapApp.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Real Phonegap App</title>
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="js/libs/mobiscroll/mobiscroll-2.1.custom.min.css" />
+<link rel="stylesheet" href="js/libs/badge/badge.css" />
+<link rel="stylesheet" href="css/realphonegapapp.css" />
+</head>
+<body>
+    <div id="manageWorkOrderRepairDetailsPage" data-role="page">
+        <div id="manageWorkOrderRepairDetailsPageContent" data-role="content" class="nopadding" style="display: none; height: 1024px; overflow: auto;">
+            <div class="ui-grid-a">
+                <!-- Icon bar -->
+                <div class="ui-block-a manage-work-order-icon-bar">
+                    <a href="" onclick="ManageWorkOrder.navigateToPage('manageWorkOrderOverviewPage');"><img class="manage-work-order-icon-button" id="manageWorkOrderOverviewIcon" src="images/manageworkorder-overview-inactive.png" /></a>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderOverview" translate="yes"></p>
+                    <!--<a href="" onclick="ManageWorkOrder.navigateToPage('manageWorkOrderDiagnosticsPage');"><img class="manage-work-order-icon-button" id="manageWorkOrderDiagnosticsIcon" src="images/manageworkorder-diagnostics-inactive.png" /></a>-->
+                    <!--<p class="manage-work-order-icon-inactive-text" id="manageWorkOrderDiagnostics" translate="yes"></p>-->
+                    <img class="manage-work-order-icon" id="manageWorkOrderRepairWorkIcon" src="images/manageworkorder-repair-active.png" />
+                    <p class="manage-work-order-icon-active-text" id="manageWorkOrderRepairWork" translate="yes"></p>
+                    <a href="" onclick="ManageWorkOrder.navigateToPage( ManageWorkOrder.TECH_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderTechnicianReviewIcon" src="images/manageworkorder-techreview-inactive.png" /></a>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderTechnicianReview" translate="yes"></p>
+                    <a href="" onclick="ManageWorkOrder.navigateToPage( ManageWorkOrder.CUSTOMER_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderCustomerReviewIcon" src="images/manageworkorder-customerreview-inactive.png" /></a>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderCustomerReview" translate="yes"></p>
+                </div>
+                <!-- Overview content -->
+                <div class="ui-block-b manage-work-order-repair-details-content" style="margin-top: 0px;">
+                    <!-- Navbar used by the repair work pages to navigate between parts and repair details -->
+                    <div data-role="navbar">
+                        <ul class="ui-grid-a">
+                            <li class="ui-block-a">
+                                <a href="" class="ui-btn-active manage-work-order-parts-navbar-button" data-role="button" data-icon="grid" data-corners="false" data-shadow="false"
+                                   data-iconshadow="true" data-iconpos="top" data-inline="true"
+                                   translate="yes" id="manageWorkOrderRepairDetails"></a>
+                            </li>
+                            <li class="ui-block-b">
+                                <a href="" onclick="ManageWorkOrder.navigateToPage('manageWorkOrderPartsPage');"
+                                   class="manage-work-order-parts-navbar-button"
+                                   data-role="button" data-icon="gear" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconpos="top" data-inline="true"
+                                   translate="yes" id="manageWorkOrderParts"
+                                   style="border-right-width: 0px;"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Repair information start -->
+                    <div id="manageWorkOrderLaborHeader" class="ui-bar-c" style="height: 44px;">
+                        <h2 id="equipmentHoursHeader" class="manage-work-order-labor-header-text"
+                            data-bind="visible: hasEquipment">&nbsp;<span id="equipmentHoursLabel" translate="yes"></span>:</h2>
+                        <input class="numeric-input" type="number" id="equipmentHours" data-mini="true" data-inline="true"
+                               oninput="ManageWorkOrderRepairDetails.valueChanged()"
+                               data-bind="value: hourMeter, valueUpdate: 'afterkeydown', visible: writable() && hasEquipment"
+                               style="display: inline-block; position: relative; left: -1px; top: -1px; width: 100px;"/>
+                        <p class="manage-work-order-readonly-value"
+                           data-bind="text: hourMeter, visible: writable() == false && hasEquipment"></p>
+                        <h2 id="billingFolderHeader" class="manage-work-order-labor-header-text">&nbsp;<span id="billingFolderLabel" translate="yes"></span>:</h2>
+                        <div data-role="fieldcontain" class="manage-work-order-billing-folder-div" data-bind="visible: writable">
+                            <select id="billingFolderList" data-native-menu="true" data-mini="true" data-inline="true" data-theme="d" 
+                                    onchange="ManageWorkOrderRepairDetails.valueChanged()"
+                                    data-bind="options: availableBillingFolders,
+                                               value: selectedBillingFolder,
+                                               enable: hasCommonFolder">
+                            </select>
+                        </div>
+                        <p class="manage-work-order-readonly-value"
+                           data-bind="text: selectedBillingFolder, visible: writable() == false"></p>
+                        <section style="display: inline-block;">
+                            <div style="position: relative; left: -50px; display: inline-block;"
+                                 data-bind="visible: writable">
+                                <h2 class="manage-work-order-labor-header-text">&nbsp;<span id="purchaseOrder" translate="yes"></span>:</h2>
+                                <input id="poNumber" data-mini="true" data-inline="true"
+                                       oninput="ManageWorkOrderRepairDetails.valueChanged()"
+                                       data-bind="value: poNumber, valueUpdate: 'afterkeydown'"
+                                       style="display: inline-block; width: 150px;"/>
+                            </div>
+                            <div style="position: relative; display: inline-block;"
+                                 data-bind="visible: writable() == false">
+                                <h2 class="manage-work-order-labor-header-text">&nbsp;<span id="purchaseOrder" translate="yes"></span>:</h2>
+                                <p class="manage-work-order-readonly-value"
+                                   data-bind="text: poNumber, visible: writable() == false"></p>
+                            </div>
+                        </section>
+                        <div style="display: inline-block; padding-top: 4px; position: absolute; right: 10px;">
+                            <a href="" id="manageWorkOrderSave" class="manage-work-order-header-button"
+                               style="width: 125px;"
+                               data-bind="click: saveWorkOrder, visible: writable"
+                               translate="yes" data-role="button" data-mini="true" data-inline="true" data-theme="b"></a>
+                        </div>
+                    </div>
+                    <!-- Repair code start -->
+                    <div class="ui-bar-d" style="height: 32px; border-top: solid 1px black; border-bottom: solid 1px black">
+                        <h2 class="manage-work-order-banner-text">&nbsp;<span id="repairCode" translate="yes"></span></h2>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="display: inline-block;"
+                             data-bind="visible: isQueryingStandardJobCodes">
+                            <h2 translate="yes" id="loadingRepairCodesFromDB" class="manage-work-order-repair-code-label-text"></h2>
+                        </div>
+                        <div style="display: inline-block;"
+                             data-bind="visible: isRepairCodeSelectionVisible()">
+                            <h2 class="manage-work-order-repair-code-label-text"><span id="repairTypeAndCode" translate="yes"></span>:&nbsp;</h2>
+                            <fieldset id="standardJobCodeFieldset" data-role="controlgroup" data-type="horizontal" style="display: inline-block; margin: 0px;">
+                                <!-- Repair code mfg select -->
+                                <select id="repairCodeMfgList" data-native-menu="true" data-mini="true" data-inline="true" data-theme="d" data-placeholder="false"
+                                        onchange="ManageWorkOrderRepairDetails.valueChanged()"
+                                        data-bind="options: availableRepairCodeMfgs,
+                                                   optionsCaption: repairTypeCaption(),
+                                                   optionsText: 'description',
+                                                   value: selectedRepairCodeMfg">
+                                </select>
+                                <!-- Repair code segment 1 select -->
+                                <select id="segment1Select" data-native-menu="true" data-mini="true" data-inline="true" data-theme="d" data-placeholder="false"
+                                        onchange="ManageWorkOrderRepairDetails.valueChanged()"
+                                        data-bind="options: repairCodeSegment1List,
+                                                   optionsCaption: repairCodeSegment1Caption(),
+                                                   optionsText: function( item ) {
+                                                       return ( item.completeJobCode.substr( 0, 2 ) + ' - ' + item.description )
+                                                   },
+                                                   value: selectedRepairCodeSegment1">
+                                </select>
+                                <!-- Repair code segment 2 select -->
+                                <select id="segment2Select" data-native-menu="true" data-mini="true" data-inline="true" data-theme="d" data-placeholder="false"
+                                        onchange="ManageWorkOrderRepairDetails.valueChanged()"
+                                        data-bind="options: repairCodeSegment2List,
+                                                   optionsCaption: repairCodeSegment2Caption(),
+                                                   optionsText: function( item ) {
+                                                       return ( item.completeJobCode.substr( 2, 2 ) + ' - ' + item.description )
+                                                   },
+                                                   value: selectedRepairCodeSegment2">
+                                </select>
+                                <!-- Repair code segment 3 select -->
+                                <select id="segment3Select" data-native-menu="true" data-mini="true" data-inline="true" data-theme="d" data-placeholder="false"
+                                        onchange="ManageWorkOrderRepairDetails.valueChanged()"
+                                        data-bind="options: repairCodeSegment3List,
+                                                   optionsCaption: repairCodeSegment3Caption(),
+                                                   optionsText: function( item ) {
+                                                       return ( item.completeJobCode.substr( 4 ) + ' - ' + item.description )
+                                                   },
+                                                   value: selectedRepairCodeSegment3">
+                                </select>
+                            </fieldset>
+                            <!-- X code select - currently hidden -->
+                            <fieldset id="xcodeFieldset" data-role="controlgroup" data-type="horizontal"
+                                      style="margin: 0px; float: right;">
+                                <select id="xcodeList"
+                                        data-native-menu="true" data-mini="true" data-inline="true" data-theme="d" data-placeholder="false"
+                                        onchange="ManageWorkOrderRepairDetails.valueChanged()"
+                                        data-bind="options: availableXcodes,
+                                                   optionsCaption: xcodeCaption(),
+                                                   optionsText: function( item ) {
+                                                       return ( item.completeJobCode + ' ' + item.description )
+                                                   },
+                                                   value: selectedXcode">
+                                </select>
+                            </fieldset>
+                            <br/>
+                        </div>
+
+                        <!-- Selected repair code information -->
+                        <section id="standardJobCodeInformation" data-bind="visible: isStandardJobCodeInformationVisible()">
+                            <hr data-bind="visible: isRepairCodeSelectionVisible()" />
+                            <h2 translate="yes" id="repairCodeDetailsLabel" class="manage-work-order-repair-code-label-text"></h2>
+                            <p style="-webkit-margin-before: 0.5em; -webkit-margin-after: 0.25em;"
+                               data-bind="visible: repairCodeId">
+                                <span id="repairCodeDetailsCode" data-bind="text: repairCodeId"></span>&nbsp;-
+                                <span id="repairCodeDetailsDescription" data-bind="text: repairCodeDescription"></span>
+                                <span data-bind="visible: repairCodeNotes">-&nbsp;<span data-bind="text: repairCodeNotes"></span></span>
+                            </p>
+                            <p style="-webkit-margin-before: .25em;" data-bind="text: selectedXcodeText"></p>
+                        </section>
+                    </div>
+                    <!-- Repair code end -->
+                    <!-- Repair information start -->
+                    <div class="ui-bar-d"
+                         style="height: 32px; border-top: solid 1px black; border-bottom: solid 1px black">
+                        <h2 class="manage-work-order-banner-text">&nbsp;<span id="repairInformation" translate="yes"></span></h2>
+                    </div>
+                    <div style="margin-left: 10px;margin-right: 10px;">
+                        <p style="-webkit-margin-before: 0.5em; -webkit-margin-after: 0.5em"><span translate="yes" id="additionalRepairNotesLabel"></span>:</p>
+                        <textarea id="additionalRepairNotes" rows="10" cols="" style="height: 95px;"
+                                  style="-webkit-margin-after: 1em"
+                                  oninput="ManageWorkOrderRepairDetails.valueChanged()"
+                                  data-bind="value: additionalRepairNotes, valueUpdate: 'afterkeydown', visible: isRepairNotesWritable()"></textarea>
+                        <p class="manage-work-order-readonly-value"
+                           data-bind="text: additionalRepairNotes, visible: isRepairNotesWritable() == false"
+                           style="-webkit-margin-after: 1em"></p>
+                    </div>
+                    <!-- Repair information end -->
+                    <!-- Labor hours banner and list start -->
+                    <!--
+                        The width's below allow the borders to line up on the tablet
+                    -->
+                    <div id="manageWorkOrderLaborHoursBanner" class="ui-bar-d" style="height: 32px; border-top: solid 1px black; border-bottom: solid 1px black">
+                        <h2 class="manage-work-order-banner-text">&nbsp;<span id="laborHours" translate="yes"></span></h2>
+                    </div>
+                    <div class="ui-bar-c" style="height: 30px;">
+                        <p class="manage-work-order-labor-list-header">
+                            <span class="manage-work-order-labor-list-header-text" translate="yes" id="date" style="width: 175px;"></span>
+                            <span class="manage-work-order-labor-list-header-text" translate="yes" id="start" style="width: 150px;"></span>
+                            <span class="manage-work-order-labor-list-header-text" translate="yes" id="stop" style="width: 150px;"></span>
+                            <span class="manage-work-order-labor-list-header-text" translate="yes" id="Hours" style="width: 150px;"></span>
+                            <span class="manage-work-order-labor-list-header-text" translate="yes" id="type" style="border-right: none;"></span>
+                        </p>
+                    </div>
+                    <ul id="manageWorkOrderLaborList" data-role="listview" data-bind="foreach: laborHours">
+                        <li class="manage-work-order-labor-list-item" style="padding: 0px;">
+                            <div class="manage-work-order-labor-list-item-div" style="width: 181px;">
+                                <p class="manage-work-order-labor-list-item-text" data-bind="text: date"></p>
+                            </div>
+                            <div class="manage-work-order-labor-list-item-div" style="width: 155px;">
+                                <p class="manage-work-order-labor-list-item-text" data-bind="text: startTime"></p>
+                            </div>
+                            <div class="manage-work-order-labor-list-item-div" style="width: 155px;">
+                                <p class="manage-work-order-labor-list-item-text"
+                                   data-bind="style: { color: inProgress ? 'red' : 'black' }, text: endTime"></p>
+                            </div>
+                            <div class="manage-work-order-labor-list-item-div" style="width: 155px;">
+                                <p class="manage-work-order-labor-list-item-text" data-bind="text: hours"></p>
+                            </div>
+                            <div class="manage-work-order-labor-list-item-div" style="border-right: none;">
+                                <p class="manage-work-order-labor-list-item-text" data-bind="text: type"></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Labor hours banner and list end -->
+                </div>
+            </div>
+        </div>
+
+        <script>var debug = true;</script>
+        <script type="text/javascript" src="js/libs/jquery/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/init.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.mobile-1.2.0.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.mobile.simpledialog2.min.js"></script>
+        <script type="text/javascript" src="js/libs/mobiscroll/mobiscroll-2.1.custom.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.i18n.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.blockUI.js"></script>
+        <script type="text/javascript" src="js/libs/badge/badge.js"></script>
+        <script type="text/javascript" src="js/libs/ejs/ejs_production.js"></script>
+        <script type="text/javascript" src="js/libs/knockout/knockout-2.2.0.js"></script>
+        <script type="text/javascript" src="js/libs/knockout/knockout.mapping-2.3.3.js"></script>
+        <script type="text/javascript" src="js/libs/underscore/underscore-1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/libs/globalize/globalize.min.js"></script>
+        <script type="text/javascript" src="js/libs/globalize/globalize.culture.en-US.js"></script>
+        <script type="text/javascript" src="js/firefox.js"></script>
+        <script type="text/javascript" src="js/loadurl.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/util.js"></script>
+        <script type="text/javascript" src="js/database.js"></script>
+        <script type="text/javascript" src="js/workorder.js"></script>
+        <script type="text/javascript" src="js/jsondata.js"></script>
+        <script type="text/javascript" src="js/clocking.js"></script>
+        <script type="text/javascript" src="js/translations.js"></script>
+        <script type="text/javascript" src="js/localization.js"></script>
+        <script type="text/javascript" src="js/dialog.js"></script>
+        <script type="text/javascript" src="js/uiframe.js"></script>
+        <script type="text/javascript" src="js/workorderlist.js"></script>
+        <script type="text/javascript" src="js/manageworkorder.js"></script>
+        <script type="text/javascript" src="js/manageworkorderrepairdetails.js"></script>
+    </div>
+</body>
+</html>

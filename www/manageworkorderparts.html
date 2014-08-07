@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Real Phonegap App</title>
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquerymobile-redbuttontheme.min.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="js/libs/mobiscroll/mobiscroll-2.1.custom.min.css" />
+<link rel="stylesheet" href="js/libs/badge/badge.css" />
+<link rel="stylesheet" href="css/realphonegapapp.css" />
+</head>
+<body>
+    <div id="manageWorkOrderPartsPage" data-role="page">
+        <div id="manageWorkOrderPartsPageContent" data-role="content" class="nopadding" style="display:none; height: 1536px; overflow: auto;">
+            <div class="ui-grid-a">
+                <!-- Icon bar -->
+                <div class="ui-block-a manage-work-order-icon-bar">
+                    <a href="" onclick="ManageWorkOrder.navigateToPage('manageWorkOrderOverviewPage');"><img class="manage-work-order-icon-button" id="manageWorkOrderOverviewIcon" src="images/manageworkorder-overview-inactive.png" /></a>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderOverview" translate="yes"></p>
+                    <!--<a href="" onclick="ManageWorkOrder.navigateToPage('manageWorkOrderDiagnosticsPage');"><img class="manage-work-order-icon-button" id="manageWorkOrderDiagnosticsIcon" src="images/manageworkorder-diagnostics-inactive.png" /></a>-->
+                    <!--<p class="manage-work-order-icon-inactive-text" id="manageWorkOrderDiagnostics" translate="yes"></p>-->
+                    <img class="manage-work-order-icon" id="manageWorkOrderRepairWorkIcon" src="images/manageworkorder-repair-active.png" />
+                    <p class="manage-work-order-icon-active-text" id="manageWorkOrderRepairWork" translate="yes"></p>
+                    <a href="" onclick="ManageWorkOrder.navigateToPage( ManageWorkOrder.TECH_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderTechnicianReviewIcon" src="images/manageworkorder-techreview-inactive.png" /></a>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderTechnicianReview" translate="yes"></p>
+                    <a href="" onclick="ManageWorkOrder.navigateToPage( ManageWorkOrder.CUSTOMER_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderCustomerReviewIcon" src="images/manageworkorder-customerreview-inactive.png" /></a>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderCustomerReview" translate="yes"></p>
+                </div>
+                <!-- Overview content -->
+                <div class="ui-block-b manage-work-order-parts-content" style="margin-top: 0px;">
+                    <!-- Navbar used by the repair work pages to navigate between parts and repair details -->
+                    <div data-role="navbar">
+                        <ul class="ui-grid-a">
+                            <li class="ui-block-a">
+                                <a href="" onclick="ManageWorkOrder.navigateToPage('manageWorkOrderRepairDetailsPage');" class="manage-work-order-parts-navbar-button" data-role="button" data-icon="grid" data-corners="false" data-shadow="false"
+                                   data-iconshadow="true" data-iconpos="top" data-inline="true"
+                                   translate="yes" id="manageWorkOrderRepairDetails"></a>
+                            </li>
+                            <li class="ui-block-b">
+                                <a href="" class="ui-btn-active manage-work-order-parts-navbar-button" translate="yes" id="manageWorkOrderParts"
+                                   data-role="button" data-icon="gear" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconpos="top" data-inline="true"
+                                   style="border-right-width: 0px;"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="display: inline-block; padding: 5px;"
+                         data-bind="visible: isQueryingInventory">
+                        <h2 translate="yes" id="loadingInventoryFromDB" class="manage-work-order-repair-code-label-text"></h2>
+                    </div>
+
+                    <!-- This div renders the parts page header.  If the work order is read only, this header is invisible -->
+                    <div id="manageWorkOrderPartsHeader" class="ui-bar-c" data-bind="visible: writable">
+                        <div class="ui-grid-a" style="height: 42px;">
+                            <div class="ui-block-a manage-work-order-parts-add" style="width: 40px; padding-left: 1px; padding-top: 4px;">
+                                <select id="addPartsMenu"
+                                        data-native-menu="<%= UIFrame.USE_NATIVE_SELECT %>" data-mini="true"
+                                        data-inline="true" data-theme="e" data-icon="plus" data-iconpos="notext">
+                                    <option id="partsMenu" translate="yes" value=""></option>
+                                    <option id="inventory" translate="yes" value="addFromInventory"></option>
+                                    <option id="catalogButton" translate="yes" value="addFromPSRT"></option>
+                                    <option id="outsidePurchase" translate="yes" value="addFromOutsidePurchase"></option>
+                                </select>
+                            </div>
+                            <div class="ui-block-b manage-work-order-parts-quick-add">
+                                <h2 class="manage-work-order-parts-header-text">&nbsp;&nbsp;<span id="partNumberLabel" translate="yes"></span>:</h2>
+                                <input type="text" name="quickAddPartNumber" id="quickAddPartNumber" value="" data-mini="true" data-inline="true"
+                                       data-bind="value: partNumber, valueUpdate: 'afterkeydown'"/>
+                                <!-- Quantity controls inside part header -->
+                                <h2 class="manage-work-order-parts-header-text">&nbsp;<span id="quantityLabel" translate="yes"></span>:</h2>
+                                <a href="" class="manage-work-order-parts-qty-button" id="decrementPartQty" data-role="button" data-icon="minus"
+                                   data-bind="click: decrementQtyInHeader"
+                                   data-iconpos="notext" data-inline="true" style="position: relative; top: -2px;"></a>
+                                <input class="numeric-input" type="number" name="quickAddPartQuantity" id="quickAddPartQuantity" min="1"
+                                       data-mini="true" data-inline="true"
+                                       data-bind="value: quantity, valueUpdate: 'afterkeydown'" style="position: relative; left: -7px;"/>
+                                <a href="" class="manage-work-order-parts-qty-button" id="incrementPartQty" data-role="button" data-icon="plus"
+                                   data-bind="click: incrementQtyInHeader"
+                                   data-iconpos="notext" data-inline="true" style="top: -2px; left: -21px;"></a>
+                                <a href="" id="quickAddPart" class="manage-work-order-header-button button-default" translate="yes"
+                                   data-bind="click: addPartFromHeader"
+                                   data-role="button" data-mini="true" data-inline="true" data-theme="d"
+                                   style="position: relative; top: -3px; left: -10px;"></a>
+                                <div style="display: inline-block; padding-top: 2px; position: absolute; right: 10px;">
+                                    <a href="" id="manageWorkOrderSave" class="manage-work-order-header-button button-default"
+                                       data-bind="click: saveChanges, visible: writable"
+                                       translate="yes" data-role="button" data-mini="true" data-inline="true" data-theme="b"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End parts page header -->
+                    <!-- Parts list header start -->
+                    <!--
+                        The width styles in the header and the list must match.
+                    -->
+                    <div id="manageWorkOrderPartsListHeader" class="ui-bar-b">
+                        <div class="ui-grid-d" style="height: 30px;">
+                            <div class="ui-block-a manage-work-order-parts-list-header-block" style="width: 105px;">
+                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="manufacturerLabel"></p>
+                            </div>
+                            <div class="ui-block-b manage-work-order-parts-list-header-block" style="width: 110px;">
+                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="partNumberLabel"></p>
+                            </div>
+                            <div class="ui-block-c manage-work-order-parts-list-header-block" style="width: 150px;">
+                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="description"></p>
+                            </div>
+                            <div class="ui-block-d manage-work-order-parts-list-header-block" style="width: 215px;">
+                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="location"></p>
+                            </div>
+                            <div class="ui-block-e manage-work-order-parts-list-header-block" style="border-right: none;">
+                                <p class="manage-work-order-parts-list-header-text" translate="yes" id="quantityLabel"></p>
+                                <div style="display: inline-block; height: 30px; width: 40px; border-left: solid 1px black; position: absolute; right: 5px;">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Parts list header end -->
+                    <!-- Parts list start -->
+                    <!-- KNOCKOUT REALPHONEGAP DEMO -->
+                    <ul id="manageWorkOrderPartsList" data-role="listview" data-bind="foreach: parts">
+                        <li class="manage-work-order-parts-list-item" data-bind="attr: { id: product.productCode }" style="padding: 0em;">
+                            <div class="ui-grid-d" style="height: 40px;">
+                                <div class="ui-block-a manage-work-order-parts-list-block" style="width: 106px;">
+                                    <div class="ui-grid-a" style="height: 40px;">
+                                        <div class="ui-block-a" style="width: 32px;">
+                                            <img id="manageWorkOrderHeaderPartsOnOrderIcon" src="images/redgearicon.png"
+                                                 style="position: relative; top: 6px; left: 2px; float: left;" data-bind="visible: qtyBackOrder > 0"/>
+                                        </div>
+                                        <div class="ui-block-b">
+                                            <p class="manage-work-order-parts-list-item-text" data-bind="text: product.manufacturer"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-block-b manage-work-order-parts-list-block" style="width: 110px;">
+                                    <p class="manage-work-order-parts-list-item-text" data-bind="text: product.productCode"></p>
+                                </div>
+                                <div class="ui-block-c manage-work-order-parts-list-block" style="width: 150px;">
+                                    <p class="manage-work-order-parts-list-item-text" data-bind="text: description"></p>
+                                </div>
+                                <div class="ui-block-d manage-work-order-parts-list-block" style="width: 215px;">
+                                    <p class="manage-work-order-parts-list-item-text"
+                                       data-bind="text: location, visible: !$parent.isPartLocationLinkVisible( $index() )"></p>
+                                    <a href=""
+                                       class="manage-work-order-parts-list-item-text"
+                                       data-bind="attr: { id: $index }, click: $parent.onPartLocationClick, text: location, visible: $parent.isPartLocationLinkVisible( $index() )" >
+                                    </a>
+                                </div>
+                                <div class="ui-block-e manage-work-order-parts-list-block" style="border-right: none;">
+                                    <!-- If work order is not writable, display quantity as a simple text -->
+                                    <p class="manage-work-order-parts-list-item-text"
+                                       data-bind="text: qtyOrdered, visible: $parent.writable() == false || writable() == false"></p>
+                                    <!-- If work order is writable, display quantity using buttons and input field -->
+                                    <a href=""
+                                       data-bind="attr: { id: $index }, visible: $parent.writable() == true && writable() == true, click: $parent.decrementPartQtyInList"
+                                       style="display: inline-block;"
+                                       data-role="button" data-icon="minus" data-iconpos="notext" data-inline="true"></a>
+                                    <input class="numeric-input" type="number" min="0" style="display: inline-block; width: 50px;"
+                                           data-bind="attr: { id: $index }, visible: $parent.writable() == true && writable() == true, value: qtyOrdered, valueUpdate: 'afterkeydown'"
+                                           oninput="ManageWorkOrderParts.onPartQtyChanged( this );"
+                                           data-mini="true" data-inline="true" />
+                                    <a href=""
+                                       data-bind="attr: { id: $index }, visible: $parent.writable() == true && writable() == true, click: $parent.incrementPartQtyInList"
+                                       style="display: inline-block; position: relative; left: -8px;"
+                                       data-role="button" data-icon="plus" data-iconpos="notext" data-inline="true"></a>
+                                    <div style="display: inline-block; height: 40px; width: 40px; border-left: solid 1px black; position: absolute; right: 5px;">
+                                        <a href=""
+                                           data-bind="visible: $parent.writable() == true && writable() == true, click: $parent.deletePart"
+                                           style="display: inline-block; float: right;"
+                                           data-role="button" data-icon="delete" data-inline="true" data-iconpos="notext" data-theme="r"></a>
+                                        <span data-bind="visible: $parent.writable() == false || writable() == false">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Parts list end -->
+                </div>
+            </div>
+        </div>
+
+        <script>var debug = true;</script>
+        <script type="text/javascript" src="js/libs/jquery/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/init.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.mobile-1.2.0.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.mobile.simpledialog2.min.js"></script>
+        <script type="text/javascript" src="js/libs/mobiscroll/mobiscroll-2.1.custom.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.i18n.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.blockUI.js"></script>
+        <script type="text/javascript" src="js/libs/badge/badge.js"></script>
+        <script type="text/javascript" src="js/libs/ejs/ejs_production.js"></script>
+        <script type="text/javascript" src="js/libs/knockout/knockout-2.2.0.js"></script>
+        <script type="text/javascript" src="js/libs/knockout/knockout.mapping-2.3.3.js"></script>
+        <script type="text/javascript" src="js/libs/underscore/underscore-1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/libs/globalize/globalize.min.js"></script>
+        <script type="text/javascript" src="js/libs/globalize/globalize.culture.en-US.js"></script>
+        <script type="text/javascript" src="js/firefox.js"></script>
+        <script type="text/javascript" src="js/loadurl.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/util.js"></script>
+        <script type="text/javascript" src="js/database.js"></script>
+        <script type="text/javascript" src="js/workorder.js"></script>
+        <script type="text/javascript" src="js/jsondata.js"></script>
+        <script type="text/javascript" src="js/clocking.js"></script>
+        <script type="text/javascript" src="js/localfs.js"></script>
+        <script type="text/javascript" src="js/translations.js"></script>
+        <script type="text/javascript" src="js/localization.js"></script>
+        <script type="text/javascript" src="js/dialog.js"></script>
+        <script type="text/javascript" src="js/uiframe.js"></script>
+        <script type="text/javascript" src="js/workorderlist.js"></script>
+        <script type="text/javascript" src="js/manageworkorder.js"></script>
+        <script type="text/javascript" src="js/manageworkorderparts.js"></script>
+    </div>
+</body>
+</html>

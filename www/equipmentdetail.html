@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Real Phonegap App</title>
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="js/libs/mobiscroll/mobiscroll-2.1.custom.min.css" />
+<link rel="stylesheet" href="js/libs/badge/badge.css" />
+<link rel="stylesheet" href="css/realphonegapapp.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquerymobile-redbuttontheme.min.css" />
+<base target="_parent" />
+</head>
+<body>
+    <div id="equipmentDetailPage" data-role="page">
+        <!-- The previously selected customer item -->
+        <div id="equipmentDetailPageContent" data-role="content" class="nopadding">
+            <div id="equipmentInfoArea">
+            </div>
+
+            <div data-role="navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="" id="workHistory" class="ui-btn-active manage-work-order-parts-navbar-button" translate="yes"
+                           onclick="EquipmentDetail.swapLayout('workHistoryListArea')"
+                           data-role="button" data-icon="grid" data-corners="false" data-shadow="false"
+                           data-iconshadow="true" data-iconpos="top" data-inline="true"
+                           style="border-left-width: 0px;"></a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="" id="parts" class="manage-work-order-parts-navbar-button" translate="yes"
+                           onclick="EquipmentDetail.swapLayout('partsListArea')"
+                           data-role="button" data-icon="grid" data-corners="false" data-shadow="false"
+                           data-iconshadow="true" data-iconpos="top" data-inline="true"></a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="" id="openWork" class="manage-work-order-parts-navbar-button" translate="yes"
+                           onclick="EquipmentDetail.swapLayout('openWorkListArea')"
+                           data-role="button" data-icon="gear" data-corners="false" data-shadow="false"
+                           data-iconshadow="true" data-iconpos="top" data-inline="true"
+                           style="border-right-width: 0px;"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- The Guided Search header and Sort option container -->
+            <div id="equipmentDetailListHeader" class="ui-bar-d">
+                <div style="height: 45px;">
+                    <div class="guided-search-block-header">
+                        <h2 id="guidedSearchHeader" class="guided-search-header" translate="yes"
+                            style="border-right-width: 0;">Guided Search</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- The list of equipment work history -->
+            <div id="workHistoryListArea" class="ui-grid-a equipment-detail-block-div-pos" style="margin-top: -25px;">
+                <div class="ui-block-a guided-search-block-width customer-equipment-block-div-pos guided-search-block-div" style="margin-top: -164px;">
+                    <ul id="guidedSearchList" data-role="listview" data-filter="false">
+                    </ul>
+                </div>
+                <div class="ui-block-b list-block-width customer-equipment-block-div-pos list-block-div equipment-detail-work-list" style="margin-top: -167px;">
+                    <ul id="equipmentDetailList" data-role="listview" data-filter="true" data-filter-placeholder="Search work history">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- The list of open work -->
+            <div id="openWorkListArea" class="equipment-detail-block-div-pos equipment-detail-open-list" style="margin-top: 14px;">
+                <ul id="openWorkList" data-role="listview" data-filter="false">
+                </ul>
+            </div>
+
+            <!-- The list of equipment work history parts -->
+            <div id="partsListArea" class="ui-grid-a equipment-detail-block-div-pos" style="margin-top: -22px;">
+                <div class="ui-block-a guided-search-block-width customer-equipment-block-div-pos guided-search-block-div" style="margin-top: -167px;">
+                    <ul id="guidedSearchListParts" data-role="listview" data-filter="false">
+                    </ul>
+                </div>
+                <div class="ui-block-b list-block-width customer-equipment-block-div-pos list-block-div equipment-detail-work-list" style="margin-top: -170px;">
+                    <ul id="partsList" data-role="listview" data-filter="true" data-filter-placeholder="Search parts">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>var debug = true;</script>
+        <script type="text/javascript" src="js/libs/jquery/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/init.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.mobile-1.2.0.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.mobile.simpledialog2.min.js"></script>
+        <script type="text/javascript" src="js/libs/mobiscroll/mobiscroll-2.1.custom.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.i18n.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.blockUI.js"></script>
+        <script type="text/javascript" src="js/libs/badge/badge.js"></script>
+        <script type="text/javascript" src="js/libs/ejs/ejs_production.js"></script>
+        <script type="text/javascript" src="js/libs/knockout/knockout-2.2.0.js"></script>
+        <script type="text/javascript" src="js/libs/knockout/knockout.mapping-2.3.3.js"></script>
+        <script type="text/javascript" src="js/libs/underscore/underscore-1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/libs/globalize/globalize.min.js"></script>
+        <script type="text/javascript" src="js/libs/globalize/globalize.culture.en-US.js"></script>
+        <script type="text/javascript" src="js/firefox.js"></script>
+        <script type="text/javascript" src="js/loadurl.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/util.js"></script>
+        <script type="text/javascript" src="js/database.js"></script>
+        <script type="text/javascript" src="js/workorder.js"></script>
+        <script type="text/javascript" src="js/jsondata.js"></script>
+        <script type="text/javascript" src="js/clocking.js"></script>
+        <script type="text/javascript" src="js/localfs.js"></script>
+        <script type="text/javascript" src="js/translations.js"></script>
+        <script type="text/javascript" src="js/localization.js"></script>
+        <script type="text/javascript" src="js/dialog.js"></script>
+        <script type="text/javascript" src="js/uiframe.js"></script>
+        <script type="text/javascript" src="js/equipmentdetail.js"></script>
+    </div>
+</body>
+</html>

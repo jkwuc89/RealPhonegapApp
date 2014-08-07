@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Real Phonegap App</title>
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="js/libs/jquery/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="js/libs/mobiscroll/mobiscroll-2.1.custom.min.css" />
+<link rel="stylesheet" href="js/libs/badge/badge.css" />
+<link rel="stylesheet" href="css/realphonegapapp.css" />
+</head>
+<body>
+    <div id="manageWorkOrderDiagnosticsPage" data-role="page">
+        <div data-role="content" class="nopadding">
+            <div class="ui-grid-a">
+                <!-- Icon bar -->
+                <div class="ui-block-a manage-work-order-icon-bar">
+                    <a href="" onclick="ManageWorkOrder.navigateToPage('manageWorkOrderOverviewPage');"><img class="manage-work-order-icon-button" id="manageWorkOrderOverviewIcon" src="images/manageworkorder-overview-inactive.png" /></a>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderOverview" translate="yes"></p>
+                    <img class="manage-work-order-icon" id="manageWorkOrderDiagnosticsIcon" src="images/manageworkorder-diagnostics-active.png" />
+                    <p class="manage-work-order-icon-active-text" id="manageWorkOrderDiagnostics" translate="yes"></p>
+                    <a href="" onclick="ManageWorkOrder.navigateToPage('manageWorkOrderRepairDetailsPage');"><img class="manage-work-order-icon-button" id="manageWorkOrderRepairWorkIcon" src="images/manageworkorder-repair-inactive.png" /></a>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderRepairWork" translate="yes"></p>
+                    <a href="" onclick="ManageWorkOrder.navigateToPage( ManageWorkOrder.TECH_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderTechnicianReviewIcon" src="images/manageworkorder-techreview-inactive.png" /></a>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderTechnicianReview" translate="yes"></p>
+                    <a href="" onclick="ManageWorkOrder.navigateToPage( ManageWorkOrder.CUSTOMER_REVIEW_PAGE );"><img class="manage-work-order-icon-button" id="manageWorkOrderCustomerReviewIcon" src="images/manageworkorder-customerreview-inactive.png" /></a>
+                    <p class="manage-work-order-icon-inactive-text" id="manageWorkOrderCustomerReview" translate="yes"></p>
+                </div>
+                <!-- Overview content -->
+                <div class="ui-block-b manage-work-order-content" style="margin-top: 0px;">
+                    <!-- Inspections list -->
+                    <div class="ui-bar-d manage-work-order-inspections-bar">
+                        <h3 id="manageWorkOrderInspectionsTitle" translate="yes"></h3>
+                    </div>
+                    <!-- TODO: Add the fault / inspections list here -->
+                </div>
+            </div>
+        </div>
+
+        <script>var debug = true;</script>
+        <script type="text/javascript" src="js/libs/jquery/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/init.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.mobile-1.2.0.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.mobile.simpledialog2.min.js"></script>
+        <script type="text/javascript" src="js/libs/mobiscroll/mobiscroll-2.1.custom.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.i18n.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery/jquery.blockUI.js"></script>
+        <script type="text/javascript" src="js/libs/badge/badge.js"></script>
+        <script type="text/javascript" src="js/libs/ejs/ejs_production.js"></script>
+        <script type="text/javascript" src="js/libs/knockout/knockout-2.2.0.js"></script>
+        <script type="text/javascript" src="js/libs/knockout/knockout.mapping-2.3.3.js"></script>
+        <script type="text/javascript" src="js/libs/underscore/underscore-1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/libs/globalize/globalize.min.js"></script>
+        <script type="text/javascript" src="js/libs/globalize/globalize.culture.en-US.js"></script>
+        <script type="text/javascript" src="js/firefox.js"></script>
+        <script type="text/javascript" src="js/loadurl.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/util.js"></script>
+        <script type="text/javascript" src="js/database.js"></script>
+        <script type="text/javascript" src="js/workorder.js"></script>
+        <script type="text/javascript" src="js/jsondata.js"></script>
+        <script type="text/javascript" src="js/clocking.js"></script>
+        <script type="text/javascript" src="js/translations.js"></script>
+        <script type="text/javascript" src="js/localization.js"></script>
+        <script type="text/javascript" src="js/uiframe.js"></script>
+        <script type="text/javascript" src="js/dialog.js"></script>
+        <script type="text/javascript" src="js/workorderlist.js"></script>
+        <script type="text/javascript" src="js/manageworkorder.js"></script>
+        <script type="text/javascript" src="js/manageworkorderdiagnostics.js"></script>
+    </div>
+</body>
+</html>
