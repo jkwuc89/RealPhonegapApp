@@ -28,6 +28,8 @@
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
 		5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEE5B34173C68D80009041E /* CoreLocation.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
+		7321EC471993EF2C0073DE5F /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5796F0CD65044FB29EC514CA /* CDVDevice.m */; };
+		7321EC481993EF3B0073DE5F /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 00518CF1D406442DB5FD1319 /* CDVLogger.m */; };
 		734C7F4C1992AD07003FF291 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 734C7F4B1992AD07003FF291 /* AppHelper.m */; };
 		739AFF061993D81D0099CB79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739AFF051993D81D0099CB79 /* Images.xcassets */; };
 		73AFAE2A1993D1FA00A08C84 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591A3512F6AF414191CF2D93 /* SystemConfiguration.framework */; };
@@ -462,6 +464,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7321EC481993EF3B0073DE5F /* CDVLogger.m in Sources */,
+				7321EC471993EF2C0073DE5F /* CDVDevice.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				734C7F4C1992AD07003FF291 /* AppHelper.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
