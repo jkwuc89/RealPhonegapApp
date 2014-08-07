@@ -68,6 +68,16 @@ var Login = function() {
     });
 
     /**
+     * Change handler for the language dropdown
+     */
+    $("#selectLanguage").change( function( event ) {
+        // Write file for selected language to local storage so that all pages
+        // will use it
+        debug && console.log( "Login.selectLanguage.change: Changing language to " + $(this).val() );
+        Localization.setLanguage( $(this).val(), true );
+    });
+
+    /**
      * Initialization
      */
     var init = _.once( function( pageId ) {
@@ -90,8 +100,16 @@ var Login = function() {
         }
 
         // Set selected language option to match current language
-        /*var currentLanguage = Localization.getLanguage();
-        $("option[value=" + currentLanguage + "]").attr( "selected", "true" );*/
+        var currentLanguage = Localization.getLanguage();
+        $("option[value=" + currentLanguage + "]").attr( "selected", "true" );
+
+        // Display today's date formatted using the selected locale
+        loginViewModel.today = ko.observable( Localization.formatDateTime( Util.getISOCurrentTime(), "f" ) );
+        loginViewModel.todayHoursLabel =
+            ko.observable( Localization.getText( "todayHoursLabel" ) +
+                Localization.formatDateTime( "1970-01-01T00:00:00Z", "d" ) );
+        loginViewModel.todayInHours =
+            ko.observable( Localization.formatNumber( ( new Date().getTime() / 1000 / 60 / 60 ), "n2" ) );
 
         // Display version number on the login page
         if ( !_.isNull( Config.getConfig() ) && ( typeof Config.getConfig().version !== 'undefined' ) ) {

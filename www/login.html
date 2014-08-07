@@ -38,6 +38,19 @@
                         <a id="login" translate="yes" href="" class="button-default"
                            data-role="button" data-inline="true" data-theme="b"
                            data-bind="click: login"></a><br>
+                        <div data-role="fieldcontain">
+                            <h3 style="-webkit-margin-before: 0em; -webkit-margin-after: .2em;">
+                                <span data-bind="text: today"></span>
+                            </h3>
+                            <h3 style="-webkit-margin-before: 0em; -webkit-margin-after: .2em;">
+                                <span data-bind="text: todayHoursLabel"></span>:&nbsp;<span data-bind="text: todayInHours"></span>
+                            </h3>
+                            <select name="selectLanguage" id="selectLanguage" data-native-menu="false" data-theme="c" data-inline="true">
+                                <option id="selectLanguageLabel" translate="yes"></option>
+                                <option id="englishUS" translate="yes" value="en-US"></option>
+                                <option id="german" translate="yes" value="de"></option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="ui-block-c login-spacer-block"></div>
@@ -62,6 +75,7 @@
         <script type="text/javascript" src="js/libs/underscore/underscore-1.4.2.min.js"></script>
         <script type="text/javascript" src="js/libs/globalize/globalize.min.js"></script>
         <script type="text/javascript" src="js/libs/globalize/globalize.culture.en-US.js"></script>
+        <script type="text/javascript" src="js/libs/globalize/globalize.culture.de.js"></script>
         <script type="text/javascript" src="js/firefox.js"></script>
         <script type="text/javascript" src="js/loadurl.js"></script>
         <script type="text/javascript" src="js/config.js"></script>
