@@ -20,7 +20,7 @@
     <RunnerSettings RunnerId="AndroidDebugRunner" />
     <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
     <method>
-      <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_Phonegap_Cordova Prepare" />
+      <option name="AntTarget" enabled="true" antfile="file://$PROJECT_DIR$/build.xml" target="prepare" />
       <option name="Make" enabled="true" />
     </method>
   </configuration>

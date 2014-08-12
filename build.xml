@@ -1,0 +1,9 @@
+<project name="RealPhonegapApp" basedir=".">
+    <target name="prepare">
+        <echo message="Running cordova prepare"/>
+        <exec executable="cordova" failifexecutionfails="true" failonerror="true">
+            <arg value="--verbose"/>
+            <arg value="prepare"/>
+        </exec>
+    </target>
+</project>
