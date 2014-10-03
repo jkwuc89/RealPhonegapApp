@@ -310,6 +310,11 @@ var UIFrame = function() {
      * @param url
      */
     function loadUrl( url ) {
+        debug && console.log( "UIFrame.loadUrl: Using window.location.replace() to load " + url );
+        window.location.replace( url );
+        debug && console.log( "UIFrame.loadUrl: URL loaded via window.location.replace()" );
+
+        /*
         var urlLoaded = true;
         if ( Config.getConfig()[ USE_PHONEGAP_LOADURL_PLUGIN ] && window.LoadURL ) {
             debug && console.log( "UIFrame.loadUrl: Using LoadURL Phonegap plugin to load " + url );
@@ -326,10 +331,8 @@ var UIFrame = function() {
             urlLoaded = false;
         }
         if ( !urlLoaded ) {
-            debug && console.log( "UIFrame.loadUrl: Using window.location.replace() to load " + url );
-            window.location.replace( url );
-            debug && console.log( "UIFrame.loadUrl: URL loaded via window.location.replace()" );
         }
+        */
     }
 
     /**
