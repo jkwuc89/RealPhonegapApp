@@ -16,7 +16,4 @@
     <author email="keith.wedinger@leadingedje.com" href="http://leadingedje.com">Keith Wedinger</author>
     <content src="login.html" />
     <access origin="*" />
-    <feature name="LoadURL">
-        <param name="android-package" value="com.leadingedje.RealPhonegapApp.LoadURL" />
-    </feature>
 </widget>
